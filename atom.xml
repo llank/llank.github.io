@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>曹世宏的博客</title>
+  
+  <subtitle>记录一些学习资料</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://cshihong.github.io/"/>
+  <updated>2018-10-25T14:57:56.585Z</updated>
+  <id>https://cshihong.github.io/</id>
+  
+  <author>
+    <name>曹世宏</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>FTP服务器搭建和配置</title>
+    <link href="https://cshihong.github.io/2018/10/25/FTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E5%92%8C%E9%85%8D%E7%BD%AE/"/>
+    <id>https://cshihong.github.io/2018/10/25/FTP服务器搭建和配置/</id>
+    <published>2018-10-25T08:52:28.000Z</published>
+    <updated>2018-10-25T14:57:56.585Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;FTP服务简介&quot;&gt;&lt;a href=&quot;#FTP服务简介&quot; class=&quot;headerlink&quot; title=&quot;FTP服务简介&quot;&gt;&lt;/a&gt;FTP服务简介&lt;/h1&gt;&lt;h2 id=&quot;FTP概述：&quot;&gt;&lt;a href=&quot;#FTP概述：&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="https://cshihong.github.io/categories/Linux/"/>
+    
+    
+      <category term="Linux学习笔记" scheme="https://cshihong.github.io/tags/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ISCSI服务器搭建与配置</title>
+    <link href="https://cshihong.github.io/2018/10/23/ISCSI%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E4%B8%8E%E9%85%8D%E7%BD%AE/"/>
+    <id>https://cshihong.github.io/2018/10/23/ISCSI服务器搭建与配置/</id>
+    <published>2018-10-23T07:57:04.000Z</published>
+    <updated>2018-10-23T10:17:22.169Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;ISCSI服务简介&quot;&gt;&lt;a href=&quot;#ISCSI服务简介&quot; class=&quot;headerlink&quot; title=&quot;ISCSI服务简介&quot;&gt;&lt;/a&gt;ISCSI服务简介&lt;/h1&gt;&lt;h2 id=&quot;ISCSI简介：&quot;&gt;&lt;a href=&quot;#ISCSI简介：&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="https://cshihong.github.io/categories/Linux/"/>
+    
+    
+      <category term="Linux学习笔记" scheme="https://cshihong.github.io/tags/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Samba服务器搭建与配置</title>
+    <link href="https://cshihong.github.io/2018/10/18/Samba%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E4%B8%8E%E9%85%8D%E7%BD%AE/"/>
+    <id>https://cshihong.github.io/2018/10/18/Samba服务器搭建与配置/</id>
+    <published>2018-10-18T06:54:35.000Z</published>
+    <updated>2018-10-18T09:39:11.308Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Samba服务简介&quot;&gt;&lt;a href=&quot;#Samba服务简介&quot; class=&quot;headerlink&quot; title=&quot;Samba服务简介&quot;&gt;&lt;/a&gt;Samba服务简介&lt;/h1&gt;&lt;h2 id=&quot;Samba的起源：&quot;&gt;&lt;a href=&quot;#Samba的起源：&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="https://cshihong.github.io/categories/Linux/"/>
+    
+    
+      <category term="Linux学习笔记" scheme="https://cshihong.github.io/tags/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux下autofs自动挂载服务</title>
+    <link href="https://cshihong.github.io/2018/10/16/Linux%E4%B8%8Bautofs%E8%87%AA%E5%8A%A8%E6%8C%82%E8%BD%BD%E6%9C%8D%E5%8A%A1/"/>
+    <id>https://cshihong.github.io/2018/10/16/Linux下autofs自动挂载服务/</id>
+    <published>2018-10-16T14:24:09.000Z</published>
+    <updated>2018-10-16T14:57:35.173Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Autofs简介&quot;&gt;&lt;a href=&quot;#Autofs简介&quot; class=&quot;headerlink&quot; title=&quot;Autofs简介&quot;&gt;&lt;/a&gt;Autofs简介&lt;/h1&gt;&lt;h2 id=&quot;Autofs介绍：&quot;&gt;&lt;a href=&quot;#Autofs介绍：&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="https://cshihong.github.io/categories/Linux/"/>
+    
+    
+      <category term="Linux学习笔记" scheme="https://cshihong.github.io/tags/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>NFS服务器搭建与配置</title>
+    <link href="https://cshihong.github.io/2018/10/16/NFS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E4%B8%8E%E9%85%8D%E7%BD%AE/"/>
+    <id>https://cshihong.github.io/2018/10/16/NFS服务器搭建与配置/</id>
+    <published>2018-10-16T13:12:21.000Z</published>
+    <updated>2018-10-17T14:40:25.048Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;NFS服务简介&quot;&gt;&lt;a href=&quot;#NFS服务简介&quot; class=&quot;headerlink&quot; title=&quot;NFS服务简介&quot;&gt;&lt;/a&gt;NFS服务简介&lt;/h1&gt;&lt;h2 id=&quot;什么是NFS？&quot;&gt;&lt;a href=&quot;#什么是NFS？&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="https://cshihong.github.io/categories/Linux/"/>
+    
+    
+      <category term="Linux学习笔记" scheme="https://cshihong.github.io/tags/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>DNS服务器搭建与配置</title>
+    <link href="https://cshihong.github.io/2018/10/15/DNS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E4%B8%8E%E9%85%8D%E7%BD%AE/"/>
+    <id>https://cshihong.github.io/2018/10/15/DNS服务器搭建与配置/</id>
+    <published>2018-10-15T13:20:07.000Z</published>
+    <updated>2018-10-16T12:42:55.255Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;DNS服务介绍&quot;&gt;&lt;a href=&quot;#DNS服务介绍&quot; class=&quot;headerlink&quot; title=&quot;DNS服务介绍&quot;&gt;&lt;/a&gt;DNS服务介绍&lt;/h1&gt;&lt;h2 id=&quot;DNS服务简介：&quot;&gt;&lt;a href=&quot;#DNS服务简介：&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="https://cshihong.github.io/categories/Linux/"/>
+    
+    
+      <category term="Linux笔记，Linux服务" scheme="https://cshihong.github.io/tags/Linux%E7%AC%94%E8%AE%B0%EF%BC%8CLinux%E6%9C%8D%E5%8A%A1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux下systemctl命令和service、chkconfig命令的区别</title>
+    <link href="https://cshihong.github.io/2018/10/15/Linux%E4%B8%8Bsystemctl%E5%91%BD%E4%BB%A4%E5%92%8Cservice%E3%80%81chkconfig%E5%91%BD%E4%BB%A4%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
+    <id>https://cshihong.github.io/2018/10/15/Linux下systemctl命令和service、chkconfig命令的区别/</id>
+    <published>2018-10-15T12:00:10.000Z</published>
+    <updated>2018-10-16T05:05:35.730Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;systemctl和service、chkconfig命令的关系&quot;&gt;&lt;a href=&quot;#systemctl和service、chkconfig命令的关系&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="https://cshihong.github.io/categories/Linux/"/>
+    
+    
+      <category term="Linux笔记，Linux命令" scheme="https://cshihong.github.io/tags/Linux%E7%AC%94%E8%AE%B0%EF%BC%8CLinux%E5%91%BD%E4%BB%A4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java学习笔记（12）Spring JDBC框架和事务管理</title>
+    <link href="https://cshihong.github.io/2018/08/05/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%8812%EF%BC%89Spring-JDBC%E6%A1%86%E6%9E%B6%E5%92%8C%E4%BA%8B%E5%8A%A1%E7%AE%A1%E7%90%86/"/>
+    <id>https://cshihong.github.io/2018/08/05/Java学习笔记（12）Spring-JDBC框架和事务管理/</id>
+    <published>2018-08-05T07:30:51.000Z</published>
+    <updated>2018-08-09T16:02:26.264Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Spring-JDBC框架&quot;&gt;&lt;a href=&quot;#Spring-JDBC框架&quot; class=&quot;headerlink&quot; title=&quot;Spring JDBC框架&quot;&gt;&lt;/a&gt;Spring JDBC框架&lt;/h1&gt;&lt;h2 id=&quot;JDBC框架概述：&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="Java" scheme="https://cshihong.github.io/categories/Java/"/>
+    
+    
+      <category term="Spring" scheme="https://cshihong.github.io/tags/Spring/"/>
+    
+      <category term="Java学习笔记" scheme="https://cshihong.github.io/tags/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="JDBC" scheme="https://cshihong.github.io/tags/JDBC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java学习笔记（11）Spring AOP</title>
+    <link href="https://cshihong.github.io/2018/08/05/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%8811%EF%BC%89Spring-AOP/"/>
+    <id>https://cshihong.github.io/2018/08/05/Java学习笔记（11）Spring-AOP/</id>
+    <published>2018-08-05T06:12:26.000Z</published>
+    <updated>2018-08-11T13:00:42.961Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;AOP简介&quot;&gt;&lt;a href=&quot;#AOP简介&quot; class=&quot;headerlink&quot; title=&quot;AOP简介&quot;&gt;&lt;/a&gt;AOP简介&lt;/h1&gt;&lt;p&gt;##AOP的概念：&lt;/p&gt;
+&lt;p&gt;AOP为Aspect Oriented
+        
+      
+    
+    </summary>
+    
+      <category term="Java" scheme="https://cshihong.github.io/categories/Java/"/>
+    
+    
+      <category term="Spring" scheme="https://cshihong.github.io/tags/Spring/"/>
+    
+      <category term="Java学习笔记" scheme="https://cshihong.github.io/tags/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java学习笔记（10）Spring Bean配置</title>
+    <link href="https://cshihong.github.io/2018/08/04/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%8810%EF%BC%89Spring-Bean%E9%85%8D%E7%BD%AE/"/>
+    <id>https://cshihong.github.io/2018/08/04/Java学习笔记（10）Spring-Bean配置/</id>
+    <published>2018-08-04T11:12:02.000Z</published>
+    <updated>2018-08-11T03:12:19.683Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Spring-Beans自动装配&quot;&gt;&lt;a href=&quot;#Spring-Beans自动装配&quot; class=&quot;headerlink&quot; title=&quot;Spring Beans自动装配&quot;&gt;&lt;/a&gt;Spring Beans自动装配&lt;/h1&gt;&lt;h2
+        
+      
+    
+    </summary>
+    
+      <category term="Java" scheme="https://cshihong.github.io/categories/Java/"/>
+    
+    
+      <category term="Spring" scheme="https://cshihong.github.io/tags/Spring/"/>
+    
+      <category term="java学习笔记" scheme="https://cshihong.github.io/tags/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java学习笔记（9）Spring基础</title>
+    <link href="https://cshihong.github.io/2018/08/02/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%889%EF%BC%89Spring%E5%9F%BA%E7%A1%80/"/>
+    <id>https://cshihong.github.io/2018/08/02/Java学习笔记（9）Spring基础/</id>
+    <published>2018-08-02T01:30:57.000Z</published>
+    <updated>2018-08-11T11:41:09.622Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Spring概述&quot;&gt;&lt;a href=&quot;#Spring概述&quot; class=&quot;headerlink&quot; title=&quot;Spring概述&quot;&gt;&lt;/a&gt;Spring概述&lt;/h1&gt;&lt;h2 id=&quot;Spring概述：&quot;&gt;&lt;a href=&quot;#Spring概述：&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Java" scheme="https://cshihong.github.io/categories/Java/"/>
+    
+    
+      <category term="Spring" scheme="https://cshihong.github.io/tags/Spring/"/>
+    
+      <category term="Java学习笔记" scheme="https://cshihong.github.io/tags/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java学习笔记（8）JSP高级</title>
+    <link href="https://cshihong.github.io/2018/07/30/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%888%EF%BC%89JSP%E9%AB%98%E7%BA%A7/"/>
+    <id>https://cshihong.github.io/2018/07/30/Java学习笔记（8）JSP高级/</id>
+    <published>2018-07-30T08:18:53.000Z</published>
+    <updated>2018-07-31T04:02:35.664Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;JSP标准标签库（JSTL）&quot;&gt;&lt;a href=&quot;#JSP标准标签库（JSTL）&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Java" scheme="https://cshihong.github.io/categories/Java/"/>
+    
+    
+      <category term="Java学习笔记" scheme="https://cshihong.github.io/tags/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="JSP" scheme="https://cshihong.github.io/tags/JSP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java学习笔记（7）JSP基础</title>
+    <link href="https://cshihong.github.io/2018/07/28/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%887%EF%BC%89JSP%E5%9F%BA%E7%A1%80/"/>
+    <id>https://cshihong.github.io/2018/07/28/Java学习笔记（7）JSP基础/</id>
+    <published>2018-07-28T06:49:09.000Z</published>
+    <updated>2018-07-29T10:02:25.904Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;JSP简介&quot;&gt;&lt;a href=&quot;#JSP简介&quot; class=&quot;headerlink&quot; title=&quot;JSP简介&quot;&gt;&lt;/a&gt;JSP简介&lt;/h1&gt;&lt;h2 id=&quot;什么是JSP？&quot;&gt;&lt;a href=&quot;#什么是JSP？&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Java" scheme="https://cshihong.github.io/categories/Java/"/>
+    
+    
+      <category term="Java学习笔记" scheme="https://cshihong.github.io/tags/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="JSP" scheme="https://cshihong.github.io/tags/JSP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java学习笔记(6)Servlet</title>
+    <link href="https://cshihong.github.io/2018/07/16/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%886%EF%BC%89Servlet/"/>
+    <id>https://cshihong.github.io/2018/07/16/Java学习笔记（6）Servlet/</id>
+    <published>2018-07-16T03:50:55.000Z</published>
+    <updated>2018-07-28T04:05:44.072Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Servlet简介&quot;&gt;&lt;a href=&quot;#Servlet简介&quot; class=&quot;headerlink&quot; title=&quot;Servlet简介&quot;&gt;&lt;/a&gt;Servlet简介&lt;/h1&gt;&lt;h2 id=&quot;Servlet是什么？&quot;&gt;&lt;a href=&quot;#Servlet是什么？&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Java" scheme="https://cshihong.github.io/categories/Java/"/>
+    
+    
+      <category term="Java学习笔记" scheme="https://cshihong.github.io/tags/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="Servlet" scheme="https://cshihong.github.io/tags/Servlet/"/>
+    
+      <category term="HTTP" scheme="https://cshihong.github.io/tags/HTTP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java学习笔记（5）JDBC</title>
+    <link href="https://cshihong.github.io/2018/07/11/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%885%EF%BC%89JDBC/"/>
+    <id>https://cshihong.github.io/2018/07/11/Java学习笔记（5）JDBC/</id>
+    <published>2018-07-11T06:40:33.000Z</published>
+    <updated>2018-07-16T03:46:51.285Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;JDBC简介&quot;&gt;&lt;a href=&quot;#JDBC简介&quot; class=&quot;headerlink&quot; title=&quot;JDBC简介&quot;&gt;&lt;/a&gt;JDBC简介&lt;/h1&gt;&lt;h2 id=&quot;JDBC简介：&quot;&gt;&lt;a href=&quot;#JDBC简介：&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Java" scheme="https://cshihong.github.io/categories/Java/"/>
+    
+    
+      <category term="Java学习笔记" scheme="https://cshihong.github.io/tags/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="数据库" scheme="https://cshihong.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+      <category term="JDBC" scheme="https://cshihong.github.io/tags/JDBC/"/>
+    
+      <category term="MySQL" scheme="https://cshihong.github.io/tags/MySQL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MySQL学习笔记（2）高级操作</title>
+    <link href="https://cshihong.github.io/2018/07/09/MySQL%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%882%EF%BC%89%E9%AB%98%E7%BA%A7%E6%93%8D%E4%BD%9C/"/>
+    <id>https://cshihong.github.io/2018/07/09/MySQL学习笔记（2）高级操作/</id>
+    <published>2018-07-09T08:27:13.000Z</published>
+    <updated>2018-07-11T03:45:51.650Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;MySQL-UNION：&quot;&gt;&lt;a href=&quot;#MySQL-UNION：&quot; class=&quot;headerlink&quot; title=&quot;MySQL UNION：&quot;&gt;&lt;/a&gt;MySQL UNION：&lt;/h2&gt;&lt;p&gt;MySQL UNION 操作符用于连接两个以上的
+        
+      
+    
+    </summary>
+    
+      <category term="数据库" scheme="https://cshihong.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+      <category term="正则表达式" scheme="https://cshihong.github.io/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
+    
+      <category term="数据库" scheme="https://cshihong.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+      <category term="MySQL" scheme="https://cshihong.github.io/tags/MySQL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MySQL学习笔记（1）基础操作</title>
+    <link href="https://cshihong.github.io/2018/07/08/MySQL%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%881%EF%BC%89%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/"/>
+    <id>https://cshihong.github.io/2018/07/08/MySQL学习笔记（1）基础操作/</id>
+    <published>2018-07-08T09:10:42.000Z</published>
+    <updated>2018-07-08T15:07:46.889Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;数据库简介&quot;&gt;&lt;a href=&quot;#数据库简介&quot; class=&quot;headerlink&quot; title=&quot;数据库简介&quot;&gt;&lt;/a&gt;数据库简介&lt;/h1&gt;&lt;h2 id=&quot;什么是数据库：&quot;&gt;&lt;a href=&quot;#什么是数据库：&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="数据库" scheme="https://cshihong.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+      <category term="数据库" scheme="https://cshihong.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+      <category term="MySQL" scheme="https://cshihong.github.io/tags/MySQL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux下的数据备份工具rsync</title>
+    <link href="https://cshihong.github.io/2018/07/06/Linux%E4%B8%8B%E7%9A%84%E6%95%B0%E6%8D%AE%E5%A4%87%E4%BB%BD%E5%B7%A5%E5%85%B7rsync/"/>
+    <id>https://cshihong.github.io/2018/07/06/Linux下的数据备份工具rsync/</id>
+    <published>2018-07-06T03:21:07.000Z</published>
+    <updated>2018-07-06T09:10:38.754Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;rsync简介：&quot;&gt;&lt;a href=&quot;#rsync简介：&quot; class=&quot;headerlink&quot; title=&quot;rsync简介：&quot;&gt;&lt;/a&gt;rsync简介：&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;rsync命令&lt;/strong&gt;（ Remote
+        
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="https://cshihong.github.io/categories/Linux/"/>
+    
+    
+      <category term="Linux学习笔记" scheme="https://cshihong.github.io/tags/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="Linux命令" scheme="https://cshihong.github.io/tags/Linux%E5%91%BD%E4%BB%A4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux系统日常管理</title>
+    <link href="https://cshihong.github.io/2018/07/03/Linux%E7%B3%BB%E7%BB%9F%E6%97%A5%E5%B8%B8%E7%AE%A1%E7%90%86/"/>
+    <id>https://cshihong.github.io/2018/07/03/Linux系统日常管理/</id>
+    <published>2018-07-03T13:08:53.000Z</published>
+    <updated>2018-07-05T14:13:55.423Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;监控系统的状态：&quot;&gt;&lt;a href=&quot;#监控系统的状态：&quot; class=&quot;headerlink&quot; title=&quot;监控系统的状态：&quot;&gt;&lt;/a&gt;监控系统的状态：&lt;/h2&gt;&lt;h3 id=&quot;w：查看当前系统负载：&quot;&gt;&lt;a href=&quot;#w：查看当前系统负载：&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="https://cshihong.github.io/categories/Linux/"/>
+    
+    
+      <category term="Linux学习笔记， Linux命令" scheme="https://cshihong.github.io/tags/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%8C-Linux%E5%91%BD%E4%BB%A4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux下的shell脚本</title>
+    <link href="https://cshihong.github.io/2018/07/02/Linux%E4%B8%8B%E7%9A%84shell%E8%84%9A%E6%9C%AC/"/>
+    <id>https://cshihong.github.io/2018/07/02/Linux下的shell脚本/</id>
+    <published>2018-07-02T06:45:03.000Z</published>
+    <updated>2018-07-02T09:23:49.158Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;shell脚本的基本结构：&quot;&gt;&lt;a href=&quot;#shell脚本的基本结构：&quot; class=&quot;headerlink&quot; title=&quot;shell脚本的基本结构：&quot;&gt;&lt;/a&gt;shell脚本的基本结构：&lt;/h2&gt;&lt;p&gt;shell脚本示例：&lt;/p&gt;
+&lt;figure
+        
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="https://cshihong.github.io/categories/Linux/"/>
+    
+    
+      <category term="Linux学习笔记" scheme="https://cshihong.github.io/tags/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="Linux命令" scheme="https://cshihong.github.io/tags/Linux%E5%91%BD%E4%BB%A4/"/>
+    
+      <category term="脚本" scheme="https://cshihong.github.io/tags/%E8%84%9A%E6%9C%AC/"/>
+    
+  </entry>
+  
+</feed>
