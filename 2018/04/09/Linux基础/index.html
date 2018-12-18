@@ -133,7 +133,7 @@
 
 
   <meta name="description" content="Linux概述Unxi的发展： 1946年：世界上第一台计算机ENIAC诞生于美国 1960年：麻省理工学院研发出兼容分时操作系统 1965年：Multiscs计划 1970年：Ken Thompson研发出Unix原型 1973年：Ritchie用C语言编写了Unix内核，Unix正式诞生 1974年：Unix对外公布，开始广泛流行  Linux的发展： 1986年：Tanenbaum研发出Mi">
-<meta name="keywords" content="Linux命令,华为网络大赛,Linux笔记">
+<meta name="keywords" content="华为网络大赛,Linux命令,Linux笔记">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux基础">
 <meta property="og:url" content="https://cshihong.github.io/2018/04/09/Linux基础/index.html">
@@ -522,17 +522,6 @@
           
 
           
-          
-             <span id="/2018/04/09/Linux基础/" class="leancloud_visitors" data-flag-title="Linux基础">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数：</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
           
 
           
@@ -1210,9 +1199,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Linux命令/" rel="tag"># Linux命令</a>
-          
             <a href="/tags/华为网络大赛/" rel="tag"># 华为网络大赛</a>
+          
+            <a href="/tags/Linux命令/" rel="tag"># Linux命令</a>
           
             <a href="/tags/Linux笔记/" rel="tag"># Linux笔记</a>
           
@@ -1220,60 +1209,6 @@
       
 
       
-      
-        <div class="post-widgets">
-        
-
-        
-
-        
-          
-          <div class="social_share">
-            
-               <div>
-                 
-  <div class="bdsharebuttonbox">
-    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
-    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
-    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
-    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
-    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
-    <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
-    <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
-    <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
-    <a href="#" class="bds_more" data-cmd="more"></a>
-    <a class="bds_count" data-cmd="count"></a>
-  </div>
-  <script>
-    window._bd_share_config = {
-      "common": {
-        "bdText": "",
-        "bdMini": "2",
-        "bdMiniList": false,
-        "bdPic": ""
-      },
-      "share": {
-        "bdSize": "16",
-        "bdStyle": "0"
-      },
-      "image": {
-        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
-        "viewText": "分享到：",
-        "viewSize": "16"
-      }
-    }
-  </script>
-
-<script>
-  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
-</script>
-
-               </div>
-            
-            
-          </div>
-        
-        </div>
       
       
 
@@ -1851,6 +1786,35 @@
     
 
     
+      <div>
+        
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "1",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      },
+      "slide": {
+        "bdImg": "5",
+        "bdPos": "left",
+        "bdTop": "100"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      </div>
+    
 
     
   </div>
@@ -2299,67 +2263,6 @@
 
 
   
-
-  
-  <script>
-    
-    function addCount(Counter) {
-      var $visitors = $(".leancloud_visitors");
-      var url = $visitors.attr('id').trim();
-      var title = $visitors.attr('data-flag-title').trim();
-
-      Counter('get', '/classes/Counter', { where: JSON.stringify({ url }) })
-        .done(function ({ results }) {
-          if (results.length > 0) {
-            var counter = results[0];
-            
-            Counter('put', `/classes/Counter/${counter.objectId}`, JSON.stringify({ time: { "__op":"Increment", "amount":1 } }))
-            
-            .done(function () {
-                  var $element = $(document.getElementById(url));
-                  $element.find('.leancloud-visitors-count').text(counter.time + 1);
-            })
-            
-            .fail(function ({ responseJSON }) {
-                console.log('Failed to save Visitor num, with error message: ' + responseJSON.error);
-            })
-          } else {
-            
-              var $element = $(document.getElementById(url));
-              $element.find('.leancloud-visitors-count').text('Counter not initialized! See more at console err msg.');
-              console.error('ATTENTION! LeanCloud counter has security bug, see here how to solve it: https://github.com/theme-next/hexo-leancloud-counter-security. \n But you also can use LeanCloud without security, by set \'security\' option to \'false\'.');
-            
-          }
-        })
-      .fail(function ({ responseJSON }) {
-        console.log('LeanCloud Counter Error:' + responseJSON.code + " " + responseJSON.error);
-      });
-    }
-    
-
-    $(function() {
-      $.get('https://app-router.leancloud.cn/2/route?appId=' + "FlM0UrILmeMhsLNIu9g0OfXe-gzGzoHsz")
-        .done(function ({ api_server }) {
-          var Counter = function (method, url, data) {
-            return $.ajax({
-              method: method,
-              url: `https://${api_server}/1.1${url}`,
-              headers: {
-                'X-LC-Id': "FlM0UrILmeMhsLNIu9g0OfXe-gzGzoHsz",
-                'X-LC-Key': "sslW3FzkFiVSxuXxuNc2myxI",
-                'Content-Type': 'application/json',
-              },
-              data: data,
-            });
-          };
-          
-          addCount(Counter);
-          
-        })
-    });
-  </script>
-
-
 
   
 
