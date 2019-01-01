@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://cshihong.github.io/"/>
-  <updated>2019-01-01T10:04:43.013Z</updated>
+  <updated>2019-01-01T14:17:08.619Z</updated>
   <id>https://cshihong.github.io/</id>
   
   <author>
@@ -15,6 +15,62 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Python获取Cookie时遇到重定向的情况</title>
+    <link href="https://cshihong.github.io/2019/01/01/Python%E8%8E%B7%E5%8F%96Cookie%E6%97%B6%E9%81%87%E5%88%B0%E9%87%8D%E5%AE%9A%E5%90%91%E7%9A%84%E6%83%85%E5%86%B5/"/>
+    <id>https://cshihong.github.io/2019/01/01/Python获取Cookie时遇到重定向的情况/</id>
+    <published>2019-01-01T13:44:52.000Z</published>
+    <updated>2019-01-01T14:17:08.619Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;问题描述和解决：&quot;&gt;&lt;a href=&quot;#问题描述和解决：&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Python" scheme="https://cshihong.github.io/categories/Python/"/>
+    
+    
+      <category term="Python学习笔记" scheme="https://cshihong.github.io/tags/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="爬虫" scheme="https://cshihong.github.io/tags/%E7%88%AC%E8%99%AB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python实现爬取教务处成绩系统</title>
+    <link href="https://cshihong.github.io/2019/01/01/Python%E5%AE%9E%E7%8E%B0%E7%88%AC%E5%8F%96%E6%95%99%E5%8A%A1%E5%A4%84%E6%88%90%E7%BB%A9%E7%B3%BB%E7%BB%9F/"/>
+    <id>https://cshihong.github.io/2019/01/01/Python实现爬取教务处成绩系统/</id>
+    <published>2019-01-01T13:07:11.000Z</published>
+    <updated>2019-01-01T13:41:46.299Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Python查询教务处成绩系统简介&quot;&gt;&lt;a href=&quot;#Python查询教务处成绩系统简介&quot; class=&quot;headerlink&quot; title=&quot;Python查询教务处成绩系统简介&quot;&gt;&lt;/a&gt;Python查询教务处成绩系统简介&lt;/h1&gt;&lt;h2
+        
+      
+    
+    </summary>
+    
+      <category term="Python" scheme="https://cshihong.github.io/categories/Python/"/>
+    
+    
+      <category term="Python学习笔记" scheme="https://cshihong.github.io/tags/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="爬虫" scheme="https://cshihong.github.io/tags/%E7%88%AC%E8%99%AB/"/>
+    
+  </entry>
   
   <entry>
     <title>位运算的奇巧淫技</title>
@@ -516,60 +572,6 @@
       <category term="数据库" scheme="https://cshihong.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
     
       <category term="MySQL" scheme="https://cshihong.github.io/tags/MySQL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux下的数据备份工具rsync</title>
-    <link href="https://cshihong.github.io/2018/07/06/Linux%E4%B8%8B%E7%9A%84%E6%95%B0%E6%8D%AE%E5%A4%87%E4%BB%BD%E5%B7%A5%E5%85%B7rsync/"/>
-    <id>https://cshihong.github.io/2018/07/06/Linux下的数据备份工具rsync/</id>
-    <published>2018-07-06T03:21:07.000Z</published>
-    <updated>2018-07-06T09:10:38.754Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;rsync简介：&quot;&gt;&lt;a href=&quot;#rsync简介：&quot; class=&quot;headerlink&quot; title=&quot;rsync简介：&quot;&gt;&lt;/a&gt;rsync简介：&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;rsync命令&lt;/strong&gt;（ Remote
-        
-      
-    
-    </summary>
-    
-      <category term="Linux" scheme="https://cshihong.github.io/categories/Linux/"/>
-    
-    
-      <category term="Linux学习笔记" scheme="https://cshihong.github.io/tags/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="Linux命令" scheme="https://cshihong.github.io/tags/Linux%E5%91%BD%E4%BB%A4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux系统日常管理</title>
-    <link href="https://cshihong.github.io/2018/07/03/Linux%E7%B3%BB%E7%BB%9F%E6%97%A5%E5%B8%B8%E7%AE%A1%E7%90%86/"/>
-    <id>https://cshihong.github.io/2018/07/03/Linux系统日常管理/</id>
-    <published>2018-07-03T13:08:53.000Z</published>
-    <updated>2018-07-05T14:13:55.423Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;监控系统的状态：&quot;&gt;&lt;a href=&quot;#监控系统的状态：&quot; class=&quot;headerlink&quot; title=&quot;监控系统的状态：&quot;&gt;&lt;/a&gt;监控系统的状态：&lt;/h2&gt;&lt;h3 id=&quot;w：查看当前系统负载：&quot;&gt;&lt;a href=&quot;#w：查看当前系统负载：&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="Linux" scheme="https://cshihong.github.io/categories/Linux/"/>
-    
-    
-      <category term="Linux学习笔记， Linux命令" scheme="https://cshihong.github.io/tags/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%8C-Linux%E5%91%BD%E4%BB%A4/"/>
     
   </entry>
   
