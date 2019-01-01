@@ -23,6 +23,10 @@
 
 
 
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
 
 
 
@@ -85,17 +89,19 @@
 <link href="/css/main.css?v=6.6.0" rel="stylesheet" type="text/css">
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.6.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon.ico?v=6.6.0">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.6.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico?v=6.6.0">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.6.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico?v=6.6.0">
 
 
-  <link rel="mask-icon" href="/images/logo.svg?v=6.6.0" color="#222">
+  <link rel="mask-icon" href="/favicon.ico?v=6.6.0" color="#222">
 
+
+  <link rel="manifest" href="/images/favicon.ico">
 
 
 
@@ -277,7 +283,7 @@
         
         
           
-          <li class="menu-item menu-item-about">
+          <li class="menu-item menu-item-categories">
 
     
     
@@ -287,7 +293,7 @@
 
     
 
-    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
 
   </li>
         
@@ -311,23 +317,6 @@
         
         
           
-          <li class="menu-item menu-item-categories">
-
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
-
-  </li>
-        
-        
-        
-          
           <li class="menu-item menu-item-archives">
 
     
@@ -339,6 +328,23 @@
     
 
     <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
 
   </li>
 
@@ -403,6 +409,176 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://cshihong.github.io/2017/11/14/MUX-VLAN/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="曹世宏">
+      <meta itemprop="description" content="你的责任就是你的方向，你的经历就是你的资本，你的性格就是你的命运。">
+      <meta itemprop="image" content="/images/touxiang.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="曹世宏的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2017/11/14/MUX-VLAN/" class="post-title-link" itemprop="https://cshihong.github.io/page/14/index.html">MUX VLAN</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2017-11-14 15:08:25 / 修改时间：19:04:58" itemprop="dateCreated datePublished" datetime="2017-11-14T15:08:25+08:00">2017-11-14</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/路由交换/" itemprop="url" rel="index"><span itemprop="name">路由交换</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          MUX VLAN简介：产生背景：MUX VLAN（Multiplex VLAN）提供了一种通过VLAN进行网络资源控制的机制。
+例如，在企业网络中，企业员工和企业客户可以访问企业的服务器。对于企业来说，希望企业内部员工之间可以互相交流，而企业客户之间是隔离的，不能够互相访问。
+为了实现所有用户都可访问企业服务器，可通过配置VLAN间通信实现。如果企业规模很大，拥有大量的用户，那么就要为不能互相访问的用户都分配VLAN，这不但需要耗费大量的VLAN ID，还增加了网络管理者的工作量同时也增加了维护
+          ...
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2017/11/14/MUX-VLAN/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
     
       
 
@@ -523,7 +699,7 @@
         
           
           VLAN聚合简介：VLAN聚合（VLAN Aggregation，也称Super VLAN）指在一个物理网络内，用多个VLAN（称为Sub-VLAN）隔离广播域，并将这些Sub-VLAN聚合成一个逻辑的VLAN（称为Super-VLAN），这些Sub-VLAN使用同一个IP子网和缺省网关。
-通过引入Super-VLAN和Sub-VLAN的概念，使每个Sub-VLAN对应一个广播域，并让多个Sub-
+通过引入Super-VLAN和Sub-VLAN的概念，使每个Sub-VLAN对应一个广播域，并让多个Sub-VLAN和一个Super-VLAN关联，只给Super-VLAN分配一个IP子网，所有Sub-VLA
           ...
           <!--noindex-->
           
@@ -718,7 +894,11 @@ VLAN配置任务概览：
 
 
 配置通过VLANIF实现VLAN间互访
-划分VLAN后，不同VLAN的用户不能直接互通。不同VLAN的用户如果有互通需求，可通过配置VLANIF接口实现VLAN间的三
+划分VLAN后，不同VLAN的用户不能直接互通。不同VLAN的用户如果有互通需求，可通过配置VLANIF接口实现VLAN间的三层互通。
+
+
+配置通过流策略实现VLAN内隔离
+划分VLAN后，同一VLAN的用户可以直接互通，同一
           ...
           <!--noindex-->
           
@@ -899,7 +1079,7 @@ VLAN配置任务概览：
         
           
           VLAN简介定义：VLAN（Virtual Local Area Network）即虚拟局域网，是将一个物理的LAN在逻辑上划分成多个广播域的通信技术。VLAN内的主机间可以直接通信，而VLAN间不能直接通信，从而将广播报文限制在一个VLAN内。
-目的：以太网是一种基于CSMA/CD（Carrier Sense Multiple Access/Collision Detection）的共享通讯介质
+目的：以太网是一种基于CSMA/CD（Carrier Sense Multiple Access/Collision Detection）的共享通讯介质的数据网络通讯技术。当主机数目较多时会导致冲突严重、广播泛滥、性能显著下降甚至造成网络不可用等问题。
           ...
           <!--noindex-->
           
@@ -1071,7 +1251,8 @@ VLAN配置任务概览：
 stdarg.h是C语言中C标准函数库的头文件，stdarg是由standard（标准） arguments（参数）简化而来，主要目的为让函数能够接收可变参数。C++的cstdarg头文件中也提供这样的功能；虽然与C的头文件是兼容的，但是也有冲突存在。
 
 
-&lt; cstdarg &gt;(stdarg.h)。变量参数处理。此标头定义宏以访问未命名参数列表的各个参数，调用
+&lt; cstdarg &gt;(stdarg.h)。变量参数处理。此标头定义宏以访问未命名参数列表的各个参数，调用的函数不知道这些参数的数量和类型。
+函数可以接受不同数量的附加参数，而不需要相应的参数声明，方法是在
           ...
           <!--noindex-->
           
@@ -1257,7 +1438,8 @@ stdarg.h是C语言中C标准函数库的头文件，stdarg是由standard（标�
 数组元素的下标一般具有固定的上界和下界,即数组一旦被定义,它的维数和维界就不再改变｡
 数组的基本操作比较简单,除了结构的初始化和销毁之外,只有存取元素和修改元素值的操作｡
 
-有关stdarg.h头文
+有关stdarg.h头文件的使用请点击：stdarg.h基本简介
+数组的基本函数实现：base.h1234567891011
           ...
           <!--noindex-->
           
@@ -1438,7 +1620,7 @@ stdarg.h是C语言中C标准函数库的头文件，stdarg是由standard（标�
         
           
           配置OSPF的基本功能创建OSPF进程：一台路由器如果要运行OSPF协议，必须存在Router ID。路由器的Router ID是一个32比特无符号整数，是一台路由器在自治系统中的唯一标识。为保证OSPF运行的稳定性，在进行网络规划时应该确定Router ID的划分并手工配置。
-12345ospf [ process-id | router-id router-id | vpn-instance 
+12345ospf [ process-id | router-id router-id | vpn-instance vpn-instance-name //启动OSPF进程，进入OSPF视图例如：ospf 1 rou
           ...
           <!--noindex-->
           
@@ -1638,7 +1820,7 @@ Version
 
 Type
 1字节
-类型，OSPF报文的类型，
+类型，OSPF报文的类型，有下面几种类型：1：Hello报文；2：DD报文；3：LSR报文；4：LSU报文；5：LSAck报文
           ...
           <!--noindex-->
           
@@ -1825,7 +2007,8 @@ Type
 
 手动设置.
 哪些条那件会影响OSPF的邻居建立？
-hello interval 和 dead interval 不一致。(1)如果只调整hello interval，dead interval也会随着改变。(2)如果只调整dead int
+hello interval 和 dead interval 不一致。(1)如果只调整hello interval，dead interval也会随着改变。(2)如果只调整dead interval ，hello interval 不会自动改。配置：需要在接口下修改。
+网络类型不一致。（
           ...
           <!--noindex-->
           
@@ -2008,181 +2191,12 @@ hello interval 和 dead interval 不一致。(1)如果只调整hello interval，
           [TOC]
 OSPF简介OSPF定义：开放式最短路径优先OSPF（Open Shortest Path First）是IETF组织开发的一个基于链路状态的内部网关协议（Interior Gateway Protocol）。
 目前针对IPv4协议使用的是OSPF Version 2（RFC2328）；针对IPv6协议使用OSPF Version 3（RFC2740）。
-OSPF目的：在OSPF出现前
+OSPF目的：在OSPF出现前，网络上广泛使用RIP（Routing Information Protocol）作为内部网关协议。
           ...
           <!--noindex-->
           
             <div class="post-button text-center">
               <a class="btn" href="/2017/10/19/OSPF基础内容/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://cshihong.github.io/2017/10/16/字符串的基本操作/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="曹世宏">
-      <meta itemprop="description" content="你的责任就是你的方向，你的经历就是你的资本，你的性格就是你的命运。">
-      <meta itemprop="image" content="/images/touxiang.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="曹世宏的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2017/10/16/字符串的基本操作/" class="post-title-link" itemprop="https://cshihong.github.io/page/14/index.html">字符串的基本操作</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2017-10-16 23:36:55 / 修改时间：23:55:40" itemprop="dateCreated datePublished" datetime="2017-10-16T23:36:55+08:00">2017-10-16</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/数据结构/" itemprop="url" rel="index"><span itemprop="name">数据结构</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          串的定义：字符串或串(String)是由数字、字母、下划线组成的一串字符。一般记为 s=“a1a2···an”(n&gt;=0)。它是编程语言中表示文本的数据类型。在程序设计中，字符串（string）为符号或数值的一个连续序列，如符号串（一串字符）或二进制数字串（一串二进制数字）。
-通常以串的整体作为操作对象，如：在串中查找某个子串、求取一个子串、在串的某个位置上插入一个子串以及删除一个子串等。两
-          ...
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2017/10/16/字符串的基本操作/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -2276,7 +2290,7 @@ OSPF目的：在OSPF出现前
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">167</span>
+                    <span class="site-state-item-count">168</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -2532,7 +2546,9 @@ OSPF目的：在OSPF出现前
                     
                       
                     
-                    <span class="site-state-item-count">95</span>
+                      
+                    
+                    <span class="site-state-item-count">96</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -2599,6 +2615,15 @@ OSPF目的：在OSPF出现前
             </div>
           
 
+          
+             <div class="cc-license motion-element" itemprop="license">
+              
+                
+              
+              
+              
+              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+             </div>
           
 
           
@@ -2671,7 +2696,7 @@ OSPF目的：在OSPF出现前
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2017 – <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; 2017 – <span itemprop="copyrightYear">2019</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
@@ -2687,11 +2712,7 @@ OSPF目的：在OSPF出现前
 
 
 
-  <span class="post-meta-divider">|</span>
 
-
-
-  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v6.6.0</div>
 
 
 
@@ -2739,36 +2760,13 @@ OSPF目的：在OSPF出现前
     
 
     
-
-    
-      <div>
-        
-  <script>
-    window._bd_share_config = {
-      "common": {
-        "bdText": "",
-        "bdMini": "1",
-        "bdMiniList": false,
-        "bdPic": ""
-      },
-      "image": {
-        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
-        "viewText": "分享到：",
-        "viewSize": "16"
-      },
-      "slide": {
-        "bdImg": "5",
-        "bdPos": "left",
-        "bdTop": "100"
-      }
-    }
-  </script>
-
-<script>
-  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
-</script>
-
+      <div id="needsharebutton-float">
+        <span class="btn">
+          <i class="fa fa-share-alt" aria-hidden="true"></i>
+        </span>
       </div>
+    
+
     
 
     
@@ -3226,10 +3224,46 @@ OSPF目的：在OSPF出现前
 
   
   
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+
+  <script>
+    
+      pbOptions = {};
+      
+          pbOptions.iconStyle = "box";
+      
+          pbOptions.boxForm = "horizontal";
+      
+          pbOptions.position = "bottomCenter";
+      
+          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+      flOptions = {};
+      
+          flOptions.iconStyle = "box";
+      
+          flOptions.boxForm = "horizontal";
+      
+          flOptions.position = "middleRight";
+      
+          flOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-float', flOptions);
+    
+  </script>
 
   
 
   
+
+  
+  <script src="/js/src/js.cookie.js?v=6.6.0"></script>
+  <script src="/js/src/scroll-cookie.js?v=6.6.0"></script>
+
 
   
 

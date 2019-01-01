@@ -23,6 +23,10 @@
 
 
 
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
 
 
 
@@ -85,17 +89,19 @@
 <link href="/css/main.css?v=6.6.0" rel="stylesheet" type="text/css">
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.6.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon.ico?v=6.6.0">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.6.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico?v=6.6.0">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.6.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico?v=6.6.0">
 
 
-  <link rel="mask-icon" href="/images/logo.svg?v=6.6.0" color="#222">
+  <link rel="mask-icon" href="/favicon.ico?v=6.6.0" color="#222">
 
+
+  <link rel="manifest" href="/images/favicon.ico">
 
 
 
@@ -277,7 +283,7 @@
         
         
           
-          <li class="menu-item menu-item-about">
+          <li class="menu-item menu-item-categories">
 
     
     
@@ -287,7 +293,7 @@
 
     
 
-    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
 
   </li>
         
@@ -311,23 +317,6 @@
         
         
           
-          <li class="menu-item menu-item-categories">
-
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
-
-  </li>
-        
-        
-        
-          
           <li class="menu-item menu-item-archives">
 
     
@@ -339,6 +328,23 @@
     
 
     <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
 
   </li>
 
@@ -403,6 +409,178 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://cshihong.github.io/2018/07/02/Linux下的shell脚本/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="曹世宏">
+      <meta itemprop="description" content="你的责任就是你的方向，你的经历就是你的资本，你的性格就是你的命运。">
+      <meta itemprop="image" content="/images/touxiang.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="曹世宏的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2018/07/02/Linux下的shell脚本/" class="post-title-link" itemprop="https://cshihong.github.io/page/3/index.html">Linux下的shell脚本</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-07-02 14:45:03 / 修改时间：17:23:49" itemprop="dateCreated datePublished" datetime="2018-07-02T14:45:03+08:00">2018-07-02</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          shell脚本的基本结构：shell脚本示例：
+123456789[root@localhost ~]# cd /usr/local/sbin/[root@localhost sbin]# vim first.sh#! /bin/bash## This is my first shell script.## Writen by Cao 2018-7-2.dateecho "Hello world!"
+shell脚本用注意事项：
+
+Shell脚本通常都是以.sh 为后缀名的**，这个并不是说不带.
+          ...
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2018/07/02/Linux下的shell脚本/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
     
       
 
@@ -523,7 +701,8 @@
         
           
           正则表达式：在计算机科学中，正则表达式是这样解释的：它是指一个用来描述或者匹配一系列符合某个句法规则的字符串的单个字符串。在很多文本编辑器或其他工具里，正则表达式通常被用来检索和/或替换那些符合某个模式的文本内容。许多程序设计语言都支持利用正则表达式进行字符串操作。对于系统管理员来讲，正则表达式贯穿在日常运维工作中，无论是查找某个文档，抑或查询某个日志文件分析其内容，都会用到正则表达式。
-在lin
+在linux中，用到正则表达的常用工具有：grep，sed，awk等。
+grep/egrep:grep （缩
           ...
           <!--noindex-->
           
@@ -704,7 +883,7 @@
         
           
           什么是shell：shell就是系统跟计算机硬件交互时使用的中间介质，它只是系统的一个工具。实际上，在shell和计算机硬件之间还有一层东西那就是系统内核了。用户直接面对的不是计算机硬件而是shell，用户把指令告诉shell，然后shell再传输给系统内核，接着内核再去支配计算机硬件去执行各种操作。
-linux发布版本（Redhat/CentOS）系统默认安装的shell叫做bash，即Bour
+linux发布版本（Redhat/CentOS）系统默认安装的shell叫做bash，即Bourne Again Shell，它是sh（Bourne Shell）的增强版本。Bourn Shell
           ...
           <!--noindex-->
           
@@ -884,7 +1063,7 @@ linux发布版本（Redhat/CentOS）系统默认安装的shell叫做bash，即Bo
       
         
           
-          RPM工具使用方法：RPM是 “Redhat Package Manager” 的缩写，根据名字也能猜到这是Redhat公司开发出来的。RPM 是以一种数据库记录的方式来将所需要的套件安装到Linux 主机的一套管理程序。也就是说，linux系统中存在着一个关于RPM的数据库，它记录了安装的包以及包与包之间依赖相关性。RPM包是预先在linux机器上编译好并打包好的文件，安装起来非常快捷。但是也有
+          RPM工具使用方法：RPM是 “Redhat Package Manager” 的缩写，根据名字也能猜到这是Redhat公司开发出来的。RPM 是以一种数据库记录的方式来将所需要的套件安装到Linux 主机的一套管理程序。也就是说，linux系统中存在着一个关于RPM的数据库，它记录了安装的包以及包与包之间依赖相关性。RPM包是预先在linux机器上编译好并打包好的文件，安装起来非常快捷。但是也有一些缺点，比如安装的环境必须与编译时的环境一致或者相当；包与包之间存在着相互依赖的情况；卸载包时需要
           ...
           <!--noindex-->
           
@@ -1056,7 +1235,8 @@ linux发布版本（Redhat/CentOS）系统默认安装的shell叫做bash，即Bo
 在linux下最常见的压缩文件通常都是以.tar.gz 为结尾的，除此之外还有.tar, .gz, .bz2, .zip等等。linux系统中的后缀名其实要不要无所谓，但是对于压缩文件来讲必须要带上。这是为了判断压缩文件是由哪种压缩工具所压缩，而后才能去正确的解压缩这个文件。以下介绍常见的后缀名所对应的压缩工具。
 
 .gz ：gzip 压缩工具压缩的文件
-.bz2： bz
+.bz2： bzip2 压缩工具压缩的文件
+.tar： tar 打包程序打包的文件(tar并没有压缩功能，只是把一个
           ...
           <!--noindex-->
           
@@ -1228,7 +1408,9 @@ linux发布版本（Redhat/CentOS）系统默认安装的shell叫做bash，即Bo
 但是目前我们使用比较多的是 vim 编辑器。
 vim 具有程序编辑的能力，可以主动的以字体颜色辨别语法的正确性，方便程序设计。
 vi 和vim最大的区别就是编辑一个文本时，vi不会显示颜色，而vim会显示颜色。显示颜色更易于用户进行编辑。
-vim的模式：vim的三种模式：一般模式
+vim的模式：vim的三种模式：一般模式、编辑模式、命令模式。
+
+一般模式： 当您vim filename 编辑一个文件时，一进入该文件就是
           ...
           <!--noindex-->
           
@@ -1420,7 +1602,11 @@ df常用的选项有：
 
 
 图：df常用参数使用示例
-命令du：du” 用来查看某个目录或文件所占
+命令du：du” 用来查看某个目录或文件所占空间大小.
+语法 : du [-abckmsh] [文件或者目录名]
+ 常用的参数有：
+
+-a（al
           ...
           <!--noindex-->
           
@@ -1596,7 +1782,10 @@ SMALLINT: 2个字节
 INT: 4个字节
 BIGINT: 8个字节
 BOOLEAN: TRUE/FALSE
-F
+FLOAT: 4个字节，单精度浮点型
+DOUBLE: 8个字节，双精度浮点型STRING 字符串
+
+b
           ...
           <!--noindex-->
           
@@ -1770,7 +1959,7 @@ F
 图：passwd前10行内容示例
 ‘/etc/passwd’ 由 ‘:’ 分割成7个字段，每个字段的具体含义是:
 
-用户名（如第一行中的root就是用户名），代表用户账号的字符串。用户名字符可
+用户名（如第一行中的root就是用户名），代表用户账号的字符串。用户名字符可以是大小写字母、数字、减号（不能出现在首位）、点以及下划线，其他字符不合法。虽然用户名中可以出现点，
           ...
           <!--noindex-->
           
@@ -1951,195 +2140,13 @@ F
         
           
           绝对路径和相对路径：绝对路径：路径的写法一定由根目录 ‘/’写起，例如 /usr/local/mysql 这就是绝对路径。
-相对路径：路径的写法不是由根目录 ‘/’写起，例如，首先用户进入到/, 然后再进入到home ，命令为 cd /home 然后 cd  test 此时用户所在的路径为 /home/test 第一个cd命令后跟 ‘/home’ 第二个cd命令后跟 ‘test’, 并没有斜杠，这
+相对路径：路径的写法不是由根目录 ‘/’写起，例如，首先用户进入到/, 然后再进入到home ，命令为 cd /home 然后 cd  test 此时用户所在的路径为 /home/test 第一个cd命令后跟 ‘/home’ 第二个cd命令后跟 ‘test’, 并没有斜杠，这个 ‘test’ 是相对于 ‘/home’ 目录来讲的，所以叫做相对路径。
+环境变量PATH： 通俗
           ...
           <!--noindex-->
           
             <div class="post-button text-center">
               <a class="btn" href="/2018/06/16/Linux文件与目录管理/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://cshihong.github.io/2018/06/13/MapReduce编程实践/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="曹世宏">
-      <meta itemprop="description" content="你的责任就是你的方向，你的经历就是你的资本，你的性格就是你的命运。">
-      <meta itemprop="image" content="/images/touxiang.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="曹世宏的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2018/06/13/MapReduce编程实践/" class="post-title-link" itemprop="https://cshihong.github.io/page/3/index.html">MapReduce编程实践</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2018-06-13 21:28:57" itemprop="dateCreated datePublished" datetime="2018-06-13T21:28:57+08:00">2018-06-13</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2018-06-17 09:09:12" itemprop="dateModified" datetime="2018-06-17T09:09:12+08:00">2018-06-17</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/大数据/" itemprop="url" rel="index"><span itemprop="name">大数据</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          编程环境准备：
-要在 Eclipse 上编译和运行 MapReduce 程序，需要安装 hadoop-eclipse-plugin，可下载 Github 上的 hadoop2x-eclipse-plugin。
-
-下载后，将 release 中的 hadoop-eclipse-kepler-plugin-2.6.0.jar 复制到 Eclipse 安装目录的 plugins 文件夹中，运行 ecli
-          ...
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2018/06/13/MapReduce编程实践/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -2233,7 +2240,7 @@ F
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">167</span>
+                    <span class="site-state-item-count">168</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -2489,7 +2496,9 @@ F
                     
                       
                     
-                    <span class="site-state-item-count">95</span>
+                      
+                    
+                    <span class="site-state-item-count">96</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -2556,6 +2565,15 @@ F
             </div>
           
 
+          
+             <div class="cc-license motion-element" itemprop="license">
+              
+                
+              
+              
+              
+              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+             </div>
           
 
           
@@ -2628,7 +2646,7 @@ F
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2017 – <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; 2017 – <span itemprop="copyrightYear">2019</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
@@ -2644,11 +2662,7 @@ F
 
 
 
-  <span class="post-meta-divider">|</span>
 
-
-
-  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v6.6.0</div>
 
 
 
@@ -2696,36 +2710,13 @@ F
     
 
     
-
-    
-      <div>
-        
-  <script>
-    window._bd_share_config = {
-      "common": {
-        "bdText": "",
-        "bdMini": "1",
-        "bdMiniList": false,
-        "bdPic": ""
-      },
-      "image": {
-        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
-        "viewText": "分享到：",
-        "viewSize": "16"
-      },
-      "slide": {
-        "bdImg": "5",
-        "bdPos": "left",
-        "bdTop": "100"
-      }
-    }
-  </script>
-
-<script>
-  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
-</script>
-
+      <div id="needsharebutton-float">
+        <span class="btn">
+          <i class="fa fa-share-alt" aria-hidden="true"></i>
+        </span>
       </div>
+    
+
     
 
     
@@ -3183,10 +3174,46 @@ F
 
   
   
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+
+  <script>
+    
+      pbOptions = {};
+      
+          pbOptions.iconStyle = "box";
+      
+          pbOptions.boxForm = "horizontal";
+      
+          pbOptions.position = "bottomCenter";
+      
+          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+      flOptions = {};
+      
+          flOptions.iconStyle = "box";
+      
+          flOptions.boxForm = "horizontal";
+      
+          flOptions.position = "middleRight";
+      
+          flOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-float', flOptions);
+    
+  </script>
 
   
 
   
+
+  
+  <script src="/js/src/js.cookie.js?v=6.6.0"></script>
+  <script src="/js/src/scroll-cookie.js?v=6.6.0"></script>
+
 
   
 

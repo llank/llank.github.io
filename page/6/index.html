@@ -23,6 +23,10 @@
 
 
 
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
 
 
 
@@ -85,17 +89,19 @@
 <link href="/css/main.css?v=6.6.0" rel="stylesheet" type="text/css">
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.6.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon.ico?v=6.6.0">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.6.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico?v=6.6.0">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.6.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico?v=6.6.0">
 
 
-  <link rel="mask-icon" href="/images/logo.svg?v=6.6.0" color="#222">
+  <link rel="mask-icon" href="/favicon.ico?v=6.6.0" color="#222">
 
+
+  <link rel="manifest" href="/images/favicon.ico">
 
 
 
@@ -277,7 +283,7 @@
         
         
           
-          <li class="menu-item menu-item-about">
+          <li class="menu-item menu-item-categories">
 
     
     
@@ -287,7 +293,7 @@
 
     
 
-    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
 
   </li>
         
@@ -311,23 +317,6 @@
         
         
           
-          <li class="menu-item menu-item-categories">
-
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
-
-  </li>
-        
-        
-        
-          
           <li class="menu-item menu-item-archives">
 
     
@@ -339,6 +328,23 @@
     
 
     <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
 
   </li>
 
@@ -403,6 +409,177 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://cshihong.github.io/2018/05/11/Yarn技术原理/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="曹世宏">
+      <meta itemprop="description" content="你的责任就是你的方向，你的经历就是你的资本，你的性格就是你的命运。">
+      <meta itemprop="image" content="/images/touxiang.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="曹世宏的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2018/05/11/Yarn技术原理/" class="post-title-link" itemprop="https://cshihong.github.io/page/6/index.html">Yarn技术原理</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-05-11 10:34:07 / 修改时间：22:43:15" itemprop="dateCreated datePublished" datetime="2018-05-11T10:34:07+08:00">2018-05-11</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/大数据/" itemprop="url" rel="index"><span itemprop="name">大数据</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          Yarn的基本介绍Yarn基本定义：Apache Hadoop YARN（Yet Another Resource Negotiator,另一种资源协调者）是一种新的Hadoop资源管理器，它是一个通用资源管理系统，可为上层应用提供统一的资源管理和调度，它的引入为集群在利用率、资源统一管理和数据共享等方面带来的巨大的好处。
+YARN在产品中的位置：
+图：Yarn在FusionInsight产品中的位置
+YARN是Hadoop2.0中的资源管理系统，它是一个通用的资源管理模块，可为各类应用程序提供
+          ...
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2018/05/11/Yarn技术原理/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
     
       
 
@@ -527,7 +704,10 @@
 
 MapReduce是一个基于集群的高性能并行计算平台（Cluster Infrastructure）。
 MapReduce是一个并行计算与运行软件框架（Software Framework）。
-MapReduce是一个并行程序设计模型与方法（Programm
+MapReduce是一个并行程序设计模型与方法（Programming Model &amp; Methodology）。
+
+MapReduce模型简介：
+MapR
           ...
           <!--noindex-->
           
@@ -714,7 +894,9 @@ MapReduce是一个并行程序设计模型与方法（Programm
 高吞吐量：为大量数据访问的应用提供高可用吞吐量支持。
 大文件存储：支持存储TB-PB级别的数据。
 
-HDFS适合
+HDFS适合做：大文件存储、流式数据访问。
+HDFS不适合做：大量小文件、随机写入、低延迟读取。
+HDFS应用场
           ...
           <!--noindex-->
           
@@ -895,7 +1077,9 @@ HDFS适合
         
           
           Java日期与时间的处理Date类：在 JDK 1.1 之前，类 Date 有两个其他的函数。它允许把日期解释为年、月、日、小时、分钟和秒值。它也允许格式化和解析日期字符串。不过，这些函数的 API 不易于实现国际化。从 JDK 1.1开始，应该使用 Calendar 类实现日期和时间字段之间转换，使用 DateFormat 类来格式化和解析日期字符串。Date 中的相应方法已废弃。 
-在类 Da
+在类 Date 所有可以接受或返回年、月、日期、小时、分钟和秒值的方法中，将使用下面的表示形式： 
+
+年份 y
           ...
           <!--noindex-->
           
@@ -1065,7 +1249,7 @@ HDFS适合
           
           双机热备技术原理双机热备技术产生的原因：传统组网中，只有一台防火墙部署在出口，当防火墙出现故障后，内部网络中所有以防火墙作为默认网关的主机与外部网络之间的通讯中断，通讯可靠性无法保证。
 双机热备份技术的出现改变了可靠性难以保证的尴尬状态，通过在网络出口位置部署两台或多台网关设备，保证了内部网络于外部网络之间的通讯畅通。
-USG防火墙作为安全设备，一般会部署在需要保护的网络和不受保护的网络之间，即位
+USG防火墙作为安全设备，一般会部署在需要保护的网络和不受保护的网络之间，即位于业务接口点上。在这种业务点上，如果仅仅使用一台USG防火墙设备，无论其可靠性多高，系统都可能会承受
           ...
           <!--noindex-->
           
@@ -1249,7 +1433,8 @@ USG防火墙作为安全设备，一般会部署在需要保护的网络和不�
 实现包过滤的核心技术是访问控制列表。
 
 包过滤作为一种网络安全保护机制，主要用于对网络中各种不同的流量是否转发做一个最基本的控制。
-传统的包过滤防火墙对于需要转发的报文，会先获取报文头信息，包括报文的源IP地址、目的IP地址、IP层所承载的上层协议的协议号、源端口号和
+传统的包过滤防火墙对于需要转发的报文，会先获取报文头信息，包括报文的源IP地址、目的IP地址、IP层所承载的上层协议的协议号、源端口号和目的端口号等，然后和预先设定的过滤规则进行匹配，并根据匹配结果对报文采取转发或丢弃处理。
+包过滤防火
           ...
           <!--noindex-->
           
@@ -1429,7 +1614,9 @@ AC基础配置
 
 WLAN业务配置示例实验拓扑：
 图：WLAN实验拓扑
-实验要求：如上图，两个AP需要释放两个信号，huawei-1和huawei-2，分别属于不同的网段。AP采用直接转发模式。同时上网需要认证，采用rad
+实验要求：如上图，两个AP需要释放两个信号，huawei-1和huawei-2，分别属于不同的网段。AP采用直接转发模式。同时上网需要认证，采用radius结合dot1x认证。无线终端通过连接无线信号，可以访问外网1.1.1.1。
+配置思路：
+配置接
           ...
           <!--noindex-->
           
@@ -1604,7 +1791,7 @@ WLAN业务配置示例实验拓扑：
 企业网络组网模式：
 
 图：企业网络的组网模式
-在企业网络或者其他大型场所中，所需要的无线覆盖范围比较大，若采用胖AP组网，则可以将AP接入到接入交
+在企业网络或者其他大型场所中，所需要的无线覆盖范围比较大，若采用胖AP组网，则可以将AP接入到接入交换机端，数据通过交换机的转发，到达企业核心网。在企业核心网也可以架设起网管系统，便于对AP的统一管理
           ...
           <!--noindex-->
           
@@ -1781,7 +1968,9 @@ WLAN业务配置示例实验拓扑：
 
 所谓的胖AP，典型的例子为无线路由器。无线路由器与纯AP不同，除无线接入功能外，一般具备WAN、LAN两个接口，多支持DHCP服务器、DNS和MAC地址克隆，以及VPN接入、防火墙等安全功能。
 瘦AP：
-瘦AP是“代表自身不能单独配置或者使用的
+瘦AP是“代表自身不能单独配置或者使用的无线AP产品，这种产品仅仅是一个WLAN系统的一部分，负责管理安装和操作”。
+
+对于可运营的WLAN
           ...
           <!--noindex-->
           
@@ -1955,185 +2144,13 @@ SSID技术可以将一个无线局域网分为几个需要不同身份验证的�
 
 BSA（Basic Server Area）：BSS的覆盖范围称为基本服务区。
 
-BSS（Bas
+BSS（Basic Service Set）基本服务集：
+是802.11网络的基本组件，由一组相互通信的工作站所构
           ...
           <!--noindex-->
           
             <div class="post-button text-center">
               <a class="btn" href="/2018/04/25/WLAN拓扑介绍/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://cshihong.github.io/2018/04/16/SDN基本概述/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="曹世宏">
-      <meta itemprop="description" content="你的责任就是你的方向，你的经历就是你的资本，你的性格就是你的命运。">
-      <meta itemprop="image" content="/images/touxiang.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="曹世宏的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2018/04/16/SDN基本概述/" class="post-title-link" itemprop="https://cshihong.github.io/page/6/index.html">SDN基本概述</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2018-04-16 09:31:14 / 修改时间：13:06:18" itemprop="dateCreated datePublished" datetime="2018-04-16T09:31:14+08:00">2018-04-16</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/路由交换/" itemprop="url" rel="index"><span itemprop="name">路由交换</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          SDN的概念与体系结构传统网络数据控制与转发：传统网络是分布式控制的架构，每台设备都包含独立的控制平面，数据平面。
-传统网络是分布式控制的架构：
-
-这里的分布式控制指在传统IP网络中，用于协议计算的控制平面和报文转发的数据平面位于同一台设备中。
-路由计算和拓扑变化后，每台设备都要重新进行路由计算过程，并称为分布式控制过程。
-在传统IP网络中，每台设备都是独立收集网络信息，独立计算，并且都只关心自己
-          ...
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2018/04/16/SDN基本概述/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -2227,7 +2244,7 @@ BSS（Bas
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">167</span>
+                    <span class="site-state-item-count">168</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -2483,7 +2500,9 @@ BSS（Bas
                     
                       
                     
-                    <span class="site-state-item-count">95</span>
+                      
+                    
+                    <span class="site-state-item-count">96</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -2550,6 +2569,15 @@ BSS（Bas
             </div>
           
 
+          
+             <div class="cc-license motion-element" itemprop="license">
+              
+                
+              
+              
+              
+              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+             </div>
           
 
           
@@ -2622,7 +2650,7 @@ BSS（Bas
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2017 – <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; 2017 – <span itemprop="copyrightYear">2019</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
@@ -2638,11 +2666,7 @@ BSS（Bas
 
 
 
-  <span class="post-meta-divider">|</span>
 
-
-
-  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v6.6.0</div>
 
 
 
@@ -2690,36 +2714,13 @@ BSS（Bas
     
 
     
-
-    
-      <div>
-        
-  <script>
-    window._bd_share_config = {
-      "common": {
-        "bdText": "",
-        "bdMini": "1",
-        "bdMiniList": false,
-        "bdPic": ""
-      },
-      "image": {
-        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
-        "viewText": "分享到：",
-        "viewSize": "16"
-      },
-      "slide": {
-        "bdImg": "5",
-        "bdPos": "left",
-        "bdTop": "100"
-      }
-    }
-  </script>
-
-<script>
-  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
-</script>
-
+      <div id="needsharebutton-float">
+        <span class="btn">
+          <i class="fa fa-share-alt" aria-hidden="true"></i>
+        </span>
       </div>
+    
+
     
 
     
@@ -3177,10 +3178,46 @@ BSS（Bas
 
   
   
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+
+  <script>
+    
+      pbOptions = {};
+      
+          pbOptions.iconStyle = "box";
+      
+          pbOptions.boxForm = "horizontal";
+      
+          pbOptions.position = "bottomCenter";
+      
+          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+      flOptions = {};
+      
+          flOptions.iconStyle = "box";
+      
+          flOptions.boxForm = "horizontal";
+      
+          flOptions.position = "middleRight";
+      
+          flOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-float', flOptions);
+    
+  </script>
 
   
 
   
+
+  
+  <script src="/js/src/js.cookie.js?v=6.6.0"></script>
+  <script src="/js/src/scroll-cookie.js?v=6.6.0"></script>
+
 
   
 

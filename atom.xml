@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://cshihong.github.io/"/>
-  <updated>2018-12-18T11:39:24.086Z</updated>
+  <updated>2019-01-01T10:04:43.013Z</updated>
   <id>https://cshihong.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>位运算的奇巧淫技</title>
+    <link href="https://cshihong.github.io/2018/12/31/%E4%BD%8D%E8%BF%90%E7%AE%97%E7%9A%84%E5%A5%87%E5%B7%A7%E6%B7%AB%E6%8A%80/"/>
+    <id>https://cshihong.github.io/2018/12/31/位运算的奇巧淫技/</id>
+    <published>2018-12-31T01:14:22.000Z</published>
+    <updated>2019-01-01T10:04:43.013Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;位运算简介&quot;&gt;&lt;a href=&quot;#位运算简介&quot; class=&quot;headerlink&quot; title=&quot;位运算简介&quot;&gt;&lt;/a&gt;位运算简介&lt;/h1&gt;&lt;h2 id=&quot;位运算简介：&quot;&gt;&lt;a href=&quot;#位运算简介：&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="算法" scheme="https://cshihong.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="算法" scheme="https://cshihong.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="位运算" scheme="https://cshihong.github.io/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/"/>
+    
+  </entry>
   
   <entry>
     <title>FTP服务器搭建和配置</title>
@@ -151,7 +179,7 @@
     <link href="https://cshihong.github.io/2018/10/15/DNS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E4%B8%8E%E9%85%8D%E7%BD%AE/"/>
     <id>https://cshihong.github.io/2018/10/15/DNS服务器搭建与配置/</id>
     <published>2018-10-15T13:20:07.000Z</published>
-    <updated>2018-10-16T12:42:55.255Z</updated>
+    <updated>2018-12-31T01:17:29.507Z</updated>
     
     <summary type="html">
     
@@ -168,7 +196,9 @@
       <category term="Linux" scheme="https://cshihong.github.io/categories/Linux/"/>
     
     
-      <category term="Linux笔记，Linux服务" scheme="https://cshihong.github.io/tags/Linux%E7%AC%94%E8%AE%B0%EF%BC%8CLinux%E6%9C%8D%E5%8A%A1/"/>
+      <category term="Linux笔记" scheme="https://cshihong.github.io/tags/Linux%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="Linux服务" scheme="https://cshihong.github.io/tags/Linux%E6%9C%8D%E5%8A%A1/"/>
     
   </entry>
   
@@ -540,37 +570,6 @@
     
     
       <category term="Linux学习笔记， Linux命令" scheme="https://cshihong.github.io/tags/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%8C-Linux%E5%91%BD%E4%BB%A4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux下的shell脚本</title>
-    <link href="https://cshihong.github.io/2018/07/02/Linux%E4%B8%8B%E7%9A%84shell%E8%84%9A%E6%9C%AC/"/>
-    <id>https://cshihong.github.io/2018/07/02/Linux下的shell脚本/</id>
-    <published>2018-07-02T06:45:03.000Z</published>
-    <updated>2018-07-02T09:23:49.158Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;shell脚本的基本结构：&quot;&gt;&lt;a href=&quot;#shell脚本的基本结构：&quot; class=&quot;headerlink&quot; title=&quot;shell脚本的基本结构：&quot;&gt;&lt;/a&gt;shell脚本的基本结构：&lt;/h2&gt;&lt;p&gt;shell脚本示例：&lt;/p&gt;
-&lt;figure
-        
-      
-    
-    </summary>
-    
-      <category term="Linux" scheme="https://cshihong.github.io/categories/Linux/"/>
-    
-    
-      <category term="Linux学习笔记" scheme="https://cshihong.github.io/tags/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="Linux命令" scheme="https://cshihong.github.io/tags/Linux%E5%91%BD%E4%BB%A4/"/>
-    
-      <category term="脚本" scheme="https://cshihong.github.io/tags/%E8%84%9A%E6%9C%AC/"/>
     
   </entry>
   
