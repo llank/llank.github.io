@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://cshihong.github.io/"/>
-  <updated>2019-01-07T08:08:24.206Z</updated>
+  <updated>2019-02-27T04:39:29.681Z</updated>
   <id>https://cshihong.github.io/</id>
   
   <author>
@@ -15,6 +15,64 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>常见排序算法（2）</title>
+    <link href="https://cshihong.github.io/2019/02/26/%E5%B8%B8%E8%A7%81%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%952/"/>
+    <id>https://cshihong.github.io/2019/02/26/常见排序算法2/</id>
+    <published>2019-02-26T13:23:33.000Z</published>
+    <updated>2019-02-27T04:39:29.681Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;hr&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;冒泡排序，插入排序，选择排序，快速排序，希尔排序，归并排序等可参考： &lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="算法" scheme="https://cshihong.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="算法" scheme="https://cshihong.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="排序算法" scheme="https://cshihong.github.io/tags/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>排序算法案例</title>
+    <link href="https://cshihong.github.io/2019/02/25/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E6%A1%88%E4%BE%8B/"/>
+    <id>https://cshihong.github.io/2019/02/25/排序算法案例/</id>
+    <published>2019-02-25T02:25:18.000Z</published>
+    <updated>2019-02-25T09:36:03.807Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;题目：调整数组顺序使奇数位于偶数前面&quot;&gt;&lt;a href=&quot;#题目：调整数组顺序使奇数位于偶数前面&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="算法" scheme="https://cshihong.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="算法" scheme="https://cshihong.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="排序算法" scheme="https://cshihong.github.io/tags/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
   
   <entry>
     <title>快速排序优化及扫描分区法</title>
@@ -514,64 +572,6 @@
       <category term="Java学习笔记" scheme="https://cshihong.github.io/tags/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
       <category term="JSP" scheme="https://cshihong.github.io/tags/JSP/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java学习笔记（7）JSP基础</title>
-    <link href="https://cshihong.github.io/2018/07/28/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%887%EF%BC%89JSP%E5%9F%BA%E7%A1%80/"/>
-    <id>https://cshihong.github.io/2018/07/28/Java学习笔记（7）JSP基础/</id>
-    <published>2018-07-28T06:49:09.000Z</published>
-    <updated>2018-07-29T10:02:25.904Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;JSP简介&quot;&gt;&lt;a href=&quot;#JSP简介&quot; class=&quot;headerlink&quot; title=&quot;JSP简介&quot;&gt;&lt;/a&gt;JSP简介&lt;/h1&gt;&lt;h2 id=&quot;什么是JSP？&quot;&gt;&lt;a href=&quot;#什么是JSP？&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="Java" scheme="https://cshihong.github.io/categories/Java/"/>
-    
-    
-      <category term="Java学习笔记" scheme="https://cshihong.github.io/tags/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="JSP" scheme="https://cshihong.github.io/tags/JSP/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java学习笔记(6)Servlet</title>
-    <link href="https://cshihong.github.io/2018/07/16/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%886%EF%BC%89Servlet/"/>
-    <id>https://cshihong.github.io/2018/07/16/Java学习笔记（6）Servlet/</id>
-    <published>2018-07-16T03:50:55.000Z</published>
-    <updated>2018-07-28T04:05:44.072Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;Servlet简介&quot;&gt;&lt;a href=&quot;#Servlet简介&quot; class=&quot;headerlink&quot; title=&quot;Servlet简介&quot;&gt;&lt;/a&gt;Servlet简介&lt;/h1&gt;&lt;h2 id=&quot;Servlet是什么？&quot;&gt;&lt;a href=&quot;#Servlet是什么？&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="Java" scheme="https://cshihong.github.io/categories/Java/"/>
-    
-    
-      <category term="Java学习笔记" scheme="https://cshihong.github.io/tags/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="Servlet" scheme="https://cshihong.github.io/tags/Servlet/"/>
-    
-      <category term="HTTP" scheme="https://cshihong.github.io/tags/HTTP/"/>
     
   </entry>
   
