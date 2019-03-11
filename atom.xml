@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://cshihong.github.io/"/>
-  <updated>2019-02-27T09:09:05.331Z</updated>
+  <updated>2019-03-11T10:02:49.375Z</updated>
   <id>https://cshihong.github.io/</id>
   
   <author>
@@ -15,6 +15,138 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>防火墙NAT技术</title>
+    <link href="https://cshihong.github.io/2019/03/09/%E9%98%B2%E7%81%AB%E5%A2%99NAT%E6%8A%80%E6%9C%AF/"/>
+    <id>https://cshihong.github.io/2019/03/09/防火墙NAT技术/</id>
+    <published>2019-03-09T05:35:35.000Z</published>
+    <updated>2019-03-11T10:02:49.375Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;防火墙NAT技术简介&quot;&gt;&lt;a href=&quot;#防火墙NAT技术简介&quot; class=&quot;headerlink&quot; title=&quot;防火墙NAT技术简介&quot;&gt;&lt;/a&gt;防火墙NAT技术简介&lt;/h1&gt;&lt;p&gt;NAT（Network Address
+        
+      
+    
+    </summary>
+    
+      <category term="网络安全" scheme="https://cshihong.github.io/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
+    
+    
+      <category term="防火墙" scheme="https://cshihong.github.io/tags/%E9%98%B2%E7%81%AB%E5%A2%99/"/>
+    
+      <category term="NAT" scheme="https://cshihong.github.io/tags/NAT/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>防火墙报文转发流程</title>
+    <link href="https://cshihong.github.io/2019/03/08/%E9%98%B2%E7%81%AB%E5%A2%99%E6%8A%A5%E6%96%87%E8%BD%AC%E5%8F%91%E6%B5%81%E7%A8%8B/"/>
+    <id>https://cshihong.github.io/2019/03/08/防火墙报文转发流程/</id>
+    <published>2019-03-08T08:16:16.000Z</published>
+    <updated>2019-03-08T15:00:05.803Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;防火墙的转发流程&quot;&gt;&lt;a href=&quot;#防火墙的转发流程&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="网络安全" scheme="https://cshihong.github.io/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
+    
+    
+      <category term="防火墙" scheme="https://cshihong.github.io/tags/%E9%98%B2%E7%81%AB%E5%A2%99/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>防火墙工作原理和详解会话表</title>
+    <link href="https://cshihong.github.io/2019/03/07/%E9%98%B2%E7%81%AB%E5%A2%99%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86%E5%92%8C%E8%AF%A6%E8%A7%A3%E4%BC%9A%E8%AF%9D%E8%A1%A8/"/>
+    <id>https://cshihong.github.io/2019/03/07/防火墙工作原理和详解会话表/</id>
+    <published>2019-03-07T11:49:52.000Z</published>
+    <updated>2019-03-08T12:54:06.401Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;防火墙工作原理&quot;&gt;&lt;a href=&quot;#防火墙工作原理&quot; class=&quot;headerlink&quot; title=&quot;防火墙工作原理&quot;&gt;&lt;/a&gt;防火墙工作原理&lt;/h1&gt;&lt;h2 id=&quot;防火墙工作原理：&quot;&gt;&lt;a href=&quot;#防火墙工作原理：&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="网络安全" scheme="https://cshihong.github.io/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
+    
+    
+      <category term="防火墙" scheme="https://cshihong.github.io/tags/%E9%98%B2%E7%81%AB%E5%A2%99/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>算法练习之数学问题</title>
+    <link href="https://cshihong.github.io/2019/03/04/%E7%AE%97%E6%B3%95%E7%BB%83%E4%B9%A0%E4%B9%8B%E6%95%B0%E5%AD%A6%E9%97%AE%E9%A2%98/"/>
+    <id>https://cshihong.github.io/2019/03/04/算法练习之数学问题/</id>
+    <published>2019-03-04T13:21:15.000Z</published>
+    <updated>2019-03-05T10:09:54.808Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;题目：巧用进制，天平称重&quot;&gt;&lt;a href=&quot;#题目：巧用进制，天平称重&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="算法" scheme="https://cshihong.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="算法" scheme="https://cshihong.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>字符串专题算法练习</title>
+    <link href="https://cshihong.github.io/2019/03/01/%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%93%E9%A2%98%E7%AE%97%E6%B3%95%E7%BB%83%E4%B9%A0/"/>
+    <id>https://cshihong.github.io/2019/03/01/字符串专题算法练习/</id>
+    <published>2019-03-01T09:43:18.000Z</published>
+    <updated>2019-03-06T08:44:50.480Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;题目：判断字符串有无重复字符&quot;&gt;&lt;a href=&quot;#题目：判断字符串有无重复字符&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="算法" scheme="https://cshihong.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="算法" scheme="https://cshihong.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
   
   <entry>
     <title>10种排序算法的对比分析</title>
@@ -126,9 +258,9 @@
     
       <category term="算法" scheme="https://cshihong.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
-      <category term="蓝桥杯" scheme="https://cshihong.github.io/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
-    
       <category term="排序" scheme="https://cshihong.github.io/tags/%E6%8E%92%E5%BA%8F/"/>
+    
+      <category term="蓝桥杯" scheme="https://cshihong.github.io/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
     
   </entry>
   
@@ -156,9 +288,9 @@
     
       <category term="算法" scheme="https://cshihong.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
-      <category term="蓝桥杯" scheme="https://cshihong.github.io/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
-    
       <category term="Java编程" scheme="https://cshihong.github.io/tags/Java%E7%BC%96%E7%A8%8B/"/>
+    
+      <category term="蓝桥杯" scheme="https://cshihong.github.io/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
     
   </entry>
   
@@ -186,9 +318,9 @@
     
       <category term="算法" scheme="https://cshihong.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
-      <category term="蓝桥杯" scheme="https://cshihong.github.io/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
-    
       <category term="Java编程" scheme="https://cshihong.github.io/tags/Java%E7%BC%96%E7%A8%8B/"/>
+    
+      <category term="蓝桥杯" scheme="https://cshihong.github.io/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
     
   </entry>
   
@@ -431,147 +563,6 @@
       <category term="Linux笔记" scheme="https://cshihong.github.io/tags/Linux%E7%AC%94%E8%AE%B0/"/>
     
       <category term="Linux服务" scheme="https://cshihong.github.io/tags/Linux%E6%9C%8D%E5%8A%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux下systemctl命令和service、chkconfig命令的区别</title>
-    <link href="https://cshihong.github.io/2018/10/15/Linux%E4%B8%8Bsystemctl%E5%91%BD%E4%BB%A4%E5%92%8Cservice%E3%80%81chkconfig%E5%91%BD%E4%BB%A4%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
-    <id>https://cshihong.github.io/2018/10/15/Linux下systemctl命令和service、chkconfig命令的区别/</id>
-    <published>2018-10-15T12:00:10.000Z</published>
-    <updated>2018-10-16T05:05:35.730Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;systemctl和service、chkconfig命令的关系&quot;&gt;&lt;a href=&quot;#systemctl和service、chkconfig命令的关系&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="Linux" scheme="https://cshihong.github.io/categories/Linux/"/>
-    
-    
-      <category term="Linux笔记，Linux命令" scheme="https://cshihong.github.io/tags/Linux%E7%AC%94%E8%AE%B0%EF%BC%8CLinux%E5%91%BD%E4%BB%A4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java学习笔记（12）Spring JDBC框架和事务管理</title>
-    <link href="https://cshihong.github.io/2018/08/05/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%8812%EF%BC%89Spring-JDBC%E6%A1%86%E6%9E%B6%E5%92%8C%E4%BA%8B%E5%8A%A1%E7%AE%A1%E7%90%86/"/>
-    <id>https://cshihong.github.io/2018/08/05/Java学习笔记（12）Spring-JDBC框架和事务管理/</id>
-    <published>2018-08-05T07:30:51.000Z</published>
-    <updated>2018-08-09T16:02:26.264Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;Spring-JDBC框架&quot;&gt;&lt;a href=&quot;#Spring-JDBC框架&quot; class=&quot;headerlink&quot; title=&quot;Spring JDBC框架&quot;&gt;&lt;/a&gt;Spring JDBC框架&lt;/h1&gt;&lt;h2 id=&quot;JDBC框架概述：&quot;&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-      <category term="Java" scheme="https://cshihong.github.io/categories/Java/"/>
-    
-    
-      <category term="Spring" scheme="https://cshihong.github.io/tags/Spring/"/>
-    
-      <category term="Java学习笔记" scheme="https://cshihong.github.io/tags/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="JDBC" scheme="https://cshihong.github.io/tags/JDBC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java学习笔记（11）Spring AOP</title>
-    <link href="https://cshihong.github.io/2018/08/05/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%8811%EF%BC%89Spring-AOP/"/>
-    <id>https://cshihong.github.io/2018/08/05/Java学习笔记（11）Spring-AOP/</id>
-    <published>2018-08-05T06:12:26.000Z</published>
-    <updated>2018-08-11T13:00:42.961Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;AOP简介&quot;&gt;&lt;a href=&quot;#AOP简介&quot; class=&quot;headerlink&quot; title=&quot;AOP简介&quot;&gt;&lt;/a&gt;AOP简介&lt;/h1&gt;&lt;p&gt;##AOP的概念：&lt;/p&gt;
-&lt;p&gt;AOP为Aspect Oriented
-        
-      
-    
-    </summary>
-    
-      <category term="Java" scheme="https://cshihong.github.io/categories/Java/"/>
-    
-    
-      <category term="Spring" scheme="https://cshihong.github.io/tags/Spring/"/>
-    
-      <category term="Java学习笔记" scheme="https://cshihong.github.io/tags/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java学习笔记（10）Spring Bean配置</title>
-    <link href="https://cshihong.github.io/2018/08/04/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%8810%EF%BC%89Spring-Bean%E9%85%8D%E7%BD%AE/"/>
-    <id>https://cshihong.github.io/2018/08/04/Java学习笔记（10）Spring-Bean配置/</id>
-    <published>2018-08-04T11:12:02.000Z</published>
-    <updated>2018-08-11T03:12:19.683Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;Spring-Beans自动装配&quot;&gt;&lt;a href=&quot;#Spring-Beans自动装配&quot; class=&quot;headerlink&quot; title=&quot;Spring Beans自动装配&quot;&gt;&lt;/a&gt;Spring Beans自动装配&lt;/h1&gt;&lt;h2
-        
-      
-    
-    </summary>
-    
-      <category term="Java" scheme="https://cshihong.github.io/categories/Java/"/>
-    
-    
-      <category term="Spring" scheme="https://cshihong.github.io/tags/Spring/"/>
-    
-      <category term="java学习笔记" scheme="https://cshihong.github.io/tags/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java学习笔记（9）Spring基础</title>
-    <link href="https://cshihong.github.io/2018/08/02/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%889%EF%BC%89Spring%E5%9F%BA%E7%A1%80/"/>
-    <id>https://cshihong.github.io/2018/08/02/Java学习笔记（9）Spring基础/</id>
-    <published>2018-08-02T01:30:57.000Z</published>
-    <updated>2018-08-11T11:41:09.622Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;Spring概述&quot;&gt;&lt;a href=&quot;#Spring概述&quot; class=&quot;headerlink&quot; title=&quot;Spring概述&quot;&gt;&lt;/a&gt;Spring概述&lt;/h1&gt;&lt;h2 id=&quot;Spring概述：&quot;&gt;&lt;a href=&quot;#Spring概述：&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="Java" scheme="https://cshihong.github.io/categories/Java/"/>
-    
-    
-      <category term="Spring" scheme="https://cshihong.github.io/tags/Spring/"/>
-    
-      <category term="Java学习笔记" scheme="https://cshihong.github.io/tags/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
