@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://cshihong.github.io/"/>
-  <updated>2019-03-11T10:02:49.375Z</updated>
+  <updated>2019-03-15T08:32:01.053Z</updated>
   <id>https://cshihong.github.io/</id>
   
   <author>
@@ -17,11 +17,68 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>防火墙用户与认证</title>
+    <link href="https://cshihong.github.io/2019/03/15/%E9%98%B2%E7%81%AB%E5%A2%99%E7%94%A8%E6%88%B7%E4%B8%8E%E8%AE%A4%E8%AF%81/"/>
+    <id>https://cshihong.github.io/2019/03/15/防火墙用户与认证/</id>
+    <published>2019-03-15T02:22:52.000Z</published>
+    <updated>2019-03-15T08:32:01.053Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;用户与认证&quot;&gt;&lt;a href=&quot;#用户与认证&quot; class=&quot;headerlink&quot; title=&quot;用户与认证&quot;&gt;&lt;/a&gt;用户与认证&lt;/h1&gt;&lt;p&gt;用户是指访问网络资源的主提，表示“谁”在进行访问，是网络访问行为的重要标识。&lt;/p&gt;
+&lt;h2
+        
+      
+    
+    </summary>
+    
+      <category term="网络安全" scheme="https://cshihong.github.io/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
+    
+    
+      <category term="防火墙" scheme="https://cshihong.github.io/tags/%E9%98%B2%E7%81%AB%E5%A2%99/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>DFS例题</title>
+    <link href="https://cshihong.github.io/2019/03/13/DFS%E4%BE%8B%E9%A2%98/"/>
+    <id>https://cshihong.github.io/2019/03/13/DFS例题/</id>
+    <published>2019-03-13T09:28:37.000Z</published>
+    <updated>2019-03-14T12:49:28.488Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;深度优先遍历和广度优先遍历：可参考&lt;/p&gt;
+&lt;p&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="算法" scheme="https://cshihong.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="算法" scheme="https://cshihong.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="图" scheme="https://cshihong.github.io/tags/%E5%9B%BE/"/>
+    
+  </entry>
+  
+  <entry>
     <title>防火墙NAT技术</title>
     <link href="https://cshihong.github.io/2019/03/09/%E9%98%B2%E7%81%AB%E5%A2%99NAT%E6%8A%80%E6%9C%AF/"/>
     <id>https://cshihong.github.io/2019/03/09/防火墙NAT技术/</id>
     <published>2019-03-09T05:35:35.000Z</published>
-    <updated>2019-03-11T10:02:49.375Z</updated>
+    <updated>2019-03-14T03:03:44.194Z</updated>
     
     <summary type="html">
     
@@ -49,7 +106,7 @@
     <link href="https://cshihong.github.io/2019/03/08/%E9%98%B2%E7%81%AB%E5%A2%99%E6%8A%A5%E6%96%87%E8%BD%AC%E5%8F%91%E6%B5%81%E7%A8%8B/"/>
     <id>https://cshihong.github.io/2019/03/08/防火墙报文转发流程/</id>
     <published>2019-03-08T08:16:16.000Z</published>
-    <updated>2019-03-08T15:00:05.803Z</updated>
+    <updated>2019-03-12T03:05:43.597Z</updated>
     
     <summary type="html">
     
@@ -258,9 +315,9 @@
     
       <category term="算法" scheme="https://cshihong.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
-      <category term="排序" scheme="https://cshihong.github.io/tags/%E6%8E%92%E5%BA%8F/"/>
-    
       <category term="蓝桥杯" scheme="https://cshihong.github.io/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
+    
+      <category term="排序" scheme="https://cshihong.github.io/tags/%E6%8E%92%E5%BA%8F/"/>
     
   </entry>
   
@@ -288,9 +345,9 @@
     
       <category term="算法" scheme="https://cshihong.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
-      <category term="Java编程" scheme="https://cshihong.github.io/tags/Java%E7%BC%96%E7%A8%8B/"/>
-    
       <category term="蓝桥杯" scheme="https://cshihong.github.io/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
+    
+      <category term="Java编程" scheme="https://cshihong.github.io/tags/Java%E7%BC%96%E7%A8%8B/"/>
     
   </entry>
   
@@ -318,9 +375,9 @@
     
       <category term="算法" scheme="https://cshihong.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
-      <category term="Java编程" scheme="https://cshihong.github.io/tags/Java%E7%BC%96%E7%A8%8B/"/>
-    
       <category term="蓝桥杯" scheme="https://cshihong.github.io/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
+    
+      <category term="Java编程" scheme="https://cshihong.github.io/tags/Java%E7%BC%96%E7%A8%8B/"/>
     
   </entry>
   
@@ -509,60 +566,6 @@
     
     
       <category term="Linux学习笔记" scheme="https://cshihong.github.io/tags/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>NFS服务器搭建与配置</title>
-    <link href="https://cshihong.github.io/2018/10/16/NFS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E4%B8%8E%E9%85%8D%E7%BD%AE/"/>
-    <id>https://cshihong.github.io/2018/10/16/NFS服务器搭建与配置/</id>
-    <published>2018-10-16T13:12:21.000Z</published>
-    <updated>2018-10-17T14:40:25.048Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;NFS服务简介&quot;&gt;&lt;a href=&quot;#NFS服务简介&quot; class=&quot;headerlink&quot; title=&quot;NFS服务简介&quot;&gt;&lt;/a&gt;NFS服务简介&lt;/h1&gt;&lt;h2 id=&quot;什么是NFS？&quot;&gt;&lt;a href=&quot;#什么是NFS？&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="Linux" scheme="https://cshihong.github.io/categories/Linux/"/>
-    
-    
-      <category term="Linux学习笔记" scheme="https://cshihong.github.io/tags/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>DNS服务器搭建与配置</title>
-    <link href="https://cshihong.github.io/2018/10/15/DNS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E4%B8%8E%E9%85%8D%E7%BD%AE/"/>
-    <id>https://cshihong.github.io/2018/10/15/DNS服务器搭建与配置/</id>
-    <published>2018-10-15T13:20:07.000Z</published>
-    <updated>2018-12-31T01:17:29.507Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;DNS服务介绍&quot;&gt;&lt;a href=&quot;#DNS服务介绍&quot; class=&quot;headerlink&quot; title=&quot;DNS服务介绍&quot;&gt;&lt;/a&gt;DNS服务介绍&lt;/h1&gt;&lt;h2 id=&quot;DNS服务简介：&quot;&gt;&lt;a href=&quot;#DNS服务简介：&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="Linux" scheme="https://cshihong.github.io/categories/Linux/"/>
-    
-    
-      <category term="Linux笔记" scheme="https://cshihong.github.io/tags/Linux%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="Linux服务" scheme="https://cshihong.github.io/tags/Linux%E6%9C%8D%E5%8A%A1/"/>
     
   </entry>
   
