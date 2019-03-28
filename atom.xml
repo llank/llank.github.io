@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://cshihong.github.io/"/>
-  <updated>2019-03-15T08:47:34.622Z</updated>
+  <updated>2019-03-28T04:08:51.095Z</updated>
   <id>https://cshihong.github.io/</id>
   
   <author>
@@ -15,6 +15,208 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>蓝桥杯第十届省赛Java-B组</title>
+    <link href="https://cshihong.github.io/2019/03/27/%E8%93%9D%E6%A1%A5%E6%9D%AF%E7%AC%AC%E5%8D%81%E5%B1%8A%E7%9C%81%E8%B5%9BJava-B%E7%BB%84/"/>
+    <id>https://cshihong.github.io/2019/03/27/蓝桥杯第十届省赛Java-B组/</id>
+    <published>2019-03-27T13:40:01.000Z</published>
+    <updated>2019-03-28T04:08:51.095Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;1-组队：&quot;&gt;&lt;a href=&quot;#1-组队：&quot; class=&quot;headerlink&quot; title=&quot;1.组队：&quot;&gt;&lt;/a&gt;1.组队：&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;作为篮球队教练，你需要从以下名单中选出1 号位至5
+        
+      
+    
+    </summary>
+    
+      <category term="算法" scheme="https://cshihong.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="算法" scheme="https://cshihong.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="蓝桥杯" scheme="https://cshihong.github.io/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
+    
+      <category term="Java编程" scheme="https://cshihong.github.io/tags/Java%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>5G网络基础知识</title>
+    <link href="https://cshihong.github.io/2019/03/25/5G%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
+    <id>https://cshihong.github.io/2019/03/25/5G网络基础知识/</id>
+    <published>2019-03-25T12:36:29.000Z</published>
+    <updated>2019-03-25T14:21:32.541Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;5G挑战&quot;&gt;&lt;a href=&quot;#5G挑战&quot; class=&quot;headerlink&quot; title=&quot;5G挑战&quot;&gt;&lt;/a&gt;5G挑战&lt;/h1&gt;&lt;h2 id=&quot;5G面临挑战分类：&quot;&gt;&lt;a href=&quot;#5G面临挑战分类：&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="5G网络" scheme="https://cshihong.github.io/categories/5G%E7%BD%91%E7%BB%9C/"/>
+    
+    
+      <category term="华为网络技术大赛" scheme="https://cshihong.github.io/tags/%E5%8D%8E%E4%B8%BA%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF%E5%A4%A7%E8%B5%9B/"/>
+    
+      <category term="5G" scheme="https://cshihong.github.io/tags/5G/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>防火墙双机热备各种场景备配置示例</title>
+    <link href="https://cshihong.github.io/2019/03/25/%E9%98%B2%E7%81%AB%E5%A2%99%E5%8F%8C%E6%9C%BA%E7%83%AD%E5%A4%87%E5%90%84%E7%A7%8D%E5%9C%BA%E6%99%AF%E5%A4%87%E9%85%8D%E7%BD%AE%E7%A4%BA%E4%BE%8B/"/>
+    <id>https://cshihong.github.io/2019/03/25/防火墙双机热备各种场景备配置示例/</id>
+    <published>2019-03-25T09:06:39.000Z</published>
+    <updated>2019-03-27T01:25:09.901Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;双机热备各场景应用&quot;&gt;&lt;a href=&quot;#双机热备各场景应用&quot; class=&quot;headerlink&quot; title=&quot;双机热备各场景应用&quot;&gt;&lt;/a&gt;双机热备各场景应用&lt;/h1&gt;&lt;h2 id=&quot;主备备份和负载分担应用场景：&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="网络安全" scheme="https://cshihong.github.io/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
+    
+    
+      <category term="防火墙" scheme="https://cshihong.github.io/tags/%E9%98%B2%E7%81%AB%E5%A2%99/"/>
+    
+      <category term="双机热备" scheme="https://cshihong.github.io/tags/%E5%8F%8C%E6%9C%BA%E7%83%AD%E5%A4%87/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>防火墙双机热备三大协议（VRRP/VGMP/HRP）原理</title>
+    <link href="https://cshihong.github.io/2019/03/20/%E9%98%B2%E7%81%AB%E5%A2%99%E5%8F%8C%E6%9C%BA%E7%83%AD%E5%A4%87%E4%B8%89%E5%A4%A7%E5%8D%8F%E8%AE%AE%EF%BC%88VRRP-VGMP-HRP%EF%BC%89%E5%8E%9F%E7%90%86/"/>
+    <id>https://cshihong.github.io/2019/03/20/防火墙双机热备三大协议（VRRP-VGMP-HRP）原理/</id>
+    <published>2019-03-20T06:06:54.000Z</published>
+    <updated>2019-03-25T10:18:47.443Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;防火墙双机热备技术&quot;&gt;&lt;a href=&quot;#防火墙双机热备技术&quot; class=&quot;headerlink&quot; title=&quot;防火墙双机热备技术&quot;&gt;&lt;/a&gt;防火墙双机热备技术&lt;/h1&gt;&lt;h2 id=&quot;双机热备概述：&quot;&gt;&lt;a href=&quot;#双机热备概述：&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="网络安全" scheme="https://cshihong.github.io/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
+    
+    
+      <category term="防火墙" scheme="https://cshihong.github.io/tags/%E9%98%B2%E7%81%AB%E5%A2%99/"/>
+    
+      <category term="双机热备" scheme="https://cshihong.github.io/tags/%E5%8F%8C%E6%9C%BA%E7%83%AD%E5%A4%87/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>防火墙双机热备三大协议（VRRP/VGMP/HRP）原理</title>
+    <link href="https://cshihong.github.io/2019/03/20/%E9%98%B2%E7%81%AB%E5%A2%99%E5%8F%8C%E6%9C%BA%E7%83%AD%E5%A4%87%E4%B8%89%E5%A4%A7%E5%8D%8F%E8%AE%AEVRRP%E3%80%81VGMP%E3%80%81HRP%E5%8E%9F%E7%90%86/"/>
+    <id>https://cshihong.github.io/2019/03/20/防火墙双机热备三大协议VRRP、VGMP、HRP原理/</id>
+    <published>2019-03-20T06:06:54.000Z</published>
+    <updated>2019-03-20T06:20:03.550Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;防火墙双机热备技术&quot;&gt;&lt;a href=&quot;#防火墙双机热备技术&quot; class=&quot;headerlink&quot; title=&quot;防火墙双机热备技术&quot;&gt;&lt;/a&gt;防火墙双机热备技术&lt;/h1&gt;&lt;h2 id=&quot;双机热备概述：&quot;&gt;&lt;a href=&quot;#双机热备概述：&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="网络安全" scheme="https://cshihong.github.io/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
+    
+    
+      <category term="防火墙" scheme="https://cshihong.github.io/tags/%E9%98%B2%E7%81%AB%E5%A2%99/"/>
+    
+      <category term="双机热备" scheme="https://cshihong.github.io/tags/%E5%8F%8C%E6%9C%BA%E7%83%AD%E5%A4%87/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>动态规划例题</title>
+    <link href="https://cshihong.github.io/2019/03/18/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E4%BE%8B%E9%A2%98/"/>
+    <id>https://cshihong.github.io/2019/03/18/动态规划例题/</id>
+    <published>2019-03-18T09:38:17.000Z</published>
+    <updated>2019-03-19T13:45:19.853Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;hr&gt;
+&lt;p&gt;动态规划算法简介：&lt;strong&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="算法" scheme="https://cshihong.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="算法" scheme="https://cshihong.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="动态规划" scheme="https://cshihong.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>贪心策略算法例题</title>
+    <link href="https://cshihong.github.io/2019/03/18/%E8%B4%AA%E5%BF%83%E7%AD%96%E7%95%A5%E7%AE%97%E6%B3%95%E4%BE%8B%E9%A2%98/"/>
+    <id>https://cshihong.github.io/2019/03/18/贪心策略算法例题/</id>
+    <published>2019-03-18T02:48:04.000Z</published>
+    <updated>2019-03-19T08:53:02.073Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;hr&gt;
+&lt;blockquote&gt;
+&lt;p&gt;贪心算法简介：&lt;strong&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="算法" scheme="https://cshihong.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="算法" scheme="https://cshihong.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="贪心" scheme="https://cshihong.github.io/tags/%E8%B4%AA%E5%BF%83/"/>
+    
+  </entry>
   
   <entry>
     <title>防火墙用户与认证</title>
@@ -48,7 +250,7 @@
     <link href="https://cshihong.github.io/2019/03/13/DFS%E4%BE%8B%E9%A2%98/"/>
     <id>https://cshihong.github.io/2019/03/13/DFS例题/</id>
     <published>2019-03-13T09:28:37.000Z</published>
-    <updated>2019-03-14T12:49:28.488Z</updated>
+    <updated>2019-03-15T15:03:42.460Z</updated>
     
     <summary type="html">
     
@@ -106,7 +308,7 @@
     <link href="https://cshihong.github.io/2019/03/08/%E9%98%B2%E7%81%AB%E5%A2%99%E6%8A%A5%E6%96%87%E8%BD%AC%E5%8F%91%E6%B5%81%E7%A8%8B/"/>
     <id>https://cshihong.github.io/2019/03/08/防火墙报文转发流程/</id>
     <published>2019-03-08T08:16:16.000Z</published>
-    <updated>2019-03-15T08:48:17.962Z</updated>
+    <updated>2019-03-15T10:11:10.414Z</updated>
     
     <summary type="html">
     
@@ -378,194 +580,6 @@
       <category term="蓝桥杯" scheme="https://cshihong.github.io/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
     
       <category term="Java编程" scheme="https://cshihong.github.io/tags/Java%E7%BC%96%E7%A8%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Python获取Cookie时遇到重定向的情况</title>
-    <link href="https://cshihong.github.io/2019/01/01/Python%E8%8E%B7%E5%8F%96Cookie%E6%97%B6%E9%81%87%E5%88%B0%E9%87%8D%E5%AE%9A%E5%90%91%E7%9A%84%E6%83%85%E5%86%B5/"/>
-    <id>https://cshihong.github.io/2019/01/01/Python获取Cookie时遇到重定向的情况/</id>
-    <published>2019-01-01T13:44:52.000Z</published>
-    <updated>2019-01-01T14:17:08.619Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;问题描述和解决：&quot;&gt;&lt;a href=&quot;#问题描述和解决：&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="Python" scheme="https://cshihong.github.io/categories/Python/"/>
-    
-    
-      <category term="Python学习笔记" scheme="https://cshihong.github.io/tags/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="爬虫" scheme="https://cshihong.github.io/tags/%E7%88%AC%E8%99%AB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Python实现爬取教务处成绩系统</title>
-    <link href="https://cshihong.github.io/2019/01/01/Python%E5%AE%9E%E7%8E%B0%E7%88%AC%E5%8F%96%E6%95%99%E5%8A%A1%E5%A4%84%E6%88%90%E7%BB%A9%E7%B3%BB%E7%BB%9F/"/>
-    <id>https://cshihong.github.io/2019/01/01/Python实现爬取教务处成绩系统/</id>
-    <published>2019-01-01T13:07:11.000Z</published>
-    <updated>2019-01-01T14:28:40.750Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;Python查询教务处成绩系统简介&quot;&gt;&lt;a href=&quot;#Python查询教务处成绩系统简介&quot; class=&quot;headerlink&quot; title=&quot;Python查询教务处成绩系统简介&quot;&gt;&lt;/a&gt;Python查询教务处成绩系统简介&lt;/h1&gt;&lt;h2
-        
-      
-    
-    </summary>
-    
-      <category term="Python" scheme="https://cshihong.github.io/categories/Python/"/>
-    
-    
-      <category term="Python学习笔记" scheme="https://cshihong.github.io/tags/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="爬虫" scheme="https://cshihong.github.io/tags/%E7%88%AC%E8%99%AB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>位运算的奇巧淫技</title>
-    <link href="https://cshihong.github.io/2018/12/31/%E4%BD%8D%E8%BF%90%E7%AE%97%E7%9A%84%E5%A5%87%E5%B7%A7%E6%B7%AB%E6%8A%80/"/>
-    <id>https://cshihong.github.io/2018/12/31/位运算的奇巧淫技/</id>
-    <published>2018-12-31T01:14:22.000Z</published>
-    <updated>2019-01-01T10:04:43.013Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;位运算简介&quot;&gt;&lt;a href=&quot;#位运算简介&quot; class=&quot;headerlink&quot; title=&quot;位运算简介&quot;&gt;&lt;/a&gt;位运算简介&lt;/h1&gt;&lt;h2 id=&quot;位运算简介：&quot;&gt;&lt;a href=&quot;#位运算简介：&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="算法" scheme="https://cshihong.github.io/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-      <category term="算法" scheme="https://cshihong.github.io/tags/%E7%AE%97%E6%B3%95/"/>
-    
-      <category term="位运算" scheme="https://cshihong.github.io/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>FTP服务器搭建和配置</title>
-    <link href="https://cshihong.github.io/2018/10/25/FTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E5%92%8C%E9%85%8D%E7%BD%AE/"/>
-    <id>https://cshihong.github.io/2018/10/25/FTP服务器搭建和配置/</id>
-    <published>2018-10-25T08:52:00.000Z</published>
-    <updated>2018-12-18T11:39:24.086Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;FTP服务简介&quot;&gt;&lt;a href=&quot;#FTP服务简介&quot; class=&quot;headerlink&quot; title=&quot;FTP服务简介&quot;&gt;&lt;/a&gt;FTP服务简介&lt;/h1&gt;&lt;h2 id=&quot;FTP概述：&quot;&gt;&lt;a href=&quot;#FTP概述：&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="Linux" scheme="https://cshihong.github.io/categories/Linux/"/>
-    
-    
-      <category term="Linux学习笔记" scheme="https://cshihong.github.io/tags/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ISCSI服务器搭建与配置</title>
-    <link href="https://cshihong.github.io/2018/10/23/ISCSI%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E4%B8%8E%E9%85%8D%E7%BD%AE/"/>
-    <id>https://cshihong.github.io/2018/10/23/ISCSI服务器搭建与配置/</id>
-    <published>2018-10-23T07:57:04.000Z</published>
-    <updated>2018-10-23T10:17:22.169Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;ISCSI服务简介&quot;&gt;&lt;a href=&quot;#ISCSI服务简介&quot; class=&quot;headerlink&quot; title=&quot;ISCSI服务简介&quot;&gt;&lt;/a&gt;ISCSI服务简介&lt;/h1&gt;&lt;h2 id=&quot;ISCSI简介：&quot;&gt;&lt;a href=&quot;#ISCSI简介：&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="Linux" scheme="https://cshihong.github.io/categories/Linux/"/>
-    
-    
-      <category term="Linux学习笔记" scheme="https://cshihong.github.io/tags/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Samba服务器搭建与配置</title>
-    <link href="https://cshihong.github.io/2018/10/18/Samba%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E4%B8%8E%E9%85%8D%E7%BD%AE/"/>
-    <id>https://cshihong.github.io/2018/10/18/Samba服务器搭建与配置/</id>
-    <published>2018-10-18T06:54:35.000Z</published>
-    <updated>2018-10-18T09:39:11.308Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;Samba服务简介&quot;&gt;&lt;a href=&quot;#Samba服务简介&quot; class=&quot;headerlink&quot; title=&quot;Samba服务简介&quot;&gt;&lt;/a&gt;Samba服务简介&lt;/h1&gt;&lt;h2 id=&quot;Samba的起源：&quot;&gt;&lt;a href=&quot;#Samba的起源：&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="Linux" scheme="https://cshihong.github.io/categories/Linux/"/>
-    
-    
-      <category term="Linux学习笔记" scheme="https://cshihong.github.io/tags/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux下autofs自动挂载服务</title>
-    <link href="https://cshihong.github.io/2018/10/16/Linux%E4%B8%8Bautofs%E8%87%AA%E5%8A%A8%E6%8C%82%E8%BD%BD%E6%9C%8D%E5%8A%A1/"/>
-    <id>https://cshihong.github.io/2018/10/16/Linux下autofs自动挂载服务/</id>
-    <published>2018-10-16T14:24:09.000Z</published>
-    <updated>2018-10-16T14:57:35.173Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;Autofs简介&quot;&gt;&lt;a href=&quot;#Autofs简介&quot; class=&quot;headerlink&quot; title=&quot;Autofs简介&quot;&gt;&lt;/a&gt;Autofs简介&lt;/h1&gt;&lt;h2 id=&quot;Autofs介绍：&quot;&gt;&lt;a href=&quot;#Autofs介绍：&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="Linux" scheme="https://cshihong.github.io/categories/Linux/"/>
-    
-    
-      <category term="Linux学习笔记" scheme="https://cshihong.github.io/tags/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   

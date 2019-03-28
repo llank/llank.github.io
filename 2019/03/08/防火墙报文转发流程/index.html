@@ -152,7 +152,7 @@
 <meta property="og:image" content="https://cshihong.github.io/2019/03/08/防火墙报文转发流程/会话前.png">
 <meta property="og:image" content="https://cshihong.github.io/2019/03/08/防火墙报文转发流程/会话中.png">
 <meta property="og:image" content="https://cshihong.github.io/2019/03/08/防火墙报文转发流程/会话后.png">
-<meta property="og:updated_time" content="2019-03-15T08:48:17.962Z">
+<meta property="og:updated_time" content="2019-03-15T10:11:10.414Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="防火墙报文转发流程">
 <meta name="twitter:description" content="防火墙的转发流程以会话为中心，分别分析会话前、会话中、会话后的转发流程。 下一代防火墙： 下一代防火墙通过应用与内容的深度检测，提供更加完善的网络安全防护。 FW提供了先进的“一次扫描”和“实时检测”机制。  “一次扫描”机制是指FW通过专业的智能感知引擎，只需对报文进行一次扫描，就可以提取所有内容安全功能所需的数据，识别出流量的应用类型、包含的内容与可能存在的网络危险。即使开启所有内容安全功能，">
@@ -493,7 +493,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-03-15 16:48:17" itemprop="dateModified" datetime="2019-03-15T16:48:17+08:00">2019-03-15</time>
+                <time title="修改时间：2019-03-15 18:11:10" itemprop="dateModified" datetime="2019-03-15T18:11:10+08:00">2019-03-15</time>
               
             
           </span>
@@ -533,7 +533,7 @@
             <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
 			<span class="post-meta-divider">|</span>
-			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 2,285</span>
+			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 2,283</span>
 			<span class="post-meta-item-text">|</span>
 			<span title="post.min2read"><span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span>阅读时长： 8</span>
 
@@ -567,9 +567,9 @@
 <p>FW通过签名和特征可以识别上千种应用，并且可以防护在应用层传输的网络入侵、蠕虫、病毒、木马和攻击。FW所提供的安全策略功能可以在一条策略中完成对一条流量的所有内容安全防护功能。</p>
 <h2 id="总的转发流程图："><a href="#总的转发流程图：" class="headerlink" title="总的转发流程图："></a>总的转发流程图：</h2><p>网络设备对流量的处理最终都是通过对单个报文的识别、转发、丢弃和改造来实现的。根据报文的类型和所配置的策略不同，FW对报文的处理过程也有所不同。USG6000典型的IP报文从接收到发送的简化转发流程如下图所示：</p>
 <p><img src="/2019/03/08/防火墙报文转发流程/报文转发流程.png" alt="报文转发流程"></p>
-<center>图：防火墙报文转发流程<center><br>## 会话前：<br><br><img src="/2019/03/08/防火墙报文转发流程/会话前.png" alt="会话前"><br><br><center>图：会话前的报文处理流程图</center>
-
-
+<p><center>图：防火墙报文转发流程<center></center></center></p>
+<h2 id="会话前："><a href="#会话前：" class="headerlink" title="会话前："></a>会话前：</h2><p><img src="/2019/03/08/防火墙报文转发流程/会话前.png" alt="会话前"></p>
+<p><center>图：会话前报文转发流程<center></center></center></p>
 <p>这个阶段的主要目的是解析出报文的帧头部和IP报文头部。根据头部当中的信息进行一些基础的安全检测。</p>
 <p>首先根据接收报文的接口是二层还是三层：两种处理方式：</p>
 <ul>
@@ -588,8 +588,7 @@
 </li>
 </ul>
 <h2 id="会话中："><a href="#会话中：" class="headerlink" title="会话中："></a>会话中：</h2><p><img src="/2019/03/08/防火墙报文转发流程/会话中.png" alt="会话中"></p>
-<center><br>    图：会话中的报文处理流程图<br></center>
-
+<p><center>图：会话中的报文处理流程图<center></center></center></p>
 <p>这个阶段是FW的核心处理环节，主要的安全功能都在这个阶段实现。FW根据该报文是否存在匹配的会话表项，有以下两种处理方式:</p>
 <ul>
 <li>有会话：匹配会话</li>
@@ -731,7 +730,7 @@
 <li><p>出接口的阈值：根据出接口配置的带宽阈值限制，FW会再次控制流量的速率。</p>
 </li>
 </ol>
-</center></center>
+
       
     </div>
 
@@ -972,7 +971,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">183</span>
+                    <span class="site-state-item-count">189</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1238,7 +1237,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">100</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">102</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1366,7 +1369,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#防火墙的转发流程"><span class="nav-number">1.</span> <span class="nav-text">防火墙的转发流程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#总的转发流程图："><span class="nav-number">1.1.</span> <span class="nav-text">总的转发流程图：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#会话中："><span class="nav-number">1.2.</span> <span class="nav-text">会话中：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#会话后："><span class="nav-number">1.3.</span> <span class="nav-text">会话后：</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#防火墙的转发流程"><span class="nav-number">1.</span> <span class="nav-text">防火墙的转发流程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#总的转发流程图："><span class="nav-number">1.1.</span> <span class="nav-text">总的转发流程图：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#会话前："><span class="nav-number">1.2.</span> <span class="nav-text">会话前：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#会话中："><span class="nav-number">1.3.</span> <span class="nav-text">会话中：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#会话后："><span class="nav-number">1.4.</span> <span class="nav-text">会话后：</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1406,7 +1409,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共 740.8k 字</span>
+  <span class="post-count">全站共 754.7k 字</span>
 </div>
 
 
