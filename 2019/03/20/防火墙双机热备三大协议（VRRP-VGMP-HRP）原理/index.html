@@ -153,7 +153,7 @@
 <meta property="og:image" content="https://cshihong.github.io/2019/03/20/防火墙双机热备三大协议（VRRP-VGMP-HRP）原理/防火墙双机热备三大协议VRRP、VGMP、HRP原理/hrp管理报文.png">
 <meta property="og:image" content="https://cshihong.github.io/2019/03/20/防火墙双机热备三大协议（VRRP-VGMP-HRP）原理/防火墙双机热备三大协议VRRP、VGMP、HRP原理/Hrp同步报文.png">
 <meta property="og:image" content="https://cshihong.github.io/2019/03/20/防火墙双机热备三大协议（VRRP-VGMP-HRP）原理/防火墙双机热备三大协议VRRP、VGMP、HRP原理/HRP报文.png">
-<meta property="og:updated_time" content="2019-03-25T10:18:47.443Z">
+<meta property="og:updated_time" content="2019-03-30T13:54:51.283Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="防火墙双机热备三大协议（VRRP&#x2F;VGMP&#x2F;HRP）原理">
 <meta name="twitter:description" content="防火墙双机热备技术双机热备概述：为什么需要要双机热备？  解决单点故障，实现业务的平滑过渡（会话表需要同步的）  双机热备的两种部署方式：  主备方式 负载分担分时。    防火墙双机热备产生的原因，详细内容可参考：防火墙双机热备技术   三大协议框架： VRRP——虚拟路由冗余协议 VGMP——VRRP组管理协议（华为私有） HRP——–华为冗余协议（华为私有）  VRRP协议基本原理 VRRP">
@@ -494,7 +494,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-03-25 18:18:47" itemprop="dateModified" datetime="2019-03-25T18:18:47+08:00">2019-03-25</time>
+                <time title="修改时间：2019-03-30 21:54:51" itemprop="dateModified" datetime="2019-03-30T21:54:51+08:00">2019-03-30</time>
               
             
           </span>
@@ -534,9 +534,9 @@
             <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
 			<span class="post-meta-divider">|</span>
-			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 2,602</span>
+			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 3,972</span>
 			<span class="post-meta-item-text">|</span>
-			<span title="post.min2read"><span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span>阅读时长： 9</span>
+			<span title="post.min2read"><span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span>阅读时长： 14</span>
 
           
 
@@ -581,13 +581,19 @@
 </blockquote>
 <hr>
 <h2 id="VRRP的基础知识点："><a href="#VRRP的基础知识点：" class="headerlink" title="VRRP的基础知识点："></a>VRRP的基础知识点：</h2><ul>
-<li><p>**VRRP角色：  master， backup</p>
+<li><p>VRRP角色：  master， backup</p>
 </li>
 <li><p><strong>发送Hello包时间间隔 1s，超时等待 3s。目的地址（组播）：224.0.0.18</strong></p>
 </li>
 <li><p><strong>基于IP协议，协议号为112.</strong></p>
 </li>
 <li><strong>选举参数：优先级越大越优，默认优先级100.范围 0-255. 如果优先级相同，IP地址大者优先。</strong></li>
+</ul>
+<h2 id="VRRP状态："><a href="#VRRP状态：" class="headerlink" title="VRRP状态："></a>VRRP状态：</h2><p>VRRP备份组有三种状态：<strong>Initialize</strong>、<strong>Master</strong>和<strong>Backup</strong>。</p>
+<ul>
+<li><strong>Initialize</strong>：初始化状态。当设备的VRRP备份组状态为<strong>Initialize</strong>时，该VRRP备份组处于不可用状态。</li>
+<li><strong>Master</strong>：活动状态。VRRP备份组状态为Master的设备被称为Master设备。Master设备拥有VRRP备份组的虚拟IP地址和虚拟MAC地址。Master设备收到目的IP地址是虚拟IP地址的ARP请求时，会响应这个ARP请求。</li>
+<li><strong>Backup</strong>：备份状态。VRRP备份组状态为Backup的设备被称为Backup设备。Backup设备不会响应目的IP地址为虚拟IP地址的ARP请求。</li>
 </ul>
 <h2 id="VRRP建立过程："><a href="#VRRP建立过程：" class="headerlink" title="VRRP建立过程："></a><strong>VRRP建立过程：</strong></h2><ol>
 <li>初始状态—–备份</li>
@@ -611,7 +617,8 @@
 <p><strong>出现状态切换不一致的，导致业务中断。</strong></p>
 </blockquote>
 <p>解决方案：VGMP</p>
-<h1 id="VGMP协议基本原理"><a href="#VGMP协议基本原理" class="headerlink" title="VGMP协议基本原理"></a>VGMP协议基本原理</h1><h2 id="为什么有VGMP？"><a href="#为什么有VGMP？" class="headerlink" title="为什么有VGMP？"></a>为什么有VGMP？</h2><blockquote>
+<h1 id="VGMP协议基本原理"><a href="#VGMP协议基本原理" class="headerlink" title="VGMP协议基本原理"></a>VGMP协议基本原理</h1><h2 id="VGMP简介："><a href="#VGMP简介：" class="headerlink" title="VGMP简介："></a>VGMP简介：</h2><p>VGMP（VRRP Group Management Protocol）协议是华为公司的私有协议。VGMP协议中定义了VGMP组，FW基于VGMP组实现设备主备状态管理。</p>
+<h2 id="为什么有VGMP？"><a href="#为什么有VGMP？" class="headerlink" title="为什么有VGMP？"></a>为什么有VGMP？</h2><blockquote>
 <p>解决VRRP备份组切换不一致性的问题</p>
 </blockquote>
 <h2 id="VGMP报文："><a href="#VGMP报文：" class="headerlink" title="VGMP报文："></a>VGMP报文：</h2><p><img src="/2019/03/20/防火墙双机热备三大协议（VRRP-VGMP-HRP）原理/防火墙双机热备三大协议VRRP、VGMP、HRP原理/VGMP报文.png" alt="VGMP报文"></p>
@@ -632,11 +639,12 @@
 </ul>
 <p><strong>VGMP优先级：</strong> </p>
 <ul>
-<li><p>中低端<br> Active设备优优先级为65001    Standby设备优先级为65000</p>
-</li>
-<li><p>高端：<br>VGMP组初始优先级=45000 + 1000 <em> LPU板上的插卡个数 + 2 </em> SPU板上的CPU个数</p>
-</li>
+<li>中低端<br> Active设备优优先级为65001    Standby设备优先级为65000</li>
+<li>高端：<br>VGMP组初始优先级=45000 + 1000 <em> LPU板上的插卡个数 + 2 </em> SPU板上的CPU个数</li>
 </ul>
+<blockquote>
+<p>USG6000，NGFW Module的初始优先级都为45000.</p>
+</blockquote>
 <h2 id="VGMP状态机"><a href="#VGMP状态机" class="headerlink" title="VGMP状态机:"></a>VGMP状态机:</h2><blockquote>
 <p>VGMP的状态有:initialize  stanby  active  A-to-S   S-to-A </p>
 </blockquote>
@@ -672,11 +680,24 @@
 <blockquote>
 <p>原Standby方<br>收到VGMP请求报文———-对比优先级——–自己高优先级，切换为Active——–VGMP组内所有的VRRP备份组状态切换为Active—–发送免费ARP刷新交换机MAC地址表———–回应一个VGMP确认</p>
 </blockquote>
+<h4 id="接口故障时VGMP管理组优先级如何计算？"><a href="#接口故障时VGMP管理组优先级如何计算？" class="headerlink" title="接口故障时VGMP管理组优先级如何计算？"></a>接口故障时VGMP管理组优先级如何计算？</h4><ul>
+<li><p>如果接口上配置了VRRP备份组，该接口故障时，VGMP管理组优先级降低2 * 接口上VRRP备份组数量。</p>
+</li>
+<li><p>如果使用<strong>hrp track interface</strong>命令配置VGMP管理组监控物理接口状态，每一个物理接口故障时，VGMP管理组优先级降低2。</p>
+</li>
+<li><p>如果使用<strong>hrp track interface</strong>命令配置VGMP管理组监控Eth-Trunk或IP-Trunk接口状态时，缺省情况下，Trunk接口的部分成员接口故障，VGMP管理组的优先级降低 2 <em> 故障成员接口个数。Trunk接口的所有成员接口故障，优先级降低 2 </em> （1 + 成员接口个数）。</p>
+<p>使用<strong>undo hrp track trunk-member enable</strong>命令取消双机热备模块对Eth-Trunk或IP-Trunk成员接口状态的监控后，部分成员接口故障时，优先级不会降低。所有成员接口故障时，优先级降低值为2 * 故障Trunk接口个数。</p>
+</li>
+<li><p>如果接口上配置了VRRP备份组，同时又使用<strong>hrp track interface</strong>命令配置VGMP管理组监控接口的状态，当接口故障时，VGMP管理组优先级降低值会叠加计算。例如，接口GigabitEthernet 1/0/1上配置了2个VRRP备份组，同时又配置了<strong>hrp track interface GigabitEthernet 1/0/1</strong>，当GigabitEthernet 1/0/1故障时，VGMP管理组优先级降低6。</p>
+</li>
+<li><p>如果使用<strong>hrp track vlan</strong>监控VLAN状态，加入该VLAN的接口故障时，VGMP管理组优先级降低2。</p>
+</li>
+</ul>
 <p><strong>B. 整机或者心跳线发现故障</strong></p>
 <blockquote>
 <p>整机故障————-主DOWN了，备的成为主</p>
 <p>心跳线故障———–会出现双主（双活）</p>
-<p>收不到HRP心跳报文（三次，3S ）————切换———组内所有VRRP备份组都变成Active———发送免费ARP，刷新MAC地址表</p>
+<p>收不到HRP心跳报文（<strong>V100中是3次，3s。 V500版本中是5次，5s</strong> ）————切换———组内所有VRRP备份组都变成Active———发送免费ARP，刷新MAC地址表</p>
 </blockquote>
 <p><strong>C. 故障恢复, 抢占功能开启</strong> </p>
 <blockquote>
@@ -697,6 +718,14 @@
 <p>IP-LINK</p>
 <p>BFD</p>
 </blockquote>
+<h4 id="IP-link："><a href="#IP-link：" class="headerlink" title="IP-link："></a>IP-link：</h4><p>IP-Link是指FW通过向指定的目的IP周期性地发送探测报文并等待应答，来判断链路是否发生故障。</p>
+<p>FW发送探测报文后，在三个探测周期（默认为15s）内未收到响应报文，则认为当前链路发生故障，IP-Link的状态变为Down。随后，FW会进行IP-Link Down相关的后续操作，例如双机热备主备切换等。</p>
+<p>当链路从故障中恢复，FW能连续地收到3个响应报文，则认为链路故障已经消除，IP-Link的状态变为Up。也就是说，链路故障恢复后，IP-Link的状态并不会立即变为Up，而是要等三个探测周期（默认为15s）才会变为Up。</p>
+<h4 id="主备切换的时间多长？"><a href="#主备切换的时间多长？" class="headerlink" title="主备切换的时间多长？"></a>主备切换的时间多长？</h4><p>主备切换的时间与其触发条件有关。</p>
+<ul>
+<li>如果由接口或链路故障触发主备切换，切换时间为毫秒级。</li>
+<li>如果由整机故障触发切换，切换时间为（V500版本）5个心跳报文的发送间隔。V100中3个心跳报文时间。</li>
+</ul>
 <h2 id="VGMP引导流量方式："><a href="#VGMP引导流量方式：" class="headerlink" title="VGMP引导流量方式："></a>VGMP引导流量方式：</h2><ul>
 <li><p>虚拟IP引流<br>适用场景：防火墙业务接口工作在三层，上下接交换机（二层）</p>
 </li>
@@ -720,7 +749,7 @@
 <p>配置心跳线的时候需要考虑加不加remote。</p>
 <h2 id="HRP备份方式："><a href="#HRP备份方式：" class="headerlink" title="HRP备份方式："></a>HRP备份方式：</h2><ul>
 <li>自动备份  —-默认方式</li>
-<li>手动备份—–批量方式</li>
+<li>手动备份—–批量方式 （<strong>hrp sync config</strong> 手动触发批量备份）</li>
 <li>快速备份 —– 针对负载分担</li>
 </ul>
 <h2 id="备份通道状态："><a href="#备份通道状态：" class="headerlink" title="备份通道状态："></a><strong>备份通道状态：</strong></h2><p>当设备两边均配置心跳口后，防火墙会判断心跳接口的物理与协议状态。心跳链路一共存在五种状态：</p>
@@ -745,9 +774,29 @@
 <li>防火墙通过VGMP链路探测报文检测通道的质量，只要本段发送的探测报文对应可以收到并回应，那么就认为本段该心跳接口可通，与对端配置顺序无关。</li>
 <li>当本段心跳接口发生故障时，那么本段将立刻切换到第一个处于ready状态的心跳接口。此动作与对端无关。</li>
 </ul>
-<h1 id="主备备份和负载分担工作原理"><a href="#主备备份和负载分担工作原理" class="headerlink" title="主备备份和负载分担工作原理"></a>主备备份和负载分担工作原理</h1><h2 id="主备备份："><a href="#主备备份：" class="headerlink" title="主备备份："></a>主备备份：</h2><p>主备备份指正常情况下仅由主用设备处理业务，备用设备空闲；当主用设备接口、链路或整机故障时，备用设备切换为主用设备，接替主用设备处理业务。</p>
+<h2 id="心跳线："><a href="#心跳线：" class="headerlink" title="心跳线："></a>心跳线：</h2><p>双机热备组网中，心跳线是两台FW交互消息了解对端状态以及备份配置命令和各种表项的通道。心跳线两端的接口通常被称之为“心跳接口”。</p>
+<p>心跳线主要传递如下消息：</p>
+<ul>
+<li>心跳报文（Hello报文）：两台FW通过定期（<strong>默认周期为1秒</strong>）互相发送心跳报文检测对端设备是否存活。</li>
+<li>VGMP报文：了解对端设备的VGMP组的状态，确定本端和对端设备当前状态是否稳定，是否要进行故障切换。</li>
+<li>配置和表项备份报文：用于两台FW同步配置命令和状态信息。</li>
+<li>心跳链路探测报文：用于检测对端设备的心跳口能否正常接收本端设备的报文，确定是否有心跳接口可以使用。</li>
+<li>配置一致性检查报文：用于检测两台FW的关键配置是否一致，如安全策略、NAT等。</li>
+</ul>
+<h1 id="主备备份和负载分担工作原理"><a href="#主备备份和负载分担工作原理" class="headerlink" title="主备备份和负载分担工作原理"></a>主备备份和负载分担工作原理</h1><p>FW支持主备备份和负载分担模式两种运行模式。</p>
+<h2 id="主备备份："><a href="#主备备份：" class="headerlink" title="主备备份："></a>主备备份：</h2><p>主备备份指正常情况下仅由主用设备处理业务，备用设备空闲；当主用设备接口、链路或整机故障时，备用设备切换为主用设备，接替主用设备处理业务。</p>
+<blockquote>
+<p>流量由单台设备处理，相较于负载分担模式，路由规划和故障定位相对简单。</p>
+</blockquote>
 <h2 id="负载分担："><a href="#负载分担：" class="headerlink" title="负载分担："></a>负载分担：</h2><p>所谓负载分担，也可以称为“互为主备”，即两台设备同时处理业务。当其中一台设备发生故障时，另一台设备会立即承担其业务，保证原来需要通过这台设备转发的业务不中断。</p>
 <p>防火墙缺省提供两个VGMP管理组：Active组和Standby组。主备备份时只有个VGMP管理组在工作。负载分担时两个VGMP管理组同时工作，工作原理完全相同。</p>
+<blockquote>
+<p>相较于主备备份模式，组网方案和配置相对复杂。</p>
+<p>负载分担组网中使用入侵防御、反病毒等内容安全检测功能时，可能会因为流量来回路径不一致导致内容安全功能失效。</p>
+<p>负载分担组网中配置NAT时，需要额外的配置来防止两台设备NAT资源分配冲突。</p>
+<p>负载分担模式组网中流量由两台设备共同处理，可以比主备备份模式或镜像模式组网承担更大的峰值流量。</p>
+<p>负载分担模式组网中设备发生故障时，只有一半的业务需要切换，故障切换的速度更快。</p>
+</blockquote>
 
       
     </div>
@@ -1389,7 +1438,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#防火墙双机热备技术"><span class="nav-number">1.</span> <span class="nav-text">防火墙双机热备技术</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#双机热备概述："><span class="nav-number">1.1.</span> <span class="nav-text">双机热备概述：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三大协议框架："><span class="nav-number">1.2.</span> <span class="nav-text">三大协议框架：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#VRRP协议基本原理"><span class="nav-number">2.</span> <span class="nav-text">VRRP协议基本原理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#VRRP的基础知识点："><span class="nav-number">2.1.</span> <span class="nav-text">VRRP的基础知识点：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#VRRP建立过程："><span class="nav-number">2.2.</span> <span class="nav-text">VRRP建立过程：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#VRRP备份组的切换过程："><span class="nav-number">2.3.</span> <span class="nav-text">VRRP备份组的切换过程：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#VRRP的故障恢复："><span class="nav-number">2.4.</span> <span class="nav-text">VRRP的故障恢复：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#VRRP缺点："><span class="nav-number">2.5.</span> <span class="nav-text">VRRP缺点：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在双机热备防火墙中的问题："><span class="nav-number">2.6.</span> <span class="nav-text">在双机热备防火墙中的问题：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#VGMP协议基本原理"><span class="nav-number">3.</span> <span class="nav-text">VGMP协议基本原理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么有VGMP？"><span class="nav-number">3.1.</span> <span class="nav-text">为什么有VGMP？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#VGMP报文："><span class="nav-number">3.2.</span> <span class="nav-text">VGMP报文：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#VGMP状态机"><span class="nav-number">3.3.</span> <span class="nav-text">VGMP状态机:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#VGMP工作原理："><span class="nav-number">3.4.</span> <span class="nav-text">VGMP工作原理：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#VGMP状态切换："><span class="nav-number">3.5.</span> <span class="nav-text">VGMP状态切换：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#VGMP故障检测："><span class="nav-number">3.6.</span> <span class="nav-text">VGMP故障检测：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#VGMP引导流量方式："><span class="nav-number">3.7.</span> <span class="nav-text">VGMP引导流量方式：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#HRP协议基本原理"><span class="nav-number">4.</span> <span class="nav-text">HRP协议基本原理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么会有HRP："><span class="nav-number">4.1.</span> <span class="nav-text">为什么会有HRP：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HRP报文："><span class="nav-number">4.2.</span> <span class="nav-text">HRP报文：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HRP报文封装："><span class="nav-number">4.3.</span> <span class="nav-text">HRP报文封装：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HRP备份方式："><span class="nav-number">4.4.</span> <span class="nav-text">HRP备份方式：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#备份通道状态："><span class="nav-number">4.5.</span> <span class="nav-text">备份通道状态：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#主备备份和负载分担工作原理"><span class="nav-number">5.</span> <span class="nav-text">主备备份和负载分担工作原理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#主备备份："><span class="nav-number">5.1.</span> <span class="nav-text">主备备份：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#负载分担："><span class="nav-number">5.2.</span> <span class="nav-text">负载分担：</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#防火墙双机热备技术"><span class="nav-number">1.</span> <span class="nav-text">防火墙双机热备技术</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#双机热备概述："><span class="nav-number">1.1.</span> <span class="nav-text">双机热备概述：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三大协议框架："><span class="nav-number">1.2.</span> <span class="nav-text">三大协议框架：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#VRRP协议基本原理"><span class="nav-number">2.</span> <span class="nav-text">VRRP协议基本原理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#VRRP的基础知识点："><span class="nav-number">2.1.</span> <span class="nav-text">VRRP的基础知识点：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#VRRP状态："><span class="nav-number">2.2.</span> <span class="nav-text">VRRP状态：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#VRRP建立过程："><span class="nav-number">2.3.</span> <span class="nav-text">VRRP建立过程：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#VRRP备份组的切换过程："><span class="nav-number">2.4.</span> <span class="nav-text">VRRP备份组的切换过程：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#VRRP的故障恢复："><span class="nav-number">2.5.</span> <span class="nav-text">VRRP的故障恢复：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#VRRP缺点："><span class="nav-number">2.6.</span> <span class="nav-text">VRRP缺点：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在双机热备防火墙中的问题："><span class="nav-number">2.7.</span> <span class="nav-text">在双机热备防火墙中的问题：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#VGMP协议基本原理"><span class="nav-number">3.</span> <span class="nav-text">VGMP协议基本原理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#VGMP简介："><span class="nav-number">3.1.</span> <span class="nav-text">VGMP简介：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么有VGMP？"><span class="nav-number">3.2.</span> <span class="nav-text">为什么有VGMP？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#VGMP报文："><span class="nav-number">3.3.</span> <span class="nav-text">VGMP报文：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#VGMP状态机"><span class="nav-number">3.4.</span> <span class="nav-text">VGMP状态机:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#VGMP工作原理："><span class="nav-number">3.5.</span> <span class="nav-text">VGMP工作原理：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#VGMP状态切换："><span class="nav-number">3.6.</span> <span class="nav-text">VGMP状态切换：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#接口故障时VGMP管理组优先级如何计算？"><span class="nav-number">3.6.0.1.</span> <span class="nav-text">接口故障时VGMP管理组优先级如何计算？</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#VGMP故障检测："><span class="nav-number">3.7.</span> <span class="nav-text">VGMP故障检测：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#IP-link："><span class="nav-number">3.7.0.1.</span> <span class="nav-text">IP-link：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#主备切换的时间多长？"><span class="nav-number">3.7.0.2.</span> <span class="nav-text">主备切换的时间多长？</span></a></li></ol></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#VGMP引导流量方式："><span class="nav-number">3.8.</span> <span class="nav-text">VGMP引导流量方式：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#HRP协议基本原理"><span class="nav-number">4.</span> <span class="nav-text">HRP协议基本原理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么会有HRP："><span class="nav-number">4.1.</span> <span class="nav-text">为什么会有HRP：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HRP报文："><span class="nav-number">4.2.</span> <span class="nav-text">HRP报文：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HRP报文封装："><span class="nav-number">4.3.</span> <span class="nav-text">HRP报文封装：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HRP备份方式："><span class="nav-number">4.4.</span> <span class="nav-text">HRP备份方式：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#备份通道状态："><span class="nav-number">4.5.</span> <span class="nav-text">备份通道状态：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#心跳线："><span class="nav-number">4.6.</span> <span class="nav-text">心跳线：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#主备备份和负载分担工作原理"><span class="nav-number">5.</span> <span class="nav-text">主备备份和负载分担工作原理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#主备备份："><span class="nav-number">5.1.</span> <span class="nav-text">主备备份：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#负载分担："><span class="nav-number">5.2.</span> <span class="nav-text">负载分担：</span></a></li></ol></li></div>
             
 
           </div>
@@ -1429,7 +1478,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共 754.7k 字</span>
+  <span class="post-count">全站共 762.1k 字</span>
 </div>
 
 
