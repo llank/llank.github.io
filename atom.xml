@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://cshihong.github.io/"/>
-  <updated>2019-03-28T04:08:51.095Z</updated>
+  <updated>2019-03-31T04:49:33.076Z</updated>
   <id>https://cshihong.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://cshihong.github.io/2019/03/27/%E8%93%9D%E6%A1%A5%E6%9D%AF%E7%AC%AC%E5%8D%81%E5%B1%8A%E7%9C%81%E8%B5%9BJava-B%E7%BB%84/"/>
     <id>https://cshihong.github.io/2019/03/27/蓝桥杯第十届省赛Java-B组/</id>
     <published>2019-03-27T13:40:01.000Z</published>
-    <updated>2019-03-28T04:08:51.095Z</updated>
+    <updated>2019-03-31T04:49:33.076Z</updated>
     
     <summary type="html">
     
@@ -29,7 +29,7 @@
       
         
         
-          &lt;h2 id=&quot;1-组队：&quot;&gt;&lt;a href=&quot;#1-组队：&quot; class=&quot;headerlink&quot; title=&quot;1.组队：&quot;&gt;&lt;/a&gt;1.组队：&lt;/h2&gt;&lt;blockquote&gt;
+          &lt;h2 id=&quot;组队：&quot;&gt;&lt;a href=&quot;#组队：&quot; class=&quot;headerlink&quot; title=&quot;组队：&quot;&gt;&lt;/a&gt;组队：&lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;作为篮球队教练，你需要从以下名单中选出1 号位至5
         
       
@@ -80,7 +80,7 @@
     <link href="https://cshihong.github.io/2019/03/25/%E9%98%B2%E7%81%AB%E5%A2%99%E5%8F%8C%E6%9C%BA%E7%83%AD%E5%A4%87%E5%90%84%E7%A7%8D%E5%9C%BA%E6%99%AF%E5%A4%87%E9%85%8D%E7%BD%AE%E7%A4%BA%E4%BE%8B/"/>
     <id>https://cshihong.github.io/2019/03/25/防火墙双机热备各种场景备配置示例/</id>
     <published>2019-03-25T09:06:39.000Z</published>
-    <updated>2019-03-30T14:02:42.096Z</updated>
+    <updated>2019-03-30T14:09:14.184Z</updated>
     
     <summary type="html">
     
@@ -89,34 +89,6 @@
         
         
           &lt;h1 id=&quot;双机热备各场景应用&quot;&gt;&lt;a href=&quot;#双机热备各场景应用&quot; class=&quot;headerlink&quot; title=&quot;双机热备各场景应用&quot;&gt;&lt;/a&gt;双机热备各场景应用&lt;/h1&gt;&lt;h2 id=&quot;主备备份和负载分担应用场景：&quot;&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-      <category term="网络安全" scheme="https://cshihong.github.io/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
-    
-    
-      <category term="防火墙" scheme="https://cshihong.github.io/tags/%E9%98%B2%E7%81%AB%E5%A2%99/"/>
-    
-      <category term="双机热备" scheme="https://cshihong.github.io/tags/%E5%8F%8C%E6%9C%BA%E7%83%AD%E5%A4%87/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>防火墙双机热备三大协议（VRRP/VGMP/HRP）原理</title>
-    <link href="https://cshihong.github.io/2019/03/20/%E9%98%B2%E7%81%AB%E5%A2%99%E5%8F%8C%E6%9C%BA%E7%83%AD%E5%A4%87%E4%B8%89%E5%A4%A7%E5%8D%8F%E8%AE%AE%EF%BC%88VRRP-VGMP-HRP%EF%BC%89%E5%8E%9F%E7%90%86/"/>
-    <id>https://cshihong.github.io/2019/03/20/防火墙双机热备三大协议（VRRP-VGMP-HRP）原理/</id>
-    <published>2019-03-20T06:06:54.000Z</published>
-    <updated>2019-03-30T13:54:51.283Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;防火墙双机热备技术&quot;&gt;&lt;a href=&quot;#防火墙双机热备技术&quot; class=&quot;headerlink&quot; title=&quot;防火墙双机热备技术&quot;&gt;&lt;/a&gt;防火墙双机热备技术&lt;/h1&gt;&lt;h2 id=&quot;双机热备概述：&quot;&gt;&lt;a href=&quot;#双机热备概述：&quot;
         
       
     
@@ -580,6 +552,34 @@
       <category term="蓝桥杯" scheme="https://cshihong.github.io/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
     
       <category term="Java编程" scheme="https://cshihong.github.io/tags/Java%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python获取Cookie时遇到重定向的情况</title>
+    <link href="https://cshihong.github.io/2019/01/01/Python%E8%8E%B7%E5%8F%96Cookie%E6%97%B6%E9%81%87%E5%88%B0%E9%87%8D%E5%AE%9A%E5%90%91%E7%9A%84%E6%83%85%E5%86%B5/"/>
+    <id>https://cshihong.github.io/2019/01/01/Python获取Cookie时遇到重定向的情况/</id>
+    <published>2019-01-01T13:44:52.000Z</published>
+    <updated>2019-01-01T14:17:08.619Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;问题描述和解决：&quot;&gt;&lt;a href=&quot;#问题描述和解决：&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Python" scheme="https://cshihong.github.io/categories/Python/"/>
+    
+    
+      <category term="Python学习笔记" scheme="https://cshihong.github.io/tags/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="爬虫" scheme="https://cshihong.github.io/tags/%E7%88%AC%E8%99%AB/"/>
     
   </entry>
   
