@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://cshihong.github.io/"/>
-  <updated>2019-03-31T04:49:33.076Z</updated>
+  <updated>2019-04-01T10:21:17.459Z</updated>
   <id>https://cshihong.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>防火墙虚拟系统</title>
+    <link href="https://cshihong.github.io/2019/04/01/%E9%98%B2%E7%81%AB%E5%A2%99%E8%99%9A%E6%8B%9F%E7%B3%BB%E7%BB%9F/"/>
+    <id>https://cshihong.github.io/2019/04/01/防火墙虚拟系统/</id>
+    <published>2019-04-01T08:26:16.000Z</published>
+    <updated>2019-04-01T10:21:17.459Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;防火墙虚拟系统&quot;&gt;&lt;a href=&quot;#防火墙虚拟系统&quot; class=&quot;headerlink&quot; title=&quot;防火墙虚拟系统&quot;&gt;&lt;/a&gt;防火墙虚拟系统&lt;/h1&gt;&lt;h2 id=&quot;虚拟化技术：&quot;&gt;&lt;a href=&quot;#虚拟化技术：&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="网络安全" scheme="https://cshihong.github.io/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
+    
+    
+      <category term="防火墙" scheme="https://cshihong.github.io/tags/%E9%98%B2%E7%81%AB%E5%A2%99/"/>
+    
+  </entry>
   
   <entry>
     <title>蓝桥杯第十届省赛Java-B组</title>
@@ -52,7 +78,7 @@
     <link href="https://cshihong.github.io/2019/03/25/5G%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
     <id>https://cshihong.github.io/2019/03/25/5G网络基础知识/</id>
     <published>2019-03-25T12:36:29.000Z</published>
-    <updated>2019-03-25T14:21:32.541Z</updated>
+    <updated>2019-04-01T14:26:43.941Z</updated>
     
     <summary type="html">
     
@@ -552,34 +578,6 @@
       <category term="蓝桥杯" scheme="https://cshihong.github.io/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
     
       <category term="Java编程" scheme="https://cshihong.github.io/tags/Java%E7%BC%96%E7%A8%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Python获取Cookie时遇到重定向的情况</title>
-    <link href="https://cshihong.github.io/2019/01/01/Python%E8%8E%B7%E5%8F%96Cookie%E6%97%B6%E9%81%87%E5%88%B0%E9%87%8D%E5%AE%9A%E5%90%91%E7%9A%84%E6%83%85%E5%86%B5/"/>
-    <id>https://cshihong.github.io/2019/01/01/Python获取Cookie时遇到重定向的情况/</id>
-    <published>2019-01-01T13:44:52.000Z</published>
-    <updated>2019-01-01T14:17:08.619Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;问题描述和解决：&quot;&gt;&lt;a href=&quot;#问题描述和解决：&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="Python" scheme="https://cshihong.github.io/categories/Python/"/>
-    
-    
-      <category term="Python学习笔记" scheme="https://cshihong.github.io/tags/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="爬虫" scheme="https://cshihong.github.io/tags/%E7%88%AC%E8%99%AB/"/>
     
   </entry>
   
