@@ -167,7 +167,17 @@
 <meta property="og:image" content="https://cshihong.github.io/2019/03/25/5G网络基础知识/频段.png">
 <meta property="og:image" content="https://cshihong.github.io/2019/03/25/5G网络基础知识/聚合.png">
 <meta property="og:image" content="https://cshihong.github.io/2019/03/25/5G网络基础知识/Hz.png">
-<meta property="og:updated_time" content="2019-04-01T14:37:54.340Z">
+<meta property="og:image" content="https://cshihong.github.io/2019/03/25/5G网络基础知识/网络.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/03/25/5G网络基础知识/切片.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/03/25/5G网络基础知识/分片.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/03/25/5G网络基础知识/e.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/03/25/5G网络基础知识/切片举例.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/03/25/5G网络基础知识/设计.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/03/25/5G网络基础知识/天线.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/03/25/5G网络基础知识/提升.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/03/25/5G网络基础知识/后续.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/03/25/5G网络基础知识/方案.png">
+<meta property="og:updated_time" content="2019-04-02T14:39:46.418Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="5G网络基础知识">
 <meta name="twitter:description" content="5G挑战5G面临挑战分类： MBB(Mobile Broadband)数量流量雪崩式增长。 移动设备通信所带来的流量增长。10年增长1000倍。 MBB(Mobile Broadband)指移动宽带。  联网设备数量巨大增长。 2020年预计有1000亿的联网设备。  应用场景和需求的多样性。 设备与设备之间的通信，比如自动驾驶，车与车之间的通信。要求时延尽可能的小。 由于机器通信所带来的新需求新">
@@ -508,7 +518,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-04-01 22:37:54" itemprop="dateModified" datetime="2019-04-01T22:37:54+08:00">2019-04-01</time>
+                <time title="修改时间：2019-04-02 22:39:46" itemprop="dateModified" datetime="2019-04-02T22:39:46+08:00">2019-04-02</time>
               
             
           </span>
@@ -548,9 +558,9 @@
             <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
 			<span class="post-meta-divider">|</span>
-			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 3,698</span>
+			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 5,387</span>
 			<span class="post-meta-item-text">|</span>
-			<span title="post.min2read"><span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span>阅读时长： 13</span>
+			<span title="post.min2read"><span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span>阅读时长： 19</span>
 
           
 
@@ -845,7 +855,51 @@
 <p>华为5G低频200MHz带宽，32T 32R，测试小区吞吐率,Sub6G,为10.32Gbps。</p>
 <p>华为5G高频，9.6GHz带宽，2T 2R，测试速率为115.20Gbps。</p>
 </blockquote>
-<h1 id="5G网络切片"><a href="#5G网络切片" class="headerlink" title="5G网络切片"></a>5G网络切片</h1><h1 id="5G关键技术及部署"><a href="#5G关键技术及部署" class="headerlink" title="5G关键技术及部署"></a>5G关键技术及部署</h1>
+<h1 id="5G网络切片"><a href="#5G网络切片" class="headerlink" title="5G网络切片"></a>5G网络切片</h1><h2 id="什么是网络切片："><a href="#什么是网络切片：" class="headerlink" title="什么是网络切片："></a>什么是网络切片：</h2><p>”网络切片“是利用虚拟化技术，将运营商网络物理基础设施资源根据场景需求虚拟化为多个相互独立的端到端网络。每个网络切片从设备到接入网传输网再到核心网在逻辑上隔离。</p>
+<h2 id="为什么5G需要网络切片？"><a href="#为什么5G需要网络切片？" class="headerlink" title="为什么5G需要网络切片？"></a>为什么5G需要网络切片？</h2><p><img src="/2019/03/25/5G网络基础知识/网络.png" alt="网络"></p>
+<p>主要是因为在5g的时代是一个万物互联的时代，万物互联也就意味着有多种多样的终端，也需要提供多种多样的服务，比方说VR和清视频对带宽的需求很高，可能要在20Gb/s。而车联网对于低时延、高可靠性，要求非常高，需要时延低于一毫秒，但是家里面的水表电表等等，他们对于带宽和实验没有太多要求，而是需要大的连接。针对不同的业务不同的需求，如果还像两三四G一样提供同样的服务，同样的网络资源，那就不行了，5g的网络切片可以把一个完整的物理网络根据需求切成多个虚拟化的切片，网络每一个切片都是一个单独的逻辑网络，可以根据用户的需求提供不同的网络资源和服务。</p>
+<h2 id="如何进行网络分片："><a href="#如何进行网络分片：" class="headerlink" title="如何进行网络分片："></a>如何进行网络分片：</h2><p><img src="/2019/03/25/5G网络基础知识/切片.png" alt="切片"></p>
+<p>当前网络基于专用设备。而5G网络需要创建虚拟化网络，网络虚拟化是前提。</p>
+<p><strong>5G采用新架构来支撑分片.</strong></p>
+<p><img src="/2019/03/25/5G网络基础知识/分片.png" alt="分片"></p>
+<h2 id="E2E网络切片："><a href="#E2E网络切片：" class="headerlink" title="E2E网络切片："></a>E2E网络切片：</h2><p><img src="/2019/03/25/5G网络基础知识/e.png" alt="e"></p>
+<p>根据不同的网络切片需求，将CP，UP，DU放到不同的位置。</p>
+<h2 id="网络切片业务模型设计举例："><a href="#网络切片业务模型设计举例：" class="headerlink" title="网络切片业务模型设计举例："></a>网络切片业务模型设计举例：</h2><p><img src="/2019/03/25/5G网络基础知识/切片举例.png" alt="切片举例"></p>
+<h2 id="网络切片的价值："><a href="#网络切片的价值：" class="headerlink" title="网络切片的价值："></a>网络切片的价值：</h2><ul>
+<li><strong>商业价值</strong>：网路切片可以帮助运营商快速进入垂直行业领域，获取更大的商业机会。</li>
+<li><strong>技术价值</strong>: 通过网络切片，一个网络便可以很好的服务于各类新的业务，极大的减少了运营商的网络投资成本。</li>
+<li><strong>TTM（Time to market ）</strong>: 网络切片对资源和业务逻辑隔离，降低了技术实现复杂度，缩短TTM，刺激业务创新。</li>
+</ul>
+<h1 id="5G关键技术及部署"><a href="#5G关键技术及部署" class="headerlink" title="5G关键技术及部署"></a>5G关键技术及部署</h1><h2 id="什么是Massive-MIMO："><a href="#什么是Massive-MIMO：" class="headerlink" title="什么是Massive MIMO："></a>什么是Massive MIMO：</h2><blockquote>
+<p>Massive MIMO：大规模天线阵列的多天线形态。</p>
+<p>和4G时代的Massive MIMO相比，5g时代的天线数量远大于g时的。</p>
+</blockquote>
+<p><strong>Massive MIMO增益—3D赋型。</strong></p>
+<blockquote>
+<p>所谓3D赋型指的是在垂直面上，3D面上多处赋型。而在4g是的大多MIMO技术都是平面上的赋型。5g时代MIMO可以做到在3D垂直面上，多个波束同时覆盖。对高层建筑有很好的覆盖效果。</p>
+<p>三维波束赋型简称3D BF，增强用户的覆盖。</p>
+</blockquote>
+<p><strong>Massive MIMO的第二个技术分两个层面：</strong></p>
+<blockquote>
+<p>第一：是立体16流更窄的波束。指的是可以在同一时间形成16个独立的流。使得速率有大幅度的提升。而在4G时一般都是两流或者4流。在5G可以做到16流。同时波束更窄可以覆盖范围更广，干扰更小。</p>
+<p>第二点：MU BF，多用户的波束赋型。对应Massive MIMO来说，它的速率决定于发射端和接收端最小的天线速率。所以即使在基站有16根天线，但是接收端有2根天线，最终也只能形成两流。峰值速率也只能是两倍。</p>
+<p>例如：手机有两根天线，可以将8个用户的手机组成一个组，就是16根天线。这样发射端和接收端都是16根天线。可以大大提高小区的峰值速率。</p>
+<p>虽然可以使用64T 64R，但是考虑到干扰等因素，现在一般只使用16流。将来随着技术的发展可能会使用更多流。</p>
+</blockquote>
+<h2 id="Massive-MIMO天线阵子设计："><a href="#Massive-MIMO天线阵子设计：" class="headerlink" title="Massive MIMO天线阵子设计："></a>Massive MIMO天线阵子设计：</h2><p><img src="/2019/03/25/5G网络基础知识/设计.png" alt="设计"></p>
+<p>对于64TR的来说，因为垂直分为了4层，所以叫也叫4V。而水平分为了8列，又因为每列的每个点有正交的两根天线组成，所以水平是16H。同时垂直的3个阵子又组成了1T。</p>
+<h2 id="Massive-MIMO天线硬件的变化："><a href="#Massive-MIMO天线硬件的变化：" class="headerlink" title="Massive MIMO天线硬件的变化："></a>Massive MIMO天线硬件的变化：</h2><p><img src="/2019/03/25/5G网络基础知识/天线.png" alt="天线"></p>
+<p>传统的MIMO天线形态是由 BBU + RRU + 天线组成，使用了Massive MIMO后，成为了BBU + AAU有源天线（包含了RRU + 天线）。</p>
+<h2 id="上下行解耦可以提升C-Band的覆盖："><a href="#上下行解耦可以提升C-Band的覆盖：" class="headerlink" title="上下行解耦可以提升C-Band的覆盖："></a>上下行解耦可以提升C-Band的覆盖：</h2><p>C-Band上行覆盖提升。</p>
+<p><img src="/2019/03/25/5G网络基础知识/提升.png" alt="提升"></p>
+<p>上下行解耦：指的是在近处的时候使用的是c波段，上下行都使用的c波段也就3.5GHz，而随着手机用户不断的远离基站，那么这个时候，上行就受限，而下行由于采用大功率的天线以及Massive MIMO的技术，所以下行没有太大问题，但上行由于手机的限制，所以上行链路会受限。</p>
+<p>解决办法：就是当手机用户远离基站的时候那么下行还是采用3.5GHz C波段，而上行会动态的调整到跟它同站的LTE的1.8GHz的频率。当然这个1.8GHz的频率是5g跟4g采用动态共享的方式，同时呢一段 是变成了5g的使用，那么这个上行虽然用的是1.8GHz的频率，但是空口技术实际上使用的是5g的空口技术。通过这样的方式，使得手机在基站的远处，也能达到上下行平衡。同时使得5g的覆盖范围和4g的基本持平。这就是上下行解耦的技术。</p>
+<p>注意：首先，5g和4g的小区，如果使用上下行解耦，那么它们必须是共站的，其次5g和4g的小区必须通过一定的方式连接起来，使他们资源变成资源池，这样才能互相进行通信和有效的资源调度。也就是说如果我们采用上下行解耦这种方式的话呢，将来4g和5g的基站必须要考虑他们之间的一个融合度和配合。</p>
+<p>那目前来说呢，上下行解耦里面的上行频段，协议中已经定义了以下这些频段，包括1.8GHz和800兆以及700M赫兹，将来会有更多的频率定义为上下行解耦的频率。</p>
+<p><img src="/2019/03/25/5G网络基础知识/后续.png" alt="后续"></p>
+<h2 id="5G的天线解决方案："><a href="#5G的天线解决方案：" class="headerlink" title="5G的天线解决方案："></a>5G的天线解决方案：</h2><p><img src="/2019/03/25/5G网络基础知识/方案.png" alt="方案"></p>
+<p>目前,经常会谈到的是1+1的天线解决方案。那么1+1的天线解决方案呢，其实指的是把Sub-3GHz，也就是低于三GHz下的所有的制式和频率都合1同一根天线，也就是两三四g都会统一合并起来，放在一个单杆的单天线里面，其次呢，毫米波及3.5GHz的Massive MIMO共一根杆，从而形成1+1的方案。</p>
+
       
     </div>
 
@@ -1486,7 +1540,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#5G挑战"><span class="nav-number">1.</span> <span class="nav-text">5G挑战</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#5G面临挑战分类："><span class="nav-number">1.1.</span> <span class="nav-text">5G面临挑战分类：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5G场景需求："><span class="nav-number">1.2.</span> <span class="nav-text">5G场景需求：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#不同网络制式所支持的连接数："><span class="nav-number">1.3.</span> <span class="nav-text">不同网络制式所支持的连接数：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自动驾驶对低时延的需求："><span class="nav-number">1.4.</span> <span class="nav-text">自动驾驶对低时延的需求：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ITU对IMT2020愿景的描述："><span class="nav-number">1.5.</span> <span class="nav-text">ITU对IMT2020愿景的描述：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5G-3GPP网络架构"><span class="nav-number">2.</span> <span class="nav-text">5G 3GPP网络架构</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#5G网络设计原则："><span class="nav-number">2.1.</span> <span class="nav-text">5G网络设计原则：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5G网络架构特点："><span class="nav-number">2.2.</span> <span class="nav-text">5G网络架构特点：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5G网络架构介绍："><span class="nav-number">2.3.</span> <span class="nav-text">5G网络架构介绍：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5G-cloud-RAN网络"><span class="nav-number">3.</span> <span class="nav-text">5G cloud RAN网络</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#背景：统一架构的网络需求："><span class="nav-number">3.1.</span> <span class="nav-text">背景：统一架构的网络需求：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现：网络功能虚拟化及云化："><span class="nav-number">3.2.</span> <span class="nav-text">实现：网络功能虚拟化及云化：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SingleRAN到CloudRAN的演进："><span class="nav-number">3.3.</span> <span class="nav-text">SingleRAN到CloudRAN的演进：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是Cloud-RAN？"><span class="nav-number">3.4.</span> <span class="nav-text">什么是Cloud RAN？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CloudRAN协议栈切分："><span class="nav-number">3.5.</span> <span class="nav-text">CloudRAN协议栈切分：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CloudRAN价值："><span class="nav-number">3.6.</span> <span class="nav-text">CloudRAN价值：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CloudRAN的部署场景："><span class="nav-number">3.7.</span> <span class="nav-text">CloudRAN的部署场景：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5G空口关键技术"><span class="nav-number">4.</span> <span class="nav-text">5G空口关键技术</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#全新的空口技术："><span class="nav-number">4.1.</span> <span class="nav-text">全新的空口技术：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#F-OFDM：非常灵活的空中接口的自适应波形："><span class="nav-number">4.2.</span> <span class="nav-text">F-OFDM：非常灵活的空中接口的自适应波形：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SCMA（稀疏码多址接入）："><span class="nav-number">4.3.</span> <span class="nav-text">SCMA（稀疏码多址接入）：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5G的信道编码-Polar码和LDPC码："><span class="nav-number">4.4.</span> <span class="nav-text">5G的信道编码-Polar码和LDPC码：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5G的多天线技术Massive-MIMO："><span class="nav-number">4.5.</span> <span class="nav-text">5G的多天线技术Massive MIMO：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#全双工："><span class="nav-number">4.6.</span> <span class="nav-text">全双工：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#频谱分配及5G核心频谱"><span class="nav-number">5.</span> <span class="nav-text">频谱分配及5G核心频谱</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#5G频谱方案："><span class="nav-number">5.1.</span> <span class="nav-text">5G频谱方案：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5G核心频段介绍："><span class="nav-number">5.2.</span> <span class="nav-text">5G核心频段介绍：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5G网络切片"><span class="nav-number">6.</span> <span class="nav-text">5G网络切片</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5G关键技术及部署"><span class="nav-number">7.</span> <span class="nav-text">5G关键技术及部署</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#5G挑战"><span class="nav-number">1.</span> <span class="nav-text">5G挑战</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#5G面临挑战分类："><span class="nav-number">1.1.</span> <span class="nav-text">5G面临挑战分类：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5G场景需求："><span class="nav-number">1.2.</span> <span class="nav-text">5G场景需求：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#不同网络制式所支持的连接数："><span class="nav-number">1.3.</span> <span class="nav-text">不同网络制式所支持的连接数：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自动驾驶对低时延的需求："><span class="nav-number">1.4.</span> <span class="nav-text">自动驾驶对低时延的需求：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ITU对IMT2020愿景的描述："><span class="nav-number">1.5.</span> <span class="nav-text">ITU对IMT2020愿景的描述：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5G-3GPP网络架构"><span class="nav-number">2.</span> <span class="nav-text">5G 3GPP网络架构</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#5G网络设计原则："><span class="nav-number">2.1.</span> <span class="nav-text">5G网络设计原则：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5G网络架构特点："><span class="nav-number">2.2.</span> <span class="nav-text">5G网络架构特点：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5G网络架构介绍："><span class="nav-number">2.3.</span> <span class="nav-text">5G网络架构介绍：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5G-cloud-RAN网络"><span class="nav-number">3.</span> <span class="nav-text">5G cloud RAN网络</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#背景：统一架构的网络需求："><span class="nav-number">3.1.</span> <span class="nav-text">背景：统一架构的网络需求：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现：网络功能虚拟化及云化："><span class="nav-number">3.2.</span> <span class="nav-text">实现：网络功能虚拟化及云化：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SingleRAN到CloudRAN的演进："><span class="nav-number">3.3.</span> <span class="nav-text">SingleRAN到CloudRAN的演进：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是Cloud-RAN？"><span class="nav-number">3.4.</span> <span class="nav-text">什么是Cloud RAN？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CloudRAN协议栈切分："><span class="nav-number">3.5.</span> <span class="nav-text">CloudRAN协议栈切分：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CloudRAN价值："><span class="nav-number">3.6.</span> <span class="nav-text">CloudRAN价值：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CloudRAN的部署场景："><span class="nav-number">3.7.</span> <span class="nav-text">CloudRAN的部署场景：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5G空口关键技术"><span class="nav-number">4.</span> <span class="nav-text">5G空口关键技术</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#全新的空口技术："><span class="nav-number">4.1.</span> <span class="nav-text">全新的空口技术：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#F-OFDM：非常灵活的空中接口的自适应波形："><span class="nav-number">4.2.</span> <span class="nav-text">F-OFDM：非常灵活的空中接口的自适应波形：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SCMA（稀疏码多址接入）："><span class="nav-number">4.3.</span> <span class="nav-text">SCMA（稀疏码多址接入）：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5G的信道编码-Polar码和LDPC码："><span class="nav-number">4.4.</span> <span class="nav-text">5G的信道编码-Polar码和LDPC码：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5G的多天线技术Massive-MIMO："><span class="nav-number">4.5.</span> <span class="nav-text">5G的多天线技术Massive MIMO：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#全双工："><span class="nav-number">4.6.</span> <span class="nav-text">全双工：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#频谱分配及5G核心频谱"><span class="nav-number">5.</span> <span class="nav-text">频谱分配及5G核心频谱</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#5G频谱方案："><span class="nav-number">5.1.</span> <span class="nav-text">5G频谱方案：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5G核心频段介绍："><span class="nav-number">5.2.</span> <span class="nav-text">5G核心频段介绍：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5G网络切片"><span class="nav-number">6.</span> <span class="nav-text">5G网络切片</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是网络切片："><span class="nav-number">6.1.</span> <span class="nav-text">什么是网络切片：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么5G需要网络切片？"><span class="nav-number">6.2.</span> <span class="nav-text">为什么5G需要网络切片？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何进行网络分片："><span class="nav-number">6.3.</span> <span class="nav-text">如何进行网络分片：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#E2E网络切片："><span class="nav-number">6.4.</span> <span class="nav-text">E2E网络切片：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网络切片业务模型设计举例："><span class="nav-number">6.5.</span> <span class="nav-text">网络切片业务模型设计举例：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网络切片的价值："><span class="nav-number">6.6.</span> <span class="nav-text">网络切片的价值：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5G关键技术及部署"><span class="nav-number">7.</span> <span class="nav-text">5G关键技术及部署</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是Massive-MIMO："><span class="nav-number">7.1.</span> <span class="nav-text">什么是Massive MIMO：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Massive-MIMO天线阵子设计："><span class="nav-number">7.2.</span> <span class="nav-text">Massive MIMO天线阵子设计：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Massive-MIMO天线硬件的变化："><span class="nav-number">7.3.</span> <span class="nav-text">Massive MIMO天线硬件的变化：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#上下行解耦可以提升C-Band的覆盖："><span class="nav-number">7.4.</span> <span class="nav-text">上下行解耦可以提升C-Band的覆盖：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5G的天线解决方案："><span class="nav-number">7.5.</span> <span class="nav-text">5G的天线解决方案：</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1526,7 +1580,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共 763.6k 字</span>
+  <span class="post-count">全站共 765.3k 字</span>
 </div>
 
 
