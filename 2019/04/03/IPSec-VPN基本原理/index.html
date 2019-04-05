@@ -133,20 +133,26 @@
 
 
 
-  <meta name="description" content="IPSec VPN简介为什么要实时VPN?实施VPN的最大动机是省钱。 VPN的分类：VPN分类方法很多。  站点到站点的VPN ATM，Rrame Relay， GRE， MPLS VPN， IPSec VPN。 常用的是IPSec VPN。  远程拨号VPN。 IPSec VPN， PPTP， L2TP + IPSec， SSL VPN。 常用的是SSL VPN。   什么是IPSec？IPS">
+  <meta name="description" content="IPSec VPN简介为什么要实时VPN?实施VPN的最大动机是省钱。 VPN的分类：VPN分类方法很多。  站点到站点的VPN ATM，Rrame Relay， GRE， MPLS VPN， IPSec VPN。 常用的是IPSec VPN。  远程拨号VPN。 IPSec VPN， PPTP， L2TP + IPSec， SSL VPN。 常用的是SSL VPN。   什么是IPSec？ IP">
 <meta name="keywords" content="VPN,IPSec VPN">
 <meta property="og:type" content="article">
 <meta property="og:title" content="IPSec VPN基本原理">
 <meta property="og:url" content="https://cshihong.github.io/2019/04/03/IPSec-VPN基本原理/index.html">
 <meta property="og:site_name" content="曹世宏的博客">
-<meta property="og:description" content="IPSec VPN简介为什么要实时VPN?实施VPN的最大动机是省钱。 VPN的分类：VPN分类方法很多。  站点到站点的VPN ATM，Rrame Relay， GRE， MPLS VPN， IPSec VPN。 常用的是IPSec VPN。  远程拨号VPN。 IPSec VPN， PPTP， L2TP + IPSec， SSL VPN。 常用的是SSL VPN。   什么是IPSec？IPS">
+<meta property="og:description" content="IPSec VPN简介为什么要实时VPN?实施VPN的最大动机是省钱。 VPN的分类：VPN分类方法很多。  站点到站点的VPN ATM，Rrame Relay， GRE， MPLS VPN， IPSec VPN。 常用的是IPSec VPN。  远程拨号VPN。 IPSec VPN， PPTP， L2TP + IPSec， SSL VPN。 常用的是SSL VPN。   什么是IPSec？ IP">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://cshihong.github.io/2019/04/03/IPSec-VPN基本原理/框架.png">
 <meta property="og:image" content="https://cshihong.github.io/2019/04/03/IPSec-VPN基本原理/数字签名.png">
-<meta property="og:updated_time" content="2019-04-03T07:20:13.074Z">
+<meta property="og:image" content="https://cshihong.github.io/2019/04/03/IPSec-VPN基本原理/AH包结构.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/04/03/IPSec-VPN基本原理/ah抓包.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/04/03/IPSec-VPN基本原理/esp包结构.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/04/03/IPSec-VPN基本原理/esp报文.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/04/03/IPSec-VPN基本原理/传输封装.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/04/03/IPSec-VPN基本原理/隧道封装.png">
+<meta property="og:updated_time" content="2019-04-04T15:30:06.908Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="IPSec VPN基本原理">
-<meta name="twitter:description" content="IPSec VPN简介为什么要实时VPN?实施VPN的最大动机是省钱。 VPN的分类：VPN分类方法很多。  站点到站点的VPN ATM，Rrame Relay， GRE， MPLS VPN， IPSec VPN。 常用的是IPSec VPN。  远程拨号VPN。 IPSec VPN， PPTP， L2TP + IPSec， SSL VPN。 常用的是SSL VPN。   什么是IPSec？IPS">
+<meta name="twitter:description" content="IPSec VPN简介为什么要实时VPN?实施VPN的最大动机是省钱。 VPN的分类：VPN分类方法很多。  站点到站点的VPN ATM，Rrame Relay， GRE， MPLS VPN， IPSec VPN。 常用的是IPSec VPN。  远程拨号VPN。 IPSec VPN， PPTP， L2TP + IPSec， SSL VPN。 常用的是SSL VPN。   什么是IPSec？ IP">
 <meta name="twitter:image" content="https://cshihong.github.io/2019/04/03/IPSec-VPN基本原理/框架.png">
 
 
@@ -467,12 +473,24 @@
                 
               
 
-              <time title="创建时间：2019-04-03 09:29:24 / 修改时间：15:20:13" itemprop="dateCreated datePublished" datetime="2019-04-03T09:29:24+08:00">2019-04-03</time>
+              <time title="创建时间：2019-04-03 09:29:24" itemprop="dateCreated datePublished" datetime="2019-04-03T09:29:24+08:00">2019-04-03</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-04-04 23:30:06" itemprop="dateModified" datetime="2019-04-04T23:30:06+08:00">2019-04-04</time>
               
             
           </span>
@@ -512,9 +530,9 @@
             <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
 			<span class="post-meta-divider">|</span>
-			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 1,213</span>
+			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 3,388</span>
 			<span class="post-meta-item-text">|</span>
-			<span title="post.min2read"><span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span>阅读时长： 4</span>
+			<span title="post.min2read"><span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span>阅读时长： 12</span>
 
           
 
@@ -547,7 +565,18 @@
 <p>常用的是SSL VPN。</p>
 </li>
 </ol>
-<h2 id="什么是IPSec？"><a href="#什么是IPSec？" class="headerlink" title="什么是IPSec？"></a>什么是IPSec？</h2><h1 id="IPSec-框架"><a href="#IPSec-框架" class="headerlink" title="IPSec 框架"></a>IPSec 框架</h1><h2 id="IPSec的框架："><a href="#IPSec的框架：" class="headerlink" title="IPSec的框架："></a>IPSec的框架：</h2><p><img src="/2019/04/03/IPSec-VPN基本原理/框架.png" alt="框架"></p>
+<h2 id="什么是IPSec？"><a href="#什么是IPSec？" class="headerlink" title="什么是IPSec？"></a>什么是IPSec？</h2><p> IPSec（Internet Protocol Security）是IETF（Internet Engineering Task Force）制定的一组开放的网络安全协议。它并不是一个单独的协议，而是一系列为IP网络提供安全性的协议和服务的集合。</p>
+<p>IPSec用来解决IP层安全性问题的技术。IPSec被设计为同时支持IPv4和IPv6网络。</p>
+<p>IPSec主要包括安全协议AH（Authentication Header）和ESP（Encapsulating Security Payload），密钥管理交换协议IKE（Internet Key Exchange）以及用于网络认证及加密的一些算法等。</p>
+<p>IPSec主要通过加密与验证等方式，为IP数据包提供安全服务。</p>
+<h2 id="IPSec提供的服务："><a href="#IPSec提供的服务：" class="headerlink" title="IPSec提供的服务："></a>IPSec提供的服务：</h2><p>IPSec通过加密与验证等方式，从以下几个方面保障了用户业务数据在Internet中的安全传输：</p>
+<ul>
+<li>数据来源验证：接收方验证发送方身份是否合法。</li>
+<li>数据加密：发送方对数据进行加密，以密文的形式在Internet上传送，接收方对接收的加密数据进行解密后处理或直接转发。</li>
+<li>数据完整性：接收方对接收的数据进行验证，以判定报文是否被篡改。</li>
+<li>抗重放：接收方拒绝旧的或重复的数据包，防止恶意用户通过重复发送捕获到的数据包所进行的攻击。</li>
+</ul>
+<h1 id="IPSec-框架"><a href="#IPSec-框架" class="headerlink" title="IPSec 框架"></a>IPSec 框架</h1><h2 id="IPSec的框架："><a href="#IPSec的框架：" class="headerlink" title="IPSec的框架："></a>IPSec的框架：</h2><p><img src="/2019/04/03/IPSec-VPN基本原理/框架.png" alt="框架"></p>
 <p>IPSec是一个框架，它不是具体指某个协议，而是定义了一个框架，由各种协议组和协商而成。该框架涉及到的主要有，加密算法、验证算法、封装协议、封装模式、秘钥有效期等等。</p>
 <h2 id="加密："><a href="#加密：" class="headerlink" title="加密："></a>加密：</h2><p>加密算法分为两类。对称算法和非对称算法。</p>
 <h3 id="对称加密算法："><a href="#对称加密算法：" class="headerlink" title="对称加密算法："></a>对称加密算法：</h3><p>特点：对称秘钥算法：用相同的秘钥进行加减密。</p>
@@ -574,9 +603,14 @@
 </blockquote>
 <p><strong>常见对称算法：</strong></p>
 <ul>
-<li>DES，56bit。</li>
-<li>3DES，168bit。</li>
-<li>AES, 128/192/256bit</li>
+<li><p>DES，数据加密标准DES（Data Encryption Standard）它使用56位的密钥对一个64位的明文块进行加密。</p>
+</li>
+<li><p>3DES，3DES（Triple Data Encryption Standard），3DES是一种增强型的DES标准，它在需要保护的数据上使用3次DES，即使用三个不同的56位的DES密钥（共168位密钥）对明文进行加密。</p>
+</li>
+<li><p>AES, 先进加密标准AES（Advanced Encryption Standard）</p>
+<p>AES被设计用来替代3DES，提供更快和更安全的加密功能。AES可以采用三种密钥：AES-128、AES-192和AES-256，其密钥长度分为128位、192位、256位。</p>
+<p>随着密钥长度的提升，加密算法的保密及安全性要求越高，但计算速度也越慢。一般情况下128bit就可以充分满足安全需求。</p>
+</li>
 </ul>
 <h3 id="非对称加密算法："><a href="#非对称加密算法：" class="headerlink" title="非对称加密算法："></a>非对称加密算法：</h3><p>特点：非对称秘钥算法，一对密钥，公钥和私钥。公钥加密，私钥解密。</p>
 <blockquote>
@@ -617,7 +651,6 @@
 </ol>
 <h2 id="验证："><a href="#验证：" class="headerlink" title="验证："></a>验证：</h2><p>验证算法，也叫HASH算法，散列函数。</p>
 <p>目的：验证数据的完整性</p>
-<p>算法：MD5  SHA-1 SHA-2 </p>
 <p><strong>特点:</strong> </p>
 <ol>
 <li>固定大小 </li>
@@ -630,6 +663,21 @@
 <p>明文数据+散列值一起发给对端</p>
 <p>验证：<br>明文数据———-同样的散列算法（MD5算法）———算出散列值2（67890）</p>
 <p>如果散列值1和散列2相同，说明验证成功，如果散列值不相同，说明验证失败</p>
+<p><strong>常见的验证算法：</strong></p>
+<ul>
+<li><p>MD5</p>
+<p>消息摘要MD5（Message Digest 5），输入任意长度的消息，MD5产生128位的签名。</p>
+<p>MD5比SHA更快，但是安全性稍差。</p>
+</li>
+<li><p>SHA1</p>
+<p>安全散列算法SHA（Secure Hash Algorithm）是由NIST开发的。在1994年对原始的HMAC功能进行了修订，被称为SHA1。输入长度小于264bit的消息，SHA1产生<strong>160位</strong>的消息摘要。</p>
+<p>SHA1比MD5要慢，但是更安全。因为它的签名比较长，具有更强大的防攻破功能，并可以更有效的发现共享的密钥。</p>
+</li>
+<li><p>SHA2</p>
+<p>SHA2是SHA1的加强版本，SHA2算法相对于SHA1加密数据长度有所上升，安全性能要远远高于SHA1。SHA2算法包括SHA2-256、SHA2-384和SHA2-512，密钥长度分别为256位、384位和512位。</p>
+<p>随着密钥长度的上升，认证算法安全强度更高，但计算速度越慢。一般情况下256位就可以充分满足安全需求。</p>
+</li>
+</ul>
 <h3 id="数字签名的工作过程示意图："><a href="#数字签名的工作过程示意图：" class="headerlink" title="数字签名的工作过程示意图："></a>数字签名的工作过程示意图：</h3><p><img src="/2019/04/03/IPSec-VPN基本原理/数字签名.png" alt="数字签名"></p>
 <p>私钥加密，公钥解密——数字签名<br><strong>实现完整性，源认证  不可否认</strong> </p>
 <p>实现过程： </p>
@@ -641,26 +689,194 @@
 <li>IPSec VPN数字签名认证。</li>
 <li>数字证书采用数字签名。</li>
 </ul>
-<h2 id="封装协议："><a href="#封装协议：" class="headerlink" title="封装协议："></a>封装协议：</h2><p>封装协议主要有两类：esp 和 AH。</p>
-<h3 id="ESP："><a href="#ESP：" class="headerlink" title="ESP："></a>ESP：</h3><p>支持加密和认证。IP协议号 50</p>
-<p>IP和IP负载之间插入一个ESP头部，同时会产生一个ESP尾部，把ESP头部和ESP尾部做认证，得到HASH值，放到认证尾部。</p>
-<h3 id="AH："><a href="#AH：" class="headerlink" title="AH："></a>AH：</h3><p>只能支持认证 ，不支持加密 。IP协议号 51.</p>
-<p>对整个头部进行认证。 </p>
-<h2 id="模式："><a href="#模式：" class="headerlink" title="模式："></a>模式：</h2><h3 id="传输模式："><a href="#传输模式：" class="headerlink" title="传输模式："></a>传输模式：</h3><p>在原IP和原IP负载之间插入ESP/AH头部 </p>
-<p>判断方法：</p>
+<h2 id="封装协议（安全协议）："><a href="#封装协议（安全协议）：" class="headerlink" title="封装协议（安全协议）："></a>封装协议（安全协议）：</h2><p>IPSec使用认证头AH（Authentication Header）和封装安全载ESP（Encapsulating Security Payload）两种安全协议来传输和封装数据，提供认证或加密等安全服务。</p>
+<h3 id="AH："><a href="#AH：" class="headerlink" title="AH："></a>AH：</h3><ul>
+<li><p>AH是一种基于IP的传输层协议，协议号为51。</p>
+</li>
+<li><p>只能支持认证 ，不支持加密 。</p>
+</li>
+<li><p>对整个头部进行认证。 </p>
+</li>
+</ul>
+<p><strong>工作原理：</strong></p>
+<p>其工作原理是在每一个数据包的标准IP报头后面添加一个AH报文头。如下所示：</p>
+<p><img src="/2019/04/03/IPSec-VPN基本原理/AH包结构.png" alt="AH包结构"></p>
+<p>​                        图：AH报文头结构</p>
+<p>AH对数据包和认证密钥进行Hash计算，接收方收到带有计算结果的数据包后，执行同样的Hash计算并与原计算结果比较，传输过程中对数据的任何更改将使计算结果无效，这样就提供了数据来源认证和数据完整性校验。AH协议的完整性验证范围为整个IP报文。</p>
+<p><strong>AH报文头字段含义：</strong></p>
+<table>
+<thead>
+<tr>
+<th>字段</th>
+<th>长度</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>下一头部</td>
+<td>8比特</td>
+<td>标识AH报文头后面的负载类型。传输模式下，是被保护的上层协议（TCP或UDP）或ESP协议的编号；隧道模式下，是IP协议或ESP协议的编号。注意：当AH与ESP协议同时使用时，AH报文头的下一头部为ESP报文头。</td>
+</tr>
+<tr>
+<td>负载长度</td>
+<td>8比特</td>
+<td>表示以32比特为单位的AH报文头长度减2，缺省为4。</td>
+</tr>
+<tr>
+<td>保留字段</td>
+<td>16比特</td>
+<td>保留将来使用，缺省为0。</td>
+</tr>
+<tr>
+<td>SPI</td>
+<td>32比特</td>
+<td>IPSec安全参数索引，用于唯一标识IPSec安全联盟。</td>
+</tr>
+<tr>
+<td>序列号</td>
+<td>32比特</td>
+<td>是一个从1开始的单项递增的计数器，唯一地标识每一个数据包，用于防止重放攻击。</td>
+</tr>
+<tr>
+<td>认证数据</td>
+<td>一个变长字段，长度为32比特的整数倍，通常为96比特。</td>
+<td>该字段包含数据完整性校验值 ICV（Integrity Check Value），用于接收方进行完整性校验。可选择的认证算法有MD5、SHA1、SHA2、SM3。</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Ah报文抓包示例：</strong></p>
+<p><img src="/2019/04/03/IPSec-VPN基本原理/ah抓包.png" alt="ah抓包"></p>
+<center><br>    图：AH报文抓包示例<br></center>
+
+<h3 id="ESP："><a href="#ESP：" class="headerlink" title="ESP："></a>ESP：</h3><blockquote>
+<p>ESP支持加密和认证。</p>
+</blockquote>
+<p>ESP是一种基于IP的传输层协议，<strong>协议号为50</strong>。其工作原理是在每一个数据包的标准IP报头后面添加一个ESP报文头，并在数据包后面追加一个ESP尾（ESP Tail和ESP Auth data）。与AH不同的是，ESP将数据中的有效载荷进行加密后再封装到数据包中，以保证数据的机密性，但ESP没有对IP头的内容进行保护。</p>
+<p><img src="/2019/04/03/IPSec-VPN基本原理/esp包结构.png" alt="esp包结构"></p>
+<center>图：ESP报文头结构</center>
+
+<p><strong>ESP报文头字段：</strong></p>
+<table>
+<thead>
+<tr>
+<th>字段</th>
+<th>长度</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SPI</td>
+<td>32比特</td>
+<td>IPSec安全参数索引，用于唯一标识IPSec安全联盟。</td>
+</tr>
+<tr>
+<td>序列号</td>
+<td>32比特</td>
+<td>是一个从1开始的单项递增的计数器，唯一地标识每一个数据包，用于防止重放攻击。</td>
+</tr>
+<tr>
+<td>负载数据</td>
+<td>—</td>
+<td>包含由下一头部字段给出的变长数据。</td>
+</tr>
+<tr>
+<td>填充字段</td>
+<td>—</td>
+<td>用于增加ESP报文头的位数。填充字段的长度与负载数据的长度和算法有关。当待加密报文的明文长度不是加密算法所要求的块长度时，需要进行填充补齐。</td>
+</tr>
+<tr>
+<td>填充长度</td>
+<td>8比特</td>
+<td>给出前面填充字段的长度，置0时表示没有填充。</td>
+</tr>
+<tr>
+<td>下一头部</td>
+<td>8比特</td>
+<td>标识ESP报文头后面的下一个负载类型。传输模式下，是被保护的上层协议（TCP或UDP）的编号；隧道模式下，是IP协议的编号。</td>
+</tr>
+<tr>
+<td>认证数据</td>
+<td>一个变长字段，长度为32比特的整数倍，通常为96比特。</td>
+<td>该字段包含数据完整性校验值ICV，用于接收方进行完整性校验。可选择的认证算法与AH的相同。ESP的验证功能是可选的，如果启动了数据包验证，会在加密数据的尾部添加一个ICV数值。</td>
+</tr>
+</tbody>
+</table>
+<p><strong>ESP报文抓包示例：</strong></p>
+<p><img src="/2019/04/03/IPSec-VPN基本原理/esp报文.png" alt="esp报文"></p>
+<center><br>    图：ESP报文抓包示例<br></center>
+
+<h3 id="AH协议和ESP协议比较："><a href="#AH协议和ESP协议比较：" class="headerlink" title="AH协议和ESP协议比较："></a>AH协议和ESP协议比较：</h3><table>
+<thead>
+<tr>
+<th>安全特性</th>
+<th>AH</th>
+<th>ESP</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>协议号</td>
+<td>51</td>
+<td>50</td>
+</tr>
+<tr>
+<td>数据完整性校验</td>
+<td>支持（验证整个IP报文）</td>
+<td>支持（不验证IP头）</td>
+</tr>
+<tr>
+<td>数据源验证</td>
+<td>支持</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>数据加密</td>
+<td>不支持</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>防报文重放攻击</td>
+<td>支持</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>IPSec NAT-T（NAT穿越）</td>
+<td>不支持</td>
+<td>支持</td>
+</tr>
+</tbody>
+</table>
+<h2 id="封装模式："><a href="#封装模式：" class="headerlink" title="封装模式："></a>封装模式：</h2><p>封装模式是指将AH或ESP相关的字段插入到原始IP报文中，以实现对报文的认证和加密，封装模式有传输模式和隧道模式两种。</p>
+<h3 id="传输模式："><a href="#传输模式：" class="headerlink" title="传输模式："></a>传输模式：</h3><p>在传输模式中，AH头或ESP头被插入到IP头与传输层协议头之间，保护TCP/UDP/ICMP负载。传输模式不改变报文头。</p>
+<p><img src="/2019/04/03/IPSec-VPN基本原理/传输封装.png" alt="传输封装"></p>
+<center>图：传输模式下报文封装</center>
+
+<p>传输模式下，AH协议的完整性验证范围为整个IP报文。ESP协议验证报文的完整性检查部分包括ESP头、传输层协议头、数据和ESP报尾，但不包括IP头，因此ESP协议无法保证IP头的安全。ESP的加密部分包括传输层协议头、数据和ESP报尾。</p>
+<p><strong>判断方法：</strong></p>
 <ol>
-<li>通信点地址和加密点地址相同</li>
-<li>通信点地址可以被路由 </li>
+<li><strong>通信点地址和加密点地址相同</strong></li>
+<li><strong>通信点地址可以被路由</strong>  </li>
 </ol>
 <h3 id="隧道模式："><a href="#隧道模式：" class="headerlink" title="隧道模式："></a>隧道模式：</h3><p>在原IP头部之前插入ESP/AH头部，同时生成新的IP头部 。</p>
+<p><img src="/2019/04/03/IPSec-VPN基本原理/隧道封装.png" alt="隧道封装"></p>
+<center>图：</center>
+
+<p>隧道模式下，AH协议的完整性验证范围为包括新增IP头在内的整个IP报文。ESP协议验证报文的完整性检查部分包括ESP头、原IP头、传输层协议头、数据和ESP报尾，但不包括新IP头，因此ESP协议无法保证新IP头的安全。ESP的加密部分包括原IP头、传输层协议头、数据和ESP报尾。</p>
 <p>判断方法： </p>
 <ol>
-<li><p>通信点地址和加密点地址不相同</p>
-</li>
-<li><p>通信点地址到internet能不能被路由，肯定是隧道</p>
-</li>
+<li>通信点地址和加密点地址不相同</li>
+<li>通信点地址到internet能不能被路由，肯定是隧道</li>
 </ol>
-<h2 id="秘钥有效期："><a href="#秘钥有效期：" class="headerlink" title="秘钥有效期："></a>秘钥有效期：</h2><h1 id="IKE协议"><a href="#IKE协议" class="headerlink" title="IKE协议"></a>IKE协议</h1><p>IKE协议参考：<strong>IKE协议详解</strong></p>
+<h3 id="传输模式和隧道模式比较："><a href="#传输模式和隧道模式比较：" class="headerlink" title="传输模式和隧道模式比较："></a>传输模式和隧道模式比较：</h3><p>传输模式和隧道模式的区别在于：</p>
+<ul>
+<li>从安全性来讲，隧道模式优于传输模式。它可以完全地对原始IP数据报进行验证和加密。隧道模式下可以隐藏内部IP地址，协议类型和端口。</li>
+<li>从性能来讲，隧道模式因为有一个额外的IP头，所以它将比传输模式占用更多带宽。</li>
+</ul>
+<p>当安全协议同时采用AH和ESP时，AH和ESP协议必须采用相同的封装模式。</p>
+<h2 id="秘钥有效期："><a href="#秘钥有效期：" class="headerlink" title="秘钥有效期："></a>秘钥有效期：</h2><p>默认为86400s，即24小时。</p>
+<h1 id="IKE协议"><a href="#IKE协议" class="headerlink" title="IKE协议"></a>IKE协议</h1><p>IKE协议参考：<strong>IKE协议详解</strong></p>
 
       
     </div>
@@ -1306,7 +1522,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#IPSec-VPN简介"><span class="nav-number">1.</span> <span class="nav-text">IPSec VPN简介</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么要实时VPN"><span class="nav-number">1.1.</span> <span class="nav-text">为什么要实时VPN?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#VPN的分类："><span class="nav-number">1.2.</span> <span class="nav-text">VPN的分类：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是IPSec？"><span class="nav-number">1.3.</span> <span class="nav-text">什么是IPSec？</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#IPSec-框架"><span class="nav-number">2.</span> <span class="nav-text">IPSec 框架</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#IPSec的框架："><span class="nav-number">2.1.</span> <span class="nav-text">IPSec的框架：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#加密："><span class="nav-number">2.2.</span> <span class="nav-text">加密：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#对称加密算法："><span class="nav-number">2.2.1.</span> <span class="nav-text">对称加密算法：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#非对称加密算法："><span class="nav-number">2.2.2.</span> <span class="nav-text">非对称加密算法：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数字信封-—-完美解决方案："><span class="nav-number">2.2.3.</span> <span class="nav-text">数字信封 —-完美解决方案：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#验证："><span class="nav-number">2.3.</span> <span class="nav-text">验证：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数字签名的工作过程示意图："><span class="nav-number">2.3.1.</span> <span class="nav-text">数字签名的工作过程示意图：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#封装协议："><span class="nav-number">2.4.</span> <span class="nav-text">封装协议：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ESP："><span class="nav-number">2.4.1.</span> <span class="nav-text">ESP：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AH："><span class="nav-number">2.4.2.</span> <span class="nav-text">AH：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模式："><span class="nav-number">2.5.</span> <span class="nav-text">模式：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#传输模式："><span class="nav-number">2.5.1.</span> <span class="nav-text">传输模式：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#隧道模式："><span class="nav-number">2.5.2.</span> <span class="nav-text">隧道模式：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#秘钥有效期："><span class="nav-number">2.6.</span> <span class="nav-text">秘钥有效期：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#IKE协议"><span class="nav-number">3.</span> <span class="nav-text">IKE协议</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#IPSec-VPN简介"><span class="nav-number">1.</span> <span class="nav-text">IPSec VPN简介</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么要实时VPN"><span class="nav-number">1.1.</span> <span class="nav-text">为什么要实时VPN?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#VPN的分类："><span class="nav-number">1.2.</span> <span class="nav-text">VPN的分类：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是IPSec？"><span class="nav-number">1.3.</span> <span class="nav-text">什么是IPSec？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IPSec提供的服务："><span class="nav-number">1.4.</span> <span class="nav-text">IPSec提供的服务：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#IPSec-框架"><span class="nav-number">2.</span> <span class="nav-text">IPSec 框架</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#IPSec的框架："><span class="nav-number">2.1.</span> <span class="nav-text">IPSec的框架：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#加密："><span class="nav-number">2.2.</span> <span class="nav-text">加密：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#对称加密算法："><span class="nav-number">2.2.1.</span> <span class="nav-text">对称加密算法：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#非对称加密算法："><span class="nav-number">2.2.2.</span> <span class="nav-text">非对称加密算法：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数字信封-—-完美解决方案："><span class="nav-number">2.2.3.</span> <span class="nav-text">数字信封 —-完美解决方案：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#验证："><span class="nav-number">2.3.</span> <span class="nav-text">验证：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数字签名的工作过程示意图："><span class="nav-number">2.3.1.</span> <span class="nav-text">数字签名的工作过程示意图：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#封装协议（安全协议）："><span class="nav-number">2.4.</span> <span class="nav-text">封装协议（安全协议）：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#AH："><span class="nav-number">2.4.1.</span> <span class="nav-text">AH：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ESP："><span class="nav-number">2.4.2.</span> <span class="nav-text">ESP：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AH协议和ESP协议比较："><span class="nav-number">2.4.3.</span> <span class="nav-text">AH协议和ESP协议比较：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#封装模式："><span class="nav-number">2.5.</span> <span class="nav-text">封装模式：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#传输模式："><span class="nav-number">2.5.1.</span> <span class="nav-text">传输模式：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#隧道模式："><span class="nav-number">2.5.2.</span> <span class="nav-text">隧道模式：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#传输模式和隧道模式比较："><span class="nav-number">2.5.3.</span> <span class="nav-text">传输模式和隧道模式比较：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#秘钥有效期："><span class="nav-number">2.6.</span> <span class="nav-text">秘钥有效期：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#IKE协议"><span class="nav-number">3.</span> <span class="nav-text">IKE协议</span></a></li></ol></div>
             
 
           </div>
@@ -1346,7 +1562,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共 770.0k 字</span>
+  <span class="post-count">全站共 778.4k 字</span>
 </div>
 
 

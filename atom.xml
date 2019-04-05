@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://cshihong.github.io/"/>
-  <updated>2019-04-03T07:46:25.872Z</updated>
+  <updated>2019-04-04T15:34:39.700Z</updated>
   <id>https://cshihong.github.io/</id>
   
   <author>
@@ -21,12 +21,26 @@
     <link href="https://cshihong.github.io/2019/04/03/IPSec-VPN%E4%B9%8BIKE%E5%8D%8F%E8%AE%AE%E8%AF%A6%E8%A7%A3/"/>
     <id>https://cshihong.github.io/2019/04/03/IPSec-VPN之IKE协议详解/</id>
     <published>2019-04-03T07:46:25.000Z</published>
-    <updated>2019-04-03T07:46:25.872Z</updated>
+    <updated>2019-04-04T15:34:39.700Z</updated>
     
     <summary type="html">
     
+      
+      
+        
+        
+          &lt;h1 id=&quot;IKE简介&quot;&gt;&lt;a href=&quot;#IKE简介&quot; class=&quot;headerlink&quot; title=&quot;IKE简介&quot;&gt;&lt;/a&gt;IKE简介&lt;/h1&gt;&lt;h2 id=&quot;安全联盟SA：&quot;&gt;&lt;a href=&quot;#安全联盟SA：&quot; class=&quot;headerlink&quot;
+        
+      
+    
     </summary>
     
+      <category term="网络安全" scheme="https://cshihong.github.io/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
+    
+    
+      <category term="VPN" scheme="https://cshihong.github.io/tags/VPN/"/>
+    
+      <category term="IPSec VPN" scheme="https://cshihong.github.io/tags/IPSec-VPN/"/>
     
   </entry>
   
@@ -35,7 +49,7 @@
     <link href="https://cshihong.github.io/2019/04/03/IPSec-VPN%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/"/>
     <id>https://cshihong.github.io/2019/04/03/IPSec-VPN基本原理/</id>
     <published>2019-04-03T01:29:24.000Z</published>
-    <updated>2019-04-03T07:20:13.074Z</updated>
+    <updated>2019-04-04T15:30:06.908Z</updated>
     
     <summary type="html">
     
@@ -173,10 +187,10 @@
   
   <entry>
     <title>防火墙双机热备三大协议（VRRP/VGMP/HRP）原理</title>
-    <link href="https://cshihong.github.io/2019/03/20/%E9%98%B2%E7%81%AB%E5%A2%99%E5%8F%8C%E6%9C%BA%E7%83%AD%E5%A4%87%E4%B8%89%E5%A4%A7%E5%8D%8F%E8%AE%AE%EF%BC%88VRRP-VGMP-HRP%EF%BC%89%E5%8E%9F%E7%90%86/"/>
-    <id>https://cshihong.github.io/2019/03/20/防火墙双机热备三大协议（VRRP-VGMP-HRP）原理/</id>
+    <link href="https://cshihong.github.io/2019/03/20/%E9%98%B2%E7%81%AB%E5%A2%99%E5%8F%8C%E6%9C%BA%E7%83%AD%E5%A4%87%E4%B8%89%E5%A4%A7%E5%8D%8F%E8%AE%AEVRRP%E3%80%81VGMP%E3%80%81HRP%E5%8E%9F%E7%90%86/"/>
+    <id>https://cshihong.github.io/2019/03/20/防火墙双机热备三大协议VRRP、VGMP、HRP原理/</id>
     <published>2019-03-20T06:06:54.000Z</published>
-    <updated>2019-03-30T14:09:10.005Z</updated>
+    <updated>2019-04-03T08:18:51.855Z</updated>
     
     <summary type="html">
     

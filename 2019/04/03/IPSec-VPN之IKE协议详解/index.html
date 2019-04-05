@@ -133,17 +133,36 @@
 
 
 
-  <meta name="description" content="你的责任就是你的方向，你的经历就是你的资本，你的性格就是你的命运。">
+  <meta name="description" content="IKE简介安全联盟SA：定义： 安全联盟是要建立IPSec 隧道的通信双方对隧道参数的约定，包括隧道两端的IP地址、隧道采用的验证方式、验证算法、验证密钥、加密算法、共享密钥以及生命周期等一系列参数。 SA由三元组来唯一标识，这个三元组包括安全参数索引SPI（Security Parameter Index）、目的IP地址和使用的安全协议号（AH或ESP）。其中，SPI是为唯一标识SA而生成的一个">
+<meta name="keywords" content="VPN,IPSec VPN">
 <meta property="og:type" content="article">
 <meta property="og:title" content="IPSec VPN之IKE协议详解">
 <meta property="og:url" content="https://cshihong.github.io/2019/04/03/IPSec-VPN之IKE协议详解/index.html">
 <meta property="og:site_name" content="曹世宏的博客">
-<meta property="og:description" content="你的责任就是你的方向，你的经历就是你的资本，你的性格就是你的命运。">
+<meta property="og:description" content="IKE简介安全联盟SA：定义： 安全联盟是要建立IPSec 隧道的通信双方对隧道参数的约定，包括隧道两端的IP地址、隧道采用的验证方式、验证算法、验证密钥、加密算法、共享密钥以及生命周期等一系列参数。 SA由三元组来唯一标识，这个三元组包括安全参数索引SPI（Security Parameter Index）、目的IP地址和使用的安全协议号（AH或ESP）。其中，SPI是为唯一标识SA而生成的一个">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-03T07:46:25.872Z">
+<meta property="og:image" content="https://cshihong.github.io/2019/04/03/IPSec-VPN之IKE协议详解/ike与ipsec关系.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/04/03/IPSec-VPN之IKE协议详解/IKEv1协商.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/04/03/IPSec-VPN之IKE协议详解/主模式9个包.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/04/03/IPSec-VPN之IKE协议详解/main_1.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/04/03/IPSec-VPN之IKE协议详解/main_1_1.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/04/03/IPSec-VPN之IKE协议详解/main_2.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/04/03/IPSec-VPN之IKE协议详解/main_3.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/04/03/IPSec-VPN之IKE协议详解/mian_4.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/04/03/IPSec-VPN之IKE协议详解/main_5.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/04/03/IPSec-VPN之IKE协议详解/main_6.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/04/03/IPSec-VPN之IKE协议详解/阶段二.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/04/03/IPSec-VPN之IKE协议详解/quick_1.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/04/03/IPSec-VPN之IKE协议详解/IKEv1野蛮模式.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/04/03/IPSec-VPN之IKE协议详解/aggressive抓包.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/04/03/IPSec-VPN之IKE协议详解/IKEv2协商.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/04/03/IPSec-VPN之IKE协议详解/IKEv2过程.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/04/03/IPSec-VPN之IKE协议详解/通知.png">
+<meta property="og:updated_time" content="2019-04-04T15:34:39.700Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="IPSec VPN之IKE协议详解">
-<meta name="twitter:description" content="你的责任就是你的方向，你的经历就是你的资本，你的性格就是你的命运。">
+<meta name="twitter:description" content="IKE简介安全联盟SA：定义： 安全联盟是要建立IPSec 隧道的通信双方对隧道参数的约定，包括隧道两端的IP地址、隧道采用的验证方式、验证算法、验证密钥、加密算法、共享密钥以及生命周期等一系列参数。 SA由三元组来唯一标识，这个三元组包括安全参数索引SPI（Security Parameter Index）、目的IP地址和使用的安全协议号（AH或ESP）。其中，SPI是为唯一标识SA而生成的一个">
+<meta name="twitter:image" content="https://cshihong.github.io/2019/04/03/IPSec-VPN之IKE协议详解/ike与ipsec关系.png">
 
 
 
@@ -467,8 +486,42 @@
             
 
             
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-04-04 23:34:39" itemprop="dateModified" datetime="2019-04-04T23:34:39+08:00">2019-04-04</time>
+              
+            
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/网络安全/" itemprop="url" rel="index"><span itemprop="name">网络安全</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -486,9 +539,9 @@
             <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
 			<span class="post-meta-divider">|</span>
-			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 0</span>
+			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 6,243</span>
 			<span class="post-meta-item-text">|</span>
-			<span title="post.min2read"><span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span>阅读时长： 1</span>
+			<span title="post.min2read"><span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span>阅读时长： 23</span>
 
           
 
@@ -509,7 +562,292 @@
       
 
       
-        
+        <h1 id="IKE简介"><a href="#IKE简介" class="headerlink" title="IKE简介"></a>IKE简介</h1><h2 id="安全联盟SA："><a href="#安全联盟SA：" class="headerlink" title="安全联盟SA："></a>安全联盟SA：</h2><p><strong>定义：</strong> 安全联盟是要建立IPSec 隧道的通信双方对隧道参数的约定，包括隧道两端的IP地址、隧道采用的验证方式、验证算法、验证密钥、加密算法、共享密钥以及生命周期等一系列参数。</p>
+<p>SA由三元组来<strong>唯一标识</strong>，这个三元组包括安全参数索引SPI（Security Parameter Index）、目的IP地址和使用的安全协议号（AH或ESP）。其中，SPI是为唯一标识SA而生成的一个32位比特的数值，它在AH和ESP头中传输。在手工配置SA时，需要手工指定SPI的取值。使用IKE协商产生SA时，SPI将随机生成。</p>
+<p>SA是单向的逻辑连接，因此两个IPSec对等体之间的双向通信，最少需要建立两个SA来分别对两个方向的数据流进行安全保护。</p>
+<p>SA是IPSec的一个基本组成部分，SA是SADB的一个条目，它包含双方关于IKE和IPSec已经协商完毕的安全信息。</p>
+<ul>
+<li>IKE or ISAKMP SA：双向的，决定了IKE协议处理相关细节</li>
+<li>IPSec SA：单向的，与封装协议相关，决定了具体加密流量的处理方式。</li>
+</ul>
+<p>两种类型的SA都是由IKE协议协商产生的。</p>
+<h2 id="建立IPSec-SA的方式："><a href="#建立IPSec-SA的方式：" class="headerlink" title="建立IPSec SA的方式："></a>建立IPSec SA的方式：</h2><p>有两种方式建立IPSec安全联盟：手工方式和IKE自动协商方式。二者的主要区别为：</p>
+<ul>
+<li><p>密钥生成方式不同</p>
+<p>手工方式下，建立SA所需的全部参数，包括加密、验证密钥，都需要用户手工配置，也只能手工刷新，在中大型网络中，这种方式的密钥管理成本很高；IKE方式下，建立SA需要的加密、验证密钥是通过DH算法生成的，可以动态刷新，因而密钥管理成本低，且安全性较高。</p>
+</li>
+<li><p>生存周期不同</p>
+<p>手工方式建立的SA，一经建立永久存在；IKE方式建立的SA，其生存周期由双方配置的生存周期参数控制。</p>
+</li>
+</ul>
+<h2 id="IKE介绍："><a href="#IKE介绍：" class="headerlink" title="IKE介绍："></a>IKE介绍：</h2><p>IKE是一个复合协议。</p>
+<p>因特网密钥交换IKE（Internet Key Exchange）协议建立在Internet安全联盟和密钥管理协议ISAKMP定义的框架上，是基于UDP（User Datagram Protocol）500 端口号，的应用层协议。</p>
+<p> IKE协商两种SA：</p>
+<ul>
+<li><p>IKE(ISAKMP)  SA (阶段一）</p>
+</li>
+<li><p>IPSEC SA（阶段二） </p>
+</li>
+</ul>
+<p>IKE负责建立和维护IKE SAs 和 IPSec SAs。功能主要体现在如下几个方面：</p>
+<ul>
+<li>对双方进行认证</li>
+<li>交换公共密钥，产生密钥资源，管理密钥</li>
+<li>协商协议参数（封装、加密、验证…..）</li>
+</ul>
+<p>IKE的三个组件：</p>
+<ul>
+<li>SKEME：实现公钥加密认证的机制</li>
+<li>Oakley：基于到达两个对等体间的加密密钥的机制</li>
+<li>ISAKMP：在两个实体间进行分组格式及状态转换的消息交换的体系结构。</li>
+</ul>
+<p><strong>IKE有两个版本:</strong> </p>
+<ul>
+<li>IKEV1 </li>
+<li>IKEV2——-华为默认 </li>
+</ul>
+<h2 id="IKE与IPSec的关系："><a href="#IKE与IPSec的关系：" class="headerlink" title="IKE与IPSec的关系："></a>IKE与IPSec的关系：</h2><p>IKE为IPSec提供了自动协商密钥、建立IPSec安全联盟的服务，能够简化IPSec的使用和管理，大大简化IPSec的配置和维护工作。</p>
+<p><img src="/2019/04/03/IPSec-VPN之IKE协议详解/ike与ipsec关系.png" alt="ike与ipsec关系"></p>
+<center>图：IKE与IPSec的关系图</center>
+
+<p>IKE与IPSec的关系如上图所示，对等体之间建立一个IKE SA完成身份验证和密钥信息交换后，在IKE SA的保护下，根据配置的AH/ESP安全协议等参数协商出一对IPSec SA。此后，对等体间的数据将在IPSec隧道中加密传输。</p>
+<h2 id="IKE的安全机制："><a href="#IKE的安全机制：" class="headerlink" title="IKE的安全机制："></a>IKE的安全机制：</h2><p>IKE具有一套自保护机制，可以在不安全的网络上安全地认证身份、分发密钥、建立IPsec SA：</p>
+<p><strong>身份认证</strong></p>
+<p>身份认证确认通信双方的身份（对等体的IP地址或名称），包括预共享密钥PSK（pre-shared key）认证、数字证书RSA（rsa-signature）认证和数字信封认证。</p>
+<ul>
+<li>在预共享密钥认证中，认证字作为一个输入来产生密钥，通信双方采用共享的密钥对报文进行Hash计算，判断双方的计算结果是否相同。如果相同，则认证通过；否则认证失败。</li>
+<li>在数字证书认证中，通信双方使用CA证书进行数字证书合法性验证，双方各有自己的公钥（网络上传输）和私钥（自己持有）。发送方对原始报文进行Hash计算，并用自己的私钥对报文计算结果进行加密，生成数字签名。接收方使用发送方的公钥对数字签名进行解密，并对报文进行Hash计算，判断计算结果与解密后的结果是否相同。如果相同，则认证通过；否则认证失败。</li>
+<li>在数字信封认证中，发送方首先随机产生一个对称密钥，使用接收方的公钥对此对称密钥进行加密（被公钥加密的对称密钥称为数字信封），发送方用对称密钥加密报文，同时用自己的私钥生成数字签名。接收方用自己的私钥解密数字信封得到对称密钥，再用对称密钥解密报文，同时根据发送方的公钥对数字签名进行解密，验证发送方的数字签名是否正确。如果正确，则认证通过；否则认证失败。</li>
+</ul>
+<p><strong>DH</strong></p>
+<ul>
+<li><p>DH是一种公共密钥交换方法，它用于产生密钥材料，并通过ISAKMP消息在发送和接收设备之间进行密钥材料交换。然后，两端设备各自计算出完全相同的对称密钥。该对称密钥用于计算加密和验证的密钥。在任何时候，通信双方都不交换真正的密钥。DH密钥交换是IKE的精髓所在。</p>
+<p>MD5、SHA1、DES、3DES、AES等算法都可以采用DH算法来共享对称密钥。</p>
+<p>DH使用密钥组定义自己产生的密钥长度。密钥组长度越长，产生的密钥就越强壮。</p>
+<blockquote>
+<p>IKE的精髓在于它永远不在不安全的网络上传送密钥，而是通过一些数据的交换，通信双方最终计算出共享的密钥，并且即使第三方截获了双方用于计算密钥的所有交换数据，也无法计算出真正的密钥。其中的核心技术就是DH（Diffie Hellman）交换技术。</p>
+</blockquote>
+</li>
+</ul>
+<p>PFS</p>
+<ul>
+<li>完善的前向安全性PFS（Perfect Forward Secrecy）是一种安全特性，指一个密钥被破解，并不影响其他密钥的安全性，因为这些密钥间没有派生关系。IPSec SA的密钥是从IKE SA的密钥导出的，由于一个IKE SA协商生成一对或多对IPSec SA，当IKE的密钥被窃取后，攻击者将可能收集到足够的信息来导出IPSec SA的密钥，PFS通过执行一次额外的DH交换，保证IPSec SA密钥的安全。</li>
+</ul>
+<h2 id="IKE的两个阶段："><a href="#IKE的两个阶段：" class="headerlink" title="IKE的两个阶段："></a>IKE的两个阶段：</h2><p>采用IKEv1协商安全联盟主要分为两个阶段：第一阶段，通信双方协商和建立IKE协议本身使用的安全通道，即建立一个IKE SA；第二阶段，利用第一阶段已通过认证和安全保护的安全通道，建立一对用于数据安全传输的IPSec安全联盟。</p>
+<p>IKEv1协商阶段1支持两种协商模式：主模式（Main Mode）和野蛮模式（Aggressive Mode）。</p>
+<p>经典版本的IKEv1有两个阶段：</p>
+<ul>
+<li><p>阶段一 ： IKE SA</p>
+<p>主模式（6个包）</p>
+<p>野蛮模式（3个包）</p>
+</li>
+<li><p>阶段二：IPSec SA</p>
+<p>快速模式（3个包）</p>
+</li>
+</ul>
+<h1 id="详解IKEv1主模式的协商过程"><a href="#详解IKEv1主模式的协商过程" class="headerlink" title="详解IKEv1主模式的协商过程"></a>详解IKEv1主模式的协商过程</h1><h2 id="IKEv1阶段一协商过程："><a href="#IKEv1阶段一协商过程：" class="headerlink" title="IKEv1阶段一协商过程："></a>IKEv1阶段一协商过程：</h2><p>IKEv1的主模式协商：包含了三次双向交换，用到了六条ISAKMP信息。协商过程如下图所示：</p>
+<p><img src="/2019/04/03/IPSec-VPN之IKE协议详解/IKEv1协商.png" alt="IKEv1协商"></p>
+<center>图：IKEv1主模式的协商过程</center>
+
+<hr>
+<p><img src="/2019/04/03/IPSec-VPN之IKE协议详解/主模式9个包.png" alt="主模式9个包"></p>
+<center>图：IKEv1主模式协商抓包</center>
+
+<p>IKEv1的协商过程总用用到了9个包。</p>
+<hr>
+<p>这三次交换分别是：</p>
+<ol>
+<li><p>消息①和②用于策略交换</p>
+<p>发起方发送一个或多个IKE安全提议，响应方查找最先匹配的IKE安全提议，并将这个IKE安全提议回应给发起方。匹配的原则为协商双方具有相同的加密算法、认证算法、认证方法和Diffie-Hellman组标识。</p>
+</li>
+<li><p>消息③和④用于密钥信息交换</p>
+<p>双方交换Diffie-Hellman公共值和nonce值，用于IKE SA的认证和加密密钥在这个阶段产生。</p>
+</li>
+<li><p>消息⑤和⑥用于身份和认证信息交换（双方使用生成的密钥发送信息），双方进行身份认证和对整个主模式交换内容的认证。</p>
+</li>
+</ol>
+<blockquote>
+<p>IKE安全提议指IKE协商过程中用到的加密算法、认证算法、Diffie-Hellman组及认证方法等。</p>
+<p>nonce是个随机数，用于保证IKE SA存活和抗重放攻击。</p>
+</blockquote>
+<hr>
+<h2 id="使用预共享秘钥进行身份验证主模式的详细过程："><a href="#使用预共享秘钥进行身份验证主模式的详细过程：" class="headerlink" title="使用预共享秘钥进行身份验证主模式的详细过程："></a>使用预共享秘钥进行身份验证主模式的详细过程：</h2><p>当做一个预共享秘钥认证时，主模式的协商如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">follows:</span><br><span class="line"></span><br><span class="line">             Initiator                        Responder</span><br><span class="line">            ----------                       -----------</span><br><span class="line">             HDR, SA             --&gt;</span><br><span class="line">                                 &lt;--    HDR, SA</span><br><span class="line">             HDR, KE, Ni         --&gt;</span><br><span class="line">                                 &lt;--    HDR, KE, Nr</span><br><span class="line">             HDR*, IDii, HASH_I  --&gt;</span><br><span class="line">                                 &lt;--    HDR*, IDir, HASH_R</span><br></pre></td></tr></table></figure>
+<p><strong>缩写名词的解释：</strong></p>
+<ul>
+<li><p><strong>HDR</strong> ：是ISAKMP的标头。当记为 HDR* 表示该流量被加密。</p>
+</li>
+<li><p><strong>SA：</strong> 是SA带有一个或多个提议的有效载荷。针对多个提议，只回复一个。</p>
+</li>
+<li><p>KE：秘钥交换</p>
+</li>
+<li><p>IDii和IDir——标识，通常要IP地址<br> HASH_I =   prf(SKEYID,K| Ci | Cr| SAi | IDi )<br> HASH_R =  prf(SKEYID, K| Ci | Cr | SAr | IDr )</p>
+</li>
+<li><p>Ni：第一个随机数，用于生成密钥</p>
+</li>
+<li><p>Nr：第二个随机数，用于生成密钥</p>
+</li>
+<li><p>Ni Nr—-代表随机数，通过KE交换素材得到公共的K值</p>
+</li>
+<li><p>K值为推导SKEYID使用 </p>
+<blockquote>
+<p>K值为推导SKEYID使用<br>​    SKEYID ——基准密钥<br>使用预共享密钥</p>
+<p>​    SKEYID = prf(pre-shared-key, Ni|Nr)</p>
+<p>使用数字证书<br>​    SKEYID = prf(Ni | Nr, K) </p>
+<p> 通过SKEYID推导三个密钥</p>
+<pre><code>SKEYID_d = prf(SKEYID, K | Ci | Cr | 0) -----------推导密钥
+
+SKEYID_a = prf(SKEYID, SKEYID_d | K | Ci | Cr | 1)---------验证密钥
+SKEYID_e = prf(SKEYID, SKEYID_a | K | Ci | Cr | 2)---------加密密钥
+</code></pre></blockquote>
+</li>
+<li><p>HASH值用进行身份数据验证。</p>
+</li>
+<li><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">HASH_I = prf(SKEYID, g^xi | g^xr | CKY-I | CKY-R | SAi_b | IDii_b )</span><br><span class="line">HASH_R = prf(SKEYID, g^xr | g^xi | CKY-R | CKY-I | SAi_b | IDir_b )</span><br><span class="line">  <span class="comment">//g^xy is the Diffie-Hellman shared secret.</span></span><br><span class="line">  <span class="comment">// CKY-I and CKY-R are the Initiator's cookie and the Responder's cookie, respectively, from the ISAKMP header.</span></span><br><span class="line">   <span class="comment">// SAi_b is the entire body of the SA payload (minus the ISAKMP generic header)-- i.e. the DOI, situation, all proposals and all transforms offered by the Initiator.</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="阶段一的第1个包（明文）："><a href="#阶段一的第1个包（明文）：" class="headerlink" title="阶段一的第1个包（明文）："></a>阶段一的第1个包（明文）：</h3><p>第一包的作用是，协商发起发，发送IKE安全提议，给响应方。下图为抓包示例内容：</p>
+<p><img src="/2019/04/03/IPSec-VPN之IKE协议详解/main_1.png" alt="main_1"></p>
+<p><img src="/2019/04/03/IPSec-VPN之IKE协议详解/main_1_1.png" alt="main_1_1"></p>
+<center><br>    图：主模式的第一个包内容抓包示例<br></center>
+
+<p>首先当两个路由器或防火墙启用IPSEC的时候，我们以其中之一为起点。A-&gt;B，那么A开始发送IKE的数据报文。报文是UDP的类型，封装在端口500里面。</p>
+<p>首先是第一个信息被发送，主要内容是<strong>COOKIE号码，标识一个唯一的IPSEC会话，也有防止重放的功能</strong>。它的建立是通常是基于IP地址，端口的号码，时间和日期等等进行一个散列算法，生成一个8位的随机数。<strong>对方的COOKIE为0</strong>。</p>
+<p><strong>内容还包含一个SA负载，还有提议负载，转换负载。</strong>sa的负载是定位这个ISAKMP是为了IPSEC工作。因为IKE是一个标准的协议，所以在SA负载中通过DOI，解释域，来说明这条消息交换用于IPSEC。</p>
+<p>提议负载的内容包含一个提议号，协议ID，SPI，转换号，其中SPI为0，转换号指向了相应的转换负载</p>
+<p>转换负载的内容是加密的参数，如des，dh算法，存活时间，hash算法等等。</p>
+<h3 id="阶段一的第2个包（明文）："><a href="#阶段一的第2个包（明文）：" class="headerlink" title="阶段一的第2个包（明文）："></a>阶段一的第2个包（明文）：</h3><p>第2个包的作用主要是：通过查找第一个包的安全提议。给发送者回复一个确认的安全提议。下图是第二个包的抓包内容。</p>
+<p><img src="/2019/04/03/IPSec-VPN之IKE协议详解/main_2.png" alt="main_2"></p>
+<center>图：IKEv1主模式协商第二个包抓包</center>
+
+<p>第二个包是响应方响应一个信息，<strong>主要内容就是对方的COOKIE号码，和一个提议和一个策略</strong>，注意，<strong>这个提议和策略是和开始里面的一个对应的，否则，就回一个失败信息。</strong></p>
+<h3 id="阶段一的第3个包（明文）："><a href="#阶段一的第3个包（明文）：" class="headerlink" title="阶段一的第3个包（明文）："></a>阶段一的第3个包（明文）：</h3><p>第三个包的作用：如果发起方接受了安全提议，就给对方发送密钥生成信息，对方用来生成IKE的秘钥。</p>
+<p><img src="/2019/04/03/IPSec-VPN之IKE协议详解/main_3.png" alt="main_3"></p>
+<center>图：IKEv1主模式协商第三个包抓包示例</center>
+
+<p>初始方然后回应第三个信息，内容是自己的公钥，发给对方，注意，此处我的理解是素数已经交换完毕，公钥就是根据自己随机产生的私钥加上素数和一个产生器g三者来产生的。同时传输一个随机数NI。</p>
+<h3 id="阶段一第四个包（明文）："><a href="#阶段一第四个包（明文）：" class="headerlink" title="阶段一第四个包（明文）："></a>阶段一第四个包（明文）：</h3><p>主要作用：协商相应方给协商发起方发送密钥生成信息，使得协议发起方能生成密钥。</p>
+<p><img src="/2019/04/03/IPSec-VPN之IKE协议详解/mian_4.png" alt="mian_4"></p>
+<center>图：IKEv1主模式协商第4个包抓包</center>
+
+<p>接收方回应自己的公钥给初始方。包含一个随机数NR。</p>
+<p>然后双方各自计算出共享的密钥，一共有三个密钥，SKEYID_a，d，e，其中d是根据z=pfs（pre-shared key，cookie_i，cookie_ni，nl|0），其中d用来给第二阶段提供密钥的素材。a用来对IKE的数据进行认证，e用来加密整个IKE协商的数据。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">K值为推导SKEYID使用 </span><br><span class="line">	SKEYID ------基准密钥</span><br><span class="line">使用预共享密钥</span><br><span class="line"></span><br><span class="line">	SKEYID = prf(pre-shared-key, Ni|Nr)</span><br><span class="line"></span><br><span class="line">使用数字证书</span><br><span class="line">	SKEYID = prf(Ni | Nr, K) </span><br><span class="line"></span><br><span class="line"> 通过SKEYID推导三个密钥</span><br><span class="line"> 	  SKEYID_d = prf(SKEYID, K | Ci | Cr | <span class="number">0</span>) -----------推导密钥</span><br><span class="line">  	 SKEYID_a = prf(SKEYID, SKEYID_d | K | Ci | Cr | <span class="number">1</span>)---------验证密钥,对数据进行验证</span><br><span class="line"> 	  SKEYID_e = prf(SKEYID, SKEYID_a | K | Ci | Cr | <span class="number">2</span>)---------加密密钥</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>当使用预共享密钥认证与主模式时，密钥可以只能通过对等点的IP地址来标识，因为必须使用HASH_I，在启动程序处理IDir之前计算。野蛮模式允许更大范围的预共享密钥标识符被使用。此外，野蛮模式允许双方进行维护多个不同的预共享密钥，并确定正确的密钥一个特定的交换。</p>
+</blockquote>
+<h3 id="阶段一的第5个包（密文）："><a href="#阶段一的第5个包（密文）：" class="headerlink" title="阶段一的第5个包（密文）："></a>阶段一的第5个包（密文）：</h3><p>主要作用：发起方发送身份和验证数据。</p>
+<p><img src="/2019/04/03/IPSec-VPN之IKE协议详解/main_5.png" alt="main_5"></p>
+<center><br>    图：IKEv1主模式协商第5个包抓包<br></center>
+
+<p>初始方开始继续协商，发送第五个信息，注意，此刻所有的<strong>负载信息是被ekey加密过的</strong>。信息主要包含两个内容，其中之一是标识负载，另一个是散<br>列负载，标识负载的主要内容是包含自己的IP地址，就是我们所谓的ID_I，或者是主机名称。散列负载主要的内容是使用session_a进行的散列计 算，计算的参数有上述的Z，和两端的cookie，pre-share key ，提议，转换集，SA的内容。</p>
+<h3 id="阶段一的第6个包（密文）："><a href="#阶段一的第6个包（密文）：" class="headerlink" title="阶段一的第6个包（密文）："></a>阶段一的第6个包（密文）：</h3><p>主要作用: 协商响应方给发起方发送身份和验证数据。</p>
+<p><img src="/2019/04/03/IPSec-VPN之IKE协议详解/main_6.png" alt="main_6"></p>
+<center><br>    图：IKEv1主模式协商第6个包抓包<br></center>
+
+<p>然后当接收方收到的时候进行确认，先解密，然后根据ID找到pre-key，然后进行相同的计算，得出散列的值，然后对比接收呼叫。</p>
+<p>总结：在这个过程中，所有的数据都是被封装在UDP 500的端口内进行协商的。</p>
+<h2 id="IKEv1阶段二-快速模式协商过程："><a href="#IKEv1阶段二-快速模式协商过程：" class="headerlink" title="IKEv1阶段二 快速模式协商过程："></a>IKEv1阶段二 快速模式协商过程：</h2><p>IKEv1协商阶段2的目的就是建立用来安全传输数据的IPSec SA，并为数据传输衍生出密钥。这一阶段采用快速模式（Quick Mode）。该模式使用IKEv1协商阶段1中生成的密钥对ISAKMP消息的完整性和身份进行验证，并对ISAKMP消息进行加密，故保证了交换的安全性。</p>
+<p><img src="/2019/04/03/IPSec-VPN之IKE协议详解/阶段二.png" alt="阶段二"></p>
+<center>图：IKEv1阶段二协商过程</center>
+
+<p><strong>阶段二的快速模式的协商如下：</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Initiator                         Responder</span><br><span class="line">  -----------                   -----------</span><br><span class="line">  HDR*, HASH(<span class="number">1</span>), SA, Ni</span><br><span class="line">    [, KE ] [, IDci, IDcr ] --&gt;</span><br><span class="line">                             &lt;--    HDR*, HASH(<span class="number">2</span>), SA, Nr</span><br><span class="line">                                    [, KE ] [, IDci, IDcr ]</span><br><span class="line">     HDR*, HASH(<span class="number">3</span>)       --&gt;</span><br></pre></td></tr></table></figure>
+<p>IKEv1协商阶段2通过三条ISAKMP消息完成双方IPSec SA的建立：</p>
+<ol>
+<li><p>协商发起方发送本端的安全参数和身份认证信息。</p>
+<p>安全参数包括被保护的数据流和IPSec安全提议等需要协商的参数。身份认证信息包括第一阶段计算出的密钥和第二阶段产生的密钥材料等，可以再次认证对等体。</p>
+</li>
+<li><p>协商响应方发送确认的安全参数和身份认证信息并生成新的密钥。</p>
+<p>IPSec SA数据传输需要的加密、验证密钥由第一阶段产生的密钥、SPI、协议等参数衍生得出，以保证每个IPSec SA都有自己独一无二的密钥。</p>
+<p>如果启用PSF，则需要再次应用DH算法计算出一个共享密钥，然后参与上述计算，因此在参数协商时要为PFS协商DH密钥组。</p>
+</li>
+<li><p>发送方发送确认信息，确认与响应方可以通信，协商结束。</p>
+</li>
+</ol>
+<hr>
+<p><img src="/2019/04/03/IPSec-VPN之IKE协议详解/quick_1.png" alt="quick_1"></p>
+<center>图：快速模式第1个包，第2个包，第3个包都除了加密数据格式都相同</center>
+
+<p>第二阶段，当第一阶段结束后，根据session-d的密钥资源，然后继续进行两次交换：</p>
+<p>第一次交换，首先，判断是否启用了PFS（完美转发安全），如果启用的话，根据pfs中定义的参数继续进行一个协商。PFS是提议者向接收者提供建议 的属性。如果协商就支持，否则就不支持。它的作用是在快速模式中重新协商DH密钥的属性。这允许使用新的密钥进行ipsec加密，而不是使用第一阶段生产的密钥。</p>
+<p>快速模式只有一次交换，DH交换必须马上发生。不能几次协商了。因此，两端的DH配置必须匹配。</p>
+<p>当执行PFS的时候，再次执行DH算法，然后，重新生产密钥。</p>
+<h1 id="详解IKEv1野蛮模式的协商过程"><a href="#详解IKEv1野蛮模式的协商过程" class="headerlink" title="详解IKEv1野蛮模式的协商过程"></a>详解IKEv1野蛮模式的协商过程</h1><h2 id="野蛮模式协商过程："><a href="#野蛮模式协商过程：" class="headerlink" title="野蛮模式协商过程："></a>野蛮模式协商过程：</h2><p><img src="/2019/04/03/IPSec-VPN之IKE协议详解/IKEv1野蛮模式.png" alt="IKEv1野蛮模式"></p>
+<center>图：野蛮模式协商过程</center>
+
+<hr>
+<p><img src="/2019/04/03/IPSec-VPN之IKE协议详解/aggressive抓包.png" alt="aggressive抓包"></p>
+<center>图：野蛮模式协商过程</center>
+
+<hr>
+<p>野蛮模式只用到三条信息：前两条消息①和②用于协商IKE安全提议，交换Diffie-Hellman公共值、必需的辅助信息以及身份信息，并且消息②中还包括响应方发送身份信息供发起方认证，消息③用于响应方认证发起方。</p>
+<hr>
+<h2 id="使用预共享秘钥进行身份验证野蛮模式的详细过程："><a href="#使用预共享秘钥进行身份验证野蛮模式的详细过程：" class="headerlink" title="使用预共享秘钥进行身份验证野蛮模式的详细过程："></a>使用预共享秘钥进行身份验证野蛮模式的详细过程：</h2><p>当做一个预共享秘钥认证时，野蛮模式的协商如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Initiator                        Responder</span><br><span class="line">         -----------                      -----------</span><br><span class="line">          HDR, SA, KE, Ni, IDii --&gt;</span><br><span class="line">                                &lt;--    HDR, SA, KE, Nr, IDir, HASH_R</span><br><span class="line">          HDR, HASH_I           --&gt;</span><br></pre></td></tr></table></figure>
+<p>野蛮模式（3个包）<br>​      Initiator                        Responder<br>​           ———–                      ———–<br>第1包——-安全提议（各种协商）  密钥交换素材   随机数  身份ID<br>​            HDR, SA, KE, Ni, IDii –&gt;<br>​                                  &lt;–    HDR, SA, KE, Nr, IDir, HASH_R</p>
+<p>第2包———安全提议，密钥交换素材  随机数  身份ID  HASH_R</p>
+<p>第3包———加密的环境<br>​            HDR*, HASH_I           –&gt;</p>
+<h2 id="野蛮模式与主模式比较"><a href="#野蛮模式与主模式比较" class="headerlink" title="野蛮模式与主模式比较"></a>野蛮模式与主模式比较</h2><p>与主模式相比，野蛮模式减少了交换信息的数目，提高了协商的速度，但是没有对身份信息进行加密保护。虽然野蛮模式不提供身份保护，但它可以满足某些特定的网络环境需求：</p>
+<ul>
+<li>如果发起方的IP地址不固定或者无法预知，而双方都希望采用预共享密钥验证方法来创建IKE SA，则只能采用野蛮模式。</li>
+<li>如果发起方已知响应方的策略，或者对响应者的策略有全面的了解，采用野蛮模式能够更快地创建IKE SA。</li>
+</ul>
+<h1 id="详解IKEv2主模式的协商过程"><a href="#详解IKEv2主模式的协商过程" class="headerlink" title="详解IKEv2主模式的协商过程"></a>详解IKEv2主模式的协商过程</h1><p>采用IKEv2协商安全联盟比IKEv1协商过程要简化的多。要建立一对IPSec SA，IKEv1需要经历两个阶段：“主模式＋快速模式”或者“野蛮模式＋快速模式”，前者至少需要交换9条消息，后者也至少需要6条消息。而IKEv2正常情况使用2次交换共4条消息就可以完成一对IPSec SA的建立，如果要求建立的IPSec SA大于一对时，每一对IPSec SA只需额外增加1次创建子SA交换，也就是2条消息就可以完成。</p>
+<p>IKEv2定义了三种交换：初始交换（Initial Exchanges）、创建子SA交换（Create_Child_SA Exchange）以及通知交换（Informational Exchange）。</p>
+<h2 id="初始交换："><a href="#初始交换：" class="headerlink" title="初始交换："></a>初始交换：</h2><p>正常情况下，IKEv2通过初始交换就可以完成第一对IPSec SA的协商建立。IKEv2初始交换对应IKEv1的第一阶段，初始交换包含两次交换四条消息。</p>
+<p><img src="/2019/04/03/IPSec-VPN之IKE协议详解/IKEv2协商.png" alt="IKEv2协商"></p>
+<center>图：初始交换过程图</center> 
+
+<p> 消息①和②属于第一次交换（称为IKE_SA_INIT交换），以明文方式完成IKE SA的参数协商，包括协商加密和验证算法，交换临时随机数和DH交换。IKE_SA_INIT交换后生成一个共享密钥材料，通过这个共享密钥材料可以衍生出IPSec SA的所有密钥。</p>
+<p>消息③和④属于第二次交换（称为IKE_AUTH交换），以加密方式完成身份认证、对前两条信息的认证和IPSec SA的参数协商。IKEv2支持RSA签名认证、预共享密钥认证以及扩展认证方法EAP（Extensible Authentication Protocol）。EAP认证是作为附加的IKE_AUTH交换在IKE中实现的，发起者通过在消息3中省去认证载荷来表明需要使用EAP认证。</p>
+<hr>
+<p><img src="/2019/04/03/IPSec-VPN之IKE协议详解/IKEv2过程.png" alt="IKEv2过程"></p>
+<center>图：IKEv2协商过程抓包,总共四个包</center>
+
+<hr>
+<h2 id="创建子SA交换："><a href="#创建子SA交换：" class="headerlink" title="创建子SA交换："></a>创建子SA交换：</h2><p>当一个IKE SA需要创建多对IPSec SA时，需要使用创建子SA交换来协商多于一对的IPSec SA。另外，创建子SA交换还可以用于IKE SA的重协商。</p>
+<p>创建子SA交换包含一个交换两条消息，对应IKEv1协商阶段2，交换的发起者可以是初始交换的协商发起方，也可以是初始交换的协商响应方。创建子SA交换必须在初始交换完成后进行，交换消息由初始交换协商的密钥进行保护。</p>
+<p>类似于IKEv1，如果启用PFS，创建子SA交换需要额外进行一次DH交换，生成新的密钥材料。生成密钥材料后，子SA的所有密钥都从这个密钥材料衍生出来。</p>
+<h2 id="通知交换："><a href="#通知交换：" class="headerlink" title="通知交换："></a>通知交换：</h2><p>运行IKE协商的两端有时会传递一些控制信息，例如错误信息或者通告信息，这些信息在IKEv2中是通过通知交换完成的。如下图</p>
+<p><img src="/2019/04/03/IPSec-VPN之IKE协议详解/通知.png" alt="通知"></p>
+<p>通知交换必须在IKE SA保护下进行，也就是说通知交换只能发生在初始交换之后。控制信息可能是IKE SA的，那么通知交换必须由该IKE SA来保护进行；也可能是某子SA的，那么该通知交换必须由生成该子SA的IKE SA来保护进行。</p>
+<h1 id="IKEv1和IKEv2的区别"><a href="#IKEv1和IKEv2的区别" class="headerlink" title="IKEv1和IKEv2的区别"></a>IKEv1和IKEv2的区别</h1><p>IKE协议分IKEv1和IKEv2两个版本。IKEv2与IKEv1相比有以下优点：</p>
+<ul>
+<li><p>简化了安全联盟的协商过程，提高了协商效率。</p>
+<p>IKEv1使用两个阶段为IPSec进行密钥协商并建立IPSec SA：第一阶段，通信双方协商和建立IKE本身使用的安全通道，建立一个IKE SA；第二阶段，利用这个已通过了认证和安全保护的安全通道，建立一对IPSec SA。IKEv2则简化了协商过程，在一次协商中可直接生成IPSec的密钥并建立IPSec SA。</p>
+</li>
+<li><p>修复了多处公认的密码学方面的安全漏洞，提高了安全性能。</p>
+</li>
+<li><p>加入对EAP（Extensible Authentication Protocol）身份认证方式的支持，提高了认证方式的灵活性和可扩展性。</p>
+<p>EAP是一种支持多种认证方法的认证协议，可扩展性是其最大的优点，即若想加入新的认证方式，可以像组件一样加入，而不用变动原来的认证体系。当前EAP认证已经广泛应用于拨号接入网络中。</p>
+</li>
+</ul>
+<hr>
+<pre><code>HDR, SA             --&gt;
+Ci  SAi
+                    &lt;--    HDR, SA
+
+                             Ci Cr  SAr
+</code></pre><hr>
+<p>3-4个包   交换密钥素材，以及产生密钥(明文）</p>
+<pre><code>HDR, KE, Ni         --&gt;
+Ci  Cr  K   Ni
+                    &lt;--    HDR, KE, Nr
+                             Ci Cr  k  Nr
+</code></pre><hr>
+<p>5-6 两个包    做身份验证 （加密）</p>
+<p>采用预共享密钥5 6两个包<br>   HDR<em>, IDii, HASH_I  –&gt;<br>   Ci Cr<br>​                                  &lt;–    HDR</em>, IDir, HASH_R</p>
+<p>IDii和IDir——标识，通常要IP地址<br> HASH_I =   prf(SKEYID,K| Ci | Cr| SAi | IDi )<br> HASH_R =  prf(SKEYID, K| Ci | Cr | SAr | IDr )</p>
+<p>采用数字证书的5 6两个包<br> HDR*, IDii, [ CERT, ] SIG_I –&gt;</p>
+<pre><code>&lt;--    HDR*, IDir, [ CERT, ] SIG_R
+</code></pre><p>=============================================</p>
+<hr>
+<blockquote>
+<p>参考文档：RFC 2409， 华为HedEx文档</p>
+</blockquote>
+<hr>
+
       
     </div>
 
@@ -585,6 +923,14 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/VPN/" rel="tag"># VPN</a>
+          
+            <a href="/tags/IPSec-VPN/" rel="tag"># IPSec VPN</a>
+          
+        </div>
       
 
       
@@ -713,8 +1059,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -1124,6 +1479,22 @@
       </div>
 
       
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#IKE简介"><span class="nav-number">1.</span> <span class="nav-text">IKE简介</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安全联盟SA："><span class="nav-number">1.1.</span> <span class="nav-text">安全联盟SA：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#建立IPSec-SA的方式："><span class="nav-number">1.2.</span> <span class="nav-text">建立IPSec SA的方式：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IKE介绍："><span class="nav-number">1.3.</span> <span class="nav-text">IKE介绍：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IKE与IPSec的关系："><span class="nav-number">1.4.</span> <span class="nav-text">IKE与IPSec的关系：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IKE的安全机制："><span class="nav-number">1.5.</span> <span class="nav-text">IKE的安全机制：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IKE的两个阶段："><span class="nav-number">1.6.</span> <span class="nav-text">IKE的两个阶段：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#详解IKEv1主模式的协商过程"><span class="nav-number">2.</span> <span class="nav-text">详解IKEv1主模式的协商过程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#IKEv1阶段一协商过程："><span class="nav-number">2.1.</span> <span class="nav-text">IKEv1阶段一协商过程：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用预共享秘钥进行身份验证主模式的详细过程："><span class="nav-number">2.2.</span> <span class="nav-text">使用预共享秘钥进行身份验证主模式的详细过程：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#阶段一的第1个包（明文）："><span class="nav-number">2.2.1.</span> <span class="nav-text">阶段一的第1个包（明文）：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#阶段一的第2个包（明文）："><span class="nav-number">2.2.2.</span> <span class="nav-text">阶段一的第2个包（明文）：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#阶段一的第3个包（明文）："><span class="nav-number">2.2.3.</span> <span class="nav-text">阶段一的第3个包（明文）：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#阶段一第四个包（明文）："><span class="nav-number">2.2.4.</span> <span class="nav-text">阶段一第四个包（明文）：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#阶段一的第5个包（密文）："><span class="nav-number">2.2.5.</span> <span class="nav-text">阶段一的第5个包（密文）：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#阶段一的第6个包（密文）："><span class="nav-number">2.2.6.</span> <span class="nav-text">阶段一的第6个包（密文）：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IKEv1阶段二-快速模式协商过程："><span class="nav-number">2.3.</span> <span class="nav-text">IKEv1阶段二 快速模式协商过程：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#详解IKEv1野蛮模式的协商过程"><span class="nav-number">3.</span> <span class="nav-text">详解IKEv1野蛮模式的协商过程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#野蛮模式协商过程："><span class="nav-number">3.1.</span> <span class="nav-text">野蛮模式协商过程：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用预共享秘钥进行身份验证野蛮模式的详细过程："><span class="nav-number">3.2.</span> <span class="nav-text">使用预共享秘钥进行身份验证野蛮模式的详细过程：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#野蛮模式与主模式比较"><span class="nav-number">3.3.</span> <span class="nav-text">野蛮模式与主模式比较</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#详解IKEv2主模式的协商过程"><span class="nav-number">4.</span> <span class="nav-text">详解IKEv2主模式的协商过程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#初始交换："><span class="nav-number">4.1.</span> <span class="nav-text">初始交换：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建子SA交换："><span class="nav-number">4.2.</span> <span class="nav-text">创建子SA交换：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#通知交换："><span class="nav-number">4.3.</span> <span class="nav-text">通知交换：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#IKEv1和IKEv2的区别"><span class="nav-number">5.</span> <span class="nav-text">IKEv1和IKEv2的区别</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
 
       
         <div class="back-to-top">
@@ -1157,7 +1528,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共 770.0k 字</span>
+  <span class="post-count">全站共 778.4k 字</span>
 </div>
 
 
