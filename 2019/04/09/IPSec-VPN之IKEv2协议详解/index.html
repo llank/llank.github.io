@@ -133,22 +133,31 @@
 
 
 
-  <meta name="description" content="IKEv2简介IKEv2介绍： 定义在RFC4306 ，更新与 RFC 5996. 不兼容IKEv1，IKEv1不支持认证，IKEv2支持认证，EAP。 尚未被广泛使用 支持NAT穿越。 IKEv2支持私密性、完整性、源认证。 工作在UDP 的 500 /4500端口。NAT-T用的是UDP4500端口。  详解IKEv2主模式的协商过程采用IKEv2协商安全联盟比IKEv1协商过程要简化的多。要">
+  <meta name="description" content="IKEv2简介IKEv2介绍： 定义在RFC4306 ，更新与 RFC 5996. 不兼容IKEv1，IKEv1不支持认证，IKEv2支持认证，EAP。 支持NAT穿越。 IKEv2支持私密性、完整性、源认证。 工作在UDP 的 500 /4500端口。NAT-T用的是UDP4500端口。  IKE的安全机制： 身份认证 确认通信算双方的身份（对等体的IP地址或者名称），包括： 预共享密钥PSK（">
 <meta name="keywords" content="IPSec VPN,VPN">
 <meta property="og:type" content="article">
 <meta property="og:title" content="IPSec VPN之IKEv2协议详解">
 <meta property="og:url" content="https://cshihong.github.io/2019/04/09/IPSec-VPN之IKEv2协议详解/index.html">
 <meta property="og:site_name" content="曹世宏的博客">
-<meta property="og:description" content="IKEv2简介IKEv2介绍： 定义在RFC4306 ，更新与 RFC 5996. 不兼容IKEv1，IKEv1不支持认证，IKEv2支持认证，EAP。 尚未被广泛使用 支持NAT穿越。 IKEv2支持私密性、完整性、源认证。 工作在UDP 的 500 /4500端口。NAT-T用的是UDP4500端口。  详解IKEv2主模式的协商过程采用IKEv2协商安全联盟比IKEv1协商过程要简化的多。要">
+<meta property="og:description" content="IKEv2简介IKEv2介绍： 定义在RFC4306 ，更新与 RFC 5996. 不兼容IKEv1，IKEv1不支持认证，IKEv2支持认证，EAP。 支持NAT穿越。 IKEv2支持私密性、完整性、源认证。 工作在UDP 的 500 /4500端口。NAT-T用的是UDP4500端口。  IKE的安全机制： 身份认证 确认通信算双方的身份（对等体的IP地址或者名称），包括： 预共享密钥PSK（">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://cshihong.github.io/2019/04/09/IPSec-VPN之IKEv2协议详解/DH.PNG">
 <meta property="og:image" content="https://cshihong.github.io/2019/04/09/IPSec-VPN之IKEv2协议详解/IKEv2协商.png">
 <meta property="og:image" content="https://cshihong.github.io/2019/04/09/IPSec-VPN之IKEv2协议详解/IKEv2过程.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/04/09/IPSec-VPN之IKEv2协议详解/IKEv2_main_1.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/04/09/IPSec-VPN之IKEv2协议详解/IKEv2_main_1_1.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/04/09/IPSec-VPN之IKEv2协议详解/IKEv2_main_2.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/04/09/IPSec-VPN之IKEv2协议详解/IKEv2_mian_3.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/04/09/IPSec-VPN之IKEv2协议详解/IKEv2_main_4.png">
 <meta property="og:image" content="https://cshihong.github.io/2019/04/09/IPSec-VPN之IKEv2协议详解/通知.png">
-<meta property="og:updated_time" content="2019-04-11T10:53:42.606Z">
+<meta property="og:image" content="https://cshihong.github.io/2019/04/09/IPSec-VPN之IKEv2协议详解/对比.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/04/09/IPSec-VPN之IKEv2协议详解/v1和v2对比1.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/04/09/IPSec-VPN之IKEv2协议详解/对比2.png">
+<meta property="og:updated_time" content="2019-04-12T10:15:36.654Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="IPSec VPN之IKEv2协议详解">
-<meta name="twitter:description" content="IKEv2简介IKEv2介绍： 定义在RFC4306 ，更新与 RFC 5996. 不兼容IKEv1，IKEv1不支持认证，IKEv2支持认证，EAP。 尚未被广泛使用 支持NAT穿越。 IKEv2支持私密性、完整性、源认证。 工作在UDP 的 500 /4500端口。NAT-T用的是UDP4500端口。  详解IKEv2主模式的协商过程采用IKEv2协商安全联盟比IKEv1协商过程要简化的多。要">
-<meta name="twitter:image" content="https://cshihong.github.io/2019/04/09/IPSec-VPN之IKEv2协议详解/IKEv2协商.png">
+<meta name="twitter:description" content="IKEv2简介IKEv2介绍： 定义在RFC4306 ，更新与 RFC 5996. 不兼容IKEv1，IKEv1不支持认证，IKEv2支持认证，EAP。 支持NAT穿越。 IKEv2支持私密性、完整性、源认证。 工作在UDP 的 500 /4500端口。NAT-T用的是UDP4500端口。  IKE的安全机制： 身份认证 确认通信算双方的身份（对等体的IP地址或者名称），包括： 预共享密钥PSK（">
+<meta name="twitter:image" content="https://cshihong.github.io/2019/04/09/IPSec-VPN之IKEv2协议详解/DH.PNG">
 
 
 
@@ -485,7 +494,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-04-11 18:53:42" itemprop="dateModified" datetime="2019-04-11T18:53:42+08:00">2019-04-11</time>
+                <time title="修改时间：2019-04-12 18:15:36" itemprop="dateModified" datetime="2019-04-12T18:15:36+08:00">2019-04-12</time>
               
             
           </span>
@@ -525,9 +534,9 @@
             <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
 			<span class="post-meta-divider">|</span>
-			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 1,350</span>
+			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 4,225</span>
 			<span class="post-meta-item-text">|</span>
-			<span title="post.min2read"><span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span>阅读时长： 5</span>
+			<span title="post.min2read"><span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span>阅读时长： 16</span>
 
           
 
@@ -551,13 +560,32 @@
         <h1 id="IKEv2简介"><a href="#IKEv2简介" class="headerlink" title="IKEv2简介"></a>IKEv2简介</h1><h2 id="IKEv2介绍："><a href="#IKEv2介绍：" class="headerlink" title="IKEv2介绍："></a>IKEv2介绍：</h2><ul>
 <li>定义在RFC4306 ，更新与 RFC 5996.</li>
 <li>不兼容IKEv1，IKEv1不支持认证，IKEv2支持认证，EAP。</li>
-<li>尚未被广泛使用</li>
 <li>支持NAT穿越。</li>
 <li>IKEv2支持私密性、完整性、源认证。</li>
 <li>工作在UDP 的 500 /4500端口。NAT-T用的是UDP4500端口。</li>
 </ul>
+<h2 id="IKE的安全机制："><a href="#IKE的安全机制：" class="headerlink" title="IKE的安全机制："></a>IKE的安全机制：</h2><ul>
+<li><p>身份认证</p>
+<p>确认通信算双方的身份（对等体的IP地址或者名称），包括：</p>
+<p>预共享密钥PSK（pre-shared key）认证。</p>
+<p>数字签名RSA（rsa-signature）认证。</p>
+</li>
+<li><p>身份保护</p>
+</li>
+<li><p>DH（Diffie-Hellman）密钥交换算法</p>
+</li>
+<li><p>完善的向前安全性PFS（Perfect Forward Secrecy）</p>
+<p>短暂的一次性密钥系统称为“完美向前保密”</p>
+<p>在IPSec里，PFS是通过在IPSec SA协商阶段重新进行一个DH交换来实现的。</p>
+</li>
+</ul>
+<p><strong>DH交换算法：</strong></p>
+<p><img src="/2019/04/09/IPSec-VPN之IKEv2协议详解/DH.PNG" alt="DH"></p>
+<center><br>    图：DH交换算法<br></center>
+
 <h1 id="详解IKEv2主模式的协商过程"><a href="#详解IKEv2主模式的协商过程" class="headerlink" title="详解IKEv2主模式的协商过程"></a>详解IKEv2主模式的协商过程</h1><p>采用IKEv2协商安全联盟比IKEv1协商过程要简化的多。要建立一对IPSec SA，IKEv1需要经历两个阶段：“主模式＋快速模式”或者“野蛮模式＋快速模式”，前者至少需要交换9条消息，后者也至少需要6条消息。而IKEv2正常情况使用2次交换共4条消息就可以完成一对IPSec SA的建立，如果要求建立的IPSec SA大于一对时，每一对IPSec SA只需额外增加1次创建子SA交换，也就是2条消息就可以完成。</p>
 <p>IKEv2定义了三种交换：初始交换（Initial Exchanges）、创建子SA交换（Create_Child_SA Exchange）以及通知交换（Informational Exchange）。</p>
+<p>在IKEv2中将IKEv1中的主模式和野蛮模式换成了Inital Exchange，将快速模式阶段换成了CRATE_CHILD_SA.</p>
 <h2 id="初始交换："><a href="#初始交换：" class="headerlink" title="初始交换："></a>初始交换：</h2><p>正常情况下，IKEv2通过初始交换就可以完成第一对IPSec SA的协商建立。IKEv2初始交换对应IKEv1的第一阶段，初始交换包含两次交换四条消息。</p>
 <p><img src="/2019/04/09/IPSec-VPN之IKEv2协议详解/IKEv2协商.png" alt="IKEv2协商"></p>
 <center>图：初始交换过程图</center> 
@@ -573,33 +601,150 @@
 <li>2个初始信息</li>
 <li>2个认证信息</li>
 </ul>
-<h2 id="IKEv2报文协商详细过程："><a href="#IKEv2报文协商详细过程：" class="headerlink" title="IKEv2报文协商详细过程：**"></a>IKEv2报文协商详细过程：**</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Initiator                         Responder</span><br><span class="line">   -------------------------------------------------------------------</span><br><span class="line">   HDR, SAi1, KEi, Ni  --&gt;</span><br><span class="line">                                  &lt;--  HDR, SAr1, KEr, Nr, [CERTREQ]</span><br><span class="line"></span><br><span class="line">   HDR, SK &#123;IDi, [CERT,] [CERTREQ,]</span><br><span class="line">       [IDr,] AUTH, SAi2,</span><br><span class="line">       TSi, TSr&#125;  --&gt;</span><br><span class="line">                                     &lt;--  HDR, SK &#123;IDr, [CERT,] AUTH, SAr2, TSi, TSr&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>HDR: IKE  头部</li>
-<li>SAi ：发起方提供的密码学算法</li>
-<li>KEi/KEr：发起方/接收方提供的密钥交换材料、优先使用最高安全级别的DH组。</li>
-<li>Ni：发起方随机数</li>
-<li>Nr：接收方随机数</li>
-<li>CertQeq：Certificate requests（可选）</li>
-</ul>
-<p>IKE_AUTH介绍：</p>
-<p>操作在由IKE_SA_INIT所创建的IKE_SA之上。协商各种加密，验证和完整性校验协议，用于建立第一个CHILD_SA.</p>
+<h2 id="IKEv2报文协商详细过程："><a href="#IKEv2报文协商详细过程：" class="headerlink" title="IKEv2报文协商详细过程："></a>IKEv2报文协商详细过程：</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Initiator                         Responder</span><br><span class="line">   -------------------------------------------------------------------</span><br><span class="line">   HDR, SAi1, KEi, Ni  --&gt;</span><br><span class="line">                                  &lt;--  HDR, SAr1, KEr, Nr, [CERTREQ]</span><br><span class="line"></span><br><span class="line">   HDR, SK &#123;IDi, [CERT,] [CERTREQ,]</span><br><span class="line">       [IDr,] AUTH, SAi2,</span><br><span class="line">       TSi, TSr&#125;  --&gt;</span><br><span class="line">                                     &lt;--  HDR, SK &#123;IDr, [CERT,] AUTH, SAr2, TSi, TSr&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>字段说明：</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">AUTH        Authentication</span><br><span class="line">CERT        Certificate，证书</span><br><span class="line">CERTREQ     Certificate Request</span><br><span class="line">CP          Configuration</span><br><span class="line">D           Delete</span><br><span class="line">EAP         Extensible Authentication</span><br><span class="line"><span class="function">HDR         IKE <span class="title">header</span> <span class="params">(not a payload)</span>，IKE头部</span></span><br><span class="line"><span class="function">IDi         Identification - Initiator</span></span><br><span class="line"><span class="function">IDr         Identification - Responder</span></span><br><span class="line"><span class="function">KE          Key Exchange，发起方提供的密钥交换材料、有限使用最高安全级别的DH组</span></span><br><span class="line"><span class="function">Ni, Nr      Nonce，随机数</span></span><br><span class="line"><span class="function">N           Notify</span></span><br><span class="line"><span class="function">SA          Security Association，安全关联参数</span></span><br><span class="line"><span class="function">SK          Encrypted and Authenticated</span></span><br><span class="line"><span class="function">TSi         Traffic Selector - Initiator</span></span><br><span class="line"><span class="function">TSr         Traffic Selector - Responder</span></span><br><span class="line"><span class="function">V           Vendor ID</span></span><br></pre></td></tr></table></figure>
+<hr>
+<blockquote>
+<p>IKEv2中的消息交换都是以IKE_SA_INIT 和 IKE_AUTH开始的。在IKEv1中称为阶段一。这些初始交换通常是由4个消息组成，在大于一对IPSec SA的建立中，可以增加子SA。</p>
+<p>IKEv2的所有通信都是以request/response对组成。</p>
+<p>第一对消息（IKE_SA_INIT）进行协商密码算法、交换nonces，和DH算法。生成SKEYSEED，后续的消息使用密钥进行加密和验证。</p>
+<p>第二对消息（IKE_AUTH）操作在又IKE_SA_INIT所创建的IKE_SA之上。对前一对消息进行身份验证，交换身份和整数，并建立第一个CHILD_SA，这些消息的一部分是加密和完整的，使用通过IKE_SA_INIT交换建立的密钥来包加密。</p>
+<p>初始交换之后所有的消息都是加密传输的。</p>
+</blockquote>
+<h3 id="IKEv2协商过程的第1个包："><a href="#IKEv2协商过程的第1个包：" class="headerlink" title="IKEv2协商过程的第1个包："></a>IKEv2协商过程的第1个包：</h3><p><img src="/2019/04/09/IPSec-VPN之IKEv2协议详解/IKEv2_main_1.png" alt="IKEv2_main_1"></p>
+<p><img src="/2019/04/09/IPSec-VPN之IKEv2协议详解/IKEv2_main_1_1.png" alt="IKEv2_main_1_1"></p>
+<center><br>    图：IKEv2协商过程的第一个包抓包示例<br></center>
+
+<p><strong>第一个包交换的信息如下：</strong></p>
+<p>IKE_SA_INIT: Message 1</p>
+<blockquote>
+<p>发起方提供基本的SA（安全关联）参数和密钥交换材料。等同与IKEv1的主模式的第1和第3个包。</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Initiator                         Responder</span><br><span class="line">   -------------------------------------------------------------------</span><br><span class="line">   HDR, SAi1, KEi, Ni  --&gt;</span><br><span class="line">    </span><br><span class="line">----------------------------------</span><br><span class="line"> KEi：发起方提供的密钥交换材料，优先级使用最高安全级别的DH组</span><br></pre></td></tr></table></figure>
+<p>发起方发送：HDR包含安全参数索引（SPIs）、版本号和flags。SAi1有效载荷声明了发起方支持的IKE SA加密算法。KE有效载荷是发送方的DH值，Ni为发起方的随机数。</p>
+<p>第一个包：Responder SPI的值为0，Flags位的Initiator的值为1，标志位发起方。Message ID的值也为0，该值和下一个会回应方的Message ID值相同。用来标即区分一对request/response消息对。</p>
+<h3 id="IKEv2协商过程的第2个包："><a href="#IKEv2协商过程的第2个包：" class="headerlink" title="IKEv2协商过程的第2个包："></a>IKEv2协商过程的第2个包：</h3><p><img src="/2019/04/09/IPSec-VPN之IKEv2协议详解/IKEv2_main_2.png" alt="IKEv2_main_2"></p>
+<center><br>    图：IKEv2协商过程的第2个包抓包示例<br></center>
+
+<p><strong>第2个包的信息交换如下：</strong></p>
+<p>IKE_SA_INIT: Message 2</p>
+<blockquote>
+<p>接收方会一个可以接受的参数，并附带密钥交换内容和证书请求(可选)。等同于IKEv1的主模式的第2和第4个包。</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">                   &lt;--  HDR, SAr1, KEr, Nr, [CERTREQ]</span><br><span class="line">                </span><br><span class="line">------------------------------------------------</span><br><span class="line"> SAri:接收方选择的密码学算法</span><br><span class="line"> KEr：接收方选择的密钥交换材料</span><br><span class="line"> Nr：接收方的随机数</span><br><span class="line"> CertReq: 整数请求，可选</span><br></pre></td></tr></table></figure>
+<p>回应方：从发起方提供的SAi1负载中选择一个可接受的加密组套件，封装在SAr1中，并发送双方都支持的DH算法的最高级封装在KEr负载中，以及发送回应方的Nr随机值。</p>
+<p>在回应方的报文中，SPIi为发起方的SPI,SPIr中填充自己生产的spi。Flags中的Response位置1，表示自己为回应方的报文。Message ID的值同第一个报文的Message ID，为0.</p>
+<p>第1个和第2个包交换完成后，每一方都能生成SKEYSEED，所有的密钥都是从这个密钥推导出来的。以后的消息除了消息头都会被加密和完整性保护。加密和完整性保护的密钥都是来自SKEYSEED，分别称为SK_e,用于加密，SK_a,用于认证，做完整性保护。会为每个方向计算单独的SK_a和SK_e。</p>
+<p>除了密钥来自DH算法的SK_e和SK_a之外，还会导出另一个两SK_d,用于生成子SA的密钥材料。符号SK{…}表示这些有效载荷已加密使用该方向的SK_e和SK_a保护完整性。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">SKEYSEED = prf(Ni | Nr, g^ir)</span><br><span class="line">&#123;SK_d | SK_ai | SK_ar | SK_ei | SK_er | SK_pi | SK_pr &#125;</span><br><span class="line">                  = prf+ (SKEYSEED, Ni | Nr | SPIi | SPIr )</span><br><span class="line">-------------------------------------------------------</span><br><span class="line">  IKE SA; SK_ai and SK_ar used as a key to the integrity protection algorithm <span class="keyword">for</span> authenticating the component messages of subsequent exchanges;</span><br><span class="line">  <span class="function">SK_ei and SK_er used <span class="keyword">for</span> <span class="title">encrypting</span> <span class="params">(and of course decrypting)</span> all subsequent exchanges</span>; </span><br><span class="line">  and SK_pi and SK_pr, which are used when generating an AUTH payload.  </span><br><span class="line"> The lengths of SK_d, SK_pi,</span><br><span class="line"> and SK_pr MUST be the preferred key length of the PRF agreed upon.</span><br></pre></td></tr></table></figure>
+<h3 id="IKEv2协商过程的第3个包："><a href="#IKEv2协商过程的第3个包：" class="headerlink" title="IKEv2协商过程的第3个包："></a>IKEv2协商过程的第3个包：</h3><p><img src="/2019/04/09/IPSec-VPN之IKEv2协议详解/IKEv2_mian_3.png" alt="IKEv2_mian_3"></p>
+<center><br>    图：IKEv2协商过程的第3个包抓包示例<br></center>
+
+<p><strong>第3个包的信息如下：</strong></p>
+<p>IKE_AUTH: Message 1</p>
+<blockquote>
+<p>创建child SA相关的认证内容和参数（等于与IKEv1的主模式的第5个包和部分快速模式的包）</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">HDR, SK &#123;IDi, [CERT,] [CERTREQ,]</span><br><span class="line">       [IDr,] AUTH, SAi2,</span><br><span class="line">       TSi, TSr&#125;  --&gt;</span><br><span class="line">-------------------------------------------</span><br><span class="line"> SK ：该负载被加密并且完整性保护。</span><br><span class="line"> IDi:发起方的身份信息</span><br><span class="line"> Cert：发起方的整数，可选</span><br><span class="line"> CertReq：发起方的证书请求，可选</span><br><span class="line"> IDr：期望的相应方的身份信息，可选</span><br><span class="line"> AUTH: 发起方认证数据，没有EAP就没有这个字段，可选</span><br><span class="line"> SAi2，发起方Child SA转换集</span><br><span class="line"> TSi/TSr: Child SA流量选择器   </span><br><span class="line"> 符号SK&#123;…&#125;表示这些有效载荷已加密使用该方向的SK_e和SK_a保护完整性。</span><br></pre></td></tr></table></figure>
+<p>发起方：除了HDR未加密，其余都被加密。IDi是发起方的有效身份载荷，用来证明自己的身份和完整性保护。也可以在CERT中发送整数有效载荷记忆在CertReq有效宰割中的信任列表。如果包含任何CERT有效载荷，必须提供第一个证书，包含用于验证AUTH字段的公钥。</p>
+<p>可选的有效负载IDr使发起者能够指定哪个响应者。当在有同一个IP地址的机器上可能有多个身份ID。如果响应者不接受发起方提出的IDr，响应者可能会使用其他一些IDr完成交换。如果发起方不接收相应方提供的IDr，发起方可以关闭这个SA协商。</p>
+<p>Tsi，Tsr是流量选择器，可以用来协商双方的感兴趣流。在IKEv2中可以协商，取感兴趣流的交集。但是在IKEv1中不能协商，只能双方互相配置为镜像地址。</p>
+<p>发起方使用SAi2负载来协商Child SA，SAi2用来描述CREATE_CHILD_SA的交换参数。</p>
+<p>第3个报文中的报文头是明文的，其余都是密文传输。在该报文中的Flags中的Initiator位置1，表示是发起方的报文。Message ID区别于上一对消息，为1。下一个回应的报文的Message ID和这个值相同。其余消息被封装到了Encrypted and Authenticated载荷中。</p>
+<h3 id="IEKv2协商过程的第4个包："><a href="#IEKv2协商过程的第4个包：" class="headerlink" title="IEKv2协商过程的第4个包："></a>IEKv2协商过程的第4个包：</h3><p><img src="/2019/04/09/IPSec-VPN之IKEv2协议详解/IKEv2_main_4.png" alt="IKEv2_main_4"></p>
+<center><br>    图：IKEv2协商过程的第4个包抓包示例<br></center>
+
+<p><strong>第4个包信息如下：</strong></p>
+<p>IKE_AUTH: Message 2</p>
+<blockquote>
+<p>创建于child SA相关的认证内容和参数。等同于IKEv1主模式的第6个包和部分快速模式的包。</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">                     &lt;--  HDR, SK &#123;IDr, [CERT,] AUTH,</span><br><span class="line">                                         SAr2, TSi, TSr&#125;</span><br><span class="line">----------------------------------------------------------</span><br><span class="line">SK: 负载被加密和完整性保护</span><br><span class="line">IDr：相应方的身份信息</span><br><span class="line">Cert：相应方的证书，可选</span><br><span class="line">AUTH：相应方的认证数据，没有EAP就没有这个字段，可选</span><br><span class="line">SAr2：相应方选择的Child SA转换集</span><br><span class="line">TSi/TSr: Child SA流量选择器，感兴趣流</span><br></pre></td></tr></table></figure>
+<p>响应方：使用IDr有效载荷声明其身份，可选发送一个或多个证书（同样这个证书需要有用于验证AUTH的公钥），AUTH：验证第二消息的身份和完整性保护。SAr2字段用于发送创建CREATE_CHILD_SA的提议材料。</p>
 <hr>
 <h2 id="创建子SA交换："><a href="#创建子SA交换：" class="headerlink" title="创建子SA交换："></a>创建子SA交换：</h2><p>当一个IKE SA需要创建多对IPSec SA时，需要使用创建子SA交换来协商多于一对的IPSec SA。另外，创建子SA交换还可以用于IKE SA的重协商。</p>
-<p>创建子SA交换包含一个交换两条消息，对应IKEv1协商阶段2，交换的发起者可以是初始交换的协商发起方，也可以是初始交换的协商响应方。创建子SA交换必须在初始交换完成后进行，交换消息由初始交换协商的密钥进行保护。</p>
+<p>创建子SA交换包含一个交换两条消息，对应IKEv1协商阶段2，<strong>交换的发起者可以是初始交换的协商发起方，也可以是初始交换的协商响应方</strong>。创建子SA交换必须在初始交换完成后进行，交换消息由初始交换协商的密钥进行保护。</p>
 <p>类似于IKEv1，如果启用PFS，创建子SA交换需要额外进行一次DH交换，生成新的密钥材料。生成密钥材料后，子SA的所有密钥都从这个密钥材料衍生出来。</p>
 <h2 id="通知交换："><a href="#通知交换：" class="headerlink" title="通知交换："></a>通知交换：</h2><p>运行IKE协商的两端有时会传递一些控制信息，例如错误信息或者通告信息，这些信息在IKEv2中是通过通知交换完成的。如下图</p>
 <p><img src="/2019/04/09/IPSec-VPN之IKEv2协议详解/通知.png" alt="通知"></p>
 <p>通知交换必须在IKE SA保护下进行，也就是说通知交换只能发生在初始交换之后。控制信息可能是IKE SA的，那么通知交换必须由该IKE SA来保护进行；也可能是某子SA的，那么该通知交换必须由生成该子SA的IKE SA来保护进行。</p>
-<h1 id="IKEv1和IKEv2的区别"><a href="#IKEv1和IKEv2的区别" class="headerlink" title="IKEv1和IKEv2的区别"></a>IKEv1和IKEv2的区别</h1><p>IKE协议分IKEv1和IKEv2两个版本。IKEv2与IKEv1相比有以下优点：</p>
+<h1 id="IKEv1和IKEv2的区别"><a href="#IKEv1和IKEv2的区别" class="headerlink" title="IKEv1和IKEv2的区别"></a>IKEv1和IKEv2的区别</h1><h2 id="IKEv1与IKEv2的区别："><a href="#IKEv1与IKEv2的区别：" class="headerlink" title="IKEv1与IKEv2的区别："></a>IKEv1与IKEv2的区别：</h2><p>可比较的角度：</p>
+<ol>
+<li><p>IPsec建立过程，报文角度</p>
+<p>阶段比较，IKEv1有两个阶段，IKEv2没有阶段。</p>
 <ul>
-<li><p>简化了安全联盟的协商过程，提高了协商效率。</p>
+<li><p>IKEv1</p>
+<p>IKEv1协商安全联盟主要分为两个阶段。</p>
+<p>IKEv1阶段1的目的是建立IKE SA，它支持两种协商模式：主模式和野蛮模式。主模式用6条ISAKMP消息完成协商。野蛮模式用3条ISAKMP消息完成协商。野蛮模式的优点是建立IKE SA的速度较快。但是由于野蛮模式密钥交换与身份认证一起进行无法提供身份保护。</p>
+<p>IKEv1阶段2的目的就是建立用来传输数据的IPSec SA，通过快速交换模式（3条ISAKMP消息）完成协商。</p>
+</li>
+<li><p>IKEv2</p>
+<p>IKEv2简化了安全联盟的协商过程。IKEv2正常情况使用2次交换共4条消息就可以完成一个IKE SA和一对IPSec SA，如果要求建立的IPSec SA大于一对时，每一对SA只需额外增加1次交换，也就是2条消息就可以完成。</p>
+</li>
+</ul>
+</li>
+<li><p>载荷角度</p>
+<p>AUTH，TSi，TSr，EAP</p>
+</li>
+<li><p>认证方法</p>
+<p>IKEv2支持EAP身份认证。IKEv2可以借助认证服务器对远程接入的PC、手机等进行身份认证、分配私网IP地址。IKEv1无法提供此功能，必须借助L2TP来分配私网地址。</p>
+</li>
+<li><p>支持远程接入</p>
+<p>L2TP OVER IPSEC———IKEV1解决方案</p>
+</li>
+<li><p>其他功能</p>
+<p>NAT -T   DPD</p>
+<p><strong>IKE SA的完整性算法支持情况不同。</strong></p>
+<p>IKE SA的完整性算法仅IKEv2支持，IKEv1不支持。</p>
+</li>
+<li><p>配置不同</p>
+</li>
+</ol>
+<ul>
+<li><p>DPD中超时重传实现不同。</p>
+<p>retry-interval参数仅IKEv1支持。表示发送DPD报文后，如果超过此时间间隔未收到正确的应答报文，DPD记录失败事件1次。当失败事件达到5次时，删除IKE SA和相应的IPSec SA。直到隧道中有流量时，两端重新协商建立IKE SA。</p>
+<p>对于IKEv2方式的IPSec SA，超时重传时间间隔从1到64以指数增长的方式增加。在8次尝试后还未收到对端发过来的报文，则认为对端已经下线，删除IKE SA和相应的IPSec SA。</p>
+</li>
+<li><p>IKE SA超时时间手工调整功能支持不同。</p>
+<p>IKEv2的IKE SA软超时为硬超时的9/10±一个随机数，所以IKEv2一般不存在两端同时发起重协商的情况，故IKEv2不需要配置软超时时间。</p>
+</li>
+</ul>
+<p><strong>IKEv1与IKEv2的对比：</strong></p>
+<p><img src="/2019/04/09/IPSec-VPN之IKEv2协议详解/对比.png" alt="对比"></p>
+<p><img src="/2019/04/09/IPSec-VPN之IKEv2协议详解/v1和v2对比1.png" alt="v1和v2对比1"></p>
+<center><br>    图：IKEv1和IKEv2区别<br></center>
+
+<p>区别：</p>
+<ul>
+<li>IKEv2：支持DPD，EAP认证方式，NAT-T，支持消息的确认（一端删除sa信息，另一端也会删除），支持自动协商感兴趣流，针对DOS的攻击防护，支持远程用户接入，最少4个包协商速度更快。</li>
+<li>IKEv1：远程用户接入必须结合L2TP、主模式9个包，野蛮模式6个包。不能协商感兴趣流，得互相配置为镜像。</li>
+</ul>
+<p><img src="/2019/04/09/IPSec-VPN之IKEv2协议详解/对比2.png" alt="对比2"></p>
+<center>图：IKEv1和IKEv2载荷对比</center>
+
+<hr>
+<h2 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h2><p><strong>IKEv1的主要问题：</strong></p>
+<ul>
+<li>不支持远程用户接入</li>
+<li>协商建立IPSec SA的时间太长</li>
+</ul>
+<p><strong>IKEv2的改进：</strong></p>
+<ul>
+<li>IKEv1是一个混合型协议，其自身的复杂性不可避免地带来一些安全及性能上的缺陷，已经成为目前实现IPSec系统的瓶颈。</li>
+<li>IKEv2协议保留了IKEv1的基本功能，并针对IKEv1研究过程中发现的问题进行修订，同时兼顾简洁性、高效性、安全性和见健壮性的需要，整合了IKEv1的相关文档，由RFC4306单个文档替代。通过核心功能最小化规定，新协议极大提高了不同IPSec VPN系统的互操作性。</li>
+</ul>
+<p><strong>IKEv2与IKEv1相比有以下优点：</strong></p>
+<ul>
+<li><p><strong>简化了安全联盟的协商过程，提高了协商效率。</strong></p>
 <p>IKEv1使用两个阶段为IPSec进行密钥协商并建立IPSec SA：第一阶段，通信双方协商和建立IKE本身使用的安全通道，建立一个IKE SA；第二阶段，利用这个已通过了认证和安全保护的安全通道，建立一对IPSec SA。IKEv2则简化了协商过程，在一次协商中可直接生成IPSec的密钥并建立IPSec SA。</p>
 </li>
-<li><p>修复了多处公认的密码学方面的安全漏洞，提高了安全性能。</p>
+<li><p><strong>修复了多处公认的密码学方面的安全漏洞，提高了安全性能。</strong></p>
 </li>
-<li><p>加入对EAP（Extensible Authentication Protocol）身份认证方式的支持，提高了认证方式的灵活性和可扩展性。</p>
+<li><p><strong>加入对EAP（Extensible Authentication Protocol）身份认证方式的支持，提高了认证方式的灵活性和可扩展性。</strong></p>
 <p>EAP是一种支持多种认证方法的认证协议，可扩展性是其最大的优点，即若想加入新的认证方式，可以像组件一样加入，而不用变动原来的认证体系。当前EAP认证已经广泛应用于拨号接入网络中。</p>
+</li>
+<li><p>通过EAP协议解决了远程接入用户的认证问题，彻底摆脱了L2TP的牵制。目前IKEv2已经广泛应用于远程接入网络中了。</p>
 </li>
 </ul>
 <hr>
@@ -1250,7 +1395,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#IKEv2简介"><span class="nav-number">1.</span> <span class="nav-text">IKEv2简介</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#IKEv2介绍："><span class="nav-number">1.1.</span> <span class="nav-text">IKEv2介绍：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#详解IKEv2主模式的协商过程"><span class="nav-number">2.</span> <span class="nav-text">详解IKEv2主模式的协商过程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#初始交换："><span class="nav-number">2.1.</span> <span class="nav-text">初始交换：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IKEv2报文协商详细过程："><span class="nav-number">2.2.</span> <span class="nav-text">IKEv2报文协商详细过程：**</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建子SA交换："><span class="nav-number">2.3.</span> <span class="nav-text">创建子SA交换：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#通知交换："><span class="nav-number">2.4.</span> <span class="nav-text">通知交换：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#IKEv1和IKEv2的区别"><span class="nav-number">3.</span> <span class="nav-text">IKEv1和IKEv2的区别</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#IKEv2简介"><span class="nav-number">1.</span> <span class="nav-text">IKEv2简介</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#IKEv2介绍："><span class="nav-number">1.1.</span> <span class="nav-text">IKEv2介绍：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IKE的安全机制："><span class="nav-number">1.2.</span> <span class="nav-text">IKE的安全机制：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#详解IKEv2主模式的协商过程"><span class="nav-number">2.</span> <span class="nav-text">详解IKEv2主模式的协商过程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#初始交换："><span class="nav-number">2.1.</span> <span class="nav-text">初始交换：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IKEv2报文协商详细过程："><span class="nav-number">2.2.</span> <span class="nav-text">IKEv2报文协商详细过程：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#IKEv2协商过程的第1个包："><span class="nav-number">2.2.1.</span> <span class="nav-text">IKEv2协商过程的第1个包：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IKEv2协商过程的第2个包："><span class="nav-number">2.2.2.</span> <span class="nav-text">IKEv2协商过程的第2个包：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IKEv2协商过程的第3个包："><span class="nav-number">2.2.3.</span> <span class="nav-text">IKEv2协商过程的第3个包：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IEKv2协商过程的第4个包："><span class="nav-number">2.2.4.</span> <span class="nav-text">IEKv2协商过程的第4个包：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建子SA交换："><span class="nav-number">2.3.</span> <span class="nav-text">创建子SA交换：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#通知交换："><span class="nav-number">2.4.</span> <span class="nav-text">通知交换：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#IKEv1和IKEv2的区别"><span class="nav-number">3.</span> <span class="nav-text">IKEv1和IKEv2的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#IKEv1与IKEv2的区别："><span class="nav-number">3.1.</span> <span class="nav-text">IKEv1与IKEv2的区别：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结："><span class="nav-number">3.2.</span> <span class="nav-text">总结：</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1290,7 +1435,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共 781.5k 字</span>
+  <span class="post-count">全站共 784.4k 字</span>
 </div>
 
 
