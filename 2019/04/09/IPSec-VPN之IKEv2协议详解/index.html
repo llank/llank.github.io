@@ -153,7 +153,7 @@
 <meta property="og:image" content="https://cshihong.github.io/2019/04/09/IPSec-VPN之IKEv2协议详解/对比.png">
 <meta property="og:image" content="https://cshihong.github.io/2019/04/09/IPSec-VPN之IKEv2协议详解/v1和v2对比1.png">
 <meta property="og:image" content="https://cshihong.github.io/2019/04/09/IPSec-VPN之IKEv2协议详解/对比2.png">
-<meta property="og:updated_time" content="2019-04-12T10:15:36.654Z">
+<meta property="og:updated_time" content="2019-04-18T03:47:23.208Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="IPSec VPN之IKEv2协议详解">
 <meta name="twitter:description" content="IKEv2简介IKEv2介绍： 定义在RFC4306 ，更新与 RFC 5996. 不兼容IKEv1，IKEv1不支持认证，IKEv2支持认证，EAP。 支持NAT穿越。 IKEv2支持私密性、完整性、源认证。 工作在UDP 的 500 /4500端口。NAT-T用的是UDP4500端口。  IKE的安全机制： 身份认证 确认通信算双方的身份（对等体的IP地址或者名称），包括： 预共享密钥PSK（">
@@ -494,7 +494,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-04-12 18:15:36" itemprop="dateModified" datetime="2019-04-12T18:15:36+08:00">2019-04-12</time>
+                <time title="修改时间：2019-04-18 11:47:23" itemprop="dateModified" datetime="2019-04-18T11:47:23+08:00">2019-04-18</time>
               
             
           </span>
@@ -534,7 +534,7 @@
             <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
 			<span class="post-meta-divider">|</span>
-			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 4,225</span>
+			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 4,221</span>
 			<span class="post-meta-item-text">|</span>
 			<span title="post.min2read"><span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span>阅读时长： 16</span>
 
@@ -581,7 +581,8 @@
 </ul>
 <p><strong>DH交换算法：</strong></p>
 <p><img src="/2019/04/09/IPSec-VPN之IKEv2协议详解/DH.PNG" alt="DH"></p>
-<center><br>    图：DH交换算法<br></center>
+<center>图：DH交换算法</center>
+
 
 <h1 id="详解IKEv2主模式的协商过程"><a href="#详解IKEv2主模式的协商过程" class="headerlink" title="详解IKEv2主模式的协商过程"></a>详解IKEv2主模式的协商过程</h1><p>采用IKEv2协商安全联盟比IKEv1协商过程要简化的多。要建立一对IPSec SA，IKEv1需要经历两个阶段：“主模式＋快速模式”或者“野蛮模式＋快速模式”，前者至少需要交换9条消息，后者也至少需要6条消息。而IKEv2正常情况使用2次交换共4条消息就可以完成一对IPSec SA的建立，如果要求建立的IPSec SA大于一对时，每一对IPSec SA只需额外增加1次创建子SA交换，也就是2条消息就可以完成。</p>
 <p>IKEv2定义了三种交换：初始交换（Initial Exchanges）、创建子SA交换（Create_Child_SA Exchange）以及通知交换（Informational Exchange）。</p>
@@ -614,7 +615,8 @@
 </blockquote>
 <h3 id="IKEv2协商过程的第1个包："><a href="#IKEv2协商过程的第1个包：" class="headerlink" title="IKEv2协商过程的第1个包："></a>IKEv2协商过程的第1个包：</h3><p><img src="/2019/04/09/IPSec-VPN之IKEv2协议详解/IKEv2_main_1.png" alt="IKEv2_main_1"></p>
 <p><img src="/2019/04/09/IPSec-VPN之IKEv2协议详解/IKEv2_main_1_1.png" alt="IKEv2_main_1_1"></p>
-<center><br>    图：IKEv2协商过程的第一个包抓包示例<br></center>
+<center>图：IKEv2协商过程的第一个包抓包示例</center>
+
 
 <p><strong>第一个包交换的信息如下：</strong></p>
 <p>IKE_SA_INIT: Message 1</p>
@@ -625,7 +627,8 @@
 <p>发起方发送：HDR包含安全参数索引（SPIs）、版本号和flags。SAi1有效载荷声明了发起方支持的IKE SA加密算法。KE有效载荷是发送方的DH值，Ni为发起方的随机数。</p>
 <p>第一个包：Responder SPI的值为0，Flags位的Initiator的值为1，标志位发起方。Message ID的值也为0，该值和下一个会回应方的Message ID值相同。用来标即区分一对request/response消息对。</p>
 <h3 id="IKEv2协商过程的第2个包："><a href="#IKEv2协商过程的第2个包：" class="headerlink" title="IKEv2协商过程的第2个包："></a>IKEv2协商过程的第2个包：</h3><p><img src="/2019/04/09/IPSec-VPN之IKEv2协议详解/IKEv2_main_2.png" alt="IKEv2_main_2"></p>
-<center><br>    图：IKEv2协商过程的第2个包抓包示例<br></center>
+<center>图：IKEv2协商过程的第2个包抓包示例</center>
+
 
 <p><strong>第2个包的信息交换如下：</strong></p>
 <p>IKE_SA_INIT: Message 2</p>
@@ -639,7 +642,8 @@
 <p>除了密钥来自DH算法的SK_e和SK_a之外，还会导出另一个两SK_d,用于生成子SA的密钥材料。符号SK{…}表示这些有效载荷已加密使用该方向的SK_e和SK_a保护完整性。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">SKEYSEED = prf(Ni | Nr, g^ir)</span><br><span class="line">&#123;SK_d | SK_ai | SK_ar | SK_ei | SK_er | SK_pi | SK_pr &#125;</span><br><span class="line">                  = prf+ (SKEYSEED, Ni | Nr | SPIi | SPIr )</span><br><span class="line">-------------------------------------------------------</span><br><span class="line">  IKE SA; SK_ai and SK_ar used as a key to the integrity protection algorithm <span class="keyword">for</span> authenticating the component messages of subsequent exchanges;</span><br><span class="line">  <span class="function">SK_ei and SK_er used <span class="keyword">for</span> <span class="title">encrypting</span> <span class="params">(and of course decrypting)</span> all subsequent exchanges</span>; </span><br><span class="line">  and SK_pi and SK_pr, which are used when generating an AUTH payload.  </span><br><span class="line"> The lengths of SK_d, SK_pi,</span><br><span class="line"> and SK_pr MUST be the preferred key length of the PRF agreed upon.</span><br></pre></td></tr></table></figure>
 <h3 id="IKEv2协商过程的第3个包："><a href="#IKEv2协商过程的第3个包：" class="headerlink" title="IKEv2协商过程的第3个包："></a>IKEv2协商过程的第3个包：</h3><p><img src="/2019/04/09/IPSec-VPN之IKEv2协议详解/IKEv2_mian_3.png" alt="IKEv2_mian_3"></p>
-<center><br>    图：IKEv2协商过程的第3个包抓包示例<br></center>
+<center>图：IKEv2协商过程的第3个包抓包示例</center>
+
 
 <p><strong>第3个包的信息如下：</strong></p>
 <p>IKE_AUTH: Message 1</p>
@@ -653,7 +657,8 @@
 <p>发起方使用SAi2负载来协商Child SA，SAi2用来描述CREATE_CHILD_SA的交换参数。</p>
 <p>第3个报文中的报文头是明文的，其余都是密文传输。在该报文中的Flags中的Initiator位置1，表示是发起方的报文。Message ID区别于上一对消息，为1。下一个回应的报文的Message ID和这个值相同。其余消息被封装到了Encrypted and Authenticated载荷中。</p>
 <h3 id="IEKv2协商过程的第4个包："><a href="#IEKv2协商过程的第4个包：" class="headerlink" title="IEKv2协商过程的第4个包："></a>IEKv2协商过程的第4个包：</h3><p><img src="/2019/04/09/IPSec-VPN之IKEv2协议详解/IKEv2_main_4.png" alt="IKEv2_main_4"></p>
-<center><br>    图：IKEv2协商过程的第4个包抓包示例<br></center>
+<center>图：IKEv2协商过程的第4个包抓包示例</center>
+
 
 <p><strong>第4个包信息如下：</strong></p>
 <p>IKE_AUTH: Message 2</p>
@@ -713,7 +718,8 @@
 <p><strong>IKEv1与IKEv2的对比：</strong></p>
 <p><img src="/2019/04/09/IPSec-VPN之IKEv2协议详解/对比.png" alt="对比"></p>
 <p><img src="/2019/04/09/IPSec-VPN之IKEv2协议详解/v1和v2对比1.png" alt="v1和v2对比1"></p>
-<center><br>    图：IKEv1和IKEv2区别<br></center>
+<center> 图：IKEv1和IKEv2区别</center>
+
 
 <p>区别：</p>
 <ul>

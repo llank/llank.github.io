@@ -156,7 +156,7 @@
 <meta property="og:image" content="https://cshihong.github.io/2019/04/17/IPSec%20VPN的NAT穿越-NAT-T-原理/状态.png">
 <meta property="og:image" content="https://cshihong.github.io/2019/04/17/IPSec%20VPN的NAT穿越-NAT-T-原理/fw%20sa.png">
 <meta property="og:image" content="https://cshihong.github.io/2019/04/17/IPSec%20VPN的NAT穿越-NAT-T-原理/fw2.png">
-<meta property="og:updated_time" content="2019-04-17T15:13:52.221Z">
+<meta property="og:updated_time" content="2019-04-18T03:44:09.436Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="IPSec VPN的NAT穿越(NAT-T)原理">
 <meta name="twitter:description" content="IPSec NAT 穿越简介IPSec NAT穿越的场景：本质上解决ESP协议无法提供转换端口，插入UDP 4500端口 有以下两种场景，需要进行进行NAT穿越。  场景一、FW既做IPSEC网关，又做NAT转换 此种场景下，是当运营商给客户的动态分配的私网地址情况下，FW需要穿越运营商的nat。 IPSEC网关与NAT在同一台设备 ，如果运营商给分配的是公网地址，需要做NAT旁路(NAT豁免）">
@@ -480,12 +480,24 @@
                 
               
 
-              <time title="创建时间：2019-04-17 09:49:38 / 修改时间：23:13:52" itemprop="dateCreated datePublished" datetime="2019-04-17T09:49:38+08:00">2019-04-17</time>
+              <time title="创建时间：2019-04-17 09:49:38" itemprop="dateCreated datePublished" datetime="2019-04-17T09:49:38+08:00">2019-04-17</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-04-18 11:44:09" itemprop="dateModified" datetime="2019-04-18T11:44:09+08:00">2019-04-18</time>
               
             
           </span>
@@ -525,7 +537,7 @@
             <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
 			<span class="post-meta-divider">|</span>
-			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 2,103</span>
+			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 2,101</span>
 			<span class="post-meta-item-text">|</span>
 			<span title="post.min2read"><span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span>阅读时长： 8</span>
 
@@ -559,11 +571,13 @@
 </li>
 </ul>
 <h2 id="IPSec的封装协议分析："><a href="#IPSec的封装协议分析：" class="headerlink" title="IPSec的封装协议分析："></a>IPSec的封装协议分析：</h2><p><img src="/2019/04/17/IPSec VPN的NAT穿越-NAT-T-原理/传输封装.png" alt="传输封装"></p>
-<center>图：<br>    传输模式下AH和ESP的封装<br></center>
+<center>图：传输模式下AH和ESP的封装</center>
+
 
 <p>如上图，在传输模式下，AH认证整个IP报文，当经过NAT转化后，肯定会认证不成功。在ESP封装下，虽然认证访问不包括IP头，但是因为通过nat后，nat修改了外层IP地址，由于TCP/UDP校验和的计算包含IP源目地址，所以TCP/UDP的校验和需要更新，但是现在TCP/UDP已经被ESP加密，中间路由器无法更新TCP/UDP的校验和，所以TCP的校验和检查最终会失败。</p>
 <p><img src="/2019/04/17/IPSec VPN的NAT穿越-NAT-T-原理/隧道封装.png" alt="隧道封装"></p>
-<center><br>    图：隧道模式下AH和ESP的封装<br></center>
+<center>图：隧道模式下AH和ESP的封装</center>
+
 
 <p>如上图，在隧道模式下，AH认证整个IP头部，包括新生成的IP头，这种情况当经过nat后， IP地址发送变化，也肯定不能认证成功。在ESP的封装下，ESP的认证范围是从ESP头部到ESP尾部。当通过nat时，改变的仅仅是外层IP头部，而内层TCP校验和因为内层IP头不变，所以校验会成功。但是也仅仅是可以通过nat的一对一的转化，即不能转化端口号。因为端口是加密的。</p>
 <p><strong>总结：</strong></p>
@@ -574,7 +588,8 @@
 </ul>
 <h2 id="解决方案："><a href="#解决方案：" class="headerlink" title="解决方案："></a>解决方案：</h2><p><strong>NAT-T技术，即在IP和ESP报文之间插入一个8个字节UDP头部(端口号默认为4500）</strong></p>
 <p><img src="/2019/04/17/IPSec VPN的NAT穿越-NAT-T-原理/ant.png" alt="ant"></p>
-<center><br>    图：NAT-T技术原理<br></center>
+<center> 图：NAT-T技术原理</center>
+
 
 <h2 id="关键NAT-T的3个问题："><a href="#关键NAT-T的3个问题：" class="headerlink" title="关键NAT-T的3个问题："></a>关键NAT-T的3个问题：</h2><ol>
 <li><p><strong>IPSEC网关如何知道自己是否支持NAT-T？</strong> </p>
@@ -602,18 +617,21 @@
 <p>由于NAT网关会改变IKE UDP的源端口，所以响应方必须能处理源端口不是500的IKE报文。</p>
 <p><strong>IKEv1主模式NAT-T协商过程：</strong></p>
 <p><img src="/2019/04/17/IPSec VPN的NAT穿越-NAT-T-原理/main_1.png" alt="main_1"></p>
-<center><br>    图：IKEv1主模式下第一个包中携带支持的nat-t参数<br></center>
+<center> 图：IKEv1主模式下第一个包中携带支持的nat-t参数</center>
+
 
 <p>消息①：发起方在IKE消息中插入VID载荷来告知对方自己支持NAT穿越。</p>
 <hr>
 <p><img src="/2019/04/17/IPSec VPN的NAT穿越-NAT-T-原理/main——2.png" alt="main——2"></p>
-<center><br>    图：IKEv1主模式下第二个包中携带双方都支持nat-t参数<br></center>
+<center> 图：IKEv1主模式下第二个包中携带双方都支持nat-t参数</center>
+
 
 <p>消息②：响应方在IKE消息中插入VID载荷表明自己支持NAT-T能力.</p>
 <p>若双方发的IKEv1消息中都包含该载荷，说明双方都支持NAT-T，协商继续，否则终止。从而可以协商出是否支持NAT-T功能。</p>
 <hr>
 <p><img src="/2019/04/17/IPSec VPN的NAT穿越-NAT-T-原理/main_3.png" alt="main_3"></p>
-<center><br>    图：IKEv1主模式第3个包，携带NAT-D参数<br></center>
+<center>图：IKEv1主模式第3个包，携带NAT-D参数</center>
+
 
 <p>消息3：相应方插入了两个NAT-D载荷。第一个NAT-D载荷包含IKE对等体的IP地址和端口的Hash值，第二个NAT-D载荷包含本端的IP地址和端口的Hash值，接收方也计算这两个Hash值，两方计算的哪个Hash值不相等，表明哪个设备在NAT网关后面。</p>
 <hr>
@@ -624,19 +642,27 @@
 <h2 id="IKEv2判断是否支持NAT-T协商过程："><a href="#IKEv2判断是否支持NAT-T协商过程：" class="headerlink" title="IKEv2判断是否支持NAT-T协商过程："></a><strong>IKEv2判断是否支持NAT-T协商过程：</strong></h2><p>KEv2的NAT穿越场景中，IKE协商的发起方和响应方在IKE_SA_INIT交换中增加两个N载荷（在Ni和Nr载荷之后），一个消息类型为NAT_DETECTION_SOURCE_IP，标识发起方的IP地址；另一个消息类型为NAT_DETECTION_DESTINATION_IP，标识响应方的IP地址。</p>
 <p>IKEv2的NAT穿越协商过程如下：</p>
 <p><img src="/2019/04/17/IPSec VPN的NAT穿越-NAT-T-原理/过程.png" alt="过程"></p>
-<center><br>    图：IKEv2下NAT-T协商过程<br></center><br>—-<br><br><strong>IKEv2报文协商NAT-T过程</strong><br><br><img src="/2019/04/17/IPSec VPN的NAT穿越-NAT-T-原理/v2_1.png" alt="v2_1"><br><br><center><br>    图：IKEv2第1个包，携带两个Notify负载<br></center>
+<center>图：IKEv2下NAT-T协商过程</center>
+
+<hr>
+<p><strong>IKEv2报文协商NAT-T过程</strong></p>
+<p><img src="/2019/04/17/IPSec VPN的NAT穿越-NAT-T-原理/v2_1.png" alt="v2_1"></p>
+<center> 图：IKEv2第1个包，携带两个Notify负载</center>
+
 
 <p>消息①、②：在IKE消息中插入两个N载荷，第一个N载荷包含本端的IP地址和端口的Hash值，第二个N载荷包含IKE对等体的IP地址和端口的Hash值，响应方也计算这两个Hash值，两方计算的哪个Hash值不相等，表明哪个设备在NAT网关后面。</p>
 <hr>
 <p><img src="/2019/04/17/IPSec VPN的NAT穿越-NAT-T-原理/v2.png" alt="v2"></p>
-<center><br>    图：IKEv2第3个包，采用UDP4500封装<br></center>
+<center> 图：IKEv2第3个包，采用UDP4500封装</center>
+
 
 <p>消息③、④：完成IKE_SA_INIT后，如果发现NAT设备，则后续UDP报文端口号修改为4500。</p>
 <blockquote>
 <p><strong>两端必须都开启NAT穿越功能，才能保证IKE协商成功。</strong></p>
 </blockquote>
 <h1 id="IPSec-NAT-T实验配置"><a href="#IPSec-NAT-T实验配置" class="headerlink" title="IPSec NAT-T实验配置"></a>IPSec NAT-T实验配置</h1><p><img src="/2019/04/17/IPSec VPN的NAT穿越-NAT-T-原理/拓扑.png" alt="拓扑"></p>
-<center><br>    图：NAT-T实验拓扑图<br></center>
+<center>图：NAT-T实验拓扑图</center>
+
 
 <p><strong>配置思路：</strong></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line">阶段一：</span><br><span class="line">ike proposal <span class="number">10</span></span><br><span class="line"> authentication-algorithm sha2-<span class="number">256</span></span><br><span class="line"> integrity-algorithm aes-xcbc-<span class="number">96</span> hmac-sha2-<span class="number">256</span></span><br><span class="line">#</span><br><span class="line">ike peer  <span class="number">10</span>             </span><br><span class="line"> pre-shared-key Huawei@<span class="number">123</span></span><br><span class="line"> ike-proposal <span class="number">10</span></span><br><span class="line"></span><br><span class="line">阶段二： </span><br><span class="line">acl number <span class="number">3000</span></span><br><span class="line"> rule <span class="number">5</span> permit ip source <span class="number">10.1</span>.1.0 <span class="number">0.0</span>.0.255 destination <span class="number">10.1</span>.2.0 <span class="number">0.0</span>.0.255</span><br><span class="line"></span><br><span class="line">ipsec proposal  <span class="number">10</span></span><br><span class="line"> encapsulation-mode auto</span><br><span class="line"> esp authentication-algorithm sha2-<span class="number">256</span></span><br><span class="line"></span><br><span class="line">ipsec policy-template <span class="number">10</span> ipsec_temp</span><br><span class="line"> security acl <span class="number">3000</span></span><br><span class="line"> ike-peer <span class="number">10</span></span><br><span class="line"> proposal  <span class="number">10</span></span><br><span class="line"></span><br><span class="line">ipsec policy ipsec_policy  <span class="number">100</span>   isakmp template  ipsec_temp</span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">GigabitEthernet0</span>/0/2</span></span><br><span class="line"><span class="class"> <span class="title">ipsec</span> <span class="title">policy</span> <span class="title">ipsec_policy</span> </span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class">对端配置：</span></span><br><span class="line">阶段一: </span><br><span class="line"></span><br><span class="line">ike proposal <span class="number">10</span></span><br><span class="line"> authentication-algorithm sha2-<span class="number">256</span></span><br><span class="line"> integrity-algorithm aes-xcbc-<span class="number">96</span> hmac-sha2-<span class="number">256</span></span><br><span class="line">#</span><br><span class="line">ike peer  <span class="number">10</span>                </span><br><span class="line"> pre-shared-key Huawei@<span class="number">123</span></span><br><span class="line"> ike-proposal <span class="number">10</span></span><br><span class="line"> remote-address <span class="number">202.100</span>.1.10</span><br><span class="line"></span><br><span class="line">阶段二：</span><br><span class="line">acl number <span class="number">3000</span></span><br><span class="line"> rule <span class="number">5</span> permit ip source <span class="number">10.1</span>.2.0 <span class="number">0.0</span>.0.255 destination <span class="number">10.1</span>.1.0 <span class="number">0.0</span>.0.255</span><br><span class="line"></span><br><span class="line">#</span><br><span class="line">ipsec proposal <span class="number">10</span> </span><br><span class="line"> encapsulation-mode auto</span><br><span class="line"> esp authentication-algorithm sha2-<span class="number">256</span></span><br><span class="line">#</span><br><span class="line">ipsec policy ipsec_policy  <span class="number">100</span> isakmp</span><br><span class="line"> security acl <span class="number">3000</span></span><br><span class="line"> ike-peer <span class="number">10</span></span><br><span class="line"> proposal <span class="number">10</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">GigabitEthernet0</span>/0/2</span></span><br><span class="line"><span class="class"> <span class="title">ipsec</span> <span class="title">policy</span> <span class="title">ipsec_policy</span></span></span><br></pre></td></tr></table></figure>
@@ -646,19 +672,16 @@
 </blockquote>
 <hr>
 <p><img src="/2019/04/17/IPSec VPN的NAT穿越-NAT-T-原理/安全策略.png" alt="安全策略"></p>
-<center><br>    图：FW2的安全策略配置<br></center>
+<center>图：FW2的安全策略配置</center>
+
 
 <p><strong>测试与检查：</strong></p>
 <p><img src="/2019/04/17/IPSec VPN的NAT穿越-NAT-T-原理/状态.png" alt="状态"></p>
-<center><br>    图：IPSec协商状态<br></center>
+<center>图：IPSec协商状态</center>
 
 <hr>
 <p><img src="/2019/04/17/IPSec VPN的NAT穿越-NAT-T-原理/fw sa.png" alt="fw sa"></p>
-<center><br>    图：FW1的IPSec SA状态，因为FW1不知道对端地址，所以需要采用模板方式<br></center>
-
-<hr>
-<p><img src="/2019/04/17/IPSec VPN的NAT穿越-NAT-T-原理/fw2.png" alt="fw2"></p>
-<center><br>    图：FW2 的IPSec SA状态，作为IPSec的发起方<br></center>
+<center>图：FW1的IPSec SA状态，因为FW1不知道对端地址，所以需要采用模板方式</center><br>—<br><br><img src="/2019/04/17/IPSec VPN的NAT穿越-NAT-T-原理/fw2.png" alt="fw2"><br><br><center> 图：FW2 的IPSec SA状态，作为IPSec的发起方</center>
 
 <hr>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//通过查看会话表，从而证明走的是udp4500端口</span></span><br><span class="line">&lt;FW2&gt;display firewall session table  </span><br><span class="line"> Current Total Sessions : <span class="number">2</span></span><br><span class="line">  udp  VPN:<span class="keyword">public</span> --&gt; <span class="keyword">public</span> <span class="number">10.1</span>.21.10:<span class="number">4500</span>--&gt;<span class="number">202.100</span>.1.10:<span class="number">4500</span></span><br><span class="line">   <span class="comment">//用的是udp的4500端口</span></span><br></pre></td></tr></table></figure>
