@@ -134,7 +134,7 @@
 
 
   <meta name="description" content="IPSec VPN配置流程 图：IPSec VPN配置流程图    先配置IKE安全提议 配置IKE对等体，调用IKE提议 配置需要保护的感兴趣流 配置IPSec 的安全提议 配置IPSec策略 在接口调用IPSec策略  IPSEC VPN各场景配置示例采用IKEV1-主模式实验 ：  图：IPsec VPN拓扑图  配置思路： 123456789101112131415161718192021">
-<meta name="keywords" content="IPSec VPN,VPN">
+<meta name="keywords" content="VPN,IPSec VPN">
 <meta property="og:type" content="article">
 <meta property="og:title" content="IPsec VPN各种场景配置示例">
 <meta property="og:url" content="https://cshihong.github.io/2019/04/09/IPsec-VPN各种场景配置示例/index.html">
@@ -157,7 +157,7 @@
 <meta property="og:image" content="https://cshihong.github.io/2019/04/09/IPsec-VPN各种场景配置示例/ipsec配置.png">
 <meta property="og:image" content="https://cshihong.github.io/2019/04/09/IPsec-VPN各种场景配置示例/安全策略.png">
 <meta property="og:image" content="https://cshihong.github.io/2019/04/09/IPsec-VPN各种场景配置示例/ike%20peer.png">
-<meta property="og:updated_time" content="2019-04-18T03:46:00.565Z">
+<meta property="og:updated_time" content="2019-04-18T07:16:02.825Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="IPsec VPN各种场景配置示例">
 <meta name="twitter:description" content="IPSec VPN配置流程 图：IPSec VPN配置流程图    先配置IKE安全提议 配置IKE对等体，调用IKE提议 配置需要保护的感兴趣流 配置IPSec 的安全提议 配置IPSec策略 在接口调用IPSec策略  IPSEC VPN各场景配置示例采用IKEV1-主模式实验 ：  图：IPsec VPN拓扑图  配置思路： 123456789101112131415161718192021">
@@ -498,7 +498,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-04-18 11:46:00" itemprop="dateModified" datetime="2019-04-18T11:46:00+08:00">2019-04-18</time>
+                <time title="修改时间：2019-04-18 15:16:02" itemprop="dateModified" datetime="2019-04-18T15:16:02+08:00">2019-04-18</time>
               
             
           </span>
@@ -538,9 +538,9 @@
             <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
 			<span class="post-meta-divider">|</span>
-			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 1,302</span>
+			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 1,719</span>
 			<span class="post-meta-item-text">|</span>
-			<span title="post.min2read"><span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span>阅读时长： 6</span>
+			<span title="post.min2read"><span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span>阅读时长： 8</span>
 
           
 
@@ -586,6 +586,49 @@
 <p><img src="/2019/04/09/IPsec-VPN各种场景配置示例/ike sa.png" alt="ike sa"></p>
 <center>图：IKE sa状态</center>
 
+<p><strong>display ike sa命令输出信息描述</strong></p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IKE SA information</td>
+<td>安全联盟配置信息。</td>
+</tr>
+<tr>
+<td>Conn-ID</td>
+<td>安全联盟的连接索引。</td>
+</tr>
+<tr>
+<td>Peer</td>
+<td>对端的IP地址和UDP端口号。</td>
+</tr>
+<tr>
+<td>VPN</td>
+<td>应用IPSec安全策略的接口所绑定的VPN实例。说明：虚拟系统不显示此字段。</td>
+</tr>
+<tr>
+<td>Flag(s)</td>
+<td>安全联盟的状态：RD–READY：表示此SA已建立成功。ST–STAYALIVE：表示此端是通道协商发起方。RL–REPLACED：表示此通道已经被新的通道代替，一段时间后将被删除。FD–FADING：表示此通道已发生过一次软超时，目前还在使用，在硬超时时会删除此通道。TO–TIMEOUT：表示此SA在上次heartbeat定时器超时发生后还没有收到heartbeat报文，如果在下次heartbeat定时器超时发生时仍没有收到heartbeat报文，此SA将被删除。HRT–HEARTBEAT：表示本端IKE SA发送heartbeat报文。LKG–LAST KNOWN GOOD SEQ NO.：表示已知的最后的序列号。BCK–BACKED UP：表示备份状态。M–ACTIVE：表示IPSec策略组状态为主状态。S–STANDBY：表示IPSec策略组状态为备状态。A–ALONE：表示IPSec策略组状态为不备份状态。NEG–NEGOTIATING：表示SA正在协商中。字段为空：表示IKE SA正在协商中，是由隧道两端设置的某些参数不一致导致。</td>
+</tr>
+<tr>
+<td>Phase</td>
+<td>SA所属阶段：v1:1或v2:1：v1和v2表示IKE的版本；1表示建立安全通道进行通信的阶段，此阶段建立IKE SA。v1:2或v2:2：v1和v2表示IKE的版本；2表示协商安全服务的阶段，此阶段建立IPSec SA。</td>
+</tr>
+<tr>
+<td>RemoteType</td>
+<td>对端ID类型。</td>
+</tr>
+<tr>
+<td>RemoteID</td>
+<td>对端ID。</td>
+</tr>
+</tbody>
+</table>
 <hr>
 <p><img src="/2019/04/09/IPsec-VPN各种场景配置示例/ipsec sa.png" alt="ipsec sa"></p>
 <center>图：IPSec SA状态</center>
@@ -747,9 +790,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/IPSec-VPN/" rel="tag"># IPSec VPN</a>
-          
             <a href="/tags/VPN/" rel="tag"># VPN</a>
+          
+            <a href="/tags/IPSec-VPN/" rel="tag"># IPSec VPN</a>
           
         </div>
       
@@ -911,7 +954,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">196</span>
+                    <span class="site-state-item-count">197</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1183,7 +1226,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">103</span>
+                      
+                    
+                    <span class="site-state-item-count">104</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1351,7 +1396,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共 790.5k 字</span>
+  <span class="post-count">全站共 794.3k 字</span>
 </div>
 
 
