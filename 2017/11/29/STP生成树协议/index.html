@@ -145,7 +145,7 @@
 <meta property="og:image" content="https://cshihong.github.io/2017/11/29/STP生成树协议/STP报文抓包.png">
 <meta property="og:image" content="https://cshihong.github.io/2017/11/29/STP生成树协议/STP配置.png">
 <meta property="og:image" content="https://cshihong.github.io/2017/11/29/STP生成树协议/端口STP状态.png">
-<meta property="og:updated_time" content="2017-11-29T12:41:39.612Z">
+<meta property="og:updated_time" content="2019-05-06T04:33:30.925Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="STP生成树协议">
 <meta name="twitter:description" content="STP简介STP概述：生成树协议STP（Spanning Tree Protocol）将环形网络修剪成为一个无环的树型网络，避免报文在环形网络中的增生和无限循环。 在一个复杂的网络环境中，难免会出现环路。由于冗余备份的需要，网络设计者都倾向于在设备之间部署多条物理链路，其中一条作主用链路，其他链路作备份，这样都有可能会导致环路产生。 环路会产生广播风暴，最终导致整个网络资源被耗尽，网络瘫痪不可用。">
@@ -469,12 +469,24 @@
                 
               
 
-              <time title="创建时间：2017-11-29 18:32:40 / 修改时间：20:41:39" itemprop="dateCreated datePublished" datetime="2017-11-29T18:32:40+08:00">2017-11-29</time>
+              <time title="创建时间：2017-11-29 18:32:40" itemprop="dateCreated datePublished" datetime="2017-11-29T18:32:40+08:00">2017-11-29</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-05-06 12:33:30" itemprop="dateModified" datetime="2019-05-06T12:33:30+08:00">2019-05-06</time>
               
             
           </span>
@@ -514,7 +526,7 @@
             <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
 			<span class="post-meta-divider">|</span>
-			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 3,390</span>
+			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 3,395</span>
 			<span class="post-meta-item-text">|</span>
 			<span title="post.min2read"><span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span>阅读时长： 13</span>
 
@@ -566,7 +578,7 @@
 <li><p>根端口（RP）：</p>
 <p>即去往根桥路径最近的端口。根端口负责向根桥方向转发数据，根端口同时还负责接收上游设备的BPDU报文和用户流量转发。根端口的选择标准是依据根路径开销判定。在一台设备上所有使能STP的端口中，根路径开销最小者，就是根端口。在一个运行STP/RSTP协议的设备上根端口有且只有一个，而且根桥上没有根端口。</p>
 </li>
-<li><p>指定端口（DR）：</p>
+<li><p>指定端口（DP）：</p>
 <p>对一台交换设备而言，它的指定端口是向下游交换设备转发BPDU报文的端口。根桥的所有端口都是指定端口。在环网的每一网段都会选举出一个指定端口，在一个网段上拥有指定端口的交换设备被称作该网段的指定桥。</p>
 </li>
 <li><p>替代端口（AP）：</p>
@@ -588,7 +600,7 @@
 <td>只有根端口或指定端口才能进入Forwarding状态。</td>
 </tr>
 <tr>
-<td></td>
+<td>Learning(学习)</td>
 <td>设备会根据收到的用户流量构建MAC地址表，但不转发用户流量。</td>
 <td>过渡状态，增加Learning状态防止临时环路。（15s）</td>
 </tr>
@@ -702,7 +714,7 @@
 <h2 id="STP的选举过程："><a href="#STP的选举过程：" class="headerlink" title="STP的选举过程："></a>STP的选举过程：</h2><ol>
 <li><p>在一个交换网络中选举一个根桥，根桥是设备的概念。</p>
 </li>
-<li><p>根桥选举后，交换网络中的其他设备都是非根桥，每个根桥还需选取一个到达根桥最短路径的端口称为根端口。</p>
+<li><p>根桥选举后，交换网络中的其他设备都是非根桥，每个非根桥还需选取一个到达根桥最短路径的端口称为根端口。</p>
 <p>注：非根桥只能有一个根端口。</p>
 </li>
 <li><p>每条链路上，还需选举一个指定端口，默认情况下根桥的所有端口都是指定端口。</p>
@@ -715,7 +727,7 @@
 <li>首先比较优先级，优先级越小越优。</li>
 <li>如果优先级一样，比较MAC地址，MAC地址越小越优。</li>
 </ol>
-<h2 id="分端口的选举："><a href="#分端口的选举：" class="headerlink" title="分端口的选举："></a>分端口的选举：</h2><ol>
+<h2 id="指定端口的选举："><a href="#指定端口的选举：" class="headerlink" title="指定端口的选举："></a>指定端口的选举：</h2><ol>
 <li>比较RID，优选小的。</li>
 <li>比较到达根桥的RPC（Root Path Cost），越小越优。</li>
 <li>比较BPDU包发送者的BID，越小越优。</li>
@@ -768,7 +780,7 @@
 <li>一个端口进入转发状态，并且本地已存在一个指端端口。</li>
 </ol>
 <h1 id="STP配置命令行"><a href="#STP配置命令行" class="headerlink" title="STP配置命令行"></a>STP配置命令行</h1><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line">stp mode &#123; stp | rstp | mstp&#125;</span><br><span class="line"><span class="comment">//配置交换机的STP工作模式，默认情况下，交换设备运行MSTP模式，MSTP模式兼容STP和RSTP模式。</span></span><br><span class="line"></span><br><span class="line">stp root primary</span><br><span class="line"><span class="comment">//配置当前设备为根桥设备。缺省情况下，交换设备不作为任何生成树的根桥。配置后该设备优先级BID值自动为0，并且不能更改设备优先级。</span></span><br><span class="line"></span><br><span class="line">stp root secondary</span><br><span class="line"><span class="comment">//配置当前交换机设备为备份根桥设备。缺省情况下，交换设备不作为任何生成树的备份根桥。配置后该设备优先级BID值为4096，并且不能更改设备优先级。</span></span><br><span class="line"></span><br><span class="line">stp priority <span class="number">32768</span></span><br><span class="line"><span class="comment">//配置交换设备在系统中的优先级。缺省情况下，交换设备的优先级取值是32768。 配置时，优先级必须为4096的倍数。</span></span><br><span class="line">  </span><br><span class="line">stp pathcost-standard &#123; dot1d<span class="number">-1998</span> | dot1t | legacy &#125;</span><br><span class="line"><span class="comment">//配置端口路径开销计算方法。缺省情况下，路径开销值的计算方法为IEEE 802.1t（dot1t）标准方法。</span></span><br><span class="line"></span><br><span class="line">[接口视图]stp cost <span class="number">100</span></span><br><span class="line"><span class="comment">//设置当前端口的路径开销值。</span></span><br><span class="line"><span class="comment">//使用华为计算方法时参数cost取值范围是1～200000。</span></span><br><span class="line"><span class="comment">//使用IEEE 802.1d标准方法时取值范围是1～65535。</span></span><br><span class="line"><span class="comment">//使用IEEE 802.1t标准方法时取值范围是1～200000000。</span></span><br><span class="line"></span><br><span class="line">[接口视图] stp port priority <span class="number">128</span></span><br><span class="line"><span class="comment">//配置端口的优先级。缺省情况下，交换设备端口的优先级取值是128。</span></span><br><span class="line"></span><br><span class="line">stp enable <span class="comment">//使能交换设备的STP功能。缺省情况下，设备的STP/RSTP功能处于启用状态。</span></span><br><span class="line">  </span><br><span class="line">stp converge &#123; fast | normal&#125;</span><br><span class="line"><span class="comment">//配置端口的收敛方式</span></span><br><span class="line"><span class="comment">//根据对ARP表项的处理方式不同，STP/RSTP的收敛方式分为fast和normal两种：</span></span><br><span class="line"><span class="comment">//fast：ARP表将需要更新的表项直接删除。</span></span><br><span class="line"><span class="comment">//normal：ARP表中需要更新的表项快速老化。</span></span><br><span class="line"><span class="comment">//交换设备将ARP表中这些表项的剩余存活时间置为0，对这些表项进行老化处理。如果配置的ARP老化探测次数大于零，则ARP对这些表项进行老化探测。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//建议选择normal收敛方式。若选择fast方式，频繁的ARP表项删除可能会导致设备CPU占用率高达100%，报文处理超时导致网络震荡。</span></span><br><span class="line"></span><br><span class="line">stp bridge-diameter <span class="number">5</span></span><br><span class="line"><span class="comment">//配置网络直径。缺省情况下，网络直径为7。</span></span><br><span class="line">  </span><br><span class="line">stp timer-factor factor</span><br><span class="line"><span class="comment">//配置未收到上游的BPDU就重新开始生成树计算的超时时间。 缺省情况下，设备未收到上游的BPDU就重新开始生成树计算的超时时间是Hello Timer的9倍。</span></span><br><span class="line"></span><br><span class="line">stp timer forward-delay <span class="number">1500</span></span><br><span class="line"><span class="comment">//配置设备的Forward Delay时间。 缺省情况下，设备的Forward Delay时间是1500厘秒（15秒）。</span></span><br><span class="line"></span><br><span class="line">stp timer hello <span class="number">200</span></span><br><span class="line"><span class="comment">//配置设备的Hello Time时间。 缺省情况下，设备的Hello Time时间是200厘秒（2秒）。</span></span><br><span class="line">  </span><br><span class="line">stp timer mac-age <span class="number">2000</span></span><br><span class="line"><span class="comment">//配置设备的Max Age时间。缺省情况下，设备的Max Age时间是2000厘秒（20秒）。</span></span><br><span class="line"></span><br><span class="line">max bandwidth-affected-linknumber <span class="number">8</span></span><br><span class="line"><span class="comment">//配置影响带宽的最大连接数。 缺省情况下，影响链路聚合带宽的最大连接数是8。</span></span><br><span class="line">  </span><br><span class="line">reset stp error packet statistics </span><br><span class="line"><span class="comment">//清除生成树协议的错误报文计数。</span></span><br><span class="line"></span><br><span class="line">display stp toplogy-change</span><br><span class="line"><span class="comment">//查看STP/RSTP拓扑变化相关的统计信息</span></span><br></pre></td></tr></table></figure>
-<h1 id="STP配置举例"><a href="#STP配置举例" class="headerlink" title="STP配置举例"></a>STP配置举例</h1><p>如下图，需将SW1配置为根桥，SW2配置为备份根桥。通过在三天交换机中配置STP，对某个端口进行阻塞，防止网络出环。</p>
+<h1 id="STP配置举例"><a href="#STP配置举例" class="headerlink" title="STP配置举例"></a>STP配置举例</h1><p>如下图，需将SW1配置为根桥，SW2配置为备份根桥。通过在三台交换机中配置STP，对某个端口进行阻塞，防止网络出环。</p>
 <p><img src="/2017/11/29/STP生成树协议/STP配置.png" alt="STP配置"></p>
 <p><center>图：STP配置拓扑<center></center></center></p>
 <p>SW1配置文件：</p>
@@ -1021,7 +1033,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">197</span>
+                    <span class="site-state-item-count">198</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1293,9 +1305,7 @@
                     
                       
                     
-                      
-                    
-                    <span class="site-state-item-count">104</span>
+                    <span class="site-state-item-count">103</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1423,7 +1433,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#STP简介"><span class="nav-number">1.</span> <span class="nav-text">STP简介</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#STP概述："><span class="nav-number">1.1.</span> <span class="nav-text">STP概述：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#STP相关概念："><span class="nav-number">1.2.</span> <span class="nav-text">STP相关概念：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#端口角色："><span class="nav-number">1.2.1.</span> <span class="nav-text">端口角色：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#端口状态："><span class="nav-number">1.2.2.</span> <span class="nav-text">端口状态：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三种定时器："><span class="nav-number">1.2.3.</span> <span class="nav-text">三种定时器：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#STP报文"><span class="nav-number">2.</span> <span class="nav-text">STP报文</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#STP报文格式："><span class="nav-number">2.1.</span> <span class="nav-text">STP报文格式：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#报文字段解释："><span class="nav-number">2.2.</span> <span class="nav-text">报文字段解释：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#STP报文抓包示例："><span class="nav-number">2.3.</span> <span class="nav-text">STP报文抓包示例：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#STP笔记"><span class="nav-number">3.</span> <span class="nav-text">STP笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#STP原理："><span class="nav-number">3.1.</span> <span class="nav-text">STP原理：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#STP版本："><span class="nav-number">3.2.</span> <span class="nav-text">STP版本：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#STP的选举过程："><span class="nav-number">3.3.</span> <span class="nav-text">STP的选举过程：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#根桥的选举："><span class="nav-number">3.4.</span> <span class="nav-text">根桥的选举：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分端口的选举："><span class="nav-number">3.5.</span> <span class="nav-text">分端口的选举：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#BPDU报文的两种类型："><span class="nav-number">3.6.</span> <span class="nav-text">BPDU报文的两种类型：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#STP故障："><span class="nav-number">3.7.</span> <span class="nav-text">STP故障：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#STP用于拓扑改变的报文："><span class="nav-number">3.8.</span> <span class="nav-text">STP用于拓扑改变的报文：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#STP拓扑改变："><span class="nav-number">3.9.</span> <span class="nav-text">STP拓扑改变：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#STP触发拓扑改变条件："><span class="nav-number">3.10.</span> <span class="nav-text">STP触发拓扑改变条件：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#STP配置命令行"><span class="nav-number">4.</span> <span class="nav-text">STP配置命令行</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#STP配置举例"><span class="nav-number">5.</span> <span class="nav-text">STP配置举例</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#STP简介"><span class="nav-number">1.</span> <span class="nav-text">STP简介</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#STP概述："><span class="nav-number">1.1.</span> <span class="nav-text">STP概述：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#STP相关概念："><span class="nav-number">1.2.</span> <span class="nav-text">STP相关概念：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#端口角色："><span class="nav-number">1.2.1.</span> <span class="nav-text">端口角色：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#端口状态："><span class="nav-number">1.2.2.</span> <span class="nav-text">端口状态：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三种定时器："><span class="nav-number">1.2.3.</span> <span class="nav-text">三种定时器：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#STP报文"><span class="nav-number">2.</span> <span class="nav-text">STP报文</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#STP报文格式："><span class="nav-number">2.1.</span> <span class="nav-text">STP报文格式：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#报文字段解释："><span class="nav-number">2.2.</span> <span class="nav-text">报文字段解释：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#STP报文抓包示例："><span class="nav-number">2.3.</span> <span class="nav-text">STP报文抓包示例：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#STP笔记"><span class="nav-number">3.</span> <span class="nav-text">STP笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#STP原理："><span class="nav-number">3.1.</span> <span class="nav-text">STP原理：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#STP版本："><span class="nav-number">3.2.</span> <span class="nav-text">STP版本：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#STP的选举过程："><span class="nav-number">3.3.</span> <span class="nav-text">STP的选举过程：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#根桥的选举："><span class="nav-number">3.4.</span> <span class="nav-text">根桥的选举：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#指定端口的选举："><span class="nav-number">3.5.</span> <span class="nav-text">指定端口的选举：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#BPDU报文的两种类型："><span class="nav-number">3.6.</span> <span class="nav-text">BPDU报文的两种类型：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#STP故障："><span class="nav-number">3.7.</span> <span class="nav-text">STP故障：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#STP用于拓扑改变的报文："><span class="nav-number">3.8.</span> <span class="nav-text">STP用于拓扑改变的报文：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#STP拓扑改变："><span class="nav-number">3.9.</span> <span class="nav-text">STP拓扑改变：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#STP触发拓扑改变条件："><span class="nav-number">3.10.</span> <span class="nav-text">STP触发拓扑改变条件：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#STP配置命令行"><span class="nav-number">4.</span> <span class="nav-text">STP配置命令行</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#STP配置举例"><span class="nav-number">5.</span> <span class="nav-text">STP配置举例</span></a></li></ol></div>
             
 
           </div>
@@ -1463,7 +1473,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共 794.3k 字</span>
+  <span class="post-count">全站共 800.0k 字</span>
 </div>
 
 

@@ -144,7 +144,11 @@
 <meta property="og:image" content="https://cshihong.github.io/2019/04/19/GRE-over-IPSec技术原理/gre报文格式.png">
 <meta property="og:image" content="https://cshihong.github.io/2019/04/19/GRE-over-IPSec技术原理/gre抓包.png">
 <meta property="og:image" content="https://cshihong.github.io/2019/04/19/GRE-over-IPSec技术原理/封装.png">
-<meta property="og:updated_time" content="2019-04-19T14:11:44.278Z">
+<meta property="og:image" content="https://cshihong.github.io/2019/04/19/GRE-over-IPSec技术原理/拓扑.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/04/19/GRE-over-IPSec技术原理/安全策略.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/04/19/GRE-over-IPSec技术原理/测试.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/04/19/GRE-over-IPSec技术原理/ipsec%20sa.png">
+<meta property="og:updated_time" content="2019-05-06T08:34:11.923Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="GRE over IPSec技术原理">
 <meta name="twitter:description" content="GRE原理GRE简介：General Routing Encapsulation，简称GRE，是一种三层VPN封装技术。GRE可以对某些网络层协议（如IPX、Apple Talk、IP等）的报文进行封装，使封装后的报文能够在另一种网络中（如IPv4）传输，从而解决了跨越异种网络的报文传输问题。异种报文传输的通道称为Tunnel（隧道）。 GRE报文封装： 图：GRE报文格式  其中：  净荷（Pa">
@@ -468,12 +472,24 @@
                 
               
 
-              <time title="创建时间：2019-04-19 16:27:37 / 修改时间：22:11:44" itemprop="dateCreated datePublished" datetime="2019-04-19T16:27:37+08:00">2019-04-19</time>
+              <time title="创建时间：2019-04-19 16:27:37" itemprop="dateCreated datePublished" datetime="2019-04-19T16:27:37+08:00">2019-04-19</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-05-06 16:34:11" itemprop="dateModified" datetime="2019-05-06T16:34:11+08:00">2019-05-06</time>
               
             
           </span>
@@ -513,9 +529,9 @@
             <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
 			<span class="post-meta-divider">|</span>
-			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 1,142</span>
+			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 2,154</span>
 			<span class="post-meta-item-text">|</span>
-			<span title="post.min2read"><span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span>阅读时长： 4</span>
+			<span title="post.min2read"><span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span>阅读时长： 9</span>
 
           
 
@@ -657,7 +673,38 @@
 <ul>
 <li>3个IP头部   原始IP头部   GRE头部    IPSEC头部</li>
 </ul>
-<h1 id="GRE-over-IPSec配置实验"><a href="#GRE-over-IPSec配置实验" class="headerlink" title="GRE over IPSec配置实验"></a>GRE over IPSec配置实验</h1>
+<h1 id="GRE-over-IPSec配置实验"><a href="#GRE-over-IPSec配置实验" class="headerlink" title="GRE over IPSec配置实验"></a>GRE over IPSec配置实验</h1><h2 id="实验拓扑图："><a href="#实验拓扑图：" class="headerlink" title="实验拓扑图："></a>实验拓扑图：</h2><p>FW1和FW2之间建立GRE over IPSec隧道，使PC1网络好PC2网络用户可通过隧道互相访问。</p>
+<p><img src="/2019/04/19/GRE-over-IPSec技术原理/拓扑.png" alt="拓扑"></p>
+<center>图：GRE Over IPSec实验拓扑图</center>
+
+<h2 id="实验一：IPSec策略在物理接口调用："><a href="#实验一：IPSec策略在物理接口调用：" class="headerlink" title="实验一：IPSec策略在物理接口调用："></a>实验一：IPSec策略在物理接口调用：</h2><h3 id="配置思路："><a href="#配置思路：" class="headerlink" title="配置思路："></a>配置思路：</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line">第一步： 完成接口基本配置。</span><br><span class="line">第二步：分别创建GRE隧道接口，并配置 GRE 隧道接口的 IP 地址、源地址和目的地址。</span><br><span class="line">FW1:</span><br><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">Tunnel0</span></span></span><br><span class="line"><span class="class"> <span class="title">ip</span> <span class="title">address</span> 172.16.1.1 255.255.255.0 </span></span><br><span class="line"><span class="class"> <span class="title">tunnel</span>-<span class="title">protocol</span> <span class="title">gre</span></span></span><br><span class="line"><span class="class"> <span class="title">source</span> 202.100.1.10</span></span><br><span class="line"><span class="class"> <span class="title">destination</span> 202.100.1.11</span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class"><span class="title">FW2</span></span></span><br><span class="line"><span class="class"><span class="title">interface</span> <span class="title">Tunnel0</span></span></span><br><span class="line"><span class="class"> <span class="title">ip</span> <span class="title">address</span> 172.16.1.2 255.255.255.0 </span></span><br><span class="line"><span class="class"> <span class="title">tunnel</span>-<span class="title">protocol</span> <span class="title">gre</span></span></span><br><span class="line"><span class="class"> <span class="title">source</span> 202.100.1.11</span></span><br><span class="line"><span class="class"> <span class="title">destination</span> 202.100.1.10</span></span><br><span class="line"><span class="class">  </span></span><br><span class="line"><span class="class">第三步：配置静态路由，将出接口指定为 <span class="title">GRE</span> 隧道接口，将流量引入到隧道中。</span></span><br><span class="line"><span class="class">注意：也可以动态路由方式</span></span><br><span class="line">FW1:</span><br><span class="line"> ip route-<span class="keyword">static</span> <span class="number">10.1</span>.2.0 <span class="number">255.255</span>.255.0 Tunnel0</span><br><span class="line"></span><br><span class="line">FW2</span><br><span class="line"> ip route-<span class="keyword">static</span> <span class="number">10.1</span>.1.0 <span class="number">255.255</span>.255.0 Tunnel0</span><br><span class="line"></span><br><span class="line">第四步：配置 IPSec 隧道。包括配置 IPSec 策略的基本信息、配置待加密的数据流和配置安全提议。</span><br><span class="line">IPSEC配置：</span><br><span class="line">阶段一：</span><br><span class="line">ike proposal <span class="number">10</span></span><br><span class="line"> authentication-algorithm sha2-<span class="number">256</span></span><br><span class="line"> integrity-algorithm aes-xcbc-<span class="number">96</span> hmac-sha2-<span class="number">256</span></span><br><span class="line"></span><br><span class="line">ike peer <span class="number">10</span>           </span><br><span class="line"> pre-shared-key Huawei@<span class="number">123</span></span><br><span class="line"> ike-proposal <span class="number">10</span>  </span><br><span class="line"> remote-address <span class="number">202.100</span>.1.11</span><br><span class="line"></span><br><span class="line">阶段二：</span><br><span class="line">acl number <span class="number">3000</span></span><br><span class="line"> rule <span class="number">5</span> permit ip source <span class="number">202.100</span>.1.10 <span class="number">0</span> destination <span class="number">202.100</span>.1.11 <span class="number">0</span></span><br><span class="line">注意: 保护的是GRE的隧道 </span><br><span class="line"></span><br><span class="line">ipsec proposal <span class="number">10</span>  </span><br><span class="line"> encapsulation-mode auto</span><br><span class="line"> esp authentication-algorithm sha2-<span class="number">256</span></span><br><span class="line">#</span><br><span class="line">ipsec policy ipsec_policy <span class="number">10</span> isakmp</span><br><span class="line"> security acl <span class="number">3000</span></span><br><span class="line"> ike-peer <span class="number">10</span>  </span><br><span class="line"> proposal <span class="number">10</span>  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">GigabitEthernet0</span>/0/2  --------------在物理接口调用 </span></span><br><span class="line"><span class="class"> <span class="title">ip</span> <span class="title">address</span> 202.100.1.10 255.255.255.0</span></span><br><span class="line"><span class="class"> <span class="title">ipsec</span> <span class="title">policy</span> <span class="title">ipsec_policy</span></span></span><br></pre></td></tr></table></figure>
+<p><strong>安全策略的放行：</strong></p>
+<p><img src="/2019/04/19/GRE-over-IPSec技术原理/安全策略.png" alt="安全策略"></p>
+<center>图：安全策略的放行</center>
+
+<blockquote>
+<p><strong>注意：关于需不需要放行gre流量的问题。</strong><br><strong>因为gre头部是在esp头部或公网IP头部中封装的，实际流量会被esp加密传输。应该是不需要放行gre的，但是在实际测试中需要放行。</strong></p>
+<p><strong>在华为防火墙实际测试中，放行gre流量后IPSec SA可以正常建立，双方的主机也可以互相通信。而不放行gre的话，IPSec SA可以正常建立，但是双方的主机不能互相通信。</strong></p>
+</blockquote>
+<h3 id="检查测试："><a href="#检查测试：" class="headerlink" title="检查测试："></a>检查测试：</h3><p><img src="/2019/04/19/GRE-over-IPSec技术原理/测试.png" alt="测试"></p>
+<center>图：PC1与PC2的连通性测试</center>
+
+<hr>
+<p><img src="/2019/04/19/GRE-over-IPSec技术原理/ipsec sa.png" alt="ipsec sa"></p>
+<center>图：IPSec SA状态</center>
+
+<h2 id="实验二：IPSec策略在Tunnel口调用："><a href="#实验二：IPSec策略在Tunnel口调用：" class="headerlink" title="实验二：IPSec策略在Tunnel口调用："></a>实验二：IPSec策略在Tunnel口调用：</h2><h3 id="配置思路：-1"><a href="#配置思路：-1" class="headerlink" title="配置思路："></a>配置思路：</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line">IPSEC 配置思路：  </span><br><span class="line">阶段一: </span><br><span class="line">ike proposal <span class="number">10</span></span><br><span class="line"> authentication-algorithm sha2-<span class="number">256</span></span><br><span class="line"> integrity-algorithm aes-xcbc-<span class="number">96</span> hmac-sha2-<span class="number">256</span></span><br><span class="line">#</span><br><span class="line">ike peer <span class="number">10</span>            </span><br><span class="line"> pre-shared-key Huawei@<span class="number">123</span></span><br><span class="line"> ike-proposal <span class="number">10</span></span><br><span class="line"> </span><br><span class="line">注意：不能配置remote-address.</span><br><span class="line"></span><br><span class="line">阶段二:</span><br><span class="line">不需要感兴趣流 </span><br><span class="line">ipsec proposal <span class="number">10</span></span><br><span class="line"> encapsulation-mode auto</span><br><span class="line"> esp</span><br><span class="line">#</span><br><span class="line">ipsec profile ipsec_pro</span><br><span class="line"> ike-peer <span class="number">10</span></span><br><span class="line"> proposal <span class="number">10</span></span><br><span class="line"></span><br><span class="line">不能调用ACL </span><br><span class="line"></span><br><span class="line">调用：</span><br><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">Tunnel0</span></span></span><br><span class="line"><span class="class"> <span class="title">ipsec</span> <span class="title">profile</span> <span class="title">ipsec_pro</span></span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class">放行策略：</span></span><br><span class="line"><span class="class"><span class="title">security</span>-<span class="title">policy</span></span></span><br><span class="line"><span class="class"> <span class="title">rule</span> <span class="title">name</span> <span class="title">IPSEC1</span></span></span><br><span class="line"><span class="class">  <span class="title">source</span>-<span class="title">zone</span> <span class="title">local</span></span></span><br><span class="line"><span class="class">  <span class="title">source</span>-<span class="title">zone</span> <span class="title">untrust</span></span></span><br><span class="line"><span class="class">  <span class="title">destination</span>-<span class="title">zone</span> <span class="title">local</span></span></span><br><span class="line"><span class="class">  <span class="title">destination</span>-<span class="title">zone</span> <span class="title">untrust</span></span></span><br><span class="line"><span class="class">  <span class="title">source</span>-<span class="title">address</span> 202.100.1.10 <span class="title">mask</span> 255.255.255.255</span></span><br><span class="line"><span class="class">  <span class="title">source</span>-<span class="title">address</span> 202.100.1.11 <span class="title">mask</span> 255.255.255.255</span></span><br><span class="line"><span class="class">  <span class="title">destination</span>-<span class="title">address</span> 202.100.1.10 <span class="title">mask</span> 255.255.255.255</span></span><br><span class="line"><span class="class">  <span class="title">destination</span>-<span class="title">address</span> 202.100.1.11 <span class="title">mask</span> 255.255.255.255</span></span><br><span class="line"><span class="class">  <span class="title">service</span> <span class="title">ISAKMP</span></span></span><br><span class="line"><span class="class">  <span class="title">service</span> <span class="title">esp</span></span></span><br><span class="line"><span class="class">  <span class="title">action</span> <span class="title">permit</span></span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class"> <span class="title">rule</span> <span class="title">name</span> <span class="title">IPSEC2</span></span></span><br><span class="line"><span class="class">  <span class="title">source</span>-<span class="title">zone</span> <span class="title">trust</span></span></span><br><span class="line"><span class="class">  <span class="title">source</span>-<span class="title">zone</span> <span class="title">vpn</span></span></span><br><span class="line"><span class="class">  <span class="title">destination</span>-<span class="title">zone</span> <span class="title">trust</span></span></span><br><span class="line"><span class="class">  <span class="title">destination</span>-<span class="title">zone</span> <span class="title">vpn</span></span></span><br><span class="line"><span class="class">  <span class="title">source</span>-<span class="title">address</span> 10.1.1.0 <span class="title">mask</span> 255.255.255.0</span></span><br><span class="line"><span class="class">  <span class="title">source</span>-<span class="title">address</span> 10.1.2.0 <span class="title">mask</span> 255.255.255.0</span></span><br><span class="line"><span class="class">  <span class="title">destination</span>-<span class="title">address</span> 10.1.1.0 <span class="title">mask</span> 255.255.255.0</span></span><br><span class="line"><span class="class">  <span class="title">destination</span>-<span class="title">address</span> 10.1.2.0 <span class="title">mask</span> 255.255.255.0</span></span><br><span class="line"><span class="class">  <span class="title">action</span> <span class="title">permit</span>    </span></span><br><span class="line"><span class="class">                       </span></span><br><span class="line"><span class="class">  <span class="title">rule</span> <span class="title">name</span> <span class="title">vpn_local</span>  ----------只需要放行<span class="title">VPN</span>-<span class="title">LOCAL</span></span></span><br><span class="line"><span class="class">  <span class="title">source</span>-<span class="title">zone</span> <span class="title">vpn</span></span></span><br><span class="line"><span class="class">  <span class="title">destination</span>-<span class="title">zone</span> <span class="title">local</span> </span></span><br><span class="line"><span class="class">  <span class="title">service</span> <span class="title">gre</span></span></span><br><span class="line"><span class="class">  <span class="title">action</span> <span class="title">permit</span></span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p> <strong>注意：当在Tunnel口调用IPSec后，可以成功建立IPSec SA，需要流量的触发。但是在防火墙的Web管理界面的IPSec监控中看不到有关IPSec的信息，只能通过命令行查看。</strong></p>
+<p><strong>在配置IPSec Profile（模板）的时候：</strong></p>
+<ul>
+<li><strong>不能配置远端的IP地址</strong></li>
+<li><strong>不能绑定ACL，即感兴趣流</strong></li>
+</ul>
+<p><strong>在Tunnel口上绑定IPSec策略时，放行gre的流量的方向是，从vpn –&gt; local的方向的流量。</strong></p>
+</blockquote>
+<hr>
+
       
     </div>
 
@@ -821,6 +868,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2019/05/06/DSVPN基础原理/" rel="prev" title="DSVPN基础原理">
+                DSVPN基础原理 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -896,7 +947,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">197</span>
+                    <span class="site-state-item-count">198</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1168,9 +1219,7 @@
                     
                       
                     
-                      
-                    
-                    <span class="site-state-item-count">104</span>
+                    <span class="site-state-item-count">103</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1298,7 +1347,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#GRE原理"><span class="nav-number">1.</span> <span class="nav-text">GRE原理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#GRE简介："><span class="nav-number">1.1.</span> <span class="nav-text">GRE简介：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GRE报文封装："><span class="nav-number">1.2.</span> <span class="nav-text">GRE报文封装：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GRE的实现–隧道接口："><span class="nav-number">1.3.</span> <span class="nav-text">GRE的实现–隧道接口：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GRE的应用场景："><span class="nav-number">1.4.</span> <span class="nav-text">GRE的应用场景：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GRE的优缺点："><span class="nav-number">1.5.</span> <span class="nav-text">GRE的优缺点：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#GRE-over-IPSec"><span class="nav-number">2.</span> <span class="nav-text">GRE over IPSec</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#IPSec的优缺点分析："><span class="nav-number">2.1.</span> <span class="nav-text">IPSec的优缺点分析：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GRE-over-IPSec："><span class="nav-number">2.2.</span> <span class="nav-text">GRE over IPSec：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GER-over-IPSec的两种封装模式："><span class="nav-number">2.3.</span> <span class="nav-text">GER over IPSec的两种封装模式：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#GRE-over-IPSec配置实验"><span class="nav-number">3.</span> <span class="nav-text">GRE over IPSec配置实验</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#GRE原理"><span class="nav-number">1.</span> <span class="nav-text">GRE原理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#GRE简介："><span class="nav-number">1.1.</span> <span class="nav-text">GRE简介：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GRE报文封装："><span class="nav-number">1.2.</span> <span class="nav-text">GRE报文封装：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GRE的实现–隧道接口："><span class="nav-number">1.3.</span> <span class="nav-text">GRE的实现–隧道接口：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GRE的应用场景："><span class="nav-number">1.4.</span> <span class="nav-text">GRE的应用场景：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GRE的优缺点："><span class="nav-number">1.5.</span> <span class="nav-text">GRE的优缺点：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#GRE-over-IPSec"><span class="nav-number">2.</span> <span class="nav-text">GRE over IPSec</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#IPSec的优缺点分析："><span class="nav-number">2.1.</span> <span class="nav-text">IPSec的优缺点分析：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GRE-over-IPSec："><span class="nav-number">2.2.</span> <span class="nav-text">GRE over IPSec：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GER-over-IPSec的两种封装模式："><span class="nav-number">2.3.</span> <span class="nav-text">GER over IPSec的两种封装模式：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#GRE-over-IPSec配置实验"><span class="nav-number">3.</span> <span class="nav-text">GRE over IPSec配置实验</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#实验拓扑图："><span class="nav-number">3.1.</span> <span class="nav-text">实验拓扑图：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实验一：IPSec策略在物理接口调用："><span class="nav-number">3.2.</span> <span class="nav-text">实验一：IPSec策略在物理接口调用：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#配置思路："><span class="nav-number">3.2.1.</span> <span class="nav-text">配置思路：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#检查测试："><span class="nav-number">3.2.2.</span> <span class="nav-text">检查测试：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实验二：IPSec策略在Tunnel口调用："><span class="nav-number">3.3.</span> <span class="nav-text">实验二：IPSec策略在Tunnel口调用：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#配置思路：-1"><span class="nav-number">3.3.1.</span> <span class="nav-text">配置思路：</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -1338,7 +1387,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共 794.3k 字</span>
+  <span class="post-count">全站共 800.0k 字</span>
 </div>
 
 
