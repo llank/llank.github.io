@@ -754,8 +754,8 @@
       </categories>
       <tags>
         <tag>Hadoop</tag>
-        <tag>HBase</tag>
         <tag>大数据开发</tag>
+        <tag>HBase</tag>
       </tags>
   </entry>
   <entry>
@@ -779,8 +779,8 @@
       </categories>
       <tags>
         <tag>Hadoop</tag>
-        <tag>大数据开发</tag>
         <tag>HDFS</tag>
+        <tag>大数据开发</tag>
       </tags>
   </entry>
   <entry>
@@ -1553,8 +1553,8 @@
       </categories>
       <tags>
         <tag>路由基础</tag>
-        <tag>IPv6</tag>
         <tag>组播</tag>
+        <tag>IPv6</tag>
       </tags>
   </entry>
   <entry>
