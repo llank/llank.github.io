@@ -133,18 +133,28 @@
 
 
 
-  <meta name="description" content="你的责任就是你的方向，你的经历就是你的资本，你的性格就是你的命运。">
+  <meta name="description" content="VPN部署现状问题企业广泛部署VPN时的问题： 总部不能集中管理VPN。 每个分支需要配置IPSec VPN，工作量大，对维护人员有一定的技术要去。 每一个分支需要重复配置： DNS域名、DNS服务器地址、WINS服务器地址等网络资源。 ACL推送，设定了允许分支子网访问的总部子网范围   需要重复配置分支设备升级。  Efficient VPN简化企业VPN部署： 总部集中管理VPN配置。 分支">
+<meta name="keywords" content="IPSec VPN,VPN">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Effient VPN(EVPN)基础原理">
+<meta property="og:title" content="Effient VPN(EVPN)技术原理">
 <meta property="og:url" content="https://cshihong.github.io/2019/05/07/Effient-VPN-EVPN-基础原理/index.html">
 <meta property="og:site_name" content="曹世宏的博客">
-<meta property="og:description" content="你的责任就是你的方向，你的经历就是你的资本，你的性格就是你的命运。">
+<meta property="og:description" content="VPN部署现状问题企业广泛部署VPN时的问题： 总部不能集中管理VPN。 每个分支需要配置IPSec VPN，工作量大，对维护人员有一定的技术要去。 每一个分支需要重复配置： DNS域名、DNS服务器地址、WINS服务器地址等网络资源。 ACL推送，设定了允许分支子网访问的总部子网范围   需要重复配置分支设备升级。  Efficient VPN简化企业VPN部署： 总部集中管理VPN配置。 分支">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-07T09:55:22.772Z">
+<meta property="og:image" content="https://cshihong.github.io/2019/05/07/Effient-VPN-EVPN-基础原理/拓扑.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/05/07/Effient-VPN-EVPN-基础原理/client.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/05/07/Effient-VPN-EVPN-基础原理/network.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/05/07/Effient-VPN-EVPN-基础原理/plus.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/05/07/Effient-VPN-EVPN-基础原理/sa.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/05/07/Effient-VPN-EVPN-基础原理/route.png">
+<meta property="og:updated_time" content="2019-05-09T07:33:00.675Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Effient VPN(EVPN)基础原理">
-<meta name="twitter:description" content="你的责任就是你的方向，你的经历就是你的资本，你的性格就是你的命运。">
+<meta name="twitter:title" content="Effient VPN(EVPN)技术原理">
+<meta name="twitter:description" content="VPN部署现状问题企业广泛部署VPN时的问题： 总部不能集中管理VPN。 每个分支需要配置IPSec VPN，工作量大，对维护人员有一定的技术要去。 每一个分支需要重复配置： DNS域名、DNS服务器地址、WINS服务器地址等网络资源。 ACL推送，设定了允许分支子网访问的总部子网范围   需要重复配置分支设备升级。  Efficient VPN简化企业VPN部署： 总部集中管理VPN配置。 分支">
+<meta name="twitter:image" content="https://cshihong.github.io/2019/05/07/Effient-VPN-EVPN-基础原理/拓扑.png">
 
+
+  
 
 
   <link rel="alternate" href="/atom.xml" title="曹世宏的博客" type="application/atom+xml">
@@ -162,7 +172,7 @@
   };
 </script>
 
-  <title>Effient VPN(EVPN)基础原理 | 曹世宏的博客</title>
+  <title>Effient VPN(EVPN)技术原理 | 曹世宏的博客</title>
   
 
 
@@ -437,7 +447,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Effient VPN(EVPN)基础原理
+          <h2 class="post-title" itemprop="name headline">Effient VPN(EVPN)技术原理
 
               
             
@@ -467,8 +477,42 @@
             
 
             
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-05-09 15:33:00" itemprop="dateModified" datetime="2019-05-09T15:33:00+08:00">2019-05-09</time>
+              
+            
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/网络安全/" itemprop="url" rel="index"><span itemprop="name">网络安全</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -486,9 +530,9 @@
             <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
 			<span class="post-meta-divider">|</span>
-			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 0</span>
+			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 1,475</span>
 			<span class="post-meta-item-text">|</span>
-			<span title="post.min2read"><span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span>阅读时长： 1</span>
+			<span title="post.min2read"><span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span>阅读时长： 6</span>
 
           
 
@@ -509,7 +553,105 @@
       
 
       
-        
+        <h1 id="VPN部署现状问题"><a href="#VPN部署现状问题" class="headerlink" title="VPN部署现状问题"></a>VPN部署现状问题</h1><h2 id="企业广泛部署VPN时的问题："><a href="#企业广泛部署VPN时的问题：" class="headerlink" title="企业广泛部署VPN时的问题："></a>企业广泛部署VPN时的问题：</h2><ol>
+<li>总部不能集中管理VPN。</li>
+<li>每个分支需要配置IPSec VPN，工作量大，对维护人员有一定的技术要去。</li>
+<li>每一个分支需要重复配置：<ul>
+<li>DNS域名、DNS服务器地址、WINS服务器地址等网络资源。</li>
+<li>ACL推送，设定了允许分支子网访问的总部子网范围</li>
+</ul>
+</li>
+<li>需要重复配置分支设备升级。</li>
+</ol>
+<h2 id="Efficient-VPN简化企业VPN部署："><a href="#Efficient-VPN简化企业VPN部署：" class="headerlink" title="Efficient VPN简化企业VPN部署："></a>Efficient VPN简化企业VPN部署：</h2><ol>
+<li>总部集中管理VPN配置。</li>
+<li>分支从总部获取IPSec VPN的配置信息，简化分支IPSec配置。</li>
+<li>分支从总部获取：网络资源配置，ACL推送等。</li>
+<li>总部统一定义升级URL，分支设备自行升级。</li>
+</ol>
+<h1 id="Efficient-VPN技术原理"><a href="#Efficient-VPN技术原理" class="headerlink" title="Efficient VPN技术原理"></a>Efficient VPN技术原理</h1><h2 id="EVPN简介："><a href="#EVPN简介：" class="headerlink" title="EVPN简介："></a>EVPN简介：</h2><p>EVPN（Efficient VPN）高效VPN。Efficient VPN可以解决IPSec VPN分支配置复杂的问题。</p>
+<p>Efficient VPN采用<strong>Client/Server</strong>结构。它将IPSec及其它相应<strong>配置集中在Server端</strong>（总部网关），当Remote端（<strong>分支网关）配置好基本参数</strong>时，Remote端发起协商并与Server端建立起IPSec隧道，然后Server端将IPSec的其它相关属性及其他网络资源<strong>推送</strong>给Remote端，简化了分支网关的IPSec和其他网络资源的配置和维护。另外，Efficient VPN还支持远程站点设备的自动升级。</p>
+<blockquote>
+<p><strong>作用：简化IPSEC VPN配置，采用C/S，推送IPSEC配置。</strong></p>
+</blockquote>
+<p>EVPN的客户端有两种：</p>
+<ol>
+<li>软件客户端</li>
+<li>硬件客户端</li>
+</ol>
+<h2 id="EVPN硬件客户端有4种运行模式："><a href="#EVPN硬件客户端有4种运行模式：" class="headerlink" title="EVPN硬件客户端有4种运行模式："></a>EVPN硬件客户端有4种运行模式：</h2><ol>
+<li><p><strong>Client模式：</strong></p>
+<ul>
+<li><p><strong>Remote端会向Server端申请一个IP地址。</strong></p>
+<p>同时自动创建一个LoopBack接口，将申请的IP地址应用到该接口。同时用该IP地址与总部建立IPSec隧道。</p>
+</li>
+<li><p><strong>Remote端的地址做地址转化（NAT）。</strong></p>
+</li>
+<li><p>Client模式一般用于出差员工或小的分支机构通过私网接入总部网络。</p>
+</li>
+</ul>
+</li>
+<li><p><strong>Network模式：</strong></p>
+<ul>
+<li><strong>Remote端直接使用内网真实地址去访问总部网络。</strong></li>
+<li>Network模式一般用于分支和总部IP地址已统一规划的场景，需要考虑IP地址的规划，各个区域的IP地址不能重叠。</li>
+</ul>
+</li>
+<li><p><strong>Network-plus模式：</strong></p>
+<ul>
+<li>network-plus模式和Network模式基本一致。</li>
+<li>Client端会向Server端申请一个IP地址，该地址可以用于设备管理。</li>
+<li><strong>该模式下只支持IKEv1 野蛮模式。</strong></li>
+</ul>
+</li>
+<li><p><strong>Network-auto-cfg模式：</strong></p>
+<ul>
+<li>Network-auto-cfg模式中Cient端还会向Server端申请IP地址池。</li>
+<li>该地址池用于给Client端下挂的用户分配地址。</li>
+</ul>
+</li>
+</ol>
+<h2 id="EVPN推送配置的方法："><a href="#EVPN推送配置的方法：" class="headerlink" title="EVPN推送配置的方法："></a>EVPN推送配置的方法：</h2><ul>
+<li>阶段1：IKE SA</li>
+<li>阶段2： IPSec SA</li>
+<li>Efficient VPN在IPSec VPN协商的第一阶段和第二阶段之间插入全新的1.5阶段。该阶段的主要技术是增加了“Config Mode”配置模式，由此为客户端推送VPN配置。</li>
+</ul>
+<h1 id="EVPN配置示例"><a href="#EVPN配置示例" class="headerlink" title="EVPN配置示例"></a>EVPN配置示例</h1><h2 id="EVPN配置步骤："><a href="#EVPN配置步骤：" class="headerlink" title="EVPN配置步骤："></a>EVPN配置步骤：</h2><p>总部端的IPSec正常配置，在IKE peer中可以绑定推送的网络资源。</p>
+<p>分支结构的配置大大简化，只需在IPSec efficient-vpn 视图下配置远端地址，共享密钥即可。然后在接口调用vpn策略。</p>
+<h2 id="配置要求："><a href="#配置要求：" class="headerlink" title="配置要求："></a>配置要求：</h2><p>AR1向 AR2 申请IP 地址用于建立 IPSec 隧道，同时申请 DNS 域名、DNS 服务器地址和 WINS 服务器地址，提供给分支子网使用。</p>
+<p><img src="/2019/05/07/Effient-VPN-EVPN-基础原理/拓扑.png" alt="拓扑"></p>
+<center>图：EVPN配置实验拓扑图</center>
+
+<h2 id="Client模式配置示例："><a href="#Client模式配置示例：" class="headerlink" title="Client模式配置示例："></a>Client模式配置示例：</h2><p>配置思路： </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line">Server端</span><br><span class="line">第一步：配置IPSEC </span><br><span class="line">阶段一： </span><br><span class="line">ike proposal <span class="number">10</span></span><br><span class="line"> encryption-algorithm <span class="number">3</span>des-cbc</span><br><span class="line"> dh group2</span><br><span class="line"> authentication-algorithm sha2-<span class="number">256</span></span><br><span class="line"> prf hmac-sha2-<span class="number">256</span></span><br><span class="line">#</span><br><span class="line">ike peer spoke v2</span><br><span class="line"> pre-shared-key simple Huawei@<span class="number">123</span></span><br><span class="line"> ike-proposal <span class="number">10</span>                          </span><br><span class="line"> service-scheme evpn</span><br><span class="line"></span><br><span class="line">阶段二</span><br><span class="line">ipsec proposal <span class="number">10</span></span><br><span class="line"> esp authentication-algorithm sha2-<span class="number">256</span> </span><br><span class="line"> esp encryption-algorithm aes-<span class="number">256</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">ipsec policy-template ipsec_temp <span class="number">1000</span></span><br><span class="line"> ike-peer spoke</span><br><span class="line"> proposal <span class="number">10</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">ipsec policy ipsec_policy <span class="number">10</span> isakmp template ipsec_temp</span><br><span class="line"></span><br><span class="line">第二步：配置网络资源分配</span><br><span class="line"></span><br><span class="line">ip pool dhcp_pool-----配置DHCP</span><br><span class="line"> network <span class="number">172.16</span>.1.0 mask <span class="number">255.255</span>.255.0 </span><br><span class="line"></span><br><span class="line">aaa</span><br><span class="line"> service-scheme evpn</span><br><span class="line">  dns <span class="number">114.114</span>.114.114</span><br><span class="line">  ip-pool dhcp_pool</span><br><span class="line">  wins <span class="number">1.2</span>.3.4</span><br><span class="line">  dns-name qytang.com</span><br><span class="line"></span><br><span class="line">ike peer spoke v2</span><br><span class="line"> service-scheme evpn</span><br><span class="line"></span><br><span class="line">第三步：调用IPSEC </span><br><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">GigabitEthernet0</span>/0/1</span></span><br><span class="line"><span class="class"> <span class="title">ipsec</span> <span class="title">policy</span> <span class="title">ipsec_policy</span> </span></span><br><span class="line"><span class="class">--------------------------------------------------</span></span><br><span class="line"><span class="class"><span class="title">Clinet</span>端</span></span><br><span class="line"><span class="class"><span class="title">ipsec</span> <span class="title">efficient</span>-<span class="title">vpn</span> <span class="title">evpn</span> <span class="title">mode</span> <span class="title">client</span></span></span><br><span class="line"><span class="class"> <span class="title">remote</span>-<span class="title">address</span> 202.100.1.2 <span class="title">v2</span></span></span><br><span class="line"><span class="class"> <span class="title">pre</span>-<span class="title">shared</span>-<span class="title">key</span> <span class="title">cipher</span>  <span class="title">Huawei</span>@123</span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class"><span class="title">interface</span> <span class="title">GigabitEthernet0</span>/0/1</span></span><br><span class="line"><span class="class"> <span class="title">ipsec</span> <span class="title">efficient</span>-<span class="title">vpn</span> <span class="title">evpn</span></span></span><br></pre></td></tr></table></figure>
+<p><strong>检查测试：</strong></p>
+<p><img src="/2019/05/07/Effient-VPN-EVPN-基础原理/client.png" alt="client"></p>
+<center>图：Client模式下分支结构EVPN设备状态</center>
+
+<p>该模式下EVPN获取到一个IP地址，该IP地址用于总NAT，并与总部建立IPsec隧道。</p>
+<blockquote>
+<p> 缺点： 需要经过NAT转换，不能直接访问总部。</p>
+</blockquote>
+<h2 id="Network模式配置："><a href="#Network模式配置：" class="headerlink" title="Network模式配置："></a>Network模式配置：</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">配置思路： </span><br><span class="line">Sever端配置同Clinet模式</span><br><span class="line"></span><br><span class="line">Clinet端配置：</span><br><span class="line">acl number <span class="number">3000</span>  </span><br><span class="line"> rule <span class="number">5</span> permit ip source <span class="number">10.1</span>.1.0 <span class="number">0.0</span>.0.255 destination <span class="number">10.1</span>.2.0 <span class="number">0.0</span>.0.255 </span><br><span class="line"></span><br><span class="line">ipsec efficient-vpn evpn mode network</span><br><span class="line"> remote-address <span class="number">202.100</span>.1.2 v2</span><br><span class="line"> pre-shared-key cipher  Huawei@<span class="number">123</span></span><br><span class="line"> security acl <span class="number">3000</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">GigabitEthernet0</span>/0/1</span></span><br><span class="line"><span class="class"> <span class="title">ipsec</span> <span class="title">efficient</span>-<span class="title">vpn</span> <span class="title">evpn</span></span></span><br></pre></td></tr></table></figure>
+<p><strong>检查：</strong></p>
+<p><img src="/2019/05/07/Effient-VPN-EVPN-基础原理/network.png" alt="network"></p>
+<center>图：Network模式下分支结构EVPN获取情况</center>
+
+<h2 id="Network-plus配置示例："><a href="#Network-plus配置示例：" class="headerlink" title="Network-plus配置示例："></a>Network-plus配置示例：</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">配置思路： </span><br><span class="line">Server端配置</span><br><span class="line">阶段一：</span><br><span class="line">ike proposal <span class="number">10</span></span><br><span class="line"> encryption-algorithm <span class="number">3</span>des-cbc</span><br><span class="line"> dh group2</span><br><span class="line"> authentication-algorithm sha2-<span class="number">256</span></span><br><span class="line"> prf hmac-sha2-<span class="number">256</span></span><br><span class="line">#</span><br><span class="line">ike peer spoke v1 -----必须采用V1版本</span><br><span class="line"> exchange-mode aggressive -------------必须采用野蛮模式</span><br><span class="line"> pre-shared-key cipher Huawei@<span class="number">123</span></span><br><span class="line"> ike-proposal <span class="number">10</span></span><br><span class="line"> service-scheme evpn</span><br><span class="line"></span><br><span class="line">阶段二</span><br><span class="line">ipsec proposal <span class="number">10</span></span><br><span class="line"> esp authentication-algorithm sha2-<span class="number">256</span> </span><br><span class="line"> esp encryption-algorithm aes-<span class="number">256</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">ipsec policy-template ipsec_temp <span class="number">1000</span></span><br><span class="line"> ike-peer spoke</span><br><span class="line"> proposal <span class="number">10</span></span><br><span class="line"></span><br><span class="line">ipsec policy ipsec_policy <span class="number">10</span> isakmp template ipsec_temp</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">GigabitEthernet0</span>/0/1</span></span><br><span class="line"><span class="class"> <span class="title">ipsec</span> <span class="title">policy</span> <span class="title">ipsec_policy</span></span></span><br><span class="line"><span class="class">---------------------------------------------- </span></span><br><span class="line"><span class="class">客户端：</span></span><br><span class="line"><span class="class"><span class="title">ipsec</span> <span class="title">efficient</span>-<span class="title">vpn</span> <span class="title">evpn</span> <span class="title">mode</span> <span class="title">network</span>-<span class="title">plus</span></span></span><br><span class="line"><span class="class"> <span class="title">remote</span>-<span class="title">address</span> 202.100.1.2 <span class="title">v1</span></span></span><br><span class="line"><span class="class"> <span class="title">pre</span>-<span class="title">shared</span>-<span class="title">key</span> <span class="title">cipher</span>  <span class="title">Huawei</span>@123</span></span><br><span class="line"><span class="class"> <span class="title">security</span> <span class="title">acl</span> 3000 </span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class"><span class="title">interface</span> <span class="title">GigabitEthernet0</span>/0/1</span></span><br><span class="line"><span class="class"> <span class="title">ipsec</span> <span class="title">efficient</span>-<span class="title">vpn</span> <span class="title">evpn</span></span></span><br></pre></td></tr></table></figure>
+<p><strong>检查：</strong></p>
+<p><img src="/2019/05/07/Effient-VPN-EVPN-基础原理/plus.png" alt="plus"></p>
+<center>图：Network-plus模式下分支机构的EVPN情况</center>
+
+<hr>
+<p><img src="/2019/05/07/Effient-VPN-EVPN-基础原理/sa.png" alt="sa"></p>
+<center>图：plus模式下会生成两条IPSec sa</center>
+
+<hr>
+<p><img src="/2019/05/07/Effient-VPN-EVPN-基础原理/route.png" alt="route"></p>
+<center>图：该模式下还会在总部生成一条Unr的路由</center>
+
+<hr>
+
       
     </div>
 
@@ -575,7 +717,7 @@
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     
-    <a href="https://cshihong.github.io/2019/05/07/Effient-VPN-EVPN-基础原理/" title="Effient VPN(EVPN)基础原理">https://cshihong.github.io/2019/05/07/Effient-VPN-EVPN-基础原理/</a>
+    <a href="https://cshihong.github.io/2019/05/07/Effient-VPN-EVPN-基础原理/" title="Effient VPN(EVPN)技术原理">https://cshihong.github.io/2019/05/07/Effient-VPN-EVPN-基础原理/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -585,6 +727,14 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/IPSec-VPN/" rel="tag"># IPSec VPN</a>
+          
+            <a href="/tags/VPN/" rel="tag"># VPN</a>
+          
+        </div>
       
 
       
@@ -665,6 +815,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2019/05/09/SSL协议详解/" rel="prev" title="SSL/TLS协议详解">
+                SSL/TLS协议详解 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -713,8 +867,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -731,7 +894,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">199</span>
+                    <span class="site-state-item-count">201</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1003,7 +1166,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">103</span>
+                      
+                    
+                    <span class="site-state-item-count">104</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1122,6 +1287,22 @@
       </div>
 
       
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#VPN部署现状问题"><span class="nav-number">1.</span> <span class="nav-text">VPN部署现状问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#企业广泛部署VPN时的问题："><span class="nav-number">1.1.</span> <span class="nav-text">企业广泛部署VPN时的问题：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Efficient-VPN简化企业VPN部署："><span class="nav-number">1.2.</span> <span class="nav-text">Efficient VPN简化企业VPN部署：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Efficient-VPN技术原理"><span class="nav-number">2.</span> <span class="nav-text">Efficient VPN技术原理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#EVPN简介："><span class="nav-number">2.1.</span> <span class="nav-text">EVPN简介：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#EVPN硬件客户端有4种运行模式："><span class="nav-number">2.2.</span> <span class="nav-text">EVPN硬件客户端有4种运行模式：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#EVPN推送配置的方法："><span class="nav-number">2.3.</span> <span class="nav-text">EVPN推送配置的方法：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#EVPN配置示例"><span class="nav-number">3.</span> <span class="nav-text">EVPN配置示例</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#EVPN配置步骤："><span class="nav-number">3.1.</span> <span class="nav-text">EVPN配置步骤：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置要求："><span class="nav-number">3.2.</span> <span class="nav-text">配置要求：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Client模式配置示例："><span class="nav-number">3.3.</span> <span class="nav-text">Client模式配置示例：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Network模式配置："><span class="nav-number">3.4.</span> <span class="nav-text">Network模式配置：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Network-plus配置示例："><span class="nav-number">3.5.</span> <span class="nav-text">Network-plus配置示例：</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
 
       
         <div class="back-to-top">
@@ -1155,7 +1336,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共 801.4k 字</span>
+  <span class="post-count">全站共 809.3k 字</span>
 </div>
 
 
