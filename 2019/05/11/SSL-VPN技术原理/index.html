@@ -133,13 +133,13 @@
 
 
 
-  <meta name="description" content="SSL详解SSL VPN的技术主要用到了SSL技术。有关SSL具体技术，可以参考：  SSL/TLS详解：  SSL VPN简介SSL VPN是以SSL协议为安全基础的VPN远程接入技术，移动办公人员（在SSL VPN中被称为远程用户）使用SSL VPN可以安全、方便的接入企业内网，访问企业内网资源，提高工作效率。 SSL VPN与IPSec VPN对比： 如上图，SSL保护的是应用层的数据，可以">
+  <meta name="description" content="SSL详解SSL VPN的技术主要用到了SSL技术。有关SSL具体技术，可以参考：  SSL/TLS协议详解   SSL VPN简介SSL VPN是以SSL协议为安全基础的VPN远程接入技术，移动办公人员（在SSL VPN中被称为远程用户）使用SSL VPN可以安全、方便的接入企业内网，访问企业内网资源，提高工作效率。 SSL VPN与IPSec VPN对比： 如上图，SSL保护的是应用层的数据，">
 <meta name="keywords" content="VPN,SSL VPN">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SSL VPN技术原理">
 <meta property="og:url" content="https://cshihong.github.io/2019/05/11/SSL-VPN技术原理/index.html">
 <meta property="og:site_name" content="曹世宏的博客">
-<meta property="og:description" content="SSL详解SSL VPN的技术主要用到了SSL技术。有关SSL具体技术，可以参考：  SSL/TLS详解：  SSL VPN简介SSL VPN是以SSL协议为安全基础的VPN远程接入技术，移动办公人员（在SSL VPN中被称为远程用户）使用SSL VPN可以安全、方便的接入企业内网，访问企业内网资源，提高工作效率。 SSL VPN与IPSec VPN对比： 如上图，SSL保护的是应用层的数据，可以">
+<meta property="og:description" content="SSL详解SSL VPN的技术主要用到了SSL技术。有关SSL具体技术，可以参考：  SSL/TLS协议详解   SSL VPN简介SSL VPN是以SSL协议为安全基础的VPN远程接入技术，移动办公人员（在SSL VPN中被称为远程用户）使用SSL VPN可以安全、方便的接入企业内网，访问企业内网资源，提高工作效率。 SSL VPN与IPSec VPN对比： 如上图，SSL保护的是应用层的数据，">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://cshihong.github.io/2019/05/11/SSL-VPN技术原理/SSL和IPSec.png">
 <meta property="og:image" content="https://cshihong.github.io/2019/05/11/SSL-VPN技术原理/流程.png">
@@ -151,17 +151,17 @@
 <meta property="og:image" content="https://cshihong.github.io/2019/05/11/SSL-VPN技术原理/web代理.png">
 <meta property="og:image" content="https://cshihong.github.io/2019/05/11/SSL-VPN技术原理/封装.png">
 <meta property="og:image" content="https://cshihong.github.io/2019/05/11/SSL-VPN技术原理/文件共享.png">
-<meta property="og:image" content="https://cshihong.github.io/2019/05/11/SSL-VPN技术原理/D:/Hexo/source/_posts/SSL-VPN技术原理/端口转发.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/05/11/SSL-VPN技术原理/端口转发.png">
 <meta property="og:image" content="https://cshihong.github.io/2019/05/11/SSL-VPN技术原理/网络扩展.png">
 <meta property="og:image" content="https://cshihong.github.io/2019/05/11/SSL-VPN技术原理/可靠.png">
 <meta property="og:image" content="https://cshihong.github.io/2019/05/11/SSL-VPN技术原理/快四.png">
 <meta property="og:image" content="https://cshihong.github.io/2019/05/11/SSL-VPN技术原理/典型网络位置.png">
 <meta property="og:image" content="https://cshihong.github.io/2019/05/11/SSL-VPN技术原理/单臂组网.png">
 <meta property="og:image" content="https://cshihong.github.io/2019/05/11/SSL-VPN技术原理/双臂组网.png">
-<meta property="og:updated_time" content="2019-05-11T08:45:24.604Z">
+<meta property="og:updated_time" content="2019-05-11T09:01:29.908Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SSL VPN技术原理">
-<meta name="twitter:description" content="SSL详解SSL VPN的技术主要用到了SSL技术。有关SSL具体技术，可以参考：  SSL/TLS详解：  SSL VPN简介SSL VPN是以SSL协议为安全基础的VPN远程接入技术，移动办公人员（在SSL VPN中被称为远程用户）使用SSL VPN可以安全、方便的接入企业内网，访问企业内网资源，提高工作效率。 SSL VPN与IPSec VPN对比： 如上图，SSL保护的是应用层的数据，可以">
+<meta name="twitter:description" content="SSL详解SSL VPN的技术主要用到了SSL技术。有关SSL具体技术，可以参考：  SSL/TLS协议详解   SSL VPN简介SSL VPN是以SSL协议为安全基础的VPN远程接入技术，移动办公人员（在SSL VPN中被称为远程用户）使用SSL VPN可以安全、方便的接入企业内网，访问企业内网资源，提高工作效率。 SSL VPN与IPSec VPN对比： 如上图，SSL保护的是应用层的数据，">
 <meta name="twitter:image" content="https://cshihong.github.io/2019/05/11/SSL-VPN技术原理/SSL和IPSec.png">
 
 
@@ -482,7 +482,7 @@
                 
               
 
-              <time title="创建时间：2019-05-11 14:39:46 / 修改时间：16:45:24" itemprop="dateCreated datePublished" datetime="2019-05-11T14:39:46+08:00">2019-05-11</time>
+              <time title="创建时间：2019-05-11 14:39:46 / 修改时间：17:01:29" itemprop="dateCreated datePublished" datetime="2019-05-11T14:39:46+08:00">2019-05-11</time>
             
 
             
@@ -527,7 +527,7 @@
             <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
 			<span class="post-meta-divider">|</span>
-			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 4,629</span>
+			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 4,631</span>
 			<span class="post-meta-item-text">|</span>
 			<span title="post.min2read"><span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span>阅读时长： 16</span>
 
@@ -552,7 +552,7 @@
       
         <h1 id="SSL详解"><a href="#SSL详解" class="headerlink" title="SSL详解"></a>SSL详解</h1><p>SSL VPN的技术主要用到了SSL技术。有关SSL具体技术，可以参考：</p>
 <blockquote>
-<p>SSL/TLS详解：</p>
+<p><strong><a href="SSL/TLS协议详解">SSL/TLS协议详解</a></strong> </p>
 </blockquote>
 <h1 id="SSL-VPN简介"><a href="#SSL-VPN简介" class="headerlink" title="SSL VPN简介"></a>SSL VPN简介</h1><p>SSL VPN是以SSL协议为安全基础的VPN远程接入技术，移动办公人员（在SSL VPN中被称为远程用户）使用SSL VPN可以安全、方便的接入企业内网，访问企业内网资源，提高工作效率。</p>
 <h2 id="SSL-VPN与IPSec-VPN对比："><a href="#SSL-VPN与IPSec-VPN对比：" class="headerlink" title="SSL VPN与IPSec VPN对比："></a>SSL VPN与IPSec VPN对比：</h2><p><img src="/2019/05/11/SSL-VPN技术原理/SSL和IPSec.png" alt="SSL和IPSec"></p>
@@ -796,7 +796,7 @@
 <p>提供端口级的访问控制。</p>
 <p><strong>端口转发实现原理：</strong></p>
 <p>端口转发需要在客户端上运行一个ActiveX控件作为端口转发器，用于侦听指定端口上的连接。</p>
-<p><img src="/2019/05/11/SSL-VPN技术原理/D:/Hexo\source\_posts\SSL-VPN技术原理\端口转发.png" alt="端口转发"></p>
+<p><img src="/2019/05/11/SSL-VPN技术原理/端口转发.png" alt="端口转发"></p>
 <center>图：端口转发的交互过程,Telnet示例</center>
 
 <p><strong>端口转发的应用特点：</strong></p>
