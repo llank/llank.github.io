@@ -133,18 +133,36 @@
 
 
 
-  <meta name="description" content="SSL详解SSL VPN的技术主要用到了SSL技术。有关SSL具体技术，可以参考：  SSL/TLS详解：">
+  <meta name="description" content="SSL详解SSL VPN的技术主要用到了SSL技术。有关SSL具体技术，可以参考：  SSL/TLS详解：  SSL VPN简介SSL VPN是以SSL协议为安全基础的VPN远程接入技术，移动办公人员（在SSL VPN中被称为远程用户）使用SSL VPN可以安全、方便的接入企业内网，访问企业内网资源，提高工作效率。 SSL VPN与IPSec VPN对比： 如上图，SSL保护的是应用层的数据，可以">
 <meta name="keywords" content="VPN,SSL VPN">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SSL VPN技术原理">
 <meta property="og:url" content="https://cshihong.github.io/2019/05/11/SSL-VPN技术原理/index.html">
 <meta property="og:site_name" content="曹世宏的博客">
-<meta property="og:description" content="SSL详解SSL VPN的技术主要用到了SSL技术。有关SSL具体技术，可以参考：  SSL/TLS详解：">
+<meta property="og:description" content="SSL详解SSL VPN的技术主要用到了SSL技术。有关SSL具体技术，可以参考：  SSL/TLS详解：  SSL VPN简介SSL VPN是以SSL协议为安全基础的VPN远程接入技术，移动办公人员（在SSL VPN中被称为远程用户）使用SSL VPN可以安全、方便的接入企业内网，访问企业内网资源，提高工作效率。 SSL VPN与IPSec VPN对比： 如上图，SSL保护的是应用层的数据，可以">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-11T06:41:33.841Z">
+<meta property="og:image" content="https://cshihong.github.io/2019/05/11/SSL-VPN技术原理/SSL和IPSec.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/05/11/SSL-VPN技术原理/流程.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/05/11/SSL-VPN技术原理/本地证书认证.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/05/11/SSL-VPN技术原理/本地认证.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/05/11/SSL-VPN技术原理/服务器认证.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/05/11/SSL-VPN技术原理/匿名认证.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/05/11/SSL-VPN技术原理/挑战认证.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/05/11/SSL-VPN技术原理/web代理.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/05/11/SSL-VPN技术原理/封装.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/05/11/SSL-VPN技术原理/文件共享.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/05/11/SSL-VPN技术原理/D:/Hexo/source/_posts/SSL-VPN技术原理/端口转发.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/05/11/SSL-VPN技术原理/网络扩展.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/05/11/SSL-VPN技术原理/可靠.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/05/11/SSL-VPN技术原理/快四.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/05/11/SSL-VPN技术原理/典型网络位置.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/05/11/SSL-VPN技术原理/单臂组网.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/05/11/SSL-VPN技术原理/双臂组网.png">
+<meta property="og:updated_time" content="2019-05-11T08:45:24.604Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SSL VPN技术原理">
-<meta name="twitter:description" content="SSL详解SSL VPN的技术主要用到了SSL技术。有关SSL具体技术，可以参考：  SSL/TLS详解：">
+<meta name="twitter:description" content="SSL详解SSL VPN的技术主要用到了SSL技术。有关SSL具体技术，可以参考：  SSL/TLS详解：  SSL VPN简介SSL VPN是以SSL协议为安全基础的VPN远程接入技术，移动办公人员（在SSL VPN中被称为远程用户）使用SSL VPN可以安全、方便的接入企业内网，访问企业内网资源，提高工作效率。 SSL VPN与IPSec VPN对比： 如上图，SSL保护的是应用层的数据，可以">
+<meta name="twitter:image" content="https://cshihong.github.io/2019/05/11/SSL-VPN技术原理/SSL和IPSec.png">
 
 
 
@@ -464,7 +482,7 @@
                 
               
 
-              <time title="创建时间：2019-05-11 14:39:46 / 修改时间：14:41:33" itemprop="dateCreated datePublished" datetime="2019-05-11T14:39:46+08:00">2019-05-11</time>
+              <time title="创建时间：2019-05-11 14:39:46 / 修改时间：16:45:24" itemprop="dateCreated datePublished" datetime="2019-05-11T14:39:46+08:00">2019-05-11</time>
             
 
             
@@ -509,9 +527,9 @@
             <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
 			<span class="post-meta-divider">|</span>
-			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 30</span>
+			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 4,629</span>
 			<span class="post-meta-item-text">|</span>
-			<span title="post.min2read"><span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span>阅读时长： 1</span>
+			<span title="post.min2read"><span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span>阅读时长： 16</span>
 
           
 
@@ -536,6 +554,367 @@
 <blockquote>
 <p>SSL/TLS详解：</p>
 </blockquote>
+<h1 id="SSL-VPN简介"><a href="#SSL-VPN简介" class="headerlink" title="SSL VPN简介"></a>SSL VPN简介</h1><p>SSL VPN是以SSL协议为安全基础的VPN远程接入技术，移动办公人员（在SSL VPN中被称为远程用户）使用SSL VPN可以安全、方便的接入企业内网，访问企业内网资源，提高工作效率。</p>
+<h2 id="SSL-VPN与IPSec-VPN对比："><a href="#SSL-VPN与IPSec-VPN对比：" class="headerlink" title="SSL VPN与IPSec VPN对比："></a>SSL VPN与IPSec VPN对比：</h2><p><img src="/2019/05/11/SSL-VPN技术原理/SSL和IPSec.png" alt="SSL和IPSec"></p>
+<p>如上图，SSL保护的是应用层的数据，可以针对某个应用做具体保护。而IPSec VPN针对的是整个网络层。无法做精细化控制。</p>
+<p>所以在SSL VPN出现之前，IPSec、L2TP等先期出现的VPN技术虽然可以支持远程接入这个应用场景，但这些VPN技术存在如下缺陷。</p>
+<ul>
+<li>远程用户终端上需要安装指定的客户端软件，导致<strong>网络部署、维护比较麻烦。</strong></li>
+<li>IPSec/L2TP VPN的<strong>配置繁琐</strong>。</li>
+<li>网络管理人员无法对远程用户访问企业内网资源的权限<strong>做精细化控制</strong>。</li>
+</ul>
+<h2 id="SSL-VPN与传统VPN的对比："><a href="#SSL-VPN与传统VPN的对比：" class="headerlink" title="SSL VPN与传统VPN的对比："></a>SSL VPN与传统VPN的对比：</h2><p><strong>传统VPN特点：</strong></p>
+<ul>
+<li>L2TP及拨号：<ul>
+<li>不安全</li>
+<li>拨号上网的额外费用</li>
+<li>拨号接入服务器端口限制</li>
+<li>缺少信息鉴别</li>
+<li>无基于应用的访问控制策略。</li>
+<li>泄露内网IP</li>
+</ul>
+</li>
+<li>MPL VPN：<ul>
+<li>不安全</li>
+<li>无用户认证</li>
+<li>无审计</li>
+<li>无加密</li>
+<li>无访问控制</li>
+<li>造价高</li>
+<li>跨运营商互通互联问题</li>
+<li>适用于大型企业内网互联</li>
+</ul>
+</li>
+<li>IPSec VPN：<ul>
+<li>客户端管理费用高</li>
+<li>NAT问题</li>
+<li>安全风险</li>
+<li>无基于应用的用户认证授权审计</li>
+</ul>
+</li>
+</ul>
+<p><strong>SSL VPN技术优势：</strong></p>
+<ul>
+<li>无客户端的便捷部署</li>
+<li>应用层接入的安全保护</li>
+<li>企业延伸的效率提升</li>
+</ul>
+<blockquote>
+<p><strong>SSL协议从身份认证、机密性、完整性三个方面确保了数据通信的安全</strong>。</p>
+<p>SSL VPN实现私密性   完整性  不可否认  源认证</p>
+</blockquote>
+<h2 id="SSL-VPN的特点："><a href="#SSL-VPN的特点：" class="headerlink" title="SSL VPN的特点："></a>SSL VPN的特点：</h2><ul>
+<li>采用B/S架构，远程用户无需安装额外软件，可直接使用浏览器访问内网资源。</li>
+<li>SSL VPN可根据远程用户访问内网资源的不同，对其访问权限进行高细粒度控制。</li>
+<li>提供了本地认证、服务器认证、认证匿名和证书挑战多种身份认证方式，提高身份认证的灵活性。</li>
+<li>可以使用主机检查策略。</li>
+<li>缓存清理策略用于清理远程用户访问内网过程中在终端上留下的访问哼唧，加固用户的信息安全。</li>
+</ul>
+<h2 id="SSL-VPN的应用场景："><a href="#SSL-VPN的应用场景：" class="headerlink" title="SSL VPN的应用场景："></a>SSL VPN的应用场景：</h2><p>SSL VPN的主要应用场景是保证远程用户能够在企业外部安全、高效的访问企业内部的网络资源。</p>
+<p>通过多虚拟网关技术可以实现业务的隔离。</p>
+<h1 id="SSL-VPN原理"><a href="#SSL-VPN原理" class="headerlink" title="SSL VPN原理"></a>SSL VPN原理</h1><h2 id="SSL-VPN访问内网资源的总体流程："><a href="#SSL-VPN访问内网资源的总体流程：" class="headerlink" title="SSL VPN访问内网资源的总体流程："></a>SSL VPN访问内网资源的总体流程：</h2><p><img src="/2019/05/11/SSL-VPN技术原理/流程.png" alt="流程"></p>
+<center>图：SSL VPN远程用户访问内网资源的总体流程图</center>
+
+<p>虚拟网关：FW向远程用户提供SSL VPN接入服务的功能模块称为<strong>虚拟网关</strong>，虚拟网关是远程用户访问企业内网资源的统一入口。</p>
+<p><strong>一台FW设备可以创建多个虚拟网关，每个虚拟网关之间相互独立，互不影响</strong>。可以在虚拟网关下配置各自的用户、资源和策略，进行单独管理。虚拟网关本身无独立的管理员，所有虚拟网关的创建、配置、修改和删除等管理操作统一由FW的系统管理员完成。</p>
+<ol>
+<li><p>用户登录</p>
+<p>远程用户通过Web浏览器（客户端）登录虚拟网关，请求建立SSL连接。虚拟网关向远程用户发送自己的本地证书，远程用户对虚拟网关的本地证书进行身份认证。认证通过后，远程用户与虚拟网关成功建立SSL连接。</p>
+</li>
+<li><p>用户认证</p>
+<p>虚拟网关对远程用户进行用户认证，验证用户身份。用户认证可以选择以下四种方式之一：本地认证、服务器认证、证书匿名认证、证书挑战认证。</p>
+</li>
+<li><p>角色授权</p>
+<p>用户认证完成后，虚拟网关查询该用户的资源访问权限。用户的权限分配通过角色实现，先将具有相同权限的用户/组加入某个角色，然后角色关联可访问的业务资源，角色是联系用户和资源的纽带。</p>
+</li>
+<li><p>资源访问</p>
+<p>虚拟网关根据远程用户的角色信息，向用户推送可访问的资源链接，远程用户点击对应的资源链接进行资源访问。</p>
+</li>
+</ol>
+<h2 id="本地证书认证："><a href="#本地证书认证：" class="headerlink" title="本地证书认证："></a>本地证书认证：</h2><p>本地证书认证是在建立SSL连接前，<strong>客户端对虚拟网关身份的验证。</strong></p>
+<p><img src="/2019/05/11/SSL-VPN技术原理/本地证书认证.png" alt="本地证书认证"></p>
+<center>图：本地证书认证的流程图</center>
+
+<ol>
+<li><p>用户在客户端输入<strong>https://*</strong>虚拟网关地址<em>:</em>端口<em>或<strong>https://</strong></em>域名*，向SSL VPN虚拟网关请求建立SSL连接。</p>
+</li>
+<li><p>虚拟网关在收到请求后，从证书模块调用虚拟网关引用的本地证书。</p>
+</li>
+<li><p>虚拟网关将本地证书发送给客户端。</p>
+</li>
+<li><p>客户端根据自己证书库中的CA证书检查虚拟网关的本地证书是否可信。</p>
+<p>当满足以下三个条件时，客户端认为虚拟网关的本地证书可信，则继续运行下一步。</p>
+<ul>
+<li>虚拟网关的本地证书在有效期内。</li>
+<li>客户端的CA证书与虚拟网关的本地证书是同一个CA机构颁发的。</li>
+<li>虚拟网关的本地证书的CN字段取值与虚拟网关地址或域名一致。</li>
+</ul>
+<p>如果以上三个条件不能同时满足，则虚拟网关会为客户端推送一个提示框，要求客户端信任虚拟网关。如果客户端选择信任，则继续运行下一步。如果客户端选择不信任，则本地证书认证不通过。</p>
+</li>
+<li><p>客户端与虚拟网关进行TCP三次握手以及一次SSL握手，成功建立SSL连接。用户看到SSL VPN虚拟网关登录界面。</p>
+</li>
+</ol>
+<h2 id="用户认证："><a href="#用户认证：" class="headerlink" title="用户认证："></a>用户认证：</h2><p><strong>用户认证是虚拟网关对客户端身份的验证</strong>，包括：本地认证、服务器认证、证书匿名认证和证书挑战认证。</p>
+<p>认证授权：</p>
+<ul>
+<li>VPNDB认证授权</li>
+<li>第三方服务器认证授权（Radius、LDAP、AD、SecurID）</li>
+<li>数字证书认证（X.509/USB Key + X.509）</li>
+<li>短信辅助认证</li>
+</ul>
+<p><strong>（1）本地认证：</strong></p>
+<p>本地用户名和密码，存在SSL网关的本地用户。</p>
+<p><img src="/2019/05/11/SSL-VPN技术原理/本地认证.png" alt="本地认证"></p>
+<center>图：本地认证流程图</center>
+
+<ol>
+<li><p>用户在SSL VPN虚拟网关登录界面输入用户名和密码后，客户端会将用户名和密码发送给虚拟网关。</p>
+</li>
+<li><p>虚拟网关会将用户名、密码发送给认证域模块。</p>
+<p>用户属于哪个认证域是由用户名中携带的“@”后的字符串来决定的。如“user1@bj”属于“bj”认证域。如果用户名中没有携带“@”，则属于缺省的default认证域。</p>
+</li>
+<li><p>认证域模块将用户名和密码发送给用户/组模块。</p>
+</li>
+<li><p>用户/组模块会根据自己的数据库检查用户名和密码是否正确。如果是则认证通过，如果不是则认证不通过。</p>
+</li>
+<li><p>用户/组模块将认证结果返回给认证域模块。</p>
+</li>
+<li><p>认证域模块将认证结果返回给虚拟网关。</p>
+</li>
+<li><p>如果认证结果为通过，则虚拟网关会从自己的角色授权列表中查找用户所属角色从而确认此用户的业务权限。如果认证结果为不通过，则直接进行8.</p>
+</li>
+<li><p>虚拟网关将认证结果返回给客户端。</p>
+<p>认证结果为通过的用户能够登录SSL VPN虚拟网关界面，以相应的业务权限来使用SSL VPN业务。认证结果为不通过的用户会在客户端上看到“认证失败”。</p>
+</li>
+</ol>
+<p><strong>（2）服务器认证：</strong></p>
+<p>服务器认证是指SSL VPN用户的用户名和密码保存在服务器上，需要在服务器上完成用户认证。服务器认证支持的服务器类型包括：RADIUS、HWTACACS、SecurID、AD、LDAP。</p>
+<p><img src="/2019/05/11/SSL-VPN技术原理/服务器认证.png" alt="服务器认证"></p>
+<center>图：服务器认证流程图</center>
+
+<p><strong>（3）证书匿名认证：</strong></p>
+<p>只采用证书，客户端发送证书给服务器认证 。</p>
+<p><img src="/2019/05/11/SSL-VPN技术原理/匿名认证.png" alt="匿名认证"></p>
+<center>图：证书匿名认证流程图</center>
+
+<p><strong>(4) 证书挑战认证：（最安全）</strong></p>
+<p>证书挑战认证是指将验证客户端证书与本地认证或服务器认证结合起来。</p>
+<blockquote>
+<p>证书+本地用户名密码</p>
+<p>证书+服务器认证</p>
+</blockquote>
+<p><img src="/2019/05/11/SSL-VPN技术原理/挑战认证.png" alt="挑战认证"></p>
+<center>图：证书挑战认证流程图</center>
+
+<hr>
+<blockquote>
+<p><strong>RADIUS双因子认证：</strong></p>
+<p>RADIUS双因子认证是指FW和RADIUS服务器配合，对SSL VPN用户进行身份认证。认证时，除了验证用户名和静态PIN码，还要求用户输入动态验证码。动态验证码可以是短信验证码或硬件令牌生成的动态密码。</p>
+</blockquote>
+<hr>
+<h1 id="SSL-VPN业务"><a href="#SSL-VPN业务" class="headerlink" title="SSL VPN业务"></a>SSL VPN业务</h1><table>
+<thead>
+<tr>
+<th>业务</th>
+<th>定义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Web代理</td>
+<td>远程用户访问内网Web资源时使用Web代理业务。</td>
+</tr>
+<tr>
+<td>文件共享</td>
+<td>远程用户访问内网文件服务器（如支持SMB协议的Windows系统、支持NFS协议的Linux系统）时使用文件共享业务。远程用户直接通过Web浏览器就能在内网文件系统上创建和浏览目录，进行下载、上传、改名、删除等文件操作，就像对本机文件系统进行操作一样方便。</td>
+</tr>
+<tr>
+<td>端口转发</td>
+<td>远程用户访问内网TCP资源时使用端口转发业务。适用于TCP的应用服务包括Telnet、远程桌面、FTP、Email等。端口转发提供了一种端口级的安全访问内网资源的方式。</td>
+</tr>
+<tr>
+<td>网络扩展</td>
+<td>远程用户访问内网IP资源时使用网络扩展业务。Web资源、文件资源以及TCP资源都属于IP资源，通常在不区分用户访问的资源类型时为对应用户开通此业务。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Web代理："><a href="#Web代理：" class="headerlink" title="Web代理："></a>Web代理：</h2><p>web代理实现对内网Web资源的安全访问：</p>
+<ul>
+<li><p>Web代理实现了无客户端的页面访问。</p>
+</li>
+<li><p>Web代理有两种实现方式：Web-Link和Web改写（默认）。</p>
+<ul>
+<li><p>Web改写：是将内网web链接隐藏起来，起到加密的作用。即远程用户在点击虚拟网关资源列表中的链接时，虚拟网关会将用户要访问的真实URL进行加密。</p>
+<p>同时用户要访问的Web资源页面链接对象（例如Flash、PDF、Java Applet等）的URL也会被一并加密。</p>
+</li>
+<li><p>Web-Link：不会进行加密和适配，只做单纯“转发”远程用户的Web资源请求。</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="/2019/05/11/SSL-VPN技术原理/web代理.png" alt="web代理"></p>
+<center>图：web代理业务交换流程</center>
+
+<p>Web代理功能的基本实现原理是将远程用户访问Web Server的过程被分成了两个阶段。首先是远程用户与FW虚拟网关之间建立HTTPS会话，然后FW虚拟网关再与Web Server建立HTTP会话。虚拟网关在远程用户访问企业内网Web Server中起到了改写、转发Web请求的作用。</p>
+<p><strong>Web代理报文封装原理：</strong></p>
+<p><img src="/2019/05/11/SSL-VPN技术原理/封装.png" alt="封装"></p>
+<center>图：Web代理报文封装原理</center>
+
+<p>远程用户访问内网Web资源时的报文封装过程，从图中可以看出远程用户的访问过程本质上是由HTTPS和HTTP这两个会话衔接而成。其中，远程用户与虚拟网关建立HTTPS会话时，使用的源端口为6293，这个源端口是一个随机端口；目的端口是443。虚拟网关与Web Server建立HTTP会话时，源端口是10091，这个源端口也是随机端口，目的端口为80。</p>
+<h2 id="文件共享："><a href="#文件共享：" class="headerlink" title="文件共享："></a>文件共享：</h2><p>提供了对内网文件系统的安全访问：</p>
+<ul>
+<li>采用协议转化技术，无需安装专有客户端，直接通过浏览器安全接入内部文件系统。</li>
+<li>将客户端发起的文件共享请求转化成相应的协议格式，与服务器进行交互。</li>
+</ul>
+<p>支持：SMB协议（Windows），NFS（Linux）</p>
+<p>在文件共享业务中FW起到了协议转换器的作用。</p>
+<p><img src="/2019/05/11/SSL-VPN技术原理/文件共享.png" alt="文件共享"></p>
+<center>图：文件共享的交互过程</center>
+
+<blockquote>
+<p>注意：在文件共享中，Ctrl + C等组合键无法使用。</p>
+</blockquote>
+<p><strong>文件共享应用的特点：</strong></p>
+<ul>
+<li>所有文件接入需要认证</li>
+<li>所有文件传输采用SSL加密</li>
+<li>文件级的访问权限控制</li>
+<li>SVN增加额外的访问控制</li>
+<li>就像操作本机文件系统一样安全便捷。</li>
+</ul>
+<h2 id="端口转发："><a href="#端口转发：" class="headerlink" title="端口转发："></a>端口转发：</h2><p>提供丰富的内网TCP应用服务。</p>
+<p>广泛支持静态端口的TCP应用：</p>
+<ul>
+<li>单端口单服务器（如：Telnet，SSH，MS RDP， VNC等）</li>
+<li>单端口多服务器（如：Lotus Notes）</li>
+<li>多端口多服务器（如：Outlook）</li>
+</ul>
+<p>支持动态端口的TCP应用：</p>
+<ul>
+<li>动态端口（如：FTP，Oracle）</li>
+</ul>
+<p>提供端口级的访问控制。</p>
+<p><strong>端口转发实现原理：</strong></p>
+<p>端口转发需要在客户端上运行一个ActiveX控件作为端口转发器，用于侦听指定端口上的连接。</p>
+<p><img src="/2019/05/11/SSL-VPN技术原理/D:/Hexo\source\_posts\SSL-VPN技术原理\端口转发.png" alt="端口转发"></p>
+<center>图：端口转发的交互过程,Telnet示例</center>
+
+<p><strong>端口转发的应用特点：</strong></p>
+<ol>
+<li>实现对内网TCP应用的广泛支持</li>
+<li>远程桌面、Outlook、Notes、FTP等</li>
+<li>所有数据流都经过加密认证</li>
+<li>对用户进行统一的授权、认证</li>
+<li>提供对TCP应用的访问控制</li>
+<li>只需标准浏览器，不用安装客户端。</li>
+<li>保证TCP应用的安全性、可靠性，提供方便快捷的操作、管理方式。</li>
+</ol>
+<h2 id="网络扩展："><a href="#网络扩展：" class="headerlink" title="网络扩展："></a>网络扩展：</h2><p>实现对内网所有复杂应用的全网访问.</p>
+<ul>
+<li><p>通过建立安全的SSL隧道，实现对基于IP的内网业务的全面访问。</p>
+</li>
+<li><p>实现方式：</p>
+<ul>
+<li>ActiveX控件</li>
+<li>专用客户端软件：一次安装，零配置。</li>
+</ul>
+</li>
+<li><p>访问方式：</p>
+<ul>
+<li><p><strong>全路由模式（Full Tunnel）</strong></p>
+<p><strong>全通道方式，所有流量都流向网关。</strong></p>
+</li>
+<li><p><strong>分离模式（Split Tunnel）</strong></p>
+<p><strong>分离通道方式：处理可以访问内网，还能够访问客户端所在的本地子网。</strong></p>
+</li>
+<li><p><strong>手动模式（Manual Tunnel）</strong></p>
+<p><strong>能够访问内网和特定网段的资源，同时，客户端访问本地子网和Internet的操作不受影响。</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>网络扩展实现原理：</strong></p>
+<p><img src="/2019/05/11/SSL-VPN技术原理/网络扩展.png" alt="网络扩展"></p>
+<center>图：网络扩展业务交换流程</center>
+
+<p>启动网络扩展功能，会触发以下几个动作：</p>
+<ol>
+<li><p>远程用户与虚拟网关之间会建立一条SSL VPN隧道。</p>
+</li>
+<li><p>远程用户本地PC会自动生成一个虚拟网卡。虚拟网关从地址池中随机选择一个IP地址，分配给远程用户的虚拟网卡，该地址作为远程用户与企业内网Server之间通信之用。有了该私网IP地址，远程用户就如同企业内网用户一样可以方便访问内网IP资源。</p>
+</li>
+<li><p>虚拟网关向远程用户下发到达企业内网Server的路由信息。</p>
+<p>虚拟网关会根据网络扩展业务中的配置，向远程用户下发不同的路由信息。</p>
+</li>
+</ol>
+<p><strong>网络扩展报文封装过程：</strong></p>
+<p>网络扩展功能建立SSL VPN隧道的方式有两种：可靠传输模式和快速传输模式。可靠传输模式中，SSL VPN采用SSL协议封装报文，并以TCP协议作为传输协议；快速传输模式中，SSL VPN采用采用UDP协议作为传输协议。</p>
+<p><img src="/2019/05/11/SSL-VPN技术原理/可靠.png" alt="可靠"></p>
+<center>图：可靠性传输模式下报文封装过程</center>
+
+<blockquote>
+<p>可靠性传输模式下，SSL VPN隧道之间使用了TCP作为传输协议。</p>
+</blockquote>
+<p><img src="/2019/05/11/SSL-VPN技术原理/快四.png" alt="快四"></p>
+<center>图：快速传输模式下报文封装过程</center>
+
+<blockquote>
+<p>模式下报文的封装原理和可靠性模式下报文封装原理是一样的，只是传输协议由TCP改为了UDP。</p>
+</blockquote>
+<h2 id="终端安全："><a href="#终端安全：" class="headerlink" title="终端安全："></a>终端安全：</h2><p>终端安全是在请求接入内网的主机上部署一个软件，通过该软件检查终端主机的安装状况。主要包括：主机检查、缓存清理。</p>
+<p>主机检查：检查用户用来访问内网资源的主机是否符号位安全要求。主机检查策略包括如下检查项：</p>
+<ul>
+<li>查毒软件检查</li>
+<li>防火墙检查</li>
+<li>注册表检查</li>
+<li>文件检查</li>
+<li>端口检查</li>
+<li>进程检查</li>
+<li>操作系统检查</li>
+</ul>
+<p>缓存清理：清除接入虚拟网关的主机的访问痕迹，实现客户端的零痕迹访问。清理范围如下：</p>
+<ul>
+<li>Internet临时文件</li>
+<li>浏览器自动保存的密码</li>
+<li>Cookie记录</li>
+<li>浏览器的访问历史记录</li>
+<li>回收站和最近打开的文档列表</li>
+<li>指定文件或文件夹</li>
+</ul>
+<h2 id="完善的日志功能："><a href="#完善的日志功能：" class="headerlink" title="完善的日志功能："></a>完善的日志功能：</h2><ul>
+<li>日志查询</li>
+<li>日志导出</li>
+<li>虚拟网关管理员日志</li>
+<li>用户日志</li>
+<li>系统日志</li>
+</ul>
+<h2 id="SSL-VPN使用限制："><a href="#SSL-VPN使用限制：" class="headerlink" title="SSL VPN使用限制："></a>SSL VPN使用限制：</h2><ul>
+<li>在负载分担组网下，不支持SSL VPN功能。</li>
+<li>SSL VPN特性不支持IPv6。</li>
+</ul>
+<h1 id="SSL-VPN组网分析"><a href="#SSL-VPN组网分析" class="headerlink" title="SSL VPN组网分析"></a>SSL VPN组网分析</h1><h2 id="SSL-VPN应用典型网络位置："><a href="#SSL-VPN应用典型网络位置：" class="headerlink" title="SSL VPN应用典型网络位置："></a>SSL VPN应用典型网络位置：</h2><p>SSL VPN网关多部署于网络出口处，应用服务器之前，介于远程用户和服务器之间，控制两者的通信。</p>
+<p><img src="/2019/05/11/SSL-VPN技术原理/典型网络位置.png" alt="典型网络位置"></p>
+<center>图：SSL VPN典型组网</center>
+
+<h2 id="SSL-VPN单臂组网模式应用场景分析："><a href="#SSL-VPN单臂组网模式应用场景分析：" class="headerlink" title="SSL VPN单臂组网模式应用场景分析："></a>SSL VPN单臂组网模式应用场景分析：</h2><p>单臂和双臂组网方式，多用于SVN设备，SVN单臂挂接在防火墙、路由器或交换机上，内网和Internet都通过这个网口与SVN通信， 这种模式称为单臂模式。</p>
+<p><img src="/2019/05/11/SSL-VPN技术原理/单臂组网.png" alt="单臂组网"></p>
+<center>图：SSL VPN单臂组网拓扑</center>
+
+<blockquote>
+<p>这种方案部署的缺点：因为SSL VPN的流量是加密的，那么当远程用户访问时，如果流量中有攻击或者病毒，而防火墙不认识加密流量，会转发给SVN，SVN解密后直接诶发往内网。会存在安全隐患。</p>
+<p>所以，最好的部署是将SVN与防火墙串联。远程用户的流量先到SVN，解密后给防火墙检查。检查通过后发送给内网。</p>
+</blockquote>
+<h2 id="SSL-VPN双臂组网模式应用场景分析："><a href="#SSL-VPN双臂组网模式应用场景分析：" class="headerlink" title="SSL VPN双臂组网模式应用场景分析："></a>SSL VPN双臂组网模式应用场景分析：</h2><p>SVN双臂挂接在防火墙、路由器或者交换机上。内网和Internet都通过不同的网口语SVN进行通信，这种模式成为双臂模式。</p>
+<p><img src="/2019/05/11/SSL-VPN技术原理/双臂组网.png" alt="双臂组网"></p>
+<center>图：SSL VPN双臂组网模式</center>
+
+
+
+<hr>
+<blockquote>
+<p>参考文档：华为HedEx文档</p>
+</blockquote>
+<hr>
 
       
     </div>
@@ -1177,7 +1556,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#SSL详解"><span class="nav-number">1.</span> <span class="nav-text">SSL详解</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#SSL详解"><span class="nav-number">1.</span> <span class="nav-text">SSL详解</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SSL-VPN简介"><span class="nav-number">2.</span> <span class="nav-text">SSL VPN简介</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#SSL-VPN与IPSec-VPN对比："><span class="nav-number">2.1.</span> <span class="nav-text">SSL VPN与IPSec VPN对比：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SSL-VPN与传统VPN的对比："><span class="nav-number">2.2.</span> <span class="nav-text">SSL VPN与传统VPN的对比：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SSL-VPN的特点："><span class="nav-number">2.3.</span> <span class="nav-text">SSL VPN的特点：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SSL-VPN的应用场景："><span class="nav-number">2.4.</span> <span class="nav-text">SSL VPN的应用场景：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SSL-VPN原理"><span class="nav-number">3.</span> <span class="nav-text">SSL VPN原理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#SSL-VPN访问内网资源的总体流程："><span class="nav-number">3.1.</span> <span class="nav-text">SSL VPN访问内网资源的总体流程：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#本地证书认证："><span class="nav-number">3.2.</span> <span class="nav-text">本地证书认证：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#用户认证："><span class="nav-number">3.3.</span> <span class="nav-text">用户认证：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SSL-VPN业务"><span class="nav-number">4.</span> <span class="nav-text">SSL VPN业务</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Web代理："><span class="nav-number">4.1.</span> <span class="nav-text">Web代理：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文件共享："><span class="nav-number">4.2.</span> <span class="nav-text">文件共享：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#端口转发："><span class="nav-number">4.3.</span> <span class="nav-text">端口转发：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网络扩展："><span class="nav-number">4.4.</span> <span class="nav-text">网络扩展：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#终端安全："><span class="nav-number">4.5.</span> <span class="nav-text">终端安全：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#完善的日志功能："><span class="nav-number">4.6.</span> <span class="nav-text">完善的日志功能：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SSL-VPN使用限制："><span class="nav-number">4.7.</span> <span class="nav-text">SSL VPN使用限制：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SSL-VPN组网分析"><span class="nav-number">5.</span> <span class="nav-text">SSL VPN组网分析</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#SSL-VPN应用典型网络位置："><span class="nav-number">5.1.</span> <span class="nav-text">SSL VPN应用典型网络位置：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SSL-VPN单臂组网模式应用场景分析："><span class="nav-number">5.2.</span> <span class="nav-text">SSL VPN单臂组网模式应用场景分析：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SSL-VPN双臂组网模式应用场景分析："><span class="nav-number">5.3.</span> <span class="nav-text">SSL VPN双臂组网模式应用场景分析：</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1217,7 +1596,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共 809.3k 字</span>
+  <span class="post-count">全站共 813.9k 字</span>
 </div>
 
 

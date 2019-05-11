@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://cshihong.github.io/"/>
-  <updated>2019-05-11T06:41:33.841Z</updated>
+  <updated>2019-05-11T08:45:24.604Z</updated>
   <id>https://cshihong.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://cshihong.github.io/2019/05/11/SSL-VPN%E6%8A%80%E6%9C%AF%E5%8E%9F%E7%90%86/"/>
     <id>https://cshihong.github.io/2019/05/11/SSL-VPN技术原理/</id>
     <published>2019-05-11T06:39:46.000Z</published>
-    <updated>2019-05-11T06:41:33.841Z</updated>
+    <updated>2019-05-11T08:45:24.604Z</updated>
     
     <summary type="html">
     
@@ -49,7 +49,7 @@
     <link href="https://cshihong.github.io/2019/05/09/SSL%E5%8D%8F%E8%AE%AE%E8%AF%A6%E8%A7%A3/"/>
     <id>https://cshihong.github.io/2019/05/09/SSL协议详解/</id>
     <published>2019-05-09T07:45:00.000Z</published>
-    <updated>2019-05-11T06:37:07.915Z</updated>
+    <updated>2019-05-11T08:46:46.215Z</updated>
     
     <summary type="html">
     
@@ -57,7 +57,10 @@
       
         
         
-          &lt;h1 id=&quot;SSL简介&quot;&gt;&lt;a href=&quot;#SSL简介&quot; class=&quot;headerlink&quot; title=&quot;SSL简介&quot;&gt;&lt;/a&gt;SSL简介&lt;/h1&gt;&lt;h2 id=&quot;SSL和TLS：&quot;&gt;&lt;a href=&quot;#SSL和TLS：&quot; class=&quot;headerlink&quot;
+          &lt;blockquote&gt;
+&lt;p&gt;SSL VPN可参考：SSL VPN介绍原理，&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;SSL简介&quot;&gt;&lt;a href=&quot;#SSL简介&quot; class=&quot;headerlink&quot;
         
       
     
