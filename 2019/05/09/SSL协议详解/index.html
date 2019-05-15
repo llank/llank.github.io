@@ -163,7 +163,9 @@
 <meta property="og:image" content="https://cshihong.github.io/2019/05/09/SSL协议详解/记录协议.png">
 <meta property="og:image" content="https://cshihong.github.io/2019/05/09/SSL协议详解/记录.png">
 <meta property="og:image" content="https://cshihong.github.io/2019/05/09/SSL协议详解/SSL协议详解/https.png">
-<meta property="og:updated_time" content="2019-05-11T09:00:27.741Z">
+<meta property="og:image" content="https://cshihong.github.io/2019/05/09/SSL协议详解/SSL-VPN技术原理/登录界面.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/05/09/SSL协议详解/SSL-VPN技术原理/ssl.png">
+<meta property="og:updated_time" content="2019-05-13T05:39:05.595Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SSL&#x2F;TLS协议详解">
 <meta name="twitter:description" content="SSL VPN可参考：SSL VPN技术原理  SSL简介SSL和TLS：SSL (Secure Sockets Layer）安全套接层。是由Netscape公司于1990年开发，用于保障Word Wide Web（WWW）通讯的安全。主要任务是提供私密性，信息完整性和身份认证。1994年改版为SSLv2,1995年改版为SSLv3. TLS(Transport Layer Security）安">
@@ -504,7 +506,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-05-11 17:00:27" itemprop="dateModified" datetime="2019-05-11T17:00:27+08:00">2019-05-11</time>
+                <time title="修改时间：2019-05-13 13:39:05" itemprop="dateModified" datetime="2019-05-13T13:39:05+08:00">2019-05-13</time>
               
             
           </span>
@@ -544,7 +546,7 @@
             <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
 			<span class="post-meta-divider">|</span>
-			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 6,358</span>
+			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 6,382</span>
 			<span class="post-meta-item-text">|</span>
 			<span title="post.min2read"><span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span>阅读时长： 23</span>
 
@@ -592,7 +594,7 @@
 <p>SSL的体系结构中包含两个协议子层，其中底层是SSL记录协议层（SSL Record Protocol Layer）；高层是SSL握手协议层（SSL HandShake Protocol Layer）。</p>
 <p>SSL协议主要分为两层：</p>
 <ul>
-<li><p>SSL记录协议层的作用是为高层协议提供基本的安全服务。SSL纪录协议针对HTTP协议进行了特别的设计，使得超文本的传输协议HTTP能够在SSL运行。纪录封装各种高层协议，具体实施压缩解压缩、加密解密、计算和校验MAC等与安全有关的操作。</p>
+<li><p>SSL记录协议层的作用是为高层协议提供基本的安全服务。SSL记录协议针对HTTP协议进行了特别的设计，使得超文本的传输协议HTTP能够在SSL运行。纪录封装各种高层协议，具体实施压缩解压缩、加密解密、计算和校验MAC等与安全有关的操作。</p>
 </li>
 <li><p>SSL握手协议层包括SSL握手协议（SSL HandShake Protocol）、SSL密码参数修改协议（SSL Change Cipher Spec Protocol）和SSL告警协议（SSL Alert Protocol）。握手层的这些协议用于SSL管理信息的交换，允许应用协议传送数据之间相互验证，协商加密算法和生成密钥等。</p>
 <p><strong>SSL握手协议的作用是协调客户和服务器的状态，使双方能够达到状态的同步。</strong></p>
@@ -836,6 +838,15 @@
 <h2 id="应用数据传输："><a href="#应用数据传输：" class="headerlink" title="应用数据传输："></a>应用数据传输：</h2><p>在所有的握手阶段都完成之后，就可以开始传送应用数据了。应用数据在传输之前，首先要附加上MAC secret，然后再对这个数据包使用write encryption key进行加密。在服务端收到密文之后，使用Client write encryption key进行解密，客户端收到服务端的数据之后使用Server write encryption key进行解密，然后使用各自的write MAC key对数据的完整性包括是否被串改进行验证。</p>
 <h1 id="HTTPS通信的过程："><a href="#HTTPS通信的过程：" class="headerlink" title="HTTPS通信的过程："></a>HTTPS通信的过程：</h1><p><img src="SSL协议详解/https.png" alt="https"></p>
 <center>图：HTTPS的通信过程</center>
+
+<hr>
+<p>华为SSL VPN登录界面：</p>
+<p><img src="/2019/05/09/SSL协议详解/SSL-VPN技术原理/登录界面.png" alt="登录界面"></p>
+<center>图：华为SSL VPN登录界面</center>
+
+<hr>
+<p><img src="/2019/05/09/SSL协议详解/SSL-VPN技术原理/ssl.png" alt="ssl"></p>
+<center>图：SSL VPN功能界面</center>
 
 
 
@@ -1090,7 +1101,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">201</span>
+                    <span class="site-state-item-count">205</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1364,7 +1375,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">104</span>
+                      
+                    
+                    <span class="site-state-item-count">105</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1532,7 +1545,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共 813.9k 字</span>
+  <span class="post-count">全站共 830.8k 字</span>
 </div>
 
 
