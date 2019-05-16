@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://cshihong.github.io/"/>
-  <updated>2019-05-15T10:00:14.923Z</updated>
+  <updated>2019-05-16T08:19:28.928Z</updated>
   <id>https://cshihong.github.io/</id>
   
   <author>
@@ -17,11 +17,53 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>二层攻击防范技术</title>
+    <link href="https://cshihong.github.io/2019/05/16/%E4%BA%8C%E5%B1%82%E6%94%BB%E5%87%BB%E9%98%B2%E8%8C%83%E6%8A%80%E6%9C%AF/"/>
+    <id>https://cshihong.github.io/2019/05/16/二层攻击防范技术/</id>
+    <published>2019-05-16T08:19:28.000Z</published>
+    <updated>2019-05-16T08:19:28.928Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>单包攻击原理与防御</title>
+    <link href="https://cshihong.github.io/2019/05/16/%E5%8D%95%E5%8C%85%E6%94%BB%E5%87%BB%E5%8E%9F%E7%90%86%E4%B8%8E%E9%98%B2%E5%BE%A1/"/>
+    <id>https://cshihong.github.io/2019/05/16/单包攻击原理与防御/</id>
+    <published>2019-05-16T05:27:58.000Z</published>
+    <updated>2019-05-16T08:18:20.697Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;单包攻击简介&quot;&gt;&lt;a href=&quot;#单包攻击简介&quot; class=&quot;headerlink&quot; title=&quot;单包攻击简介&quot;&gt;&lt;/a&gt;单包攻击简介&lt;/h1&gt;&lt;p&gt;在DDoS攻击中最常见的攻击便单包
+        
+      
+    
+    </summary>
+    
+      <category term="网络安全" scheme="https://cshihong.github.io/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
+    
+    
+      <category term="网络攻击" scheme="https://cshihong.github.io/tags/%E7%BD%91%E7%BB%9C%E6%94%BB%E5%87%BB/"/>
+    
+      <category term="DDoS" scheme="https://cshihong.github.io/tags/DDoS/"/>
+    
+  </entry>
+  
+  <entry>
     <title>应用层(DNS/HTTP/HTTPS)攻击与防御原理</title>
     <link href="https://cshihong.github.io/2019/05/14/%E5%BA%94%E7%94%A8%E5%B1%82-DNS-HTTP-HTTPS-%E6%94%BB%E5%87%BB%E4%B8%8E%E9%98%B2%E5%BE%A1%E5%8E%9F%E7%90%86/"/>
     <id>https://cshihong.github.io/2019/05/14/应用层-DNS-HTTP-HTTPS-攻击与防御原理/</id>
     <published>2019-05-14T14:49:34.000Z</published>
-    <updated>2019-05-15T10:00:14.923Z</updated>
+    <updated>2019-05-16T05:35:28.815Z</updated>
     
     <summary type="html">
     
@@ -523,62 +565,6 @@
       <category term="蓝桥杯" scheme="https://cshihong.github.io/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
     
       <category term="Java编程" scheme="https://cshihong.github.io/tags/Java%E7%BC%96%E7%A8%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>5G网络基础知识</title>
-    <link href="https://cshihong.github.io/2019/03/25/5G%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
-    <id>https://cshihong.github.io/2019/03/25/5G网络基础知识/</id>
-    <published>2019-03-25T12:36:29.000Z</published>
-    <updated>2019-04-11T03:57:39.742Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;5G挑战&quot;&gt;&lt;a href=&quot;#5G挑战&quot; class=&quot;headerlink&quot; title=&quot;5G挑战&quot;&gt;&lt;/a&gt;5G挑战&lt;/h1&gt;&lt;h2 id=&quot;5G面临挑战分类：&quot;&gt;&lt;a href=&quot;#5G面临挑战分类：&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="5G网络" scheme="https://cshihong.github.io/categories/5G%E7%BD%91%E7%BB%9C/"/>
-    
-    
-      <category term="华为网络大赛" scheme="https://cshihong.github.io/tags/%E5%8D%8E%E4%B8%BA%E7%BD%91%E7%BB%9C%E5%A4%A7%E8%B5%9B/"/>
-    
-      <category term="5G" scheme="https://cshihong.github.io/tags/5G/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>防火墙双机热备各种场景备配置示例</title>
-    <link href="https://cshihong.github.io/2019/03/25/%E9%98%B2%E7%81%AB%E5%A2%99%E5%8F%8C%E6%9C%BA%E7%83%AD%E5%A4%87%E5%90%84%E7%A7%8D%E5%9C%BA%E6%99%AF%E5%A4%87%E9%85%8D%E7%BD%AE%E7%A4%BA%E4%BE%8B/"/>
-    <id>https://cshihong.github.io/2019/03/25/防火墙双机热备各种场景备配置示例/</id>
-    <published>2019-03-25T09:06:39.000Z</published>
-    <updated>2019-03-30T14:09:14.184Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;双机热备各场景应用&quot;&gt;&lt;a href=&quot;#双机热备各场景应用&quot; class=&quot;headerlink&quot; title=&quot;双机热备各场景应用&quot;&gt;&lt;/a&gt;双机热备各场景应用&lt;/h1&gt;&lt;h2 id=&quot;主备备份和负载分担应用场景：&quot;&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-      <category term="网络安全" scheme="https://cshihong.github.io/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
-    
-    
-      <category term="防火墙" scheme="https://cshihong.github.io/tags/%E9%98%B2%E7%81%AB%E5%A2%99/"/>
-    
-      <category term="双机热备" scheme="https://cshihong.github.io/tags/%E5%8F%8C%E6%9C%BA%E7%83%AD%E5%A4%87/"/>
     
   </entry>
   
