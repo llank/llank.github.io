@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://cshihong.github.io/"/>
-  <updated>2019-05-16T08:19:28.928Z</updated>
+  <updated>2019-05-17T09:19:43.675Z</updated>
   <id>https://cshihong.github.io/</id>
   
   <author>
@@ -21,12 +21,26 @@
     <link href="https://cshihong.github.io/2019/05/16/%E4%BA%8C%E5%B1%82%E6%94%BB%E5%87%BB%E9%98%B2%E8%8C%83%E6%8A%80%E6%9C%AF/"/>
     <id>https://cshihong.github.io/2019/05/16/二层攻击防范技术/</id>
     <published>2019-05-16T08:19:28.000Z</published>
-    <updated>2019-05-16T08:19:28.928Z</updated>
+    <updated>2019-05-17T09:19:43.675Z</updated>
     
     <summary type="html">
     
+      
+      
+        
+        
+          &lt;h1 id=&quot;DHCP-Snooping&quot;&gt;&lt;a href=&quot;#DHCP-Snooping&quot; class=&quot;headerlink&quot; title=&quot;DHCP Snooping&quot;&gt;&lt;/a&gt;DHCP Snooping&lt;/h1&gt;&lt;h2 id=&quot;DHCP原理：&quot;&gt;&lt;a
+        
+      
+    
     </summary>
     
+      <category term="网络安全" scheme="https://cshihong.github.io/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
+    
+    
+      <category term="网络攻击" scheme="https://cshihong.github.io/tags/%E7%BD%91%E7%BB%9C%E6%94%BB%E5%87%BB/"/>
+    
+      <category term="DDoS" scheme="https://cshihong.github.io/tags/DDoS/"/>
     
   </entry>
   
@@ -35,7 +49,7 @@
     <link href="https://cshihong.github.io/2019/05/16/%E5%8D%95%E5%8C%85%E6%94%BB%E5%87%BB%E5%8E%9F%E7%90%86%E4%B8%8E%E9%98%B2%E5%BE%A1/"/>
     <id>https://cshihong.github.io/2019/05/16/单包攻击原理与防御/</id>
     <published>2019-05-16T05:27:58.000Z</published>
-    <updated>2019-05-16T08:18:20.697Z</updated>
+    <updated>2019-05-18T02:17:54.914Z</updated>
     
     <summary type="html">
     
@@ -63,7 +77,7 @@
     <link href="https://cshihong.github.io/2019/05/14/%E5%BA%94%E7%94%A8%E5%B1%82-DNS-HTTP-HTTPS-%E6%94%BB%E5%87%BB%E4%B8%8E%E9%98%B2%E5%BE%A1%E5%8E%9F%E7%90%86/"/>
     <id>https://cshihong.github.io/2019/05/14/应用层-DNS-HTTP-HTTPS-攻击与防御原理/</id>
     <published>2019-05-14T14:49:34.000Z</published>
-    <updated>2019-05-16T05:35:28.815Z</updated>
+    <updated>2019-05-16T08:44:00.468Z</updated>
     
     <summary type="html">
     
@@ -72,7 +86,9 @@
         
         
           &lt;hr&gt;
-&lt;h1 id=&quot;DNS类报文攻击防御&quot;&gt;&lt;a href=&quot;#DNS类报文攻击防御&quot; class=&quot;headerlink&quot;
+&lt;p&gt;网络层攻击：TCP、UDP类攻击&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;网络层攻击可参考：&lt;a
         
       
     
@@ -92,7 +108,7 @@
     <link href="https://cshihong.github.io/2019/05/14/%E7%BD%91%E7%BB%9C%E5%B1%82-TCP-UDP-%E6%94%BB%E5%87%BB%E4%B8%8E%E9%98%B2%E5%BE%A1%E5%8E%9F%E7%90%86/"/>
     <id>https://cshihong.github.io/2019/05/14/网络层-TCP-UDP-攻击与防御原理/</id>
     <published>2019-05-14T14:49:08.000Z</published>
-    <updated>2019-05-15T01:18:43.791Z</updated>
+    <updated>2019-05-16T08:43:04.756Z</updated>
     
     <summary type="html">
     
@@ -100,7 +116,10 @@
       
         
         
-          &lt;h1 id=&quot;网络层攻击防御&quot;&gt;&lt;a href=&quot;#网络层攻击防御&quot; class=&quot;headerlink&quot;
+          &lt;hr&gt;
+&lt;p&gt;应用层攻击 ：HTTP、DNS、FTP等&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;应用层攻击可参考：&lt;strong&gt;&lt;a
         
       
     
@@ -120,7 +139,7 @@
     <link href="https://cshihong.github.io/2019/05/13/DDoS%E6%94%BB%E5%87%BB%E9%98%B2%E8%8C%83%E6%8A%80%E6%9C%AF/"/>
     <id>https://cshihong.github.io/2019/05/13/DDoS攻击防范技术/</id>
     <published>2019-05-13T08:30:29.000Z</published>
-    <updated>2019-05-14T14:53:05.697Z</updated>
+    <updated>2019-05-16T08:41:05.342Z</updated>
     
     <summary type="html">
     
@@ -128,10 +147,9 @@
       
         
         
-          &lt;blockquote&gt;
-&lt;p&gt;网络攻击介绍：&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h1 id=&quot;Anti-DDoS防御体系介绍&quot;&gt;&lt;a href=&quot;#Anti-DDoS防御体系介绍&quot; class=&quot;headerlink&quot;
+          &lt;hr&gt;
+&lt;blockquote&gt;
+&lt;p&gt;网络攻击介绍可参考：&lt;a
         
       
     
@@ -151,7 +169,7 @@
     <link href="https://cshihong.github.io/2019/05/13/%E7%BD%91%E7%BB%9C%E6%94%BB%E5%87%BB%E4%BB%8B%E7%BB%8D/"/>
     <id>https://cshihong.github.io/2019/05/13/网络攻击介绍/</id>
     <published>2019-05-13T07:08:04.000Z</published>
-    <updated>2019-05-13T08:30:59.951Z</updated>
+    <updated>2019-05-18T05:14:12.189Z</updated>
     
     <summary type="html">
     

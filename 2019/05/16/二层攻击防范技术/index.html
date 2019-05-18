@@ -133,17 +133,21 @@
 
 
 
-  <meta name="description" content="你的责任就是你的方向，你的经历就是你的资本，你的性格就是你的命运。">
+  <meta name="description" content="DHCP SnoopingDHCP原理： DHCP详细原理可参考：DHCP工作原理。   DHCP —-C/S架构基于 UDP    67—–bootps ，服务端使用​                      68—–bootpc ， 客户端使用 工作原理：发现—–广播提供—–单播请求—–广播确认—–单播    DHCP Snooping： 可参考：DHCP Snooping原理。  DHCP">
+<meta name="keywords" content="网络攻击,DDoS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="二层攻击防范技术">
 <meta property="og:url" content="https://cshihong.github.io/2019/05/16/二层攻击防范技术/index.html">
 <meta property="og:site_name" content="曹世宏的博客">
-<meta property="og:description" content="你的责任就是你的方向，你的经历就是你的资本，你的性格就是你的命运。">
+<meta property="og:description" content="DHCP SnoopingDHCP原理： DHCP详细原理可参考：DHCP工作原理。   DHCP —-C/S架构基于 UDP    67—–bootps ，服务端使用​                      68—–bootpc ， 客户端使用 工作原理：发现—–广播提供—–单播请求—–广播确认—–单播    DHCP Snooping： 可参考：DHCP Snooping原理。  DHCP">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-16T08:19:28.928Z">
+<meta property="og:image" content="https://cshihong.github.io/2019/05/16/二层攻击防范技术/arp.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/05/16/二层攻击防范技术/ip_mac.png">
+<meta property="og:updated_time" content="2019-05-17T09:19:43.675Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="二层攻击防范技术">
-<meta name="twitter:description" content="你的责任就是你的方向，你的经历就是你的资本，你的性格就是你的命运。">
+<meta name="twitter:description" content="DHCP SnoopingDHCP原理： DHCP详细原理可参考：DHCP工作原理。   DHCP —-C/S架构基于 UDP    67—–bootps ，服务端使用​                      68—–bootpc ， 客户端使用 工作原理：发现—–广播提供—–单播请求—–广播确认—–单播    DHCP Snooping： 可参考：DHCP Snooping原理。  DHCP">
+<meta name="twitter:image" content="https://cshihong.github.io/2019/05/16/二层攻击防范技术/arp.png">
 
 
 
@@ -467,8 +471,42 @@
             
 
             
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-05-17 17:19:43" itemprop="dateModified" datetime="2019-05-17T17:19:43+08:00">2019-05-17</time>
+              
+            
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/网络安全/" itemprop="url" rel="index"><span itemprop="name">网络安全</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -486,9 +524,9 @@
             <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
 			<span class="post-meta-divider">|</span>
-			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 0</span>
+			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 1,568</span>
 			<span class="post-meta-item-text">|</span>
-			<span title="post.min2read"><span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span>阅读时长： 1</span>
+			<span title="post.min2read"><span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span>阅读时长： 6</span>
 
           
 
@@ -509,7 +547,88 @@
       
 
       
-        
+        <h1 id="DHCP-Snooping"><a href="#DHCP-Snooping" class="headerlink" title="DHCP Snooping"></a>DHCP Snooping</h1><h2 id="DHCP原理："><a href="#DHCP原理：" class="headerlink" title="DHCP原理："></a>DHCP原理：</h2><blockquote>
+<p>DHCP详细原理可参考：<strong><a href="https://cshihong.github.io/2017/12/09/DHCP/">DHCP工作原理</a></strong>。</p>
+</blockquote>
+<blockquote>
+<p>DHCP —-C/S架构<br>基于 UDP    67—–bootps ，服务端使用<br>​                      68—–bootpc ， 客户端使用</p>
+<p>工作原理：<br>发现—–广播<br>提供—–单播<br>请求—–广播<br>确认—–单播  </p>
+</blockquote>
+<h2 id="DHCP-Snooping："><a href="#DHCP-Snooping：" class="headerlink" title="DHCP Snooping："></a>DHCP Snooping：</h2><blockquote>
+<p>可参考：<strong><a href="https://cshihong.github.io/2017/12/09/DHCP-Snooping/">DHCP Snooping原理</a></strong>。</p>
+</blockquote>
+<p>DHCP 攻击类型： </p>
+<ol>
+<li><p><strong>DHCP服务器伪造</strong><br>信任端口和非信任端口(trust和untrust)</p>
+<p>只有trust接口才能回应offer和ack报文</p>
+</li>
+<li><p><strong>DHCP服务器耗尽（DOS）</strong><br>DHCP请求限速<br>解决方案：<br> dhcp snooping check dhcp-rate enable<br> dhcp snooping check dhcp-rate 90</p>
+</li>
+<li><p><strong>DHCP中间人攻击与IP/MAC Spoofing攻击</strong></p>
+<p>通过IP/MAC欺骗，攻击者让客户端端认为自己就是DHCP服务器，然后攻击者代替客户端向DHCP服务器申请IP地址，让DHCP服务器认为攻击者就是客户端。</p>
+</li>
+<li><p><strong>改变CHADDR 值的DoS 攻击</strong><br> int xxxx<br>   dhcp snooping check dhcp-chaddr enable<br>   dhcp snooping check dhcp-request enable</p>
+</li>
+</ol>
+<p>解决方案：<br>DHCP  Snooping  </p>
+<p>动态生成绑定表(IP地址  MAC地址   VLAN 接口） </p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">使用防火墙作为DHCP中继，配置三层DHCP SNOOPING</span><br><span class="line">中继配置：</span><br><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">GigabitEthernet0</span>/0/1</span></span><br><span class="line"><span class="class"> <span class="title">dhcp</span> <span class="title">select</span> <span class="title">relay</span></span></span><br><span class="line"><span class="class"> </span></span><br><span class="line"><span class="class">配置思路：</span></span><br><span class="line">第一步:配置DHCP Snooping</span><br><span class="line">dhcp snooping enable </span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> XXX</span><br><span class="line">dhcp snooping enable  </span><br><span class="line"></span><br><span class="line">第二步：去连接DHCP服务器的接口配置为信任端口</span><br><span class="line"><span class="keyword">int</span> XXX</span><br><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">GigabitEthernet0</span>/0/2</span></span><br><span class="line"><span class="class"> <span class="title">dhcp</span> <span class="title">snooping</span> <span class="title">trusted</span></span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class">第三步：客户端获取地址</span></span><br><span class="line">[DHCP Relay]display  dhcp snooping  bind-table all</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注意绑定表问题</p>
+<ol>
+<li><p>如果是不在绑定表中，可以正常通过</p>
+</li>
+<li><p>如果在绑定表中，必须配置正确，如果不正确也通过不了</p>
+</li>
+</ol>
+</blockquote>
+<p><strong>解决方案：手工绑定</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"> dhcp snooping bind-table <span class="keyword">static</span> ip-address X.X.X.X mac-address XXXX-XXXX-XXXX</span><br><span class="line"></span><br><span class="line">防火墙作为DHCP服务器，交换机配置DHCP SNOOPING</span><br><span class="line"></span><br><span class="line">配置</span><br><span class="line">交换机</span><br><span class="line">第一步：开启DHCP  Snooping功能</span><br><span class="line">dhcp enable</span><br><span class="line">dhcp snooping enable </span><br><span class="line">dhcp snooping enable  vlan <span class="number">10</span></span><br><span class="line"></span><br><span class="line">第二步：配置信任端口</span><br><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">Ethernet0</span>/0/1</span></span><br><span class="line"><span class="class"> <span class="title">dhcp</span> <span class="title">snooping</span> <span class="title">trusted</span></span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class">第三步：客户端重新地址，查看交换机的绑定表</span></span><br></pre></td></tr></table></figure>
+<h1 id="端口安全"><a href="#端口安全" class="headerlink" title="端口安全"></a>端口安全</h1><blockquote>
+<p>端口安全详细内容可参考：<strong><a href="https://cshihong.github.io/2017/11/16/%E7%AB%AF%E5%8F%A3%E5%AE%89%E5%85%A8%E5%92%8C%E7%AB%AF%E5%8F%A3%E9%9A%94%E7%A6%BB/">端口安全域端口隔离。</a></strong></p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">端口安全；</span><br><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">Ethernet0</span>/0/13</span></span><br><span class="line"><span class="class"> <span class="title">port</span> <span class="title">link</span>-<span class="title">type</span> <span class="title">access</span></span></span><br><span class="line"><span class="class"> <span class="title">port</span> <span class="title">default</span> <span class="title">vlan</span> 10</span></span><br><span class="line"><span class="class"> <span class="title">port</span>-<span class="title">security</span> <span class="title">enable</span>   ---------------------启动端口安全 </span></span><br><span class="line"><span class="class"> <span class="title">port</span>-<span class="title">security</span> <span class="title">protect</span>-<span class="title">action</span> <span class="title">shutdown</span>------超过<span class="title">MAC</span>的地址以后的动作.默认是<span class="title">restrict</span>（丢弃并统计）</span></span><br><span class="line"><span class="class"> <span class="title">port</span>-<span class="title">security</span> <span class="title">max</span>-<span class="title">mac</span>-<span class="title">num</span> 2 ------------定义最大学习<span class="title">MAC</span>地址的数量</span></span><br><span class="line"><span class="class"> <span class="title">port</span>-<span class="title">security</span> <span class="title">mac</span>-<span class="title">address</span> <span class="title">sticky</span> ---------绑定<span class="title">MAC</span></span></span><br></pre></td></tr></table></figure>
+<h1 id="ARP-Spoofing"><a href="#ARP-Spoofing" class="headerlink" title="ARP Spoofing"></a>ARP Spoofing</h1><p> ARP Spoofing(ARP欺骗)是一种单包攻击。</p>
+<p>  攻击者为了改变网关设备上的ARP表项，会向网关设备发送虚假ARP请求报文。如果设备将该报文中的IP地址与MAC地址对应关系学习至ARP表项，则会误将其他主机的报文转发给攻击源。</p>
+<p><strong>防御方式：</strong></p>
+<p>启用ARP欺骗攻击防范后，只在自己主动向其他主机发起ARP请求并得到回应的情况下才更改ARP表项，而不会学习主机主动发来的ARP请求报文。</p>
+<p><strong>配置命令：</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">firewall defend arp-spoofing enable</span><br></pre></td></tr></table></figure>
+<h1 id="DAI"><a href="#DAI" class="headerlink" title="DAI"></a>DAI</h1><h2 id="ARP中间人攻击："><a href="#ARP中间人攻击：" class="headerlink" title="ARP中间人攻击："></a>ARP中间人攻击：</h2><p><img src="/2019/05/16/二层攻击防范技术/arp.png" alt="arp"></p>
+<center>图：ARP中间人攻击示意图</center>
+
+<p>ARP中间人攻击过程：</p>
+<ol>
+<li>如图，攻击者向用户A发送ARP更新，将用户A上存储的用户B的mac改为攻击者的mac地址。</li>
+<li>同样，攻击者向用户B发送ARP更新，将用户B上存储的用户A的mac改为攻击者的mac地址。</li>
+<li>会造成，当用户A和用户B通信时，流量都会发给攻击者。容易造成数据泄露。</li>
+</ol>
+<h2 id="DAI："><a href="#DAI：" class="headerlink" title="DAI："></a>DAI：</h2><p>DAI（Dynamic ARP Inspection）动态ARP检查。为了防御中间人攻击，避免合法用户的数据被中间人窃取，可以使能动态ARP检测功能。设备会将ARP报文对应的源IP、源MAC、接口、VLAN信息和绑定表中的信息进行比较，如果信息匹配，说明发送该ARP报文的用户是合法用户，允许此用户的ARP报文通过，否则就认为是攻击，丢弃该ARP报文。</p>
+<p>配置命令：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[接口视图] arp anti-attack check user-bind enable <span class="comment">//使能检查绑定表功能</span></span><br><span class="line">[接口视图] arp anti-attack check user-bind alarm enable<span class="comment">//使能告警功能</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>本功能仅适用于DHCP Snooping场景</strong>。设备使能DHCP Snooping功能后，当DHCP用户上线时，设备会自动生成DHCP Snooping绑定表；对于静态配置IP地址的用户，设备不会生成DHCP Snooping绑定表，所以需要手动添加静态绑定表。</p>
+<p><code>user-bind static 10.1.1.1 1-1-1 vlan 10，配置静态用户绑定表项。</code> </p>
+</blockquote>
+<h1 id="IPSG"><a href="#IPSG" class="headerlink" title="IPSG"></a>IPSG</h1><p>随着网络规模越来越大，基于源IP的攻击也逐渐增多，一些攻击者利用欺骗的手段获取到网络资源，取得合法使用网络的能力，甚至造成被欺骗者无法访问网络，或者信息泄露，造成不可估量的损失。</p>
+<p><strong>IPSG(IP Source Guard），是指设备在作为二层设备使用时，利用绑定表来防御IP源欺骗的攻击。</strong>当设备在转发IP报文时，将此IP报文中的源IP、源MAC、端口、VLAN信息和绑定表的信息进行比较，如果信息匹配，说明是合法用户，则允许此用户正常转发，否则认为是攻击者，丢弃该用户发送的IP报文。</p>
+<p><img src="/2019/05/16/二层攻击防范技术/ip_mac.png" alt="ip_mac"></p>
+<center>图：IP/MAC欺骗攻击典型场景</center>
+
+<p><strong>IPSG防御原理：</strong></p>
+<ul>
+<li>IP地址包括IPv4地址和IPv6地址，即使能IPSG功能后，设备将对用户IP报文的源IPv4地址和源IPv6地址都进行检查。</li>
+<li><strong>IPSG功能只对IP类型的报文有效</strong>。对其他类型的报文，如PPPoE（Point-to-Point Protocol over Ethernet）报文无法生效。<br>IP:<br>1.1.1.3/24<br>MAC: 3-3-3</li>
+</ul>
+<p><strong>配置命令：</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[接口视图] ip source check user-bind enable <span class="comment">//使能IP报文检查功能。</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>结合DHCP Snooping使用。</p>
+<p>IPSG可以基于VLAN对IP报文进行检查，也可以基于接口对IP报文进行检查。</p>
+<p>本命令只对动态绑定表生效，对静态绑定表不生效。对于静态绑定表，IPSG按照静态绑定表配置的表项进行完全匹配。</p>
+</blockquote>
+<hr>
+
       
     </div>
 
@@ -585,6 +704,14 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/网络攻击/" rel="tag"># 网络攻击</a>
+          
+            <a href="/tags/DDoS/" rel="tag"># DDoS</a>
+          
+        </div>
       
 
       
@@ -713,8 +840,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -1126,6 +1262,22 @@
       </div>
 
       
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#DHCP-Snooping"><span class="nav-number">1.</span> <span class="nav-text">DHCP Snooping</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#DHCP原理："><span class="nav-number">1.1.</span> <span class="nav-text">DHCP原理：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DHCP-Snooping："><span class="nav-number">1.2.</span> <span class="nav-text">DHCP Snooping：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#端口安全"><span class="nav-number">2.</span> <span class="nav-text">端口安全</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ARP-Spoofing"><span class="nav-number">3.</span> <span class="nav-text">ARP Spoofing</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#DAI"><span class="nav-number">4.</span> <span class="nav-text">DAI</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#ARP中间人攻击："><span class="nav-number">4.1.</span> <span class="nav-text">ARP中间人攻击：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DAI："><span class="nav-number">4.2.</span> <span class="nav-text">DAI：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#IPSG"><span class="nav-number">5.</span> <span class="nav-text">IPSG</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
 
       
         <div class="back-to-top">
@@ -1159,7 +1311,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共 836.0k 字</span>
+  <span class="post-count">全站共 837.9k 字</span>
 </div>
 
 
