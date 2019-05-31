@@ -144,7 +144,22 @@
 <meta property="og:image" content="https://cshihong.github.io/2019/05/30/SACG认证原理/sacg.png">
 <meta property="og:image" content="https://cshihong.github.io/2019/05/30/SACG认证原理/流程.png">
 <meta property="og:image" content="https://cshihong.github.io/2019/05/30/SACG认证原理/原理.gif">
-<meta property="og:updated_time" content="2019-05-30T04:36:17.103Z">
+<meta property="og:image" content="https://cshihong.github.io/2019/05/30/SACG认证原理/拓扑.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/05/30/SACG认证原理/1.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/05/30/SACG认证原理/2.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/05/30/SACG认证原理/3.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/05/30/SACG认证原理/4.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/05/30/SACG认证原理/5.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/05/30/SACG认证原理/6.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/05/30/SACG认证原理/7.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/05/30/SACG认证原理/8.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/05/30/SACG认证原理/9.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/05/30/SACG认证原理/10.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/05/30/SACG认证原理/11.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/05/30/SACG认证原理/12.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/05/30/SACG认证原理/13.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/05/30/SACG认证原理/14.png">
+<meta property="og:updated_time" content="2019-05-30T14:32:23.791Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SACG认证原理">
 <meta name="twitter:description" content="SACG技术简介什么是SACG认证？SACG认证（华为私有）：使用防火墙作为接入控制设备，对用户接入网络进行身份认证和安全检查。部署在数据中心或网络出口位置，方便维护。适用于大中型园区，网络环境复杂，对网络安全要求适中的场景。 SACG是指设备通过在SACG认证系统中承担SACG的角色，协助SACG认证系统实现内网终端用户的安全控制。 SACG准入，是Controller和和防火墙配合实现的用户准">
@@ -468,7 +483,7 @@
                 
               
 
-              <time title="创建时间：2019-05-30 09:27:56 / 修改时间：12:36:17" itemprop="dateCreated datePublished" datetime="2019-05-30T09:27:56+08:00">2019-05-30</time>
+              <time title="创建时间：2019-05-30 09:27:56 / 修改时间：22:32:23" itemprop="dateCreated datePublished" datetime="2019-05-30T09:27:56+08:00">2019-05-30</time>
             
 
             
@@ -513,9 +528,9 @@
             <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
 			<span class="post-meta-divider">|</span>
-			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 2,546</span>
+			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 2,790</span>
 			<span class="post-meta-item-text">|</span>
-			<span title="post.min2read"><span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span>阅读时长： 9</span>
+			<span title="post.min2read"><span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span>阅读时长： 10</span>
 
           
 
@@ -643,6 +658,58 @@
 <li>如果终端IP地址同时通过身份认证和安全检查，SACG将该报文从认证前域或隔离域切换至认证后域，并根据认证后域对应的ACL对报文进行处理，终端用户可以访问认证前域和认证后域的网络资源。</li>
 </ul>
 <h1 id="部署SACG认证配置思路"><a href="#部署SACG认证配置思路" class="headerlink" title="部署SACG认证配置思路"></a>部署SACG认证配置思路</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">配置步骤： </span><br><span class="line">第一步：基本配置 </span><br><span class="line">路由  策略  </span><br><span class="line">第二步：重定向流量</span><br><span class="line">SW1</span><br><span class="line">acl number <span class="number">3000</span></span><br><span class="line"> rule <span class="number">5</span> permit ip source <span class="number">10.1</span>.2.0 <span class="number">0.0</span>.0.255</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">Ethernet0</span>/0/9</span></span><br><span class="line"><span class="class"> <span class="title">traffic</span>-<span class="title">redirect</span> <span class="title">inbound</span> <span class="title">acl</span> 3000 <span class="title">ip</span>-<span class="title">nexthop</span> 10.1.3.10 </span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class">第三步：关闭硬件<span class="title">SACG</span>（<span class="title">FW</span>）状态检测功能</span></span><br><span class="line"><span class="class"> <span class="title">undo</span> <span class="title">firewall</span> <span class="title">session</span> <span class="title">link</span>-<span class="title">state</span> <span class="title">check</span>  </span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class">第四步：配置<span class="title">AC</span></span></span><br><span class="line"><span class="class">1. 创建硬件<span class="title">SACG</span></span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class">2. 定义认证前域</span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class">3. 受控域</span></span><br><span class="line"><span class="class">隔离域</span></span><br><span class="line"><span class="class">后域</span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class">4.分别各自调用</span></span><br><span class="line"><span class="class">隔离域调用隔离域</span></span><br><span class="line"><span class="class">后域调用后域</span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class">5. 创建<span class="title">SACG</span>策略</span></span><br><span class="line"><span class="class">把隔离和后域都调用</span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class">6. 创建用户组，用户用户名和密码</span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class">7. 用户组对应策略</span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class">第五步：防火墙<span class="title">S</span></span></span><br><span class="line"><span class="class">配置与<span class="title">TSM</span>联动</span></span><br><span class="line"><span class="class">1.开启功能</span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class">2.联动<span class="title">AC</span>的硬件<span class="title">SACG</span></span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class">3.联动关联</span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class">第六步：使用<span class="title">PC</span>的 <span class="title">Anyoffice</span>测试</span></span><br></pre></td></tr></table></figure>
+<h1 id="SACG配置示例"><a href="#SACG配置示例" class="headerlink" title="SACG配置示例"></a>SACG配置示例</h1><h2 id="配置拓扑如下："><a href="#配置拓扑如下：" class="headerlink" title="配置拓扑如下："></a>配置拓扑如下：</h2><p><img src="/2019/05/30/SACG认证原理/拓扑.png" alt="拓扑"></p>
+<center>图：SACG配置拓扑</center>
+
+<p>要求： 配置SACG，认证前域为192.168.1.100/32，隔离域为192.168.1.1/32，认证后域为202.100.1.10/24以及10.1.0.0/16.</p>
+<h2 id="SW1配置；"><a href="#SW1配置；" class="headerlink" title="SW1配置；"></a>SW1配置；</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">acl number <span class="number">3000</span></span><br><span class="line"> rule <span class="number">5</span> permit ip source <span class="number">10.1</span>.2.0 <span class="number">0.0</span>.0.255</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">Ethernet0</span>/0/9</span></span><br><span class="line"><span class="class"> <span class="title">traffic</span>-<span class="title">redirect</span> <span class="title">inbound</span> <span class="title">acl</span> 3000 <span class="title">ip</span>-<span class="title">nexthop</span> 10.1.3.10</span></span><br></pre></td></tr></table></figure>
+<h2 id="AC上配置："><a href="#AC上配置：" class="headerlink" title="AC上配置："></a>AC上配置：</h2><ol>
+<li><p>AC上配置与FW联动</p>
+<p><img src="/2019/05/30/SACG认证原理/1.png" alt="1"></p>
+</li>
+<li><p>.配置前域、受控域</p>
+<p><img src="/2019/05/30/SACG认证原理/2.png" alt="2"></p>
+</li>
+<li><p>配置部门、用户、账号</p>
+<p><img src="/2019/05/30/SACG认证原理/3.png" alt="3"></p>
+</li>
+<li><p>配置SACG策略组</p>
+<p><img src="/2019/05/30/SACG认证原理/4.png" alt="4"></p>
+</li>
+</ol>
+<h2 id="FW与AC联动配置："><a href="#FW与AC联动配置：" class="headerlink" title="FW与AC联动配置："></a>FW与AC联动配置：</h2><ol>
+<li><p>TSM联动</p>
+<p><img src="/2019/05/30/SACG认证原理/5.png" alt="5"></p>
+</li>
+<li><p>域间应用联动策略</p>
+<p><img src="/2019/05/30/SACG认证原理/6.png" alt="6"></p>
+</li>
+<li><p>安全策略</p>
+<p><img src="/2019/05/30/SACG认证原理/7.png" alt="7"></p>
+</li>
+</ol>
+<h2 id="检查测试："><a href="#检查测试：" class="headerlink" title="检查测试："></a>检查测试：</h2><p>SACG与AC联动信息：</p>
+<p><img src="/2019/05/30/SACG认证原理/8.png" alt="8"></p>
+<hr>
+<p>SACG获得的角色列表：</p>
+<p><img src="/2019/05/30/SACG认证原理/9.png" alt="9"></p>
+<p><img src="/2019/05/30/SACG认证原理/10.png" alt="10"></p>
+<hr>
+<p>未认证前，只能访问认证前域:</p>
+<p><img src="/2019/05/30/SACG认证原理/11.png" alt="11"></p>
+<hr>
+<p>认证后：认证后可以访问认证后域。隔离域只有配置终端安全策略检查才会出现。</p>
+<p><img src="/2019/05/30/SACG认证原理/12.png" alt="12"></p>
+<hr>
+<p>SACG上在线用户：</p>
+<p><img src="/2019/05/30/SACG认证原理/13.png" alt="13"></p>
+<p>角色6拿到的授权列表：</p>
+<p><img src="/2019/05/30/SACG认证原理/14.png" alt="14"></p>
+<hr>
+<blockquote>
+<p>参考文档：华为HedEx文档</p>
+</blockquote>
+<hr>
 
       
     </div>
@@ -1290,7 +1357,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#SACG技术简介"><span class="nav-number">1.</span> <span class="nav-text">SACG技术简介</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是SACG认证？"><span class="nav-number">1.1.</span> <span class="nav-text">什么是SACG认证？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SACG基本概念："><span class="nav-number">1.2.</span> <span class="nav-text">SACG基本概念：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SACG认证特点："><span class="nav-number">1.3.</span> <span class="nav-text">SACG认证特点：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SACG应用场景："><span class="nav-number">1.4.</span> <span class="nav-text">SACG应用场景：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SACG认证原理"><span class="nav-number">2.</span> <span class="nav-text">SACG认证原理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#SACG本质通过ACL控制："><span class="nav-number">2.1.</span> <span class="nav-text">SACG本质通过ACL控制：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SACG接入控制认证流程："><span class="nav-number">2.2.</span> <span class="nav-text">SACG接入控制认证流程：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SACG认证过程："><span class="nav-number">2.3.</span> <span class="nav-text">SACG认证过程：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#部署SACG认证配置思路"><span class="nav-number">3.</span> <span class="nav-text">部署SACG认证配置思路</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#SACG技术简介"><span class="nav-number">1.</span> <span class="nav-text">SACG技术简介</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是SACG认证？"><span class="nav-number">1.1.</span> <span class="nav-text">什么是SACG认证？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SACG基本概念："><span class="nav-number">1.2.</span> <span class="nav-text">SACG基本概念：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SACG认证特点："><span class="nav-number">1.3.</span> <span class="nav-text">SACG认证特点：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SACG应用场景："><span class="nav-number">1.4.</span> <span class="nav-text">SACG应用场景：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SACG认证原理"><span class="nav-number">2.</span> <span class="nav-text">SACG认证原理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#SACG本质通过ACL控制："><span class="nav-number">2.1.</span> <span class="nav-text">SACG本质通过ACL控制：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SACG接入控制认证流程："><span class="nav-number">2.2.</span> <span class="nav-text">SACG接入控制认证流程：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SACG认证过程："><span class="nav-number">2.3.</span> <span class="nav-text">SACG认证过程：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#部署SACG认证配置思路"><span class="nav-number">3.</span> <span class="nav-text">部署SACG认证配置思路</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SACG配置示例"><span class="nav-number">4.</span> <span class="nav-text">SACG配置示例</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#配置拓扑如下："><span class="nav-number">4.1.</span> <span class="nav-text">配置拓扑如下：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SW1配置；"><span class="nav-number">4.2.</span> <span class="nav-text">SW1配置；</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AC上配置："><span class="nav-number">4.3.</span> <span class="nav-text">AC上配置：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#FW与AC联动配置："><span class="nav-number">4.4.</span> <span class="nav-text">FW与AC联动配置：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#检查测试："><span class="nav-number">4.5.</span> <span class="nav-text">检查测试：</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1330,7 +1397,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共 848.5k 字</span>
+  <span class="post-count">全站共 851.7k 字</span>
 </div>
 
 

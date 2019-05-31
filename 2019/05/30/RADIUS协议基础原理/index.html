@@ -133,17 +133,22 @@
 
 
 
-  <meta name="description" content="你的责任就是你的方向，你的经历就是你的资本，你的性格就是你的命运。">
+  <meta name="description" content="RADIUS简介RADIUS概述：RADIUS（Remote Authentication Dial-In User Server，远程认证拨号用户服务）是一种分布式的、C/S架构的信息交互协议，能包含网络不受未授权访问的干扰，常应用在既要求较高安全性、又允许远程用户访问的各种网络环境中。 协议定义了基于UDP（User Datagram Protocol）的RADIUS报文格式及其传输机制，并规">
+<meta name="keywords" content="准入控制技术">
 <meta property="og:type" content="article">
 <meta property="og:title" content="RADIUS协议基础原理">
 <meta property="og:url" content="https://cshihong.github.io/2019/05/30/RADIUS协议基础原理/index.html">
 <meta property="og:site_name" content="曹世宏的博客">
-<meta property="og:description" content="你的责任就是你的方向，你的经历就是你的资本，你的性格就是你的命运。">
+<meta property="og:description" content="RADIUS简介RADIUS概述：RADIUS（Remote Authentication Dial-In User Server，远程认证拨号用户服务）是一种分布式的、C/S架构的信息交互协议，能包含网络不受未授权访问的干扰，常应用在既要求较高安全性、又允许远程用户访问的各种网络环境中。 协议定义了基于UDP（User Datagram Protocol）的RADIUS报文格式及其传输机制，并规">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-30T04:42:58.317Z">
+<meta property="og:image" content="https://cshihong.github.io/2019/05/30/RADIUS协议基础原理/数据.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/05/30/RADIUS协议基础原理/报文头.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/05/30/RADIUS协议基础原理/流程.png">
+<meta property="og:updated_time" content="2019-05-31T13:14:18.137Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="RADIUS协议基础原理">
-<meta name="twitter:description" content="你的责任就是你的方向，你的经历就是你的资本，你的性格就是你的命运。">
+<meta name="twitter:description" content="RADIUS简介RADIUS概述：RADIUS（Remote Authentication Dial-In User Server，远程认证拨号用户服务）是一种分布式的、C/S架构的信息交互协议，能包含网络不受未授权访问的干扰，常应用在既要求较高安全性、又允许远程用户访问的各种网络环境中。 协议定义了基于UDP（User Datagram Protocol）的RADIUS报文格式及其传输机制，并规">
+<meta name="twitter:image" content="https://cshihong.github.io/2019/05/30/RADIUS协议基础原理/数据.png">
 
 
 
@@ -467,8 +472,42 @@
             
 
             
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-05-31 21:14:18" itemprop="dateModified" datetime="2019-05-31T21:14:18+08:00">2019-05-31</time>
+              
+            
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/网络安全/" itemprop="url" rel="index"><span itemprop="name">网络安全</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -486,9 +525,9 @@
             <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
 			<span class="post-meta-divider">|</span>
-			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 0</span>
+			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 2,487</span>
 			<span class="post-meta-item-text">|</span>
-			<span title="post.min2read"><span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span>阅读时长： 1</span>
+			<span title="post.min2read"><span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span>阅读时长： 9</span>
 
           
 
@@ -509,7 +548,163 @@
       
 
       
-        
+        <h1 id="RADIUS简介"><a href="#RADIUS简介" class="headerlink" title="RADIUS简介"></a>RADIUS简介</h1><h2 id="RADIUS概述："><a href="#RADIUS概述：" class="headerlink" title="RADIUS概述："></a>RADIUS概述：</h2><p>RADIUS（Remote Authentication Dial-In User Server，远程认证拨号用户服务）是一种分布式的、C/S架构的信息交互协议，能包含网络不受未授权访问的干扰，常应用在既要求较高安全性、又允许远程用户访问的各种网络环境中。</p>
+<p>协议定义了基于<strong>UDP（User Datagram Protocol）的RADIUS报文格式及其传输机制，并规定UDP端口1812、1813分别作为认证、计费端口。</strong></p>
+<p><strong>如果是思科设备：认证和授权端口为UDP1645，计费端口1646.</strong></p>
+<p>RADIUS最初仅是针对拨号用户的AAA协议，后来随着用户接入方式的多样化发展，RADIUS也适应多种用户接入方式，如以太网接入等。它通过认证授权来提供接入服务，通过计费来收集、记录用户对网络资源的使用。</p>
+<h2 id="Radius的架构："><a href="#Radius的架构：" class="headerlink" title="Radius的架构："></a>Radius的架构：</h2><p>客户端/服务器模式。</p>
+<p><strong>RADIUS客户端</strong>：一般位于网络接入服务器NAS（Network Access Server）上，可以遍布整个网络，负责传输用户信息到指定的RADIUS服务器，然后根据从服务器返回的信息进行相应处理（如接受/拒绝用户接入）。</p>
+<p>设备作为RADIUS协议的客户端，实现以下功能：</p>
+<ul>
+<li>支持标准RADIUS协议及扩充属性，包括RFC（Request For Comments）2865、RFC2866。</li>
+<li>支持华为扩展的私有属性。</li>
+<li>对RADIUS服务器状态的主动探测功能。</li>
+<li>计费结束报文的本地缓存重传功能。</li>
+<li>RADIUS服务器的自动切换功能。</li>
+</ul>
+<p><strong>RADIUS服务器</strong>：一般运行在中心计算机或工作站上，维护相关的用户认证和网络服务访问信息，负责接收用户连接请求并认证用户，然后给客户端返回所有需要的信息（如接受/拒绝认证请求）。RADIUS服务器通常要维护三个数据库。</p>
+<p><img src="/2019/05/30/RADIUS协议基础原理/数据.png" alt="数据"></p>
+<center>图：RADIUS服务器的组成</center>
+
+<ul>
+<li>Users：用于存储用户信息（如用户名、口令以及使用的协议、IP地址等配置信息）。</li>
+<li>Clients：用于存储RADIUS客户端的信息（如接入设备的共享密钥、IP地址等）。</li>
+<li>Dictionary：用于存储RADIUS协议中的属性和属性值含义的信息。</li>
+</ul>
+<h2 id="RADIUS的特点："><a href="#RADIUS的特点：" class="headerlink" title="RADIUS的特点："></a>RADIUS的特点：</h2><ul>
+<li><p><strong>网络安全</strong></p>
+<p>RADIUS客户端和RADIUS服务器之间认证消息的交互是通过共享密钥的参与来完成的，并且共享密钥不能通过网络来传输，增强了信息交互的安全性。另外，为防止用户密码在不安全的网络上传递时被窃取，RADIUS协议利用共享密钥对RADIUS报文中的密码进行了加密。</p>
+</li>
+<li><p><strong>良好的扩展性</strong></p>
+<p>RADIUS报文是由包头和一定数目的属性（Attribute）构成，新属性的加入不会破坏协议的原有实现。</p>
+</li>
+</ul>
+<h1 id="RADIUS报文"><a href="#RADIUS报文" class="headerlink" title="RADIUS报文"></a>RADIUS报文</h1><h2 id="RADIUS报文格式："><a href="#RADIUS报文格式：" class="headerlink" title="RADIUS报文格式："></a>RADIUS报文格式：</h2><p>RADIUS协议采用UDP报文来传输消息。</p>
+<p><img src="/2019/05/30/RADIUS协议基础原理/报文头.png" alt="报文头"></p>
+<center>图：RADIUS报文结构</center>
+
+<p>各字段的解释如下：</p>
+<ul>
+<li>Code：长度为1个字节，<strong>用来说明RADIUS报文的类型</strong>。</li>
+<li>Identifier：长度为1个字节，用来匹配请求报文和响应报文，以及检测在一段时间内重发的请求报文。客户端发送请求报文后，服务器返回的响应报文中的Identifier值应与请求报文中的Identifier值相同。</li>
+<li>Length：长度为2个字节，用来指定RADIUS报文的长度。超过Length取值的字节将作为填充字符而忽略。如果接收到的报文的实际长度小于Length的取值，则该报文会被丢弃。</li>
+<li>Authenticator：长度为16个字节，用来验证RADIUS服务器的响应报文，同时还用于用户密码的加密。</li>
+<li>Attribute：不定长度，为报文的内容主体，用来携带专门的认证、授权和计费信息，提供请求和响应报文的配置细节。Attribute可以包括多个属性，每一个属性都采用（Type、Length、Value）三元组的结构来表示。</li>
+</ul>
+<h2 id="RADISU报文类型："><a href="#RADISU报文类型：" class="headerlink" title="RADISU报文类型："></a>RADISU报文类型：</h2><p>目前RADIUS定义了十六种报文类型。</p>
+<p><strong>RADIUS认证报文:</strong></p>
+<table>
+<thead>
+<tr>
+<th>报文名称</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Access-Request</td>
+<td>认证请求报文，是RADIUS报文交互过程中的第一个报文，用来携带用户的认证信息（例如：用户名、密码等）。认证请求报文由RADIUS客户端发送给RADIUS服务器，RADIUS服务器根据该报文中携带的用户信息判断是否允许接入。</td>
+</tr>
+<tr>
+<td>Access-Accept</td>
+<td>认证接受报文，是服务器对客户端发送的Access-Request报文的接受响应报文。如果Access-Request报文中的所有属性都可以接受（即认证通过），则发送该类型报文。客户端收到此报文后，认证用户才能认证通过并被赋予相应的权限。</td>
+</tr>
+<tr>
+<td>Access-Reject</td>
+<td>认证拒绝报文，是服务器对客户端的Access-Request报文的拒绝响应报文。如果Access-Request报文中的任何一个属性不可接受（即认证失败），则RADIUS服务器返回Access-Reject报文，用户认证失败。</td>
+</tr>
+<tr>
+<td>Access-Challenge</td>
+<td>认证挑战报文。EAP认证时，RADIUS服务器接收到Access-Request报文中携带的用户名信息后，会随机生成一个MD5挑战字，同时将此挑战字通过Access-Challenge报文发送给客户端。客户端使用该挑战字对用户密码进行加密处理后，将新的用户密码信息通过Access-Request报文发送给RADIUS服务器。RADIUS服务器将收到的已加密的密码信息和本地经过加密运算后的密码信息进行对比，如果相同，则该用户为合法用户。</td>
+</tr>
+</tbody>
+</table>
+<p><strong>RADIUS计费报文：</strong></p>
+<table>
+<thead>
+<tr>
+<th>报文名称</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Accounting-Request(Start)</td>
+<td>计费开始请求报文。如果客户端使用RADIUS模式进行计费，客户端会在用户开始访问网络资源时，向服务器发送计费开始请求报文。</td>
+</tr>
+<tr>
+<td>Accounting-Response(Start)</td>
+<td>计费开始响应报文。服务器接收并成功记录计费开始请求报文后，需要回应一个计费开始响应报文。</td>
+</tr>
+<tr>
+<td>Accounting-Request(Interim-update)</td>
+<td>实时计费请求报文。为避免计费服务器无法收到计费停止请求报文而继续对该用户计费，可以在客户端上配置实时计费功能。客户端定时向服务器发送实时计费报文，减少计费误差。</td>
+</tr>
+<tr>
+<td>Accounting-Response(Interim-update)</td>
+<td>实时计费响应报文。服务器接收并成功记录实时计费请求报文后，需要回应一个实时计费响应报文。</td>
+</tr>
+<tr>
+<td>Accounting-Request(Stop)</td>
+<td>计费结束请求报文。当用户断开连接时（连接也可以由接入服务器断开），客户端向服务器发送计费结束请求报文，其中包括用户上网所使用的网络资源的统计信息（上网时长、进/出的字节数等），请求服务器停止计费。</td>
+</tr>
+<tr>
+<td>Accounting-Response(Stop)</td>
+<td>计费结束响应报文。服务器接收计费停止请求报文后，需要回应一个计费停止响应报文。</td>
+</tr>
+</tbody>
+</table>
+<p><strong>RADIUS授权报文：</strong></p>
+<table>
+<thead>
+<tr>
+<th>报文名称</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CoA-Request</td>
+<td>动态授权请求报文。当管理员需要更改某个在线用户的权限时（例如，管理员不希望用户访问某个网站），可以通过服务器发送一个动态授权请求报文给客户端，使客户端修改在线用户的权限。</td>
+</tr>
+<tr>
+<td>CoA-ACK</td>
+<td>动态授权请求接受报文。如果客户端成功更改了用户的权限，则客户端回应动态授权请求接受报文给服务器。</td>
+</tr>
+<tr>
+<td>CoA-NAK</td>
+<td>动态授权请求拒绝报文。如果客户端未成功更改用户的权限，则客户端回应动态授权请求拒绝报文给服务器。</td>
+</tr>
+<tr>
+<td>DM-Request</td>
+<td>用户离线请求报文。当管理员需要让某个在线的用户下线时，可以通过服务器发送一个用户离线请求报文给客户端，使客户端终结用户的连接。</td>
+</tr>
+<tr>
+<td>DM-ACK</td>
+<td>用户离线请求接受报文。如果客户端已经切断了用户的连接，则客户端回应用户离线请求接受报文给服务器。</td>
+</tr>
+<tr>
+<td>DM-NAK</td>
+<td>用户离线请求拒绝报文。如果客户端无法切断用户的连接，则客户端回应用户离线请求拒绝报文给服务器。</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>CoA:（Change of Authorization）是指用户认证成功后，管理员可以通过RADIUS协议来修改在线用户的权限。</li>
+<li>DM:（Disconnect Message）是指用户离线报文，即由RADIUS服务器端主动发起的强迫用户下线的报文。</li>
+</ul>
+<h1 id="RADIUS工作原理"><a href="#RADIUS工作原理" class="headerlink" title="RADIUS工作原理"></a>RADIUS工作原理</h1><h2 id="RADIUS认证、授权和计费："><a href="#RADIUS认证、授权和计费：" class="headerlink" title="RADIUS认证、授权和计费："></a>RADIUS认证、授权和计费：</h2><p>接入设备作为RADIUS客户端，负责收集用户信息（例如：用户名、密码等），并将这些信息发送到RADIUS服务器。RADIUS服务器则根据这些信息完成用户身份认证以及认证通过后的用户授权和计费。用户、RADIUS客户端和RADIUS服务器之间的交互流程如下：</p>
+<p><img src="/2019/05/30/RADIUS协议基础原理/流程.png" alt="流程"></p>
+<center>图：RADIUS认证、授权、计费的交互过程</center>
+
+<h1 id="Radius配置示例"><a href="#Radius配置示例" class="headerlink" title="Radius配置示例"></a>Radius配置示例</h1><h2 id="在核心交换机上的配置："><a href="#在核心交换机上的配置：" class="headerlink" title="在核心交换机上的配置："></a>在核心交换机上的配置：</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">定义radius</span><br><span class="line">radius-server template qytang_radius_server-------------定义radius服务器模板</span><br><span class="line"> radius-server shared-key simple Huawei@<span class="number">123</span>------------联动服务器设置密码</span><br><span class="line"> radius-server authentication <span class="number">192.168</span>.1.100 <span class="number">1812</span> -----------设置认证的端口</span><br><span class="line"> radius-server accounting <span class="number">192.168</span>.1.100 <span class="number">1813</span>----------------设置计费的端口</span><br><span class="line">radius-server authorization <span class="number">192.168</span>.1.100 shared-key simple Huawei@<span class="number">123</span>------授权可选 </span><br><span class="line"></span><br><span class="line">aaa</span><br><span class="line"> authentication-scheme qytang_auth</span><br><span class="line">  authentication-mode radius              </span><br><span class="line"> accounting-scheme qytang_acco</span><br><span class="line">  accounting-mode radius</span><br><span class="line"> domain <span class="keyword">default</span></span><br><span class="line">  authentication-scheme qytang_auth</span><br><span class="line">  accounting-scheme qytang_acco</span><br><span class="line">  radius-server  qytang_radius_server</span><br></pre></td></tr></table></figure>
+<p>然后在Radius服务器上配置好，即可与dot1x、Portal等技术结合使用。</p>
+<hr>
+<blockquote>
+<p>参考文档：华为HedEx文档</p>
+</blockquote>
+<hr>
+
       
     </div>
 
@@ -585,6 +780,12 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/准入控制技术/" rel="tag"># 准入控制技术</a>
+          
+        </div>
       
 
       
@@ -713,8 +914,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -1128,6 +1338,22 @@
       </div>
 
       
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#RADIUS简介"><span class="nav-number">1.</span> <span class="nav-text">RADIUS简介</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#RADIUS概述："><span class="nav-number">1.1.</span> <span class="nav-text">RADIUS概述：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Radius的架构："><span class="nav-number">1.2.</span> <span class="nav-text">Radius的架构：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#RADIUS的特点："><span class="nav-number">1.3.</span> <span class="nav-text">RADIUS的特点：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#RADIUS报文"><span class="nav-number">2.</span> <span class="nav-text">RADIUS报文</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#RADIUS报文格式："><span class="nav-number">2.1.</span> <span class="nav-text">RADIUS报文格式：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#RADISU报文类型："><span class="nav-number">2.2.</span> <span class="nav-text">RADISU报文类型：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#RADIUS工作原理"><span class="nav-number">3.</span> <span class="nav-text">RADIUS工作原理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#RADIUS认证、授权和计费："><span class="nav-number">3.1.</span> <span class="nav-text">RADIUS认证、授权和计费：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Radius配置示例"><span class="nav-number">4.</span> <span class="nav-text">Radius配置示例</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#在核心交换机上的配置："><span class="nav-number">4.1.</span> <span class="nav-text">在核心交换机上的配置：</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
 
       
         <div class="back-to-top">
@@ -1161,7 +1387,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共 848.5k 字</span>
+  <span class="post-count">全站共 851.7k 字</span>
 </div>
 
 

@@ -144,7 +144,14 @@
 <meta property="og:image" content="https://cshihong.github.io/2019/05/30/MAC认证和MAC旁路认证/ma流程.png">
 <meta property="og:image" content="https://cshihong.github.io/2019/05/30/MAC认证和MAC旁路认证/mac下线.png">
 <meta property="og:image" content="https://cshihong.github.io/2019/05/30/MAC认证和MAC旁路认证/mac旁路.png">
-<meta property="og:updated_time" content="2019-05-30T05:38:12.926Z">
+<meta property="og:image" content="https://cshihong.github.io/2019/05/30/MAC认证和MAC旁路认证/1.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/05/30/MAC认证和MAC旁路认证/2.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/05/30/MAC认证和MAC旁路认证/3.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/05/30/MAC认证和MAC旁路认证/4.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/05/30/MAC认证和MAC旁路认证/5.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/05/30/MAC认证和MAC旁路认证/6.png">
+<meta property="og:image" content="https://cshihong.github.io/2019/05/30/MAC认证和MAC旁路认证/7.png">
+<meta property="og:updated_time" content="2019-05-30T14:42:57.403Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MAC认证和MAC旁路认证">
 <meta name="twitter:description" content="MAC认证原理MAC认证是什么？MAC认证，是指终端网络接入控制设备自动获取终端的MAC地址，作为接入网络的凭证发到RADIUS服务器进行校验。 MAC认证是一种基于接口和MAC地址对用户的网络访问权限进行控制的认证方法，它不需要用户安装任何客户端软件。设备在启动了MAC认证的接口上首次检测到用户的MAC地址以后，即启动对该用户的认证操作。认证过程中，不需要用户手动输入用户名或者密码。 MAC认证">
@@ -468,7 +475,7 @@
                 
               
 
-              <time title="创建时间：2019-05-30 12:41:00 / 修改时间：13:38:12" itemprop="dateCreated datePublished" datetime="2019-05-30T12:41:00+08:00">2019-05-30</time>
+              <time title="创建时间：2019-05-30 12:41:00 / 修改时间：22:42:57" itemprop="dateCreated datePublished" datetime="2019-05-30T12:41:00+08:00">2019-05-30</time>
             
 
             
@@ -513,7 +520,7 @@
             <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
 			<span class="post-meta-divider">|</span>
-			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 1,580</span>
+			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 1,654</span>
 			<span class="post-meta-item-text">|</span>
 			<span title="post.min2read"><span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span>阅读时长： 6</span>
 
@@ -588,7 +595,31 @@
 <p>MAC旁路认证属于802.1X认证，适用于员工和无法主动触发认证的终端混合接入网络的场景，在802.1X认证阶段，员工通过帐号和密码完成认证，不会进入MAC认证阶段。对于哑终端，在802.1X认证失败后在MAC认证阶段通过MAC地址接入网络。</p>
 <h2 id="MAC旁路认证和MAC认证对应的业务类型是否一样？"><a href="#MAC旁路认证和MAC认证对应的业务类型是否一样？" class="headerlink" title="MAC旁路认证和MAC认证对应的业务类型是否一样？"></a>MAC旁路认证和MAC认证对应的业务类型是否一样？</h2><p>在设置认证规则、授权结果和授权规则，MAC旁路认证和MAC认证对应的业务类型都是MAC旁路业务。</p>
 <h1 id="MAC认证配置思路"><a href="#MAC认证配置思路" class="headerlink" title="MAC认证配置思路"></a>MAC认证配置思路</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">配置思路： </span><br><span class="line">交换机部分： </span><br><span class="line">mac-authen</span><br><span class="line"><span class="keyword">int</span> xxxx</span><br><span class="line">mac-authen </span><br><span class="line">mac-authen  max-user <span class="number">100</span> </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">AC部分</span><br><span class="line"><span class="number">1</span>. 配置设备列表（MAC地址）</span><br><span class="line"></span><br><span class="line"><span class="number">2</span>.配置认证</span><br><span class="line"></span><br><span class="line"><span class="number">3</span>.配置授权 </span><br><span class="line">A. 动态ACL</span><br><span class="line">B.授权结果</span><br><span class="line">C. 授权</span><br></pre></td></tr></table></figure>
-<h1 id="MAC旁路认证配置思路"><a href="#MAC旁路认证配置思路" class="headerlink" title="MAC旁路认证配置思路"></a>MAC旁路认证配置思路</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">配置思路： </span><br><span class="line">交换机部分： </span><br><span class="line">dot1x  enable ------------全局开启dot1x功能</span><br><span class="line">dot1x authentication-method eap  ---------dot1x认证方法eap</span><br><span class="line"><span class="keyword">int</span>  xxx</span><br><span class="line">dot1x enable  ----------开启dot1x</span><br><span class="line">dot1x mac-bypass -------开启MAC旁路认证（交换机传统模式）</span><br><span class="line"></span><br><span class="line">AC部分</span><br><span class="line"><span class="number">1</span>. 配置设备列表（MAC地址）</span><br><span class="line"></span><br><span class="line"><span class="number">2</span>.配置认证</span><br><span class="line"></span><br><span class="line"><span class="number">3</span>.配置授权 </span><br><span class="line">A. 动态ACL</span><br><span class="line">B.授权结果</span><br><span class="line">C. 授权</span><br></pre></td></tr></table></figure>
+<h1 id="MAC旁路认证配置思路"><a href="#MAC旁路认证配置思路" class="headerlink" title="MAC旁路认证配置思路"></a>MAC旁路认证配置思路</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">配置思路： </span><br><span class="line">交换机部分： </span><br><span class="line">dot1x  enable ------------全局开启dot1x功能</span><br><span class="line">dot1x authentication-method eap  ---------dot1x认证方法eap</span><br><span class="line"><span class="keyword">int</span>  xxx</span><br><span class="line">	dot1x enable  ----------开启dot1x</span><br><span class="line">	dot1x mac-bypass -------开启MAC旁路认证（交换机传统模式）</span><br><span class="line"></span><br><span class="line">AC部分</span><br><span class="line"><span class="number">1</span>. 配置设备列表（MAC地址）</span><br><span class="line"></span><br><span class="line"><span class="number">2</span>.配置认证</span><br><span class="line"></span><br><span class="line"><span class="number">3</span>.配置授权 </span><br><span class="line">A. 动态ACL</span><br><span class="line">B.授权结果</span><br><span class="line">C. 授权</span><br></pre></td></tr></table></figure>
+<h1 id="MAC认证配置示例"><a href="#MAC认证配置示例" class="headerlink" title="MAC认证配置示例"></a>MAC认证配置示例</h1><h2 id="交换机部分配置："><a href="#交换机部分配置：" class="headerlink" title="交换机部分配置："></a>交换机部分配置：</h2><p><img src="/2019/05/30/MAC认证和MAC旁路认证/1.png" alt="1"></p>
+<h2 id="AC部分配置："><a href="#AC部分配置：" class="headerlink" title="AC部分配置："></a>AC部分配置：</h2><ol>
+<li><p>添加需要进行MAC认证的终端MAC地址</p>
+<p><img src="/2019/05/30/MAC认证和MAC旁路认证/2.png" alt="2"></p>
+</li>
+<li><p>配置认证规则：</p>
+<p><img src="/2019/05/30/MAC认证和MAC旁路认证/3.png" alt="3"></p>
+</li>
+<li><p>配置动态acl。</p>
+<p><img src="/2019/05/30/MAC认证和MAC旁路认证/4.png" alt="4"></p>
+</li>
+<li><p>配置授权结果：</p>
+<p><img src="/2019/05/30/MAC认证和MAC旁路认证/5.png" alt="5"></p>
+</li>
+<li><p>配置授权规则：</p>
+<p><img src="/2019/05/30/MAC认证和MAC旁路认证/6.png" alt="6"></p>
+</li>
+</ol>
+<h2 id="检查测试："><a href="#检查测试：" class="headerlink" title="检查测试："></a>检查测试：</h2><p><img src="/2019/05/30/MAC认证和MAC旁路认证/7.png" alt="7"></p>
+<hr>
+<blockquote>
+<p>参考文档：华为HedEx文档</p>
+</blockquote>
+<hr>
 
       
     </div>
@@ -1236,7 +1267,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#MAC认证原理"><span class="nav-number">1.</span> <span class="nav-text">MAC认证原理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#MAC认证是什么？"><span class="nav-number">1.1.</span> <span class="nav-text">MAC认证是什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MAC认证的特点："><span class="nav-number">1.2.</span> <span class="nav-text">MAC认证的特点：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MAC认证应用场景："><span class="nav-number">1.3.</span> <span class="nav-text">MAC认证应用场景：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#用户名形式："><span class="nav-number">1.4.</span> <span class="nav-text">用户名形式：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MAC认证流程："><span class="nav-number">1.5.</span> <span class="nav-text">MAC认证流程：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#终端主动注销下线流程："><span class="nav-number">1.6.</span> <span class="nav-text">终端主动注销下线流程：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#MAC旁路认证原理"><span class="nav-number">2.</span> <span class="nav-text">MAC旁路认证原理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是MAC旁路认证？"><span class="nav-number">2.1.</span> <span class="nav-text">什么是MAC旁路认证？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MAC旁路应用场景："><span class="nav-number">2.2.</span> <span class="nav-text">MAC旁路应用场景：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MAC旁路认证原理："><span class="nav-number">2.3.</span> <span class="nav-text">MAC旁路认证原理：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#MAC认证和MAC旁路认证对比"><span class="nav-number">3.</span> <span class="nav-text">MAC认证和MAC旁路认证对比</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#MAC认证与MAC旁路认证有什么区别："><span class="nav-number">3.1.</span> <span class="nav-text">MAC认证与MAC旁路认证有什么区别：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MAC旁路认证和MAC认证对应的业务类型是否一样？"><span class="nav-number">3.2.</span> <span class="nav-text">MAC旁路认证和MAC认证对应的业务类型是否一样？</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#MAC认证配置思路"><span class="nav-number">4.</span> <span class="nav-text">MAC认证配置思路</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#MAC旁路认证配置思路"><span class="nav-number">5.</span> <span class="nav-text">MAC旁路认证配置思路</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#MAC认证原理"><span class="nav-number">1.</span> <span class="nav-text">MAC认证原理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#MAC认证是什么？"><span class="nav-number">1.1.</span> <span class="nav-text">MAC认证是什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MAC认证的特点："><span class="nav-number">1.2.</span> <span class="nav-text">MAC认证的特点：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MAC认证应用场景："><span class="nav-number">1.3.</span> <span class="nav-text">MAC认证应用场景：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#用户名形式："><span class="nav-number">1.4.</span> <span class="nav-text">用户名形式：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MAC认证流程："><span class="nav-number">1.5.</span> <span class="nav-text">MAC认证流程：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#终端主动注销下线流程："><span class="nav-number">1.6.</span> <span class="nav-text">终端主动注销下线流程：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#MAC旁路认证原理"><span class="nav-number">2.</span> <span class="nav-text">MAC旁路认证原理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是MAC旁路认证？"><span class="nav-number">2.1.</span> <span class="nav-text">什么是MAC旁路认证？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MAC旁路应用场景："><span class="nav-number">2.2.</span> <span class="nav-text">MAC旁路应用场景：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MAC旁路认证原理："><span class="nav-number">2.3.</span> <span class="nav-text">MAC旁路认证原理：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#MAC认证和MAC旁路认证对比"><span class="nav-number">3.</span> <span class="nav-text">MAC认证和MAC旁路认证对比</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#MAC认证与MAC旁路认证有什么区别："><span class="nav-number">3.1.</span> <span class="nav-text">MAC认证与MAC旁路认证有什么区别：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MAC旁路认证和MAC认证对应的业务类型是否一样？"><span class="nav-number">3.2.</span> <span class="nav-text">MAC旁路认证和MAC认证对应的业务类型是否一样？</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#MAC认证配置思路"><span class="nav-number">4.</span> <span class="nav-text">MAC认证配置思路</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#MAC旁路认证配置思路"><span class="nav-number">5.</span> <span class="nav-text">MAC旁路认证配置思路</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#MAC认证配置示例"><span class="nav-number">6.</span> <span class="nav-text">MAC认证配置示例</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#交换机部分配置："><span class="nav-number">6.1.</span> <span class="nav-text">交换机部分配置：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AC部分配置："><span class="nav-number">6.2.</span> <span class="nav-text">AC部分配置：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#检查测试："><span class="nav-number">6.3.</span> <span class="nav-text">检查测试：</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1276,7 +1307,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共 848.5k 字</span>
+  <span class="post-count">全站共 851.7k 字</span>
 </div>
 
 
