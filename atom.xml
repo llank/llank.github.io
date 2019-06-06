@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://cshihong.github.io/"/>
-  <updated>2019-06-06T01:38:39.445Z</updated>
+  <updated>2019-06-06T05:59:39.247Z</updated>
   <id>https://cshihong.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[转载]网络工程师行业的岗位认知</title>
+    <link href="https://cshihong.github.io/2019/06/06/%E8%BD%AC%E8%BD%BD-%E7%BD%91%E7%BB%9C%E5%B7%A5%E7%A8%8B%E5%B8%88%E8%A1%8C%E4%B8%9A%E7%9A%84%E5%B2%97%E4%BD%8D%E8%AE%A4%E7%9F%A5/"/>
+    <id>https://cshihong.github.io/2019/06/06/转载-网络工程师行业的岗位认知/</id>
+    <published>2019-06-06T05:25:54.000Z</published>
+    <updated>2019-06-06T05:59:39.247Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;hr&gt;
+&lt;blockquote&gt;
+&lt;p&gt;本文转载至：红茶三杯：&lt;a href=&quot;http://ccietea.com/Folder_GetStart/03.htm&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;网络工程师行业的岗位认知&lt;/a&gt;  &lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="职业发展" scheme="https://cshihong.github.io/categories/%E8%81%8C%E4%B8%9A%E5%8F%91%E5%B1%95/"/>
+    
+    
+      <category term="职业发展" scheme="https://cshihong.github.io/tags/%E8%81%8C%E4%B8%9A%E5%8F%91%E5%B1%95/"/>
+    
+  </entry>
   
   <entry>
     <title>应用行为控制技术</title>
@@ -527,34 +555,6 @@
       <category term="网络攻击" scheme="https://cshihong.github.io/tags/%E7%BD%91%E7%BB%9C%E6%94%BB%E5%87%BB/"/>
     
       <category term="DDoS" scheme="https://cshihong.github.io/tags/DDoS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>SSL VPN技术原理</title>
-    <link href="https://cshihong.github.io/2019/05/11/SSL-VPN%E6%8A%80%E6%9C%AF%E5%8E%9F%E7%90%86/"/>
-    <id>https://cshihong.github.io/2019/05/11/SSL-VPN技术原理/</id>
-    <published>2019-05-11T06:39:46.000Z</published>
-    <updated>2019-05-11T09:01:29.908Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;SSL详解&quot;&gt;&lt;a href=&quot;#SSL详解&quot; class=&quot;headerlink&quot; title=&quot;SSL详解&quot;&gt;&lt;/a&gt;SSL详解&lt;/h1&gt;&lt;p&gt;SSL
-        
-      
-    
-    </summary>
-    
-      <category term="网络安全" scheme="https://cshihong.github.io/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
-    
-    
-      <category term="VPN" scheme="https://cshihong.github.io/tags/VPN/"/>
-    
-      <category term="SSL VPN" scheme="https://cshihong.github.io/tags/SSL-VPN/"/>
     
   </entry>
   
