@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://cshihong.github.io/"/>
-  <updated>2019-07-27T01:55:27.482Z</updated>
+  <updated>2019-08-18T06:06:37.540Z</updated>
   <id>https://cshihong.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>防火墙双机热备升级步骤</title>
+    <link href="https://cshihong.github.io/2019/08/18/%E9%98%B2%E7%81%AB%E5%A2%99%E5%8F%8C%E6%9C%BA%E7%83%AD%E5%A4%87%E5%8D%87%E7%BA%A7%E6%AD%A5%E9%AA%A4/"/>
+    <id>https://cshihong.github.io/2019/08/18/防火墙双机热备升级步骤/</id>
+    <published>2019-08-18T03:13:01.000Z</published>
+    <updated>2019-08-18T06:06:37.540Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;防火墙上下VRRP双机热备在不中断业务的情况下升级设备过程：&quot;&gt;&lt;a href=&quot;#防火墙上下VRRP双机热备在不中断业务的情况下升级设备过程：&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="网络安全" scheme="https://cshihong.github.io/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
+    
+    
+      <category term="防火墙" scheme="https://cshihong.github.io/tags/%E9%98%B2%E7%81%AB%E5%A2%99/"/>
+    
+      <category term="双机热备" scheme="https://cshihong.github.io/tags/%E5%8F%8C%E6%9C%BA%E7%83%AD%E5%A4%87/"/>
+    
+  </entry>
   
   <entry>
     <title>Linux对大于2T的磁盘分区方法及创建逻辑卷LVM</title>
@@ -510,37 +538,6 @@
 &lt;p&gt;网络层攻击：TCP、UDP类攻击&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;网络层攻击可参考：&lt;a
-        
-      
-    
-    </summary>
-    
-      <category term="网络安全" scheme="https://cshihong.github.io/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
-    
-    
-      <category term="网络攻击" scheme="https://cshihong.github.io/tags/%E7%BD%91%E7%BB%9C%E6%94%BB%E5%87%BB/"/>
-    
-      <category term="DDoS" scheme="https://cshihong.github.io/tags/DDoS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>网络层(TCP/UDP)攻击与防御原理</title>
-    <link href="https://cshihong.github.io/2019/05/14/%E7%BD%91%E7%BB%9C%E5%B1%82-TCP-UDP-%E6%94%BB%E5%87%BB%E4%B8%8E%E9%98%B2%E5%BE%A1%E5%8E%9F%E7%90%86/"/>
-    <id>https://cshihong.github.io/2019/05/14/网络层-TCP-UDP-攻击与防御原理/</id>
-    <published>2019-05-14T14:49:08.000Z</published>
-    <updated>2019-05-16T08:43:04.756Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;hr&gt;
-&lt;p&gt;应用层攻击 ：HTTP、DNS、FTP等&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;应用层攻击可参考：&lt;strong&gt;&lt;a
         
       
     
