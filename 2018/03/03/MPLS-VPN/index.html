@@ -145,7 +145,7 @@
 <meta property="og:image" content="https://cshihong.github.io/2018/03/03/MPLS-VPN/VPN-IPv4.png">
 <meta property="og:image" content="https://cshihong.github.io/2018/03/03/MPLS-VPN/CE2-CE2.png">
 <meta property="og:image" content="https://cshihong.github.io/2018/03/03/MPLS-VPN/VPN转发报文过程.png">
-<meta property="og:updated_time" content="2018-03-03T03:22:54.103Z">
+<meta property="og:updated_time" content="2019-08-25T01:50:50.119Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MPLS VPN">
 <meta name="twitter:description" content="BGP/MPLS IP VPN简介BGP/MPLS IP VPN是一种L3VPN（Layer 3 Virtual Private Network）。它使用BGP（Border Gateway Protocol）在服务提供商骨干网上发布VPN路由，使用MPLS（Multiprotocol Label Switch）在服务提供商骨干网上转发VPN报文。这里的IP是指VPN承载的是IP（Internet">
@@ -469,12 +469,24 @@
                 
               
 
-              <time title="创建时间：2018-03-03 08:56:15 / 修改时间：11:22:54" itemprop="dateCreated datePublished" datetime="2018-03-03T08:56:15+08:00">2018-03-03</time>
+              <time title="创建时间：2018-03-03 08:56:15" itemprop="dateCreated datePublished" datetime="2018-03-03T08:56:15+08:00">2018-03-03</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-08-25 09:50:50" itemprop="dateModified" datetime="2019-08-25T09:50:50+08:00">2019-08-25</time>
               
             
           </span>
@@ -514,7 +526,7 @@
             <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
 			<span class="post-meta-divider">|</span>
-			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 5,868</span>
+			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 5,877</span>
 			<span class="post-meta-item-text">|</span>
 			<span title="post.min2read"><span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span>阅读时长： 22</span>
 
@@ -764,6 +776,11 @@
 </li>
 </ol>
 <h1 id="MPLS-IP-VPN配置命令行"><a href="#MPLS-IP-VPN配置命令行" class="headerlink" title="MPLS IP VPN配置命令行"></a>MPLS IP VPN配置命令行</h1><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">apply-label per-instance</span><br><span class="line"><span class="comment">//配置当前VPN实例地址族下所有发往对端PE的路由都使用同一个标签值。</span></span><br><span class="line">apply-label per-nexthop</span><br><span class="line"><span class="comment">//使能ASBR按下一跳为VPNv4路由分标签。</span></span><br><span class="line">apply-label per-route</span><br><span class="line"><span class="comment">//使能每路由每标签的标签分配方式，即配置当前VPN实例地址</span></span><br><span class="line"><span class="comment">//族下的所有发往对端PE的每条路由使用单独的标签值。</span></span><br><span class="line"><span class="comment">//缺省情况下，同一VPN实例IPv4地址族下所有发往对端PE的路由都使用同一个标签值。</span></span><br><span class="line">display ip vpn-instance</span><br><span class="line"><span class="comment">//查看VPN实例的配置信息。</span></span><br><span class="line">display ip vpn-instance <span class="keyword">import</span>-vt</span><br><span class="line"><span class="comment">//显示所有具备指定入口vpn-target属性的VPN实例。</span></span><br><span class="line">display interface tunnel</span><br><span class="line"><span class="comment">//查看Tunnel接口的所有信息。</span></span><br><span class="line">display tunnel-info</span><br><span class="line"><span class="comment">//查看隧道信息。</span></span><br><span class="line">ingress-lsp trigger</span><br><span class="line"><span class="comment">//配置基于路由策略为BGP标签路由创建Ingress LSP的功能。</span></span><br><span class="line">ip binding vpn-instance</span><br><span class="line"><span class="comment">//将PE上的接口与VPN实例绑定。</span></span><br><span class="line"><span class="comment">//配置接口与VPN实例绑定后，或取消接口与VPN实例的绑定，</span></span><br><span class="line"><span class="comment">//都会清除该接口的IP地址、三层特性和IP相关的路由协议，如果需要应重新配置。</span></span><br><span class="line">ip vpn-instance</span><br><span class="line"><span class="comment">//创建VPN实例，并进入VPN实例视图。</span></span><br><span class="line">peer soo</span><br><span class="line"><span class="comment">//为BGP VPN实例下的EBGP对等体配置Site-of-Origin（SoO）。</span></span><br><span class="line">peer substitute-as</span><br><span class="line"><span class="comment">//使能AS号替换功能，即用本地AS号替换AS_Path属性中指定对等体的AS号。</span></span><br><span class="line">route-distinguisher</span><br><span class="line"><span class="comment">//为VPN实例地址族配置路由标识RD（Route Distinguisher）。</span></span><br><span class="line">traffic-statistics enable</span><br><span class="line"><span class="comment">//使能基于VPN实例的流量统计功能。</span></span><br><span class="line">vpn-target</span><br><span class="line"><span class="comment">//配置VPN实例地址族入方向或出方向的VPN-Target扩展团体属性。</span></span><br></pre></td></tr></table></figure>
+<hr>
+<blockquote>
+<p>参考资料：华为HedEx文档</p>
+</blockquote>
+<hr>
 
       
     </div>
@@ -1005,7 +1022,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">224</span>
+                    <span class="site-state-item-count">227</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1293,7 +1310,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">109</span>
+                      
+                    
+                    <span class="site-state-item-count">110</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1461,7 +1480,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共 882.3k 字</span>
+  <span class="post-count">全站共 897.1k 字</span>
 </div>
 
 

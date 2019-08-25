@@ -142,7 +142,7 @@
 <meta property="og:description" content="端口安全简介：端口安全（Port Security）通过将接口学习到的动态MAC地址转换为安全MAC地址（包括安全动态MAC和Sticky MAC），阻止除安全MAC和静态MAC之外的主机通过本接口和设备通信，从而增强设备的安全性。 原理描述：安全MAC地址分类：   类型 定义 特点     安全动态MAC地址 使能端口安全而未使能Sticky MAC功能时转换的MAC地址。 设备重启后表项会丢">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://cshihong.github.io/2017/11/16/端口安全和端口隔离/端口安全.png">
-<meta property="og:updated_time" content="2019-05-17T06:29:14.294Z">
+<meta property="og:updated_time" content="2019-08-25T01:42:09.223Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="端口安全和端口隔离">
 <meta name="twitter:description" content="端口安全简介：端口安全（Port Security）通过将接口学习到的动态MAC地址转换为安全MAC地址（包括安全动态MAC和Sticky MAC），阻止除安全MAC和静态MAC之外的主机通过本接口和设备通信，从而增强设备的安全性。 原理描述：安全MAC地址分类：   类型 定义 特点     安全动态MAC地址 使能端口安全而未使能Sticky MAC功能时转换的MAC地址。 设备重启后表项会丢">
@@ -483,7 +483,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-05-17 14:29:14" itemprop="dateModified" datetime="2019-05-17T14:29:14+08:00">2019-05-17</time>
+                <time title="修改时间：2019-08-25 09:42:09" itemprop="dateModified" datetime="2019-08-25T09:42:09+08:00">2019-08-25</time>
               
             
           </span>
@@ -523,7 +523,7 @@
             <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
 			<span class="post-meta-divider">|</span>
-			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 1,603</span>
+			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 1,612</span>
 			<span class="post-meta-item-text">|</span>
 			<span title="post.min2read"><span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span>阅读时长： 6</span>
 
@@ -631,6 +631,11 @@
 <p><center>图：端口安全<center></center></center></p>
 <h2 id="配置命令：-1"><a href="#配置命令：-1" class="headerlink" title="配置命令："></a>配置命令：</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">[SW]dis current-configuration </span><br><span class="line">#</span><br><span class="line">sysname SW</span><br><span class="line">#</span><br><span class="line">port-isolate mode all</span><br><span class="line"><span class="comment">//配置端口隔离模式为二层三层都隔离</span></span><br><span class="line">#</span><br><span class="line">interface GigabitEthernet0/<span class="number">0</span>/<span class="number">1</span></span><br><span class="line"> port-security enable<span class="comment">//使能端口安全</span></span><br><span class="line"> port-security protect-action shutdown</span><br><span class="line"> <span class="comment">//配置端口安全保护动作为 shutdown</span></span><br><span class="line"> port-security max-mac-num <span class="number">3</span></span><br><span class="line">  <span class="comment">//配置端口最大MAC地址数量为3个</span></span><br><span class="line"> port-security mac-address sticky</span><br><span class="line"> <span class="comment">//配置MAC地址模式为 sticky</span></span><br><span class="line"> port-isolate enable group <span class="number">1</span></span><br><span class="line">  <span class="comment">//端口隔离组1</span></span><br><span class="line">#</span><br><span class="line">interface GigabitEthernet0/<span class="number">0</span>/<span class="number">2</span></span><br><span class="line"> port-security enable</span><br><span class="line"> port-security protect-action shutdown</span><br><span class="line"> port-security max-mac-num <span class="number">3</span></span><br><span class="line"> port-security mac-address sticky</span><br><span class="line"> port-isolate enable group <span class="number">1</span></span><br><span class="line">#</span><br><span class="line"> interface GigabitEthernet0/<span class="number">0</span>/<span class="number">3</span></span><br><span class="line"> port-security enable</span><br><span class="line"> port-security protect-action shutdown</span><br><span class="line"> port-security max-mac-num <span class="number">3</span></span><br><span class="line"> port-security mac-address sticky</span><br><span class="line"> port-isolate enable group <span class="number">1</span></span><br><span class="line">#</span><br></pre></td></tr></table></figure>
 <p>注：配置多个端口时，可以先配置一个端口组，将需要配置的端口添加进端口组，然后就可同时配置多个端口。</p>
+<hr>
+<blockquote>
+<p>参考文档：华为HedEx文档</p>
+</blockquote>
+<hr>
 
       
     </div>
@@ -872,7 +877,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">224</span>
+                    <span class="site-state-item-count">227</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1160,7 +1165,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">109</span>
+                      
+                    
+                    <span class="site-state-item-count">110</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1328,7 +1335,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共 882.3k 字</span>
+  <span class="post-count">全站共 897.1k 字</span>
 </div>
 
 

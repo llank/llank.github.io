@@ -153,7 +153,7 @@
 <meta property="og:image" content="https://cshihong.github.io/2018/01/29/IPv6基础/ICPMv6.png">
 <meta property="og:image" content="https://cshihong.github.io/2018/01/29/IPv6基础/ICMPv6.png">
 <meta property="og:image" content="https://cshihong.github.io/2018/01/29/IPv6基础/PMTU原理.png">
-<meta property="og:updated_time" content="2018-02-07T17:49:39.286Z">
+<meta property="og:updated_time" content="2019-08-25T01:51:56.792Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="IPv6基础">
 <meta name="twitter:description" content="IPv6简介IPv6（Internet Protocol Version 6）是网络层协议的第二代标准协议，也被称为IPng（IP Next Generation）。它是Internet工程任务组IETF（Internet Engineering Task Force）设计的一套规范，是IPv4（Internet Protocol Version 4）的升级版本。 目的：IPv4协议是目前广泛部署">
@@ -494,7 +494,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-02-08 01:49:39" itemprop="dateModified" datetime="2018-02-08T01:49:39+08:00">2018-02-08</time>
+                <time title="修改时间：2019-08-25 09:51:56" itemprop="dateModified" datetime="2019-08-25T09:51:56+08:00">2019-08-25</time>
               
             
           </span>
@@ -534,7 +534,7 @@
             <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
 			<span class="post-meta-divider">|</span>
-			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 7,804</span>
+			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 7,813</span>
 			<span class="post-meta-item-text">|</span>
 			<span title="post.min2read"><span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span>阅读时长： 28</span>
 
@@ -854,6 +854,11 @@
 <p><center>图：PMTU原理<center></center></center></p>
 <p>整条传输路径需要通过4条链路，每条链路的MTU分别是1500、1500、1400、1300，当源节点发送一个分片报文的时候，首先按照PMTU为1500进行分片并发送分片报文，当到达MTU为1400的出接口时，设备返回Packet Too Big错误，同时携带MTU值为1400的信息。源节点接收到之后会将报文重新按照PMTU为1400进行分片并再次发送一个分片报文，当分片报文到达MTU值为1300的出接口时，同样返回Packet Too Big错误，携带MTU值为1300的信息。之后源节点重新按照PMTU为1300进行分片并发送分片报文，最终到达目的地，这样就找到了该路径的PMTU。</p>
 <p>由于IPv6要求链路层所支持的最小MTU为1280，所以PMTU的值必须大于1280。建议您用1500作为链路的PMTU值。</p>
+<hr>
+<blockquote>
+<p>参考资料：华为HedEx文档</p>
+</blockquote>
+<hr>
 
       
     </div>
@@ -1097,7 +1102,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">224</span>
+                    <span class="site-state-item-count">227</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1385,7 +1390,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">109</span>
+                      
+                    
+                    <span class="site-state-item-count">110</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1553,7 +1560,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共 882.3k 字</span>
+  <span class="post-count">全站共 897.1k 字</span>
 </div>
 
 

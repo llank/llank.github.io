@@ -144,7 +144,7 @@
 <meta property="og:image" content="https://cshihong.github.io/2017/11/05/VLAN命令行配置/vlan配置逻辑干洗.png">
 <meta property="og:image" content="https://cshihong.github.io/2017/11/05/VLAN命令行配置/单臂路由.png">
 <meta property="og:image" content="https://cshihong.github.io/2017/11/05/VLAN命令行配置/三层交换.png">
-<meta property="og:updated_time" content="2017-11-14T09:15:34.628Z">
+<meta property="og:updated_time" content="2019-08-25T01:55:22.589Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="VLAN命令行配置">
 <meta name="twitter:description" content="VLNA配置任务概览各配置任务间的逻辑关系： VLAN配置任务概览：   配置任务 描述     划分VLAN 创建并划分VLAN，将没有二层互通需求的用户进行隔离，可增强网络的安全性、减少广播流量，同时也减少了广播风暴的产生。   配置通过VLANIF实现VLAN间互访 划分VLAN后，不同VLAN的用户不能直接互通。不同VLAN的用户如果有互通需求，可通过配置VLANIF接口实现VLAN间的三">
@@ -485,7 +485,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2017-11-14 17:15:34" itemprop="dateModified" datetime="2017-11-14T17:15:34+08:00">2017-11-14</time>
+                <time title="修改时间：2019-08-25 09:55:22" itemprop="dateModified" datetime="2019-08-25T09:55:22+08:00">2019-08-25</time>
               
             
           </span>
@@ -525,7 +525,7 @@
             <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
 			<span class="post-meta-divider">|</span>
-			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 1,231</span>
+			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 1,240</span>
 			<span class="post-meta-item-text">|</span>
 			<span title="post.min2read"><span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span>阅读时长： 5</span>
 
@@ -637,6 +637,11 @@
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//配置命令行c</span></span><br><span class="line">interface vlanif <span class="number">10</span> <span class="comment">//进入接口视图</span></span><br><span class="line">arp-proxy inner-sub-vlan-procy enable</span><br><span class="line"><span class="comment">//使能VLAN内Proxy ARP</span></span><br></pre></td></tr></table></figure>
 <h2 id="配置VLAN间Procy-ARP："><a href="#配置VLAN间Procy-ARP：" class="headerlink" title="配置VLAN间Procy ARP："></a>配置VLAN间Procy ARP：</h2><p>当属于同一网段但属于不同VLAN的用户间要实现三层互通时，可以在关联了VLAN的接口上使能VLAN间Proxy  ARP功能。例如在Super-VLAN对应的VLANIF接口上使能VLAN间Proxy ARP功能，实现Sub-VLAN间用户互通。</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//配置命令行c</span></span><br><span class="line">interface vlanif <span class="number">10</span> <span class="comment">//进入接口视图</span></span><br><span class="line">arp-proxy inter-sub-vlan-procy enable</span><br><span class="line"><span class="comment">//使能VLAN内Proxy ARP</span></span><br></pre></td></tr></table></figure>
+<hr>
+<blockquote>
+<p>参考资料：华为HedEx文档</p>
+</blockquote>
+<hr>
 
       
     </div>
@@ -880,7 +885,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">224</span>
+                    <span class="site-state-item-count">227</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1168,7 +1173,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">109</span>
+                      
+                    
+                    <span class="site-state-item-count">110</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1336,7 +1343,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共 882.3k 字</span>
+  <span class="post-count">全站共 897.1k 字</span>
 </div>
 
 

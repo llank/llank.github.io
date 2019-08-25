@@ -145,7 +145,7 @@
 <meta property="og:image" content="https://cshihong.github.io/2018/02/13/组播侦听者发现协议MLD/MLD查询器选举.png">
 <meta property="og:image" content="https://cshihong.github.io/2018/02/13/组播侦听者发现协议MLD/普遍组查询.png">
 <meta property="og:image" content="https://cshihong.github.io/2018/02/13/组播侦听者发现协议MLD/v2报文格式.png">
-<meta property="og:updated_time" content="2018-02-18T08:29:11.601Z">
+<meta property="og:updated_time" content="2019-08-25T01:51:12.063Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="组播侦听者发现协议MLD">
 <meta name="twitter:description" content="MLD简介组播侦听者发现协议MLD（Multicast Listener Discovery）是负责IPv6组播成员管理的协议，用来在IPv6成员主机和与其直接相邻的组播路由器之间建立和维护组播组成员关系。MLD通过在成员主机和组播路由器之间交互MLD报文实现组成员管理功能，MLD报文封装在IPv6报文中。 目的：出现于IPv4时代的组播技术，有效解决了单点发送、多点接收的问题，实现了网络中点到多">
@@ -486,7 +486,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-02-18 16:29:11" itemprop="dateModified" datetime="2018-02-18T16:29:11+08:00">2018-02-18</time>
+                <time title="修改时间：2019-08-25 09:51:12" itemprop="dateModified" datetime="2019-08-25T09:51:12+08:00">2019-08-25</time>
               
             
           </span>
@@ -526,7 +526,7 @@
             <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
 			<span class="post-meta-divider">|</span>
-			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 3,495</span>
+			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 3,504</span>
 			<span class="post-meta-item-text">|</span>
 			<span title="post.min2read"><span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span>阅读时长： 13</span>
 
@@ -667,6 +667,11 @@
 <h2 id="MLD-SSM-Mapping："><a href="#MLD-SSM-Mapping：" class="headerlink" title="MLD SSM Mapping："></a>MLD SSM Mapping：</h2><p>SSM（Source-Specific Multicast）称为指定源组播，要求路由器能了解成员主机加入组播组时所指定的组播源。如果成员主机上运行MLDv2，可以在MLDv2报告报文中直接指定组播源地址。但是某些情况下，成员主机只能运行MLDv1，为了使其也能够使用SSM服务，组播路由器上需要提供MLD SSM Mapping功能。</p>
 <p>MLD SSM Mapping的机制是：通过在组播路由器上静态配置SSM地址的映射规则，将MLDv1报告报文中的（*，G）信息转化为对应的（G，INCLUDE，（S1，S2…））信息，以提供SSM组播服务。</p>
 <h1 id="MLD命令行配置"><a href="#MLD命令行配置" class="headerlink" title="MLD命令行配置"></a>MLD命令行配置</h1><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">mld enable</span><br><span class="line"><span class="comment">//在接口上使能MLD功能。</span></span><br><span class="line">mld lastlistener-queryinterval <span class="number">1</span></span><br><span class="line"><span class="comment">//在接口上配置MLD查询器在收到成员主机发送的离开报文时，</span></span><br><span class="line"><span class="comment">//发送特定组\源组查询报文的时间间隔。</span></span><br><span class="line">mld limit</span><br><span class="line"><span class="comment">//当前接口可以维护MLD组成员关系的最大个数。</span></span><br><span class="line">mld max-response-time</span><br><span class="line"><span class="comment">//接口上配置MLD普遍组查询报文的最大响应时间。</span></span><br><span class="line">mld prompt-leave</span><br><span class="line"><span class="comment">//在接口上配置组播组成员快速离开功能</span></span><br><span class="line">mld require-router-alert</span><br><span class="line"><span class="comment">//配置丢弃不包含Router-Alert选项的MLD报文</span></span><br><span class="line">mld send-router-alert</span><br><span class="line"><span class="comment">//设置接口上发送的MLD报文在IPv6报文头里包含Router-Alert选项。</span></span><br><span class="line"><span class="comment">//缺省情况下，设备接口上发送包含Router-Alert选项的MLD报文。</span></span><br><span class="line">mld ssm-mapping enable</span><br><span class="line"><span class="comment">//在接口上使能MLD SSM Mapping功能。</span></span><br><span class="line">mld timer query <span class="number">125</span></span><br><span class="line"><span class="comment">//配置MLD普遍组查询报文的发送时间间隔。</span></span><br></pre></td></tr></table></figure>
+<hr>
+<blockquote>
+<p>参考资料：华为HedEx文档</p>
+</blockquote>
+<hr>
 
       
     </div>
@@ -912,7 +917,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">224</span>
+                    <span class="site-state-item-count">227</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1200,7 +1205,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">109</span>
+                      
+                    
+                    <span class="site-state-item-count">110</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1368,7 +1375,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共 882.3k 字</span>
+  <span class="post-count">全站共 897.1k 字</span>
 </div>
 
 

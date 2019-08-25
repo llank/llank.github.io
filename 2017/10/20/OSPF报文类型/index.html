@@ -158,7 +158,7 @@
 <meta property="og:image" content="https://cshihong.github.io/2017/10/20/OSPF报文类型/2累.png">
 <meta property="og:image" content="https://cshihong.github.io/2017/10/20/OSPF报文类型/3类.png">
 <meta property="og:image" content="https://cshihong.github.io/2017/10/20/OSPF报文类型/4类.png">
-<meta property="og:updated_time" content="2017-10-22T04:06:25.423Z">
+<meta property="og:updated_time" content="2019-08-25T01:55:44.034Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="OSPF报文类型">
 <meta name="twitter:description" content="OSPF报文头格式OSPF用IP报文直接封装协议报文，协议号为89。OSPF分为5种报文，Hello报文、DD报文、LSR报文、LSU报文和LSAck报文。 OSPF这五种报文具有相同的报文头格式，长度为24字节。 报文格式： 字段解释：   Version 1字节 版本，OSPF的版本号。对于OSPFv2来说，其值为2。     字段 长度 含义   Type 1字节 类型，OSPF报文的类型，">
@@ -499,7 +499,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2017-10-22 12:06:25" itemprop="dateModified" datetime="2017-10-22T12:06:25+08:00">2017-10-22</time>
+                <time title="修改时间：2019-08-25 09:55:44" itemprop="dateModified" datetime="2019-08-25T09:55:44+08:00">2019-08-25</time>
               
             
           </span>
@@ -539,7 +539,7 @@
             <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
 			<span class="post-meta-divider">|</span>
-			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 3,036</span>
+			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 3,045</span>
 			<span class="post-meta-item-text">|</span>
 			<span title="post.min2read"><span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span>阅读时长： 13</span>
 
@@ -1048,6 +1048,11 @@
 </table>
 <p><strong>Type5的LSA可以用来通告缺省路由，此时Link State ID和Network Mask都设置为0.0.0.0。</strong> </p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;AR3&gt;dis ospf lsdb ase </span><br><span class="line"></span><br><span class="line">	 OSPF Process <span class="number">1</span> with Router ID <span class="number">10.0</span><span class="number">.13</span><span class="number">.3</span></span><br><span class="line">		 Link State Database</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  Type      : External</span><br><span class="line">  Ls id     : <span class="number">192.168</span><span class="number">.10</span><span class="number">.0</span></span><br><span class="line">  Adv rtr   : <span class="number">10.0</span><span class="number">.4</span><span class="number">.4</span>  </span><br><span class="line">  Ls age    : <span class="number">766</span> </span><br><span class="line">  Len       : <span class="number">36</span> </span><br><span class="line">  Options   :  E  </span><br><span class="line">  seq#      : <span class="number">80000005</span> </span><br><span class="line">  chksum    : <span class="number">0x48fe</span></span><br><span class="line">  Net mask  : <span class="number">255.255</span><span class="number">.255</span><span class="number">.0</span> </span><br><span class="line">  TOS <span class="number">0</span>  Metric: <span class="number">1</span> </span><br><span class="line">  E type    : <span class="number">2</span></span><br><span class="line">  Forwarding Address : <span class="number">0.0</span><span class="number">.0</span><span class="number">.0</span> </span><br><span class="line">  Tag       : <span class="number">1</span> </span><br><span class="line">  Priority  : Low</span><br></pre></td></tr></table></figure>
+<hr>
+<blockquote>
+<p>参考资料：华为HedEx文档</p>
+</blockquote>
+<hr>
 
       
     </div>
@@ -1291,7 +1296,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">224</span>
+                    <span class="site-state-item-count">227</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1579,7 +1584,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">109</span>
+                      
+                    
+                    <span class="site-state-item-count">110</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1747,7 +1754,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共 882.3k 字</span>
+  <span class="post-count">全站共 897.1k 字</span>
 </div>
 
 

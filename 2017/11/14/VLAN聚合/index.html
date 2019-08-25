@@ -145,7 +145,7 @@
 <meta property="og:image" content="https://cshihong.github.io/2017/11/14/VLAN聚合/arp实现不同Sub-VLAN间的三层通信.gif">
 <meta property="og:image" content="https://cshihong.github.io/2017/11/14/VLAN聚合/二层通信.gif">
 <meta property="og:image" content="https://cshihong.github.io/2017/11/14/VLAN聚合/聚合VLAN配置.png">
-<meta property="og:updated_time" content="2017-11-14T08:07:30.127Z">
+<meta property="og:updated_time" content="2019-08-25T01:55:32.524Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="VLAN聚合">
 <meta name="twitter:description" content="VLAN聚合简介：VLAN聚合（VLAN Aggregation，也称Super VLAN）指在一个物理网络内，用多个VLAN（称为Sub-VLAN）隔离广播域，并将这些Sub-VLAN聚合成一个逻辑的VLAN（称为Super-VLAN），这些Sub-VLAN使用同一个IP子网和缺省网关。 通过引入Super-VLAN和Sub-VLAN的概念，使每个Sub-VLAN对应一个广播域，并让多个Sub-">
@@ -469,12 +469,24 @@
                 
               
 
-              <time title="创建时间：2017-11-14 15:08:00 / 修改时间：16:07:30" itemprop="dateCreated datePublished" datetime="2017-11-14T15:08:00+08:00">2017-11-14</time>
+              <time title="创建时间：2017-11-14 15:08:00" itemprop="dateCreated datePublished" datetime="2017-11-14T15:08:00+08:00">2017-11-14</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-08-25 09:55:32" itemprop="dateModified" datetime="2019-08-25T09:55:32+08:00">2019-08-25</time>
               
             
           </span>
@@ -514,7 +526,7 @@
             <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
 			<span class="post-meta-divider">|</span>
-			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 2,421</span>
+			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 2,430</span>
 			<span class="post-meta-item-text">|</span>
 			<span title="post.min2read"><span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span>阅读时长： 9</span>
 
@@ -596,6 +608,11 @@
 <p><img src="/2017/11/14/VLAN聚合/聚合VLAN配置.png" alt="聚合VLAN配置"></p>
 <p><center>图：VLAN聚合配置拓扑<center></center></center></p>
 <h3 id="配置参数："><a href="#配置参数：" class="headerlink" title="配置参数："></a>配置参数：</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">[SW]dis current-configuration </span><br><span class="line">#</span><br><span class="line">sysname SW</span><br><span class="line">#</span><br><span class="line">vlan batch <span class="number">10</span> <span class="number">20</span> <span class="number">100</span></span><br><span class="line">  <span class="comment">//批量创建VLAN</span></span><br><span class="line">#</span><br><span class="line">vlan <span class="number">100</span></span><br><span class="line"> aggregate-vlan<span class="comment">//创建聚合VLAN</span></span><br><span class="line"> access-vlan <span class="number">10</span> <span class="number">20</span><span class="comment">//将valn10 20 添加进聚合和VLAN</span></span><br><span class="line">#</span><br><span class="line">interface Vlanif100</span><br><span class="line"> ip address <span class="number">10.0</span><span class="number">.100</span><span class="number">.254</span> <span class="number">255.255</span><span class="number">.255</span><span class="number">.0</span></span><br><span class="line"> arp-proxy inter-sub-vlan-proxy enable</span><br><span class="line"> <span class="comment">//开启VLAN间ARP代理，实现VLAN间通信</span></span><br><span class="line">#</span><br><span class="line">interface GigabitEthernet0/<span class="number">0</span>/<span class="number">1</span></span><br><span class="line"> port link-type access</span><br><span class="line"> port <span class="keyword">default</span> vlan <span class="number">10</span></span><br><span class="line">#</span><br><span class="line">interface GigabitEthernet0/<span class="number">0</span>/<span class="number">2</span></span><br><span class="line"> port link-type access</span><br><span class="line"> port <span class="keyword">default</span> vlan <span class="number">10</span></span><br><span class="line">#</span><br><span class="line">interface GigabitEthernet0/<span class="number">0</span>/<span class="number">3</span></span><br><span class="line"> port link-type access</span><br><span class="line"> port <span class="keyword">default</span> vlan <span class="number">20</span></span><br><span class="line">#</span><br><span class="line">interface GigabitEthernet0/<span class="number">0</span>/<span class="number">4</span></span><br><span class="line"> port link-type access</span><br><span class="line"> port <span class="keyword">default</span> vlan <span class="number">20</span></span><br><span class="line">#</span><br></pre></td></tr></table></figure>
+<hr>
+<blockquote>
+<p>参考资料：华为HedEx文档</p>
+</blockquote>
+<hr>
 
       
     </div>
@@ -839,7 +856,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">224</span>
+                    <span class="site-state-item-count">227</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1127,7 +1144,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">109</span>
+                      
+                    
+                    <span class="site-state-item-count">110</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1295,7 +1314,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共 882.3k 字</span>
+  <span class="post-count">全站共 897.1k 字</span>
 </div>
 
 

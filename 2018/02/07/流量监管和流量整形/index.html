@@ -150,7 +150,7 @@
 <meta property="og:image" content="https://cshihong.github.io/2018/02/07/流量监管和流量整形/流策略状态.png">
 <meta property="og:image" content="https://cshihong.github.io/2018/02/07/流量监管和流量整形/队列模板.png">
 <meta property="og:image" content="https://cshihong.github.io/2018/02/07/流量监管和流量整形/接口队列应用状况.png">
-<meta property="og:updated_time" content="2018-02-07T17:12:18.461Z">
+<meta property="og:updated_time" content="2019-08-25T01:52:08.785Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="流量监管和流量整形">
 <meta name="twitter:description" content="流量监管和流量整形概述流量监管和流量整形通过监督进入网络的流量速率，用来限制流量及其资源的使用，保证更好的为用户提供服务。 如果报文的发送速率大于接收速率，或者下游设备的接口速率小于上游设备的接口速率，就会引起网络拥塞。如果不限制用户发送的业务流量，大量用户不断突发的业务数据会使网络更加拥挤。为了使有限的网络资源能够更好地发挥效用，更好地为更多的用户服务，必须对用户的业务流量加以限制。 流量监管和">
@@ -491,7 +491,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-02-08 01:12:18" itemprop="dateModified" datetime="2018-02-08T01:12:18+08:00">2018-02-08</time>
+                <time title="修改时间：2019-08-25 09:52:08" itemprop="dateModified" datetime="2019-08-25T09:52:08+08:00">2019-08-25</time>
               
             
           </span>
@@ -531,7 +531,7 @@
             <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
 			<span class="post-meta-divider">|</span>
-			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 5,301</span>
+			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 5,310</span>
 			<span class="post-meta-item-text">|</span>
 			<span title="post.min2read"><span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span>阅读时长： 20</span>
 
@@ -725,16 +725,13 @@
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&lt;SW&gt;dis current-configuration </span><br><span class="line">#</span><br><span class="line">sysname SW</span><br><span class="line">#</span><br><span class="line">vlan batch <span class="number">10</span> <span class="number">20</span> <span class="number">30</span></span><br><span class="line">#</span><br><span class="line">interface GigabitEthernet0/<span class="number">0</span>/<span class="number">1</span></span><br><span class="line"> port link-type trunk</span><br><span class="line"> port trunk allow-pass vlan <span class="number">2</span> to <span class="number">4094</span></span><br><span class="line">#</span><br><span class="line">interface GigabitEthernet0/<span class="number">0</span>/<span class="number">2</span></span><br><span class="line"> port link-type access</span><br><span class="line"> port <span class="keyword">default</span> vlan <span class="number">10</span></span><br><span class="line">#</span><br><span class="line">interface GigabitEthernet0/<span class="number">0</span>/<span class="number">3</span></span><br><span class="line"> port link-type access</span><br><span class="line"> port <span class="keyword">default</span> vlan <span class="number">20</span></span><br><span class="line">#</span><br><span class="line">interface GigabitEthernet0/<span class="number">0</span>/<span class="number">4</span></span><br><span class="line"> port link-type access</span><br><span class="line"> port <span class="keyword">default</span> vlan <span class="number">30</span></span><br><span class="line">#</span><br><span class="line"><span class="keyword">return</span></span><br></pre></td></tr></table></figure>
 <h3 id="配置结果："><a href="#配置结果：" class="headerlink" title="配置结果："></a>配置结果：</h3><hr>
 <p><img src="/2018/02/07/流量监管和流量整形/流策略应用记录.png" alt="流策略应用记录"></p>
-<p><center>图：流策略应用记录<center></center></center></p>
-<hr>
-<p><img src="/2018/02/07/流量监管和流量整形/流策略状态.png" alt="流策略状态"></p>
-<p><center>图：流策略状态<center></center></center></p>
-<hr>
-<p><img src="/2018/02/07/流量监管和流量整形/队列模板.png" alt="队列模板"></p>
-<p><center>图：队列模板情况<center></center></center></p>
-<hr>
-<p><img src="/2018/02/07/流量监管和流量整形/接口队列应用状况.png" alt="接口队列应用状况"></p>
-<p><center>图：接口应用队列模板情况统计<center></center></center></p>
+<h2 id="图：流策略应用记录"><a href="#图：流策略应用记录" class="headerlink" title="图：流策略应用记录"></a><center>图：流策略应用记录<center></center></center></h2><p><img src="/2018/02/07/流量监管和流量整形/流策略状态.png" alt="流策略状态"></p>
+<h2 id="图：流策略状态"><a href="#图：流策略状态" class="headerlink" title="图：流策略状态"></a><center>图：流策略状态<center></center></center></h2><p><img src="/2018/02/07/流量监管和流量整形/队列模板.png" alt="队列模板"></p>
+<h2 id="图：队列模板情况"><a href="#图：队列模板情况" class="headerlink" title="图：队列模板情况"></a><center>图：队列模板情况<center></center></center></h2><p><img src="/2018/02/07/流量监管和流量整形/接口队列应用状况.png" alt="接口队列应用状况"></p>
+<h2 id="图：接口应用队列模板情况统计"><a href="#图：接口应用队列模板情况统计" class="headerlink" title="图：接口应用队列模板情况统计"></a><center>图：接口应用队列模板情况统计<center></center></center></h2><hr>
+<blockquote>
+<p>参考资料：华为HedEx文档</p>
+</blockquote>
 <hr>
 
       
@@ -979,7 +976,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">224</span>
+                    <span class="site-state-item-count">227</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1267,7 +1264,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">109</span>
+                      
+                    
+                    <span class="site-state-item-count">110</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1395,7 +1394,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#流量监管和流量整形概述"><span class="nav-number">1.</span> <span class="nav-text">流量监管和流量整形概述</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#流量监管："><span class="nav-number">1.1.</span> <span class="nav-text">流量监管：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#流量整形："><span class="nav-number">1.2.</span> <span class="nav-text">流量整形：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#监管和整形的区别："><span class="nav-number">1.3.</span> <span class="nav-text">监管和整形的区别：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#令牌桶技术"><span class="nav-number">2.</span> <span class="nav-text">令牌桶技术</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#单速双桶："><span class="nav-number">2.1.</span> <span class="nav-text">单速双桶：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#双速双桶："><span class="nav-number">2.2.</span> <span class="nav-text">双速双桶：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#色敏模式："><span class="nav-number">2.3.</span> <span class="nav-text">色敏模式：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#流量监管"><span class="nav-number">3.</span> <span class="nav-text">流量监管</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#流量监管的原理："><span class="nav-number">3.1.</span> <span class="nav-text">流量监管的原理：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#流量整形"><span class="nav-number">4.</span> <span class="nav-text">流量整形</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#处理流程："><span class="nav-number">4.1.</span> <span class="nav-text">处理流程：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自适应流量整形："><span class="nav-number">4.2.</span> <span class="nav-text">自适应流量整形：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#流量整形与流量监管配置"><span class="nav-number">5.</span> <span class="nav-text">流量整形与流量监管配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#流量监管和流量整形配置示例："><span class="nav-number">5.1.</span> <span class="nav-text">流量监管和流量整形配置示例：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#实验要求："><span class="nav-number">5.1.1.</span> <span class="nav-text">实验要求：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置文件："><span class="nav-number">5.1.2.</span> <span class="nav-text">配置文件：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置结果："><span class="nav-number">5.1.3.</span> <span class="nav-text">配置结果：</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#流量监管和流量整形概述"><span class="nav-number">1.</span> <span class="nav-text">流量监管和流量整形概述</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#流量监管："><span class="nav-number">1.1.</span> <span class="nav-text">流量监管：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#流量整形："><span class="nav-number">1.2.</span> <span class="nav-text">流量整形：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#监管和整形的区别："><span class="nav-number">1.3.</span> <span class="nav-text">监管和整形的区别：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#令牌桶技术"><span class="nav-number">2.</span> <span class="nav-text">令牌桶技术</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#单速双桶："><span class="nav-number">2.1.</span> <span class="nav-text">单速双桶：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#双速双桶："><span class="nav-number">2.2.</span> <span class="nav-text">双速双桶：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#色敏模式："><span class="nav-number">2.3.</span> <span class="nav-text">色敏模式：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#流量监管"><span class="nav-number">3.</span> <span class="nav-text">流量监管</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#流量监管的原理："><span class="nav-number">3.1.</span> <span class="nav-text">流量监管的原理：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#流量整形"><span class="nav-number">4.</span> <span class="nav-text">流量整形</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#处理流程："><span class="nav-number">4.1.</span> <span class="nav-text">处理流程：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自适应流量整形："><span class="nav-number">4.2.</span> <span class="nav-text">自适应流量整形：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#流量整形与流量监管配置"><span class="nav-number">5.</span> <span class="nav-text">流量整形与流量监管配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#流量监管和流量整形配置示例："><span class="nav-number">5.1.</span> <span class="nav-text">流量监管和流量整形配置示例：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#实验要求："><span class="nav-number">5.1.1.</span> <span class="nav-text">实验要求：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置文件："><span class="nav-number">5.1.2.</span> <span class="nav-text">配置文件：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置结果："><span class="nav-number">5.1.3.</span> <span class="nav-text">配置结果：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#图：流策略应用记录"><span class="nav-number">5.2.</span> <span class="nav-text">图：流策略应用记录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#图：流策略状态"><span class="nav-number">5.3.</span> <span class="nav-text">图：流策略状态</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#图：队列模板情况"><span class="nav-number">5.4.</span> <span class="nav-text">图：队列模板情况</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#图：接口应用队列模板情况统计"><span class="nav-number">5.5.</span> <span class="nav-text">图：接口应用队列模板情况统计</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1435,7 +1434,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共 882.3k 字</span>
+  <span class="post-count">全站共 897.1k 字</span>
 </div>
 
 

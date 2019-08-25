@@ -153,7 +153,7 @@
 <meta property="og:image" content="https://cshihong.github.io/2018/01/08/ISIS报文类型/PSNP报文格式.png">
 <meta property="og:image" content="https://cshihong.github.io/2018/01/08/ISIS报文类型/CSNP报文抓包示例.png">
 <meta property="og:image" content="https://cshihong.github.io/2018/01/08/ISIS报文类型/PSNP报文抓包.png">
-<meta property="og:updated_time" content="2018-01-09T09:43:28.659Z">
+<meta property="og:updated_time" content="2019-08-25T01:53:26.112Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ISIS报文类型">
 <meta name="twitter:description" content="ISIS的报文类型IS-IS报文有以下几种类型：HELLO PDU（Protocol Data Unit）、LSP和SNP。  Hello PDU Hello报文用于建立和维持邻居关系，也称为IIH（IS-to-IS Hello PDUs）。其中，广播网中的Level-1 IS-IS使用Level-1 LAN IIH；广播网中的Level-2 IS-IS使用Level-2 LAN IIH；非广播网">
@@ -494,7 +494,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-01-09 17:43:28" itemprop="dateModified" datetime="2018-01-09T17:43:28+08:00">2018-01-09</time>
+                <time title="修改时间：2019-08-25 09:53:26" itemprop="dateModified" datetime="2019-08-25T09:53:26+08:00">2019-08-25</time>
               
             
           </span>
@@ -534,7 +534,7 @@
             <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
 			<span class="post-meta-divider">|</span>
-			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 2,217</span>
+			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 2,226</span>
 			<span class="post-meta-item-text">|</span>
 			<span title="post.min2read"><span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span>阅读时长： 9</span>
 
@@ -749,9 +749,7 @@
 <p><center>图：P2P中IIH报文格式<center></center></center></p>
 <p>从图中可以看出，P2P IIH中的多数字段与LAN IIH相同。不同的是没有Priority和LAN ID字段，而多了一个Local Circuit<br>ID字段，表示本地链路ID。</p>
 <h2 id="IIH-抓包示例："><a href="#IIH-抓包示例：" class="headerlink" title="IIH 抓包示例："></a>IIH 抓包示例：</h2><p><img src="/2018/01/08/ISIS报文类型/LAN中IIH.png" alt="LAN中IIH"></p>
-<p><center>图：LAN网中IIH报文抓包示例<center></center></center></p>
-<hr>
-<p><img src="/2018/01/08/ISIS报文类型/P2P中IIH.png" alt="P2P中IIH"></p>
+<h2 id="图：LAN网中IIH报文抓包示例"><a href="#图：LAN网中IIH报文抓包示例" class="headerlink" title="图：LAN网中IIH报文抓包示例"></a><center>图：LAN网中IIH报文抓包示例<center></center></center></h2><p><img src="/2018/01/08/ISIS报文类型/P2P中IIH.png" alt="P2P中IIH"></p>
 <p><center>图：P2P中IIH报文抓包示例<center></center></center></p>
 <h1 id="IS-IS-LSP报文格式"><a href="#IS-IS-LSP报文格式" class="headerlink" title="IS-IS LSP报文格式"></a>IS-IS LSP报文格式</h1><p>链路状态报文LSP（Link State PDUs）用于交换链路状态信息。LSP分为两种：Level–1 LSP和Level–2 LSP。Level–1 LSP由Level-1路由器传送，Level–2 LSP由Level-2路由器传送，Level-1-2路由器则可传送以上两种LSP。</p>
 <p>两类LSP有相同的报文格式。</p>
@@ -802,10 +800,11 @@
 <p><img src="/2018/01/08/ISIS报文类型/PSNP报文格式.png" alt="PSNP报文格式"></p>
 <p><center>图：PSNP报文格式<center></center></center></p>
 <h2 id="SNP报文抓包示例："><a href="#SNP报文抓包示例：" class="headerlink" title="SNP报文抓包示例："></a>SNP报文抓包示例：</h2><p><img src="/2018/01/08/ISIS报文类型/CSNP报文抓包示例.png" alt="CSNP报文抓包示例"></p>
-<p><center>图：CSNP报文抓包示例<center></center></center></p>
-<hr>
-<p><img src="/2018/01/08/ISIS报文类型/PSNP报文抓包.png" alt="PSNP报文抓包"></p>
-<p><center>图：PSNP报文抓包示例<center></center></center></p>
+<h2 id="图：CSNP报文抓包示例"><a href="#图：CSNP报文抓包示例" class="headerlink" title="图：CSNP报文抓包示例"></a><center>图：CSNP报文抓包示例<center></center></center></h2><p><img src="/2018/01/08/ISIS报文类型/PSNP报文抓包.png" alt="PSNP报文抓包"></p>
+<h2 id="图：PSNP报文抓包示例"><a href="#图：PSNP报文抓包示例" class="headerlink" title="图：PSNP报文抓包示例"></a><center>图：PSNP报文抓包示例<center></center></center></h2><hr>
+<blockquote>
+<p>参考资料：华为HedEx文档</p>
+</blockquote>
 <hr>
 
       
@@ -1050,7 +1049,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">224</span>
+                    <span class="site-state-item-count">227</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1338,7 +1337,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">109</span>
+                      
+                    
+                    <span class="site-state-item-count">110</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1466,7 +1467,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#ISIS的报文类型"><span class="nav-number">1.</span> <span class="nav-text">ISIS的报文类型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#常见的TLV："><span class="nav-number">1.1.</span> <span class="nav-text">常见的TLV：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#IS-IS报文通用格式"><span class="nav-number">2.</span> <span class="nav-text">IS-IS报文通用格式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#PDU类型对应关系："><span class="nav-number">2.1.</span> <span class="nav-text">PDU类型对应关系：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#抓包示例："><span class="nav-number">2.2.</span> <span class="nav-text">抓包示例：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#IS-IS-Hello报文"><span class="nav-number">3.</span> <span class="nav-text">IS-IS Hello报文</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Hello报文格式："><span class="nav-number">3.1.</span> <span class="nav-text">Hello报文格式：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IIH-抓包示例："><span class="nav-number">3.2.</span> <span class="nav-text">IIH 抓包示例：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#IS-IS-LSP报文格式"><span class="nav-number">4.</span> <span class="nav-text">IS-IS LSP报文格式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#LSP报文格式："><span class="nav-number">4.1.</span> <span class="nav-text">LSP报文格式：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#LSP报文抓包示例："><span class="nav-number">4.2.</span> <span class="nav-text">LSP报文抓包示例：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#IS-IS-SNP报文格式"><span class="nav-number">5.</span> <span class="nav-text">IS-IS SNP报文格式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#SNP报文格式："><span class="nav-number">5.1.</span> <span class="nav-text">SNP报文格式：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SNP报文抓包示例："><span class="nav-number">5.2.</span> <span class="nav-text">SNP报文抓包示例：</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#ISIS的报文类型"><span class="nav-number">1.</span> <span class="nav-text">ISIS的报文类型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#常见的TLV："><span class="nav-number">1.1.</span> <span class="nav-text">常见的TLV：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#IS-IS报文通用格式"><span class="nav-number">2.</span> <span class="nav-text">IS-IS报文通用格式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#PDU类型对应关系："><span class="nav-number">2.1.</span> <span class="nav-text">PDU类型对应关系：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#抓包示例："><span class="nav-number">2.2.</span> <span class="nav-text">抓包示例：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#IS-IS-Hello报文"><span class="nav-number">3.</span> <span class="nav-text">IS-IS Hello报文</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Hello报文格式："><span class="nav-number">3.1.</span> <span class="nav-text">Hello报文格式：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IIH-抓包示例："><span class="nav-number">3.2.</span> <span class="nav-text">IIH 抓包示例：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#图：LAN网中IIH报文抓包示例"><span class="nav-number">3.3.</span> <span class="nav-text">图：LAN网中IIH报文抓包示例</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#IS-IS-LSP报文格式"><span class="nav-number">4.</span> <span class="nav-text">IS-IS LSP报文格式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#LSP报文格式："><span class="nav-number">4.1.</span> <span class="nav-text">LSP报文格式：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#LSP报文抓包示例："><span class="nav-number">4.2.</span> <span class="nav-text">LSP报文抓包示例：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#IS-IS-SNP报文格式"><span class="nav-number">5.</span> <span class="nav-text">IS-IS SNP报文格式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#SNP报文格式："><span class="nav-number">5.1.</span> <span class="nav-text">SNP报文格式：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SNP报文抓包示例："><span class="nav-number">5.2.</span> <span class="nav-text">SNP报文抓包示例：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#图：CSNP报文抓包示例"><span class="nav-number">5.3.</span> <span class="nav-text">图：CSNP报文抓包示例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#图：PSNP报文抓包示例"><span class="nav-number">5.4.</span> <span class="nav-text">图：PSNP报文抓包示例</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1506,7 +1507,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共 882.3k 字</span>
+  <span class="post-count">全站共 897.1k 字</span>
 </div>
 
 

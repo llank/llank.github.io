@@ -141,7 +141,7 @@
 <meta property="og:site_name" content="曹世宏的博客">
 <meta property="og:description" content="NQA简介网络质量分析NQA（Network Quality Analysis）是一种实时的网络性能探测和统计技术，可以对响应时间、网络抖动、丢包率等网络信息进行统计。NQA能够实时监视网络QoS，在网络发生故障时进行有效的故障诊断和定位。 目的：为了使网络服务质量可见，使用户能够自行检查网络服务质量是否达到要求，需要采取以下措施：  在设备上提供能够说明网络服务质量的数据。 在网络中部署探针设备">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-12-22T12:47:36.384Z">
+<meta property="og:updated_time" content="2019-08-25T01:53:43.344Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="网络质量分析-NQA">
 <meta name="twitter:description" content="NQA简介网络质量分析NQA（Network Quality Analysis）是一种实时的网络性能探测和统计技术，可以对响应时间、网络抖动、丢包率等网络信息进行统计。NQA能够实时监视网络QoS，在网络发生故障时进行有效的故障诊断和定位。 目的：为了使网络服务质量可见，使用户能够自行检查网络服务质量是否达到要求，需要采取以下措施：  在设备上提供能够说明网络服务质量的数据。 在网络中部署探针设备">
@@ -464,12 +464,24 @@
                 
               
 
-              <time title="创建时间：2017-12-22 11:18:00 / 修改时间：20:47:36" itemprop="dateCreated datePublished" datetime="2017-12-22T11:18:00+08:00">2017-12-22</time>
+              <time title="创建时间：2017-12-22 11:18:00" itemprop="dateCreated datePublished" datetime="2017-12-22T11:18:00+08:00">2017-12-22</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-08-25 09:53:43" itemprop="dateModified" datetime="2019-08-25T09:53:43+08:00">2019-08-25</time>
               
             
           </span>
@@ -509,7 +521,7 @@
             <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
 			<span class="post-meta-divider">|</span>
-			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 6,109</span>
+			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 6,118</span>
 			<span class="post-meta-item-text">|</span>
 			<span title="post.min2read"><span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span>阅读时长： 22</span>
 
@@ -730,6 +742,11 @@
 <p>以静态路由为例：</p>
 <p>用户配置了一条静态路由，下一跳为192.168.0.88，如果192.168.0.88可达，该静态路由有效；如果192.168.0.88不可达，则该静态路由无效。通过在NQA和应用模块之间建立联动，可以实现静态路由有效性的实时判断。如果NQA发现192.168.0.88不可达，NQA将通知静态路由模块，静态路由模块可以据此判断该静态路由项无效。</p>
 <h1 id="NQA配置命令行："><a href="#NQA配置命令行：" class="headerlink" title="NQA配置命令行："></a>NQA配置命令行：</h1><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br></pre></td><td class="code"><pre><span class="line">adv-factor factor-value</span><br><span class="line"><span class="comment">//配置NQA Jitter模拟语音测试计算的补偿因子。</span></span><br><span class="line"><span class="comment">//缺省情况下，NQA Jitter模拟语音测试计算的补偿因子的值为0。取值范围是0～20。</span></span><br><span class="line">agetime hh:mm:ss</span><br><span class="line"><span class="comment">//来配置NQA测试例的老化时间。</span></span><br><span class="line"><span class="comment">//缺省情况下，老化时间为0，表示测试例永不老化。</span></span><br><span class="line">clear-records</span><br><span class="line"><span class="comment">//用来清除NQA测试例的统计信息。</span></span><br><span class="line">community read cipher community-name</span><br><span class="line"><span class="comment">//用来配置用于SNMP测试的团体名。</span></span><br><span class="line"><span class="comment">//缺省情况下，系统中SNMP测试的团体名为public。</span></span><br><span class="line">datafill fillstring </span><br><span class="line"><span class="comment">//配置NQA测试例的填充字符。</span></span><br><span class="line">datasize size</span><br><span class="line"><span class="comment">//用来配置NQA测试例的报文大小。取值范围是0～8100</span></span><br><span class="line">destination-address</span><br><span class="line"><span class="comment">//用来配置NQA测试例的目的地址。</span></span><br><span class="line">destination-port</span><br><span class="line"><span class="comment">//用来配置NQA测试例的目的端口号。</span></span><br><span class="line">display nqa application</span><br><span class="line"><span class="comment">//查看与业务对应的NQA测试例类型。</span></span><br><span class="line">display nqa-parameter (参数)</span><br><span class="line"><span class="comment">//用来查看当前测试例的参数配置信息。</span></span><br><span class="line">dns-server ipv4 ip-address</span><br><span class="line"><span class="comment">//用来配置NQA测试中DNS服务器地址。</span></span><br><span class="line">fail-percent percent</span><br><span class="line"><span class="comment">//用来配置NQA测试失败百分比。</span></span><br><span class="line"><span class="comment">//缺省情况下，测试失败百分比为100%，即只有全部探测失败，本次测试才视为失败。</span></span><br><span class="line">frequency interval</span><br><span class="line"><span class="comment">//用来配置NQA测试例自动执行测试的时间间隔。</span></span><br><span class="line"><span class="comment">//缺省情况下，没有配置自动测试间隔，即只进行一次测试。</span></span><br><span class="line">ftp-filename file-name</span><br><span class="line"><span class="comment">//用来配置NQA测试FTP测试例的文件名和文件路径。</span></span><br><span class="line">hardware-based enable</span><br><span class="line"><span class="comment">//用来使能在进行Jitter测试时，采用接口板上的硬件转发引擎进行发包及打时间戳。</span></span><br><span class="line">icmp-jitter-mode &#123; icmp-echo | icmp-timestamp &#125;</span><br><span class="line"><span class="comment">//用来指定ICMP Jitter测试例测试模式的类型。</span></span><br><span class="line"><span class="comment">//缺省情况下，ICMP Jitter测试例测试模式的类型为icmp-timestamp。</span></span><br><span class="line"></span><br><span class="line">interval &#123; milliseconds interval | seconds interval &#125;</span><br><span class="line"><span class="comment">//配置NQA测试例的发送报文的时间间隔。</span></span><br><span class="line">probe-count number</span><br><span class="line"><span class="comment">//用来配置NQA测试例的一次测试探针数目。</span></span><br><span class="line"><span class="comment">//缺省情况下，一次测试探针数目是3。</span></span><br><span class="line">probe-failtimes times</span><br><span class="line"><span class="comment">//用来配置NQA测试探测失败后发送trap的阈值。即，连续探测失败的次数。</span></span><br><span class="line"><span class="comment">//取值范围是1～15。缺省值是1。</span></span><br><span class="line">packet-rewrite-check &#123; alternant-binary | same-binary &#125; </span><br><span class="line"><span class="comment">//配置NQA报文改写检查功能，通过填充检测报文的方式实现检查。</span></span><br><span class="line"><span class="comment">//alternant-binary:指定使用0101和1010交替填充检测报文。</span></span><br><span class="line"><span class="comment">//same-binary:指定使用全0和全1交替填充检测报文。</span></span><br><span class="line">records &#123; history number | result number &#125;</span><br><span class="line"><span class="comment">//配置NQA测试的历史记录和结果记录的最大数目。</span></span><br><span class="line">records history-filter &#123; all | failures &#125;</span><br><span class="line"><span class="comment">//打开对NQA测试例历史表记录的过滤功能。</span></span><br><span class="line">sendpacket passroute</span><br><span class="line"><span class="comment">//配置NQA测试例不查找路由表发送报文。</span></span><br><span class="line">send-trap</span><br><span class="line"><span class="comment">//用来配置Trap消息的发送条件。</span></span><br><span class="line"><span class="built_in">set</span>-df</span><br><span class="line"><span class="comment">//设置报文的DF（Don't Fragment）位。即，不允许报文分片。</span></span><br><span class="line">snmp-agent trap enable feature-name nqa</span><br><span class="line"><span class="comment">//打开NQA模块的告警开关。</span></span><br><span class="line">start</span><br><span class="line"><span class="comment">//配置NQA测试例的启动方式和结束方式。</span></span><br><span class="line">stop</span><br><span class="line"><span class="comment">//用来终止当前正在执行的NQA测试例。</span></span><br><span class="line">test-failtimes times</span><br><span class="line"><span class="comment">//配置在NQA测试失败后发送Trap的阈值。即，连续测试失败的次数。</span></span><br><span class="line">test-type</span><br><span class="line"><span class="comment">//配置NQA测试例的测试类型。</span></span><br><span class="line">timestamp-unit &#123; millisecond | microsecond &#125; </span><br><span class="line"><span class="comment">//来设置NQA测试例的时间戳单位。</span></span><br><span class="line"><span class="comment">//millisecond:毫秒   microsecond：微秒</span></span><br><span class="line">threshold &#123; owd-ds owd-ds-value | owd-sd owd-sd-value | rtd rtd-value &#125;</span><br><span class="line"><span class="comment">//设置双向传输延迟、单向传输延迟的阈值。</span></span><br><span class="line">timeout time</span><br><span class="line"><span class="comment">//配置NQA测试例的一次探测的超时时间。</span></span><br><span class="line"><span class="comment">//缺省情况下，除DHCP、FTP测试类型的超时时间为15秒外，其他测试类型的超时时间为3秒。</span></span><br><span class="line">tos value</span><br><span class="line"><span class="comment">//配置NQA测试报文的服务类型。</span></span><br><span class="line">tracert-hopfailtimes</span><br><span class="line"><span class="comment">//配置NQA测试中Trace测试例失败的失败跳数。取值范围是1～255。</span></span><br><span class="line"><span class="comment">//缺省情况下，一次探测中的失败跳数达到5次就认为此次探测失败。</span></span><br><span class="line">tracert-livetime first-ttl first-ttl max-ttl max-ttl</span><br><span class="line"><span class="comment">//配置NQA测试Trace测试例的生存时间。</span></span><br><span class="line"><span class="comment">//缺省情况下，初始TTL值为1，最大TTL值为30。</span></span><br><span class="line">ttl number</span><br><span class="line"><span class="comment">//配置NQA测试例测试报文的TTL值。</span></span><br><span class="line"><span class="comment">//缺省情况下，TTL值为30。</span></span><br></pre></td></tr></table></figure>
+<hr>
+<blockquote>
+<p>参考资料：华为HedEx文档</p>
+</blockquote>
+<hr>
 
       
     </div>
@@ -971,7 +988,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">224</span>
+                    <span class="site-state-item-count">227</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1259,7 +1276,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">109</span>
+                      
+                    
+                    <span class="site-state-item-count">110</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1427,7 +1446,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共 882.3k 字</span>
+  <span class="post-count">全站共 897.1k 字</span>
 </div>
 
 

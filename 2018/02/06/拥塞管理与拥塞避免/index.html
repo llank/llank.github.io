@@ -151,7 +151,7 @@
 <meta property="og:image" content="https://cshihong.github.io/2018/02/06/拥塞管理与拥塞避免/PQ.png">
 <meta property="og:image" content="https://cshihong.github.io/2018/02/06/拥塞管理与拥塞避免/PQ+WFQ.png">
 <meta property="og:image" content="https://cshihong.github.io/2018/02/06/拥塞管理与拥塞避免/CBQ.png">
-<meta property="og:updated_time" content="2018-02-07T17:43:03.515Z">
+<meta property="og:updated_time" content="2019-08-25T01:52:18.290Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="拥塞管理与拥塞避免">
 <meta name="twitter:description" content="拥塞管理与拥塞避免概述拥塞避免通过指定报文丢弃策略来解除网络过载，拥塞管理通过指定报文调度次序来确保高优先级业务优先被处理。 传统网络所面临的服务质量问题主要由拥塞引起，拥塞是指由于网络资源不足而造成速率下降、引入额外延时的一种现象。拥塞会造成报文的传输时延、吞吐率低及资源的大量耗费。而在IP分组交换及多业务并存的复杂环境下，拥塞又极为常见。 拥塞避免和拥塞管理就是解决网络拥塞的两种流控方式。 拥">
@@ -492,7 +492,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-02-08 01:43:03" itemprop="dateModified" datetime="2018-02-08T01:43:03+08:00">2018-02-08</time>
+                <time title="修改时间：2019-08-25 09:52:18" itemprop="dateModified" datetime="2019-08-25T09:52:18+08:00">2019-08-25</time>
               
             
           </span>
@@ -532,7 +532,7 @@
             <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
 			<span class="post-meta-divider">|</span>
-			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 8,628</span>
+			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 8,637</span>
 			<span class="post-meta-item-text">|</span>
 			<span title="post.min2read"><span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span>阅读时长： 31</span>
 
@@ -859,6 +859,11 @@
 </ol>
 <h1 id="配置命令行"><a href="#配置命令行" class="headerlink" title="配置命令行"></a>配置命令行</h1><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">display drop-profile</span><br><span class="line"><span class="comment">//查看WRED丢弃模板的配置信息。</span></span><br><span class="line">display qos <span class="built_in">queue</span> statistics</span><br><span class="line"><span class="comment">//查看接口上基于队列的流量统计信息。</span></span><br><span class="line">display qos <span class="built_in">queue</span>-profile</span><br><span class="line"><span class="comment">//查看已配置的队列模板信息。</span></span><br><span class="line">dscp discard-percentage</span><br><span class="line"><span class="comment">//配置基于DSCP优先级的WRED模板参数，包括丢弃上下门限百分比和最大丢弃概率。</span></span><br><span class="line"><span class="comment">//缺省情况下，WRED模板的丢弃下限百分比为30</span></span><br><span class="line"><span class="comment">//丢弃上限百分比为100，最大丢弃概率值为10。</span></span><br><span class="line">ip-precedence discard-percentage</span><br><span class="line"><span class="comment">//配置基于IP优先级的WRED模板参数，包括丢弃上下限百分比和最大丢弃概率。</span></span><br><span class="line">drop-profile</span><br><span class="line"><span class="comment">//在系统视图下，创建丢弃模板并进入丢弃模板视图</span></span><br><span class="line"><span class="comment">//在流行为中为AF队列或使用WFQ方式调度的BE队列绑定丢弃模板。</span></span><br><span class="line">qos <span class="built_in">queue</span>-profile</span><br><span class="line"><span class="comment">//在接口下应用队列模板。</span></span><br><span class="line"><span class="comment">//创建队列模板并进入队列模板视图</span></span><br><span class="line"><span class="built_in">queue</span> af bandwidth </span><br><span class="line"><span class="comment">//配置对匹配一定规则的某一类报文进行确保转发</span></span><br><span class="line"><span class="comment">//（Assured-forwarding），并配置可确保的最小带宽。</span></span><br><span class="line"><span class="built_in">queue</span> drop-profile</span><br><span class="line"><span class="comment">//在队列模板中为指定队列绑定丢弃模板。</span></span><br><span class="line"><span class="built_in">queue</span> ef </span><br><span class="line"><span class="comment">//配置对匹配一定规则的某一类报文进行加速转发</span></span><br><span class="line"><span class="comment">//（Expedited-forwarding），并配置最大允许带宽。</span></span><br><span class="line"><span class="comment">//cbs:指定承诺突发尺寸，即瞬间能够通过的承诺突发流量。</span></span><br><span class="line"><span class="comment">//pct:指定可确保的最大带宽占接口可用带宽的百分比。</span></span><br><span class="line"><span class="built_in">queue</span> length</span><br><span class="line"><span class="comment">//在队列模板中配置各队列的长度。</span></span><br><span class="line"><span class="built_in">queue</span>-length</span><br><span class="line"><span class="comment">//在流行为中配置队列的最大长度。</span></span><br><span class="line"><span class="built_in">queue</span> llq</span><br><span class="line"><span class="comment">//配置对匹配一定规则的某一类报文进行低延时转发，并配置允许的最大带宽。</span></span><br><span class="line"><span class="built_in">queue</span> weight</span><br><span class="line"><span class="comment">//用来在队列模板中配置队列的权重。</span></span><br><span class="line"><span class="built_in">queue</span> wfq</span><br><span class="line"><span class="comment">//用来配置缺省类报文进入使用WFQ方式调度的BE队列，并配置队列的总数。</span></span><br><span class="line"><span class="comment">//缺省情况下，系统未配置缺省类报文进入使用WFQ方式调度的BE队列。</span></span><br><span class="line">reset qos <span class="built_in">queue</span> statistics</span><br><span class="line"><span class="comment">//清除接口上基于队列的流量统计信息。</span></span><br><span class="line">schedule</span><br><span class="line"><span class="comment">//在队列模板中配置各队列之间的调度关系。</span></span><br><span class="line">wred &#123; dscp | ip-precedence &#125;</span><br><span class="line"><span class="comment">//用来指定当前WRED丢弃模板基于DSCP优先级或IP优先级进行丢弃。</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//配置拥塞管理和拥塞避免示例：</span></span><br><span class="line">drop-profile data                             #                                  </span><br><span class="line">wred dscp</span><br><span class="line">  dscp af31 low-limit <span class="number">40</span> high-limit <span class="number">60</span> discard-percentage <span class="number">40</span>                      </span><br><span class="line">  dscp af32 low-limit <span class="number">50</span> high-limit <span class="number">70</span> discard-percentage <span class="number">30</span>                      </span><br><span class="line">#                                                                               </span><br><span class="line">drop-profile video                                       </span><br><span class="line">wred dscp</span><br><span class="line">  dscp af43 low-limit <span class="number">60</span> high-limit <span class="number">80</span> discard-percentage <span class="number">20</span>                      </span><br><span class="line">#                                                                               </span><br><span class="line">qos <span class="built_in">queue</span>-profile <span class="built_in">queue</span>-profile1                                                </span><br><span class="line">  <span class="built_in">queue</span> <span class="number">3</span> drop-profile data                                                     </span><br><span class="line">  <span class="built_in">queue</span> <span class="number">4</span> drop-profile video                                                    </span><br><span class="line">  schedule wfq <span class="number">3</span> to <span class="number">4</span> pq <span class="number">5</span>                                                      </span><br><span class="line">#</span><br></pre></td></tr></table></figure>
+<hr>
+<blockquote>
+<p>参考资料：华为HedEx文档</p>
+</blockquote>
+<hr>
 
       
     </div>
@@ -1102,7 +1107,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">224</span>
+                    <span class="site-state-item-count">227</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1390,7 +1395,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">109</span>
+                      
+                    
+                    <span class="site-state-item-count">110</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1558,7 +1565,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共 882.3k 字</span>
+  <span class="post-count">全站共 897.1k 字</span>
 </div>
 
 
