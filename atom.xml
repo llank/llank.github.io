@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://cshihong.github.io/"/>
-  <updated>2019-09-22T03:48:49.259Z</updated>
+  <updated>2019-10-02T05:26:00.773Z</updated>
   <id>https://cshihong.github.io/</id>
   
   <author>
@@ -15,6 +15,93 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>华为HCIE-Security考试心得</title>
+    <link href="https://cshihong.github.io/2019/10/02/%E5%8D%8E%E4%B8%BAHCIE-Security%E8%80%83%E8%AF%95%E5%BF%83%E5%BE%97/"/>
+    <id>https://cshihong.github.io/2019/10/02/华为HCIE-Security考试心得/</id>
+    <published>2019-10-02T02:27:57.000Z</published>
+    <updated>2019-10-02T05:26:00.773Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;HCIE考试心得&quot;&gt;&lt;a href=&quot;#HCIE考试心得&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="人生感悟" scheme="https://cshihong.github.io/categories/%E4%BA%BA%E7%94%9F%E6%84%9F%E6%82%9F/"/>
+    
+    
+      <category term="人生感悟" scheme="https://cshihong.github.io/tags/%E4%BA%BA%E7%94%9F%E6%84%9F%E6%82%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>nmap扫描工具学习笔记</title>
+    <link href="https://cshihong.github.io/2019/09/24/nmap%E6%89%AB%E6%8F%8F%E5%B7%A5%E5%85%B7%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>https://cshihong.github.io/2019/09/24/nmap扫描工具学习笔记/</id>
+    <published>2019-09-24T02:21:49.000Z</published>
+    <updated>2019-09-25T12:13:03.776Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;hr&gt;
+&lt;blockquote&gt;
+&lt;p&gt;参考文档：2019.3_Kali man namp手册。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h1 id=&quot;Namp简介&quot;&gt;&lt;a href=&quot;#Namp简介&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="https://cshihong.github.io/categories/Linux/"/>
+    
+    
+      <category term="扫描工具" scheme="https://cshihong.github.io/tags/%E6%89%AB%E6%8F%8F%E5%B7%A5%E5%85%B7/"/>
+    
+      <category term="Nmap" scheme="https://cshihong.github.io/tags/Nmap/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Kali基本扫描工具</title>
+    <link href="https://cshihong.github.io/2019/09/22/Kali%E5%9F%BA%E6%9C%AC%E6%89%AB%E6%8F%8F%E5%B7%A5%E5%85%B7/"/>
+    <id>https://cshihong.github.io/2019/09/22/Kali基本扫描工具/</id>
+    <published>2019-09-22T12:47:23.000Z</published>
+    <updated>2019-09-22T14:50:46.944Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Fping工具的使用&quot;&gt;&lt;a href=&quot;#Fping工具的使用&quot; class=&quot;headerlink&quot; title=&quot;Fping工具的使用&quot;&gt;&lt;/a&gt;Fping工具的使用&lt;/h1&gt;&lt;h2 id=&quot;fping简介：&quot;&gt;&lt;a href=&quot;#fping简介：&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="https://cshihong.github.io/categories/Linux/"/>
+    
+    
+      <category term="扫描工具" scheme="https://cshihong.github.io/tags/%E6%89%AB%E6%8F%8F%E5%B7%A5%E5%85%B7/"/>
+    
+      <category term="Kali" scheme="https://cshihong.github.io/tags/Kali/"/>
+    
+  </entry>
   
   <entry>
     <title>OS命令注入学习笔记</title>
@@ -472,86 +559,6 @@
     
     
       <category term="UTM统一威胁管理" scheme="https://cshihong.github.io/tags/UTM%E7%BB%9F%E4%B8%80%E5%A8%81%E8%83%81%E7%AE%A1%E7%90%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>内容过滤技术</title>
-    <link href="https://cshihong.github.io/2019/06/04/%E5%86%85%E5%AE%B9%E8%BF%87%E6%BB%A4%E6%8A%80%E6%9C%AF/"/>
-    <id>https://cshihong.github.io/2019/06/04/内容过滤技术/</id>
-    <published>2019-06-04T06:55:46.000Z</published>
-    <updated>2019-06-05T10:30:00.239Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;内容过滤简介&quot;&gt;&lt;a href=&quot;#内容过滤简介&quot; class=&quot;headerlink&quot; title=&quot;内容过滤简介&quot;&gt;&lt;/a&gt;内容过滤简介&lt;/h1&gt;&lt;h2 id=&quot;定义：&quot;&gt;&lt;a href=&quot;#定义：&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="网络安全" scheme="https://cshihong.github.io/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
-    
-    
-      <category term="UTM统一威胁管理" scheme="https://cshihong.github.io/tags/UTM%E7%BB%9F%E4%B8%80%E5%A8%81%E8%83%81%E7%AE%A1%E7%90%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>URL过滤技术</title>
-    <link href="https://cshihong.github.io/2019/06/04/URL%E8%BF%87%E6%BB%A4%E6%8A%80%E6%9C%AF/"/>
-    <id>https://cshihong.github.io/2019/06/04/URL过滤技术/</id>
-    <published>2019-06-04T06:55:31.000Z</published>
-    <updated>2019-06-04T14:43:00.573Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;URL过滤简介&quot;&gt;&lt;a href=&quot;#URL过滤简介&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="网络安全" scheme="https://cshihong.github.io/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
-    
-    
-      <category term="UTM统一威胁管理" scheme="https://cshihong.github.io/tags/UTM%E7%BB%9F%E4%B8%80%E5%A8%81%E8%83%81%E7%AE%A1%E7%90%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>入侵防御（IPS）技术</title>
-    <link href="https://cshihong.github.io/2019/06/04/%E5%85%A5%E4%BE%B5%E9%98%B2%E5%BE%A1(IPS)%E6%8A%80%E6%9C%AF/"/>
-    <id>https://cshihong.github.io/2019/06/04/入侵防御(IPS)技术/</id>
-    <published>2019-06-04T06:55:20.000Z</published>
-    <updated>2019-08-18T09:38:53.485Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;入侵防御简介&quot;&gt;&lt;a href=&quot;#入侵防御简介&quot; class=&quot;headerlink&quot; title=&quot;入侵防御简介&quot;&gt;&lt;/a&gt;入侵防御简介&lt;/h1&gt;&lt;h2 id=&quot;IPS定义：&quot;&gt;&lt;a href=&quot;#IPS定义：&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="网络安全" scheme="https://cshihong.github.io/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
-    
-    
-      <category term="UTM统一威胁管理" scheme="https://cshihong.github.io/tags/UTM%E7%BB%9F%E4%B8%80%E5%A8%81%E8%83%81%E7%AE%A1%E7%90%86/"/>
-    
-      <category term="IPS" scheme="https://cshihong.github.io/tags/IPS/"/>
     
   </entry>
   
