@@ -133,18 +133,18 @@
 
 
 
-  <meta name="description" content="XSS基础XSS概念：通常情况下，在Web应用的网页中，有些部分的显示内容会根据外届输入值而发生变化（会反弹恶意代码），而如果生成这些HTML的程序中存在问题，就会滋生名为跨站脚本（Cross-Site Scripting）的安全隐患。由于它和知名的CSS（层叠样式表）缩写冲突，所以经常缩写为XSS。 XSS的风险：Web应用若存在XSS漏洞，就会有如下风险：  用户的浏览器中运行攻击者的恶意脚本">
+  <meta name="description" content="XSS基础XSS概念：通常情况下，在Web应用的网页中，有些部分的显示内容会根据外届输入值而发生变化（会反弹恶意代码），而如果生成这些HTML的程序中存在问题，就会滋生名为跨站脚本（Cross-Site Scripting）的安全隐患。由于它和知名的CSS（层叠样式表）缩写冲突，所以经常缩写为XSS。 XSS的实质其实是HTML代码与Javscript代码的注入。但由于XSS的攻击对象是与客户对等">
 <meta name="keywords" content="Web安全,XSS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="XSS基础学习笔记">
 <meta property="og:url" content="https://cshihong.github.io/2019/09/16/XSS基础学习笔记/index.html">
 <meta property="og:site_name" content="曹世宏的博客">
-<meta property="og:description" content="XSS基础XSS概念：通常情况下，在Web应用的网页中，有些部分的显示内容会根据外届输入值而发生变化（会反弹恶意代码），而如果生成这些HTML的程序中存在问题，就会滋生名为跨站脚本（Cross-Site Scripting）的安全隐患。由于它和知名的CSS（层叠样式表）缩写冲突，所以经常缩写为XSS。 XSS的风险：Web应用若存在XSS漏洞，就会有如下风险：  用户的浏览器中运行攻击者的恶意脚本">
+<meta property="og:description" content="XSS基础XSS概念：通常情况下，在Web应用的网页中，有些部分的显示内容会根据外届输入值而发生变化（会反弹恶意代码），而如果生成这些HTML的程序中存在问题，就会滋生名为跨站脚本（Cross-Site Scripting）的安全隐患。由于它和知名的CSS（层叠样式表）缩写冲突，所以经常缩写为XSS。 XSS的实质其实是HTML代码与Javscript代码的注入。但由于XSS的攻击对象是与客户对等">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-17T03:10:09.775Z">
+<meta property="og:updated_time" content="2019-10-07T12:55:32.734Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="XSS基础学习笔记">
-<meta name="twitter:description" content="XSS基础XSS概念：通常情况下，在Web应用的网页中，有些部分的显示内容会根据外届输入值而发生变化（会反弹恶意代码），而如果生成这些HTML的程序中存在问题，就会滋生名为跨站脚本（Cross-Site Scripting）的安全隐患。由于它和知名的CSS（层叠样式表）缩写冲突，所以经常缩写为XSS。 XSS的风险：Web应用若存在XSS漏洞，就会有如下风险：  用户的浏览器中运行攻击者的恶意脚本">
+<meta name="twitter:description" content="XSS基础XSS概念：通常情况下，在Web应用的网页中，有些部分的显示内容会根据外届输入值而发生变化（会反弹恶意代码），而如果生成这些HTML的程序中存在问题，就会滋生名为跨站脚本（Cross-Site Scripting）的安全隐患。由于它和知名的CSS（层叠样式表）缩写冲突，所以经常缩写为XSS。 XSS的实质其实是HTML代码与Javscript代码的注入。但由于XSS的攻击对象是与客户对等">
 
 
 
@@ -481,7 +481,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-09-17 11:10:09" itemprop="dateModified" datetime="2019-09-17T11:10:09+08:00">2019-09-17</time>
+                <time title="修改时间：2019-10-07 20:55:32" itemprop="dateModified" datetime="2019-10-07T20:55:32+08:00">2019-10-07</time>
               
             
           </span>
@@ -521,9 +521,9 @@
             <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
 			<span class="post-meta-divider">|</span>
-			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 2,118</span>
+			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 3,488</span>
 			<span class="post-meta-item-text">|</span>
-			<span title="post.min2read"><span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span>阅读时长： 8</span>
+			<span title="post.min2read"><span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span>阅读时长： 13</span>
 
           
 
@@ -545,6 +545,8 @@
 
       
         <h1 id="XSS基础"><a href="#XSS基础" class="headerlink" title="XSS基础"></a>XSS基础</h1><h2 id="XSS概念："><a href="#XSS概念：" class="headerlink" title="XSS概念："></a>XSS概念：</h2><p>通常情况下，在Web应用的网页中，<strong>有些部分的显示内容会根据外届输入值而发生变化（会反弹恶意代码）</strong>，而如果生成这些HTML的程序中存在问题，就会滋生名为跨站脚本（Cross-Site Scripting）的安全隐患。由于它和知名的CSS（层叠样式表）缩写冲突，所以经常缩写为XSS。</p>
+<p>XSS的<strong>实质其实是HTML代码与Javscript代码的注入</strong>。但由于XSS的攻击对象是与客户对等的Browser端，因此常常不被开发者所重视。</p>
+<p>一般意义上的XSS通常可以用简单的方法检测出来：<strong>当用户输入中某个参数的全部或其中一部分，原封不动地在源代码里出现时，我们就可以认为这个参数存在XSS漏洞。</strong></p>
 <h2 id="XSS的风险："><a href="#XSS的风险：" class="headerlink" title="XSS的风险："></a>XSS的风险：</h2><p>Web应用若存在XSS漏洞，就会有如下风险：</p>
 <ul>
 <li>用户的浏览器中运行攻击者的恶意脚本，从而<strong>导致Cookie信息被窃取</strong>，用户身份被报名顶替。</li>
@@ -564,12 +566,61 @@
 <li>通过JavaScript攻击</li>
 <li>篡改网页</li>
 </ol>
-<h2 id="跨站脚本类型："><a href="#跨站脚本类型：" class="headerlink" title="跨站脚本类型："></a>跨站脚本类型：</h2><h3 id="反射型XSS："><a href="#反射型XSS：" class="headerlink" title="反射型XSS："></a>反射型XSS：</h3><p><strong>如果攻击用JavaScript代码位于攻击目标网站之外的其他网站（恶意网站或者邮件中的URL），就 称为反射型的XSS（Reflected XSS）。</strong></p>
+<h2 id="同源策略："><a href="#同源策略：" class="headerlink" title="同源策略："></a>同源策略：</h2><ul>
+<li><p>同源策略：来自相同网站的页面。</p>
+</li>
+<li><p>不同源策略：来自不同网站的页面。</p>
+</li>
+</ul>
+<h2 id="跨站脚本类型："><a href="#跨站脚本类型：" class="headerlink" title="跨站脚本类型："></a>跨站脚本类型：</h2><p>XSS分类：可根据不同分类方式，分为不同类型。</p>
+<ul>
+<li>按形式分：反射型XSS  存储型XSS</li>
+<li>按介质分：JSXSS  FlashXSS</li>
+<li>按接口分：DOM base XSS , 非DOM XSS</li>
+</ul>
+<blockquote>
+<p>注：因此没有反射型XSS、存储型XSS、DOM XSS这种分类，因为分类依据都不同…</p>
+</blockquote>
+<h3 id="反射型XSS："><a href="#反射型XSS：" class="headerlink" title="反射型XSS："></a>反射型XSS：</h3><p><strong>如果攻击用JavaScript代码位于攻击目标网站之外的其他网站（恶意网站或者邮件中的URL），就 称为反射型的XSS（Reflected XSS）。</strong></p>
 <p>窃取Cookie实例中用到的XSS攻击模式就属于反射型XSS。</p>
 <p><strong>反射型XSS多发生于网页将用户输入值原封不动地显示出来的情况。</strong>其中，输入值确定页面就是一个典型的例子。</p>
 <h3 id="存储型XSS："><a href="#存储型XSS：" class="headerlink" title="存储型XSS："></a>存储型XSS：</h3><p><strong>有时攻击者也会将攻击用JavaScript代码保存至攻击对象的数据库中。这种模式的XSS就被称为存储型的XSS（Stored XSS）或持久性的XSS（Presistent XSS）。</strong></p>
 <p>存储型的XSS的典型攻击对象为<strong>Web邮箱</strong>客户端以及<strong>社交网站</strong>（Social Networking Service，简称SNS）。</p>
 <p>存储型XSS无需攻击者费劲心思将用户引诱至恶意网站，而且即使是戒心很重的用户也会有很大的几率中招，因此对攻击者来说益处多多。</p>
+<p><strong>存储型XSS：</strong> </p>
+<ul>
+<li>长期存储与服务器端</li>
+<li>每次用户访问都会被执行JS脚本</li>
+</ul>
+<p>客户端表单长度限制：</p>
+<ul>
+<li>客户端源码修改限制</li>
+<li>代理截断</li>
+</ul>
+<h3 id="DOM型XSS："><a href="#DOM型XSS：" class="headerlink" title="DOM型XSS："></a>DOM型XSS：</h3><ul>
+<li><p>DOMXSS漏洞是基于文档对象模型（Document Object Model）的一种漏洞。</p>
+</li>
+<li><p>DOM是一套JS和其他语言课调用的API（遍历、获取、修改）。</p>
+</li>
+<li><p>根据XSS在DOM中输出点的不同，DOM XSS机有可能是反射型，也有可能是存储型。</p>
+</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">注意：‘#’，它告诉浏览器所有在它后面的东西都是个片段，也就是不作为查询的一部分。IE（<span class="number">6.0</span>）和Mozilla不会把这个片段发送到服务器，因此服务器端看到的只是#号前面提交的参数。这样如果#号后面填充了恶意脚本，就不会被服务器端看到。</span><br><span class="line">如果服务器端直接读取客户端提交参数的所有，重写改写页面，就会将恶意脚本写到页面。在写页面时，需要先使用URL解码。</span><br></pre></td></tr></table></figure>
+<h4 id="两种典型的DOM过程："><a href="#两种典型的DOM过程：" class="headerlink" title="两种典型的DOM过程："></a><strong>两种典型的DOM过程：</strong></h4><p><strong>反射型DOM base XSS： </strong> </p>
+<ol>
+<li>用户输入带有参数的URL</li>
+<li>JavaScript处理URL并获取参数</li>
+<li>通过DOM调用参数对页面进行排版。</li>
+<li>通过DOM动态输出到页面上。</li>
+</ol>
+<p><strong>存储型DOM base XSS：</strong> </p>
+<ol>
+<li>用户输入带有参数的URL或者Body域数据</li>
+<li>服务器将参数存入数据库</li>
+<li>通过JSON格式返回参数到页面</li>
+<li>通过DOM调用参数进行排版</li>
+<li>通过DOM动态输出到页面上。</li>
+</ol>
 <h2 id="XSS产生的根源："><a href="#XSS产生的根源：" class="headerlink" title="XSS产生的根源："></a>XSS产生的根源：</h2><p>XSS漏洞产生的原因为，<strong>生成HTML的过程中，HTML语法中含有特殊意义的字符（元字符）没有被正确处理</strong>，结果导致HTML或JavaScript被肆意注入，从而使得原先的HTML结构产生变化。为了消除元字符的特殊意义，将其转化为普通字符，就需要用到转义（Escape）处理。HTML的<strong>转义处理对消除XSS至关重要。</strong></p>
 <h2 id="HTML转义："><a href="#HTML转义：" class="headerlink" title="HTML转义："></a>HTML转义：</h2><p>在HTML中显示&lt; 时，必须按照字符实体引用（Character Entity Reference）将其转义记载为 &amp;lt；而如果忽略这一步骤直接生成HTML的话，浏览器会将 &lt; 解释为标签的开始。从而就或招致恶意利用此漏洞进行的XSS攻击。</p>
 <p>在HTML中，根据字符所处位置的不同，应当转义的元字符也会发生变化。</p>
@@ -708,9 +759,51 @@
 </tr>
 </tbody>
 </table>
+<h1 id="XSSer简介-确认XSS存在的工具"><a href="#XSSer简介-确认XSS存在的工具" class="headerlink" title="XSSer简介-确认XSS存在的工具"></a>XSSer简介-确认XSS存在的工具</h1><h2 id="XSSer概述："><a href="#XSSer概述：" class="headerlink" title="XSSer概述："></a>XSSer概述：</h2><p>跨站点“Scripter”（又名XSSer）是一个自动化框架，用于检测、利用以及报告基于Web应用程序<br>中的XSS漏洞。</p>
+<p>XSS是Web应用常见的漏洞。利用该漏洞，安全人员在网站注入恶意脚本，控制用户浏览器，并发起其他渗透操作。XSSer是Kali Linux提供的一款自动化XSS攻击框架。该工具可以同时探测多个网址。如果发现XSS漏洞，可以生成报告，并直接进行利用，如建立反向连接。为了提供攻击效率，该工具支持各种规避措施，如判断XSS过滤器、规避特定的防火墙、编码规避。同时，该工具提供丰富的选项，供用户自定义攻击，如指定攻击载荷、设置漏洞利用代码等。</p>
+<p>一个自动框架、检测，利用和报告基于Web应用的XSS漏洞。</p>
+<p>支持命令行、图形化界面。</p>
+<p>提供绕过服务器过滤的选项，以及一些特殊的代码注入技术。</p>
+<h2 id="XSSer经典命令："><a href="#XSSer经典命令：" class="headerlink" title="XSSer经典命令："></a>XSSer经典命令：</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">-u URL, --url=URL  添加URL</span><br><span class="line">-g Getdata	使用GET提交数据</span><br><span class="line">-p POSTdata 使用post提交数据</span><br><span class="line">--cookie=COOKIE 提供cookie信息</span><br><span class="line">-s, --statistics 显示统计信息</span><br><span class="line">-v, --verbose 展示详细结果</span><br><span class="line">--reverse-check 反向连接检查</span><br></pre></td></tr></table></figure>
+<h1 id="BeEF攻击简介"><a href="#BeEF攻击简介" class="headerlink" title="BeEF攻击简介"></a>BeEF攻击简介</h1><h2 id="BeEF概述："><a href="#BeEF概述：" class="headerlink" title="BeEF概述："></a>BeEF概述：</h2><blockquote>
+<p>通过XSS漏洞，将hook.js脚本注入，可将中招的客户端挂起。</p>
+<p>如果客户端浏览器关掉，则连接会断开。</p>
+<p>可以做持久化连接。不让用户关闭浏览器，或者后台开一个小窗。</p>
+</blockquote>
+<p>BeEF（Brower exploitation framerwork）：</p>
+<ul>
+<li>生成，交付Payload</li>
+<li>Ruby语言编写</li>
+<li>服务器端：管理Hooked客户端</li>
+<li>客户端：运行与客户端浏览器的JS脚本（hook）</li>
+</ul>
+<p>降低白帽子对JS代码的要求。</p>
+<p>BeEF主要针对浏览器（客户）进行攻击。</p>
+<ul>
+<li>应用普遍转移到B/S架构，浏览器称为唯一客户端程序。</li>
+<li>结合社会工程学方法对浏览器进行攻击。</li>
+<li>攻击浏览器用户</li>
+<li>通过注入的JS脚本，刘勇浏览器工具其他网站</li>
+</ul>
+<h2 id="BeEF攻击手段："><a href="#BeEF攻击手段：" class="headerlink" title="BeEF攻击手段："></a>BeEF攻击手段：</h2><ul>
+<li>利用网站XSS漏洞实现攻击</li>
+<li>诱使客户端访问包含hook的伪造网站</li>
+<li>结合中间人攻击注入hook脚本</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">软件攻击模块颜色介绍：</span><br><span class="line">- 绿色模块：表示模块适合目标浏览器，并且执行结果客户端不可见</span><br><span class="line">- 红色模块：表示模块不适合目标浏览器，有些红色模块也可正常运行</span><br><span class="line">- 橙色模块：模块可用，但是结果对用户可见（例如：弹窗申请全新等）</span><br><span class="line">- 灰色模块：模块未在目标浏览器测试过</span><br></pre></td></tr></table></figure>
+<h2 id="BeEF常见用途："><a href="#BeEF常见用途：" class="headerlink" title="BeEF常见用途："></a>BeEF常见用途：</h2><ul>
+<li>键盘记录器</li>
+<li>网络扫描</li>
+<li>浏览器信息收集</li>
+<li>绑定shell</li>
+<li>与Metasploit集成</li>
+</ul>
 <hr>
 <blockquote>
 <p>学习笔记记录。与相关资料整理。</p>
+<p>参考资料：</p>
+<p><a href="https://blog.csdn.net/daxueba/article/details/77703872" target="_blank" rel="noopener">https://blog.csdn.net/daxueba/article/details/77703872</a></p>
+<p><a href="http://blog.nsfocus.net/xss-advance/#_XSS" target="_blank" rel="noopener">http://blog.nsfocus.net/xss-advance/#_XSS</a></p>
 </blockquote>
 <hr>
 
@@ -1390,7 +1483,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#XSS基础"><span class="nav-number">1.</span> <span class="nav-text">XSS基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#XSS概念："><span class="nav-number">1.1.</span> <span class="nav-text">XSS概念：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#XSS的风险："><span class="nav-number">1.2.</span> <span class="nav-text">XSS的风险：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#XSS漏洞总览："><span class="nav-number">1.3.</span> <span class="nav-text">XSS漏洞总览：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#XSS被恶意使用的三种方法："><span class="nav-number">1.4.</span> <span class="nav-text">XSS被恶意使用的三种方法：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#跨站脚本类型："><span class="nav-number">1.5.</span> <span class="nav-text">跨站脚本类型：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#反射型XSS："><span class="nav-number">1.5.1.</span> <span class="nav-text">反射型XSS：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#存储型XSS："><span class="nav-number">1.5.2.</span> <span class="nav-text">存储型XSS：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#XSS产生的根源："><span class="nav-number">1.6.</span> <span class="nav-text">XSS产生的根源：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTML转义："><span class="nav-number">1.7.</span> <span class="nav-text">HTML转义：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#元素内容转义："><span class="nav-number">1.7.1.</span> <span class="nav-text">元素内容转义：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#属性值（双引号中南的内容）转义："><span class="nav-number">1.7.2.</span> <span class="nav-text">属性值（双引号中南的内容）转义：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#XSS的辅助性对策："><span class="nav-number">1.8.</span> <span class="nav-text">XSS的辅助性对策：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#XSS对策总结："><span class="nav-number">1.9.</span> <span class="nav-text">XSS对策总结：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#XSS进阶"><span class="nav-number">2.</span> <span class="nav-text">XSS进阶</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#JavaScript问题："><span class="nav-number">2.1.</span> <span class="nav-text">JavaScript问题：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JS字符串字面量动态生成的对策："><span class="nav-number">2.2.</span> <span class="nav-text">JS字符串字面量动态生成的对策：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTML转义概要："><span class="nav-number">2.3.</span> <span class="nav-text">HTML转义概要：</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#XSS基础"><span class="nav-number">1.</span> <span class="nav-text">XSS基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#XSS概念："><span class="nav-number">1.1.</span> <span class="nav-text">XSS概念：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#XSS的风险："><span class="nav-number">1.2.</span> <span class="nav-text">XSS的风险：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#XSS漏洞总览："><span class="nav-number">1.3.</span> <span class="nav-text">XSS漏洞总览：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#XSS被恶意使用的三种方法："><span class="nav-number">1.4.</span> <span class="nav-text">XSS被恶意使用的三种方法：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#同源策略："><span class="nav-number">1.5.</span> <span class="nav-text">同源策略：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#跨站脚本类型："><span class="nav-number">1.6.</span> <span class="nav-text">跨站脚本类型：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#反射型XSS："><span class="nav-number">1.6.1.</span> <span class="nav-text">反射型XSS：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#存储型XSS："><span class="nav-number">1.6.2.</span> <span class="nav-text">存储型XSS：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DOM型XSS："><span class="nav-number">1.6.3.</span> <span class="nav-text">DOM型XSS：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#两种典型的DOM过程："><span class="nav-number">1.6.3.1.</span> <span class="nav-text">两种典型的DOM过程：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#XSS产生的根源："><span class="nav-number">1.7.</span> <span class="nav-text">XSS产生的根源：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTML转义："><span class="nav-number">1.8.</span> <span class="nav-text">HTML转义：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#元素内容转义："><span class="nav-number">1.8.1.</span> <span class="nav-text">元素内容转义：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#属性值（双引号中南的内容）转义："><span class="nav-number">1.8.2.</span> <span class="nav-text">属性值（双引号中南的内容）转义：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#XSS的辅助性对策："><span class="nav-number">1.9.</span> <span class="nav-text">XSS的辅助性对策：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#XSS对策总结："><span class="nav-number">1.10.</span> <span class="nav-text">XSS对策总结：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#XSS进阶"><span class="nav-number">2.</span> <span class="nav-text">XSS进阶</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#JavaScript问题："><span class="nav-number">2.1.</span> <span class="nav-text">JavaScript问题：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JS字符串字面量动态生成的对策："><span class="nav-number">2.2.</span> <span class="nav-text">JS字符串字面量动态生成的对策：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTML转义概要："><span class="nav-number">2.3.</span> <span class="nav-text">HTML转义概要：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#XSSer简介-确认XSS存在的工具"><span class="nav-number">3.</span> <span class="nav-text">XSSer简介-确认XSS存在的工具</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#XSSer概述："><span class="nav-number">3.1.</span> <span class="nav-text">XSSer概述：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#XSSer经典命令："><span class="nav-number">3.2.</span> <span class="nav-text">XSSer经典命令：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#BeEF攻击简介"><span class="nav-number">4.</span> <span class="nav-text">BeEF攻击简介</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#BeEF概述："><span class="nav-number">4.1.</span> <span class="nav-text">BeEF概述：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#BeEF攻击手段："><span class="nav-number">4.2.</span> <span class="nav-text">BeEF攻击手段：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#BeEF常见用途："><span class="nav-number">4.3.</span> <span class="nav-text">BeEF常见用途：</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1430,7 +1523,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共 918.8k 字</span>
+  <span class="post-count">全站共 920.1k 字</span>
 </div>
 
 
