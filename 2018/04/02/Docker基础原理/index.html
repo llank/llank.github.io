@@ -165,7 +165,7 @@
 <meta property="og:image" content="https://cshihong.github.io/2018/04/02/Docker基础原理/Swarm.png">
 <meta property="og:image" content="https://cshihong.github.io/2018/04/02/Docker基础原理/应用场景.png">
 <meta property="og:image" content="https://cshihong.github.io/2018/04/02/Docker基础原理/弹性扩展.png">
-<meta property="og:updated_time" content="2018-04-20T13:34:18.891Z">
+<meta property="og:updated_time" content="2019-11-08T05:23:57.862Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Docker基础原理">
 <meta name="twitter:description" content="Docker发展历程容器技术的演进： 1979年：Unix V7 chroot技术的引进开启了进程隔离的大门。 2000年：FreeBSD Jails将计算机分为多个独立的小型计算机系统。 2006年：Process Containers 进程的资源使用限制。 2008年：LXC 第一个完整的容器管理工具。 2013年：LMCTFY Libcontainer的重要组成。 2013年：Docker。">
@@ -506,7 +506,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-04-20 21:34:18" itemprop="dateModified" datetime="2018-04-20T21:34:18+08:00">2018-04-20</time>
+                <time title="修改时间：2019-11-08 13:23:57" itemprop="dateModified" datetime="2019-11-08T13:23:57+08:00">2019-11-08</time>
               
             
           </span>
@@ -636,7 +636,7 @@
 </tbody>
 </table>
 <p>利用Namespace可以构建一个相对隔离的容器。</p>
-<h2 id="cgroups："><a href="#cgroups：" class="headerlink" title="cgroups："></a>cgroups：</h2><p>通过Cgroups可以实现为容器设置系统资源的险恶</p>
+<h2 id="cgroups："><a href="#cgroups：" class="headerlink" title="cgroups："></a>cgroups：</h2><p>通过Cgroups可以实现为容器设置系统资源的限额。</p>
 <p>包括CPU，内存，I/O等等。</p>
 <h2 id="其他相关的Linux-Kernel技术："><a href="#其他相关的Linux-Kernel技术：" class="headerlink" title="其他相关的Linux Kernel技术："></a>其他相关的Linux Kernel技术：</h2><p><img src="/2018/04/02/Docker基础原理/Linux Kernel技术.png" alt="Linux Kernel技术"></p>
 <p><center>图：Linux Kernel<center></center></center></p>
@@ -925,9 +925,7 @@
 <h1 id="Docker生态圈及企业应用案例"><a href="#Docker生态圈及企业应用案例" class="headerlink" title="Docker生态圈及企业应用案例"></a>Docker生态圈及企业应用案例</h1><h2 id="应用场景：快速交付与CICD："><a href="#应用场景：快速交付与CICD：" class="headerlink" title="应用场景：快速交付与CICD："></a>应用场景：快速交付与CICD：</h2><p><img src="/2018/04/02/Docker基础原理/应用场景.png" alt="应用场景"></p>
 <p><center>图：Docker应用，快速交付<center></center></center></p>
 <h2 id="应用场景：弹性扩展："><a href="#应用场景：弹性扩展：" class="headerlink" title="应用场景：弹性扩展："></a>应用场景：弹性扩展：</h2><p><img src="/2018/04/02/Docker基础原理/弹性扩展.png" alt="弹性扩展"></p>
-<p><center>图：弹性扩展<center></center></center></p>
-<hr>
-<h1 id="Docker自测题"><a href="#Docker自测题" class="headerlink" title="Docker自测题"></a>Docker自测题</h1><ol>
+<h2 id="图：弹性扩展"><a href="#图：弹性扩展" class="headerlink" title="图：弹性扩展"></a><center>图：弹性扩展<center></center></center></h2><h1 id="Docker自测题"><a href="#Docker自测题" class="headerlink" title="Docker自测题"></a>Docker自测题</h1><ol>
 <li><p>（判断题）Docker容器本质上是宿主机上的进程，宿主机只能是硬件服务器。 答案：错。</p>
 </li>
 <li><p>下列哪个不是Docker引擎的组件？</p>
@@ -1201,7 +1199,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">237</span>
+                    <span class="site-state-item-count">242</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1260,7 +1258,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">23</span>
+                      
+                    
+                    <span class="site-state-item-count">24</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1507,7 +1507,15 @@
                     
                       
                     
-                    <span class="site-state-item-count">117</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">121</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1635,7 +1643,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Docker发展历程"><span class="nav-number">1.</span> <span class="nav-text">Docker发展历程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#容器技术的演进："><span class="nav-number">1.1.</span> <span class="nav-text">容器技术的演进：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#容器迅猛发展的背景："><span class="nav-number">1.2.</span> <span class="nav-text">容器迅猛发展的背景：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#容器技术："><span class="nav-number">1.3.</span> <span class="nav-text">容器技术：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定义标准-服务应用："><span class="nav-number">1.4.</span> <span class="nav-text">定义标准+服务应用：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#史无前例的发展速度："><span class="nav-number">1.5.</span> <span class="nav-text">史无前例的发展速度：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#容器技术精髓剖析"><span class="nav-number">2.</span> <span class="nav-text">容器技术精髓剖析</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#namespace："><span class="nav-number">2.1.</span> <span class="nav-text">namespace：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cgroups："><span class="nav-number">2.2.</span> <span class="nav-text">cgroups：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他相关的Linux-Kernel技术："><span class="nav-number">2.3.</span> <span class="nav-text">其他相关的Linux Kernel技术：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#容器管理："><span class="nav-number">2.4.</span> <span class="nav-text">容器管理：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker："><span class="nav-number">2.5.</span> <span class="nav-text">Docker：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker技术原理："><span class="nav-number">2.6.</span> <span class="nav-text">Docker技术原理：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Docker核心技术"><span class="nav-number">3.</span> <span class="nav-text">Docker核心技术</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#VM-vs-Docker："><span class="nav-number">3.1.</span> <span class="nav-text">VM vs Docker：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker的优势："><span class="nav-number">3.2.</span> <span class="nav-text">Docker的优势：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#容器、镜像、仓库："><span class="nav-number">3.3.</span> <span class="nav-text">容器、镜像、仓库：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker容器："><span class="nav-number">3.4.</span> <span class="nav-text">Docker容器：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Docker容器的三种状态："><span class="nav-number">3.4.1.</span> <span class="nav-text">Docker容器的三种状态：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker镜像："><span class="nav-number">3.5.</span> <span class="nav-text">Docker镜像：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker仓库："><span class="nav-number">3.6.</span> <span class="nav-text">Docker仓库：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker的核心技术Build，Ship，Run："><span class="nav-number">3.7.</span> <span class="nav-text">Docker的核心技术Build，Ship，Run：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker数据卷："><span class="nav-number">3.8.</span> <span class="nav-text">Docker数据卷：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker网络："><span class="nav-number">3.9.</span> <span class="nav-text">Docker网络：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Docker平台架构"><span class="nav-number">4.</span> <span class="nav-text">Docker平台架构</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Orchestration："><span class="nav-number">4.1.</span> <span class="nav-text">Orchestration：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三大Orchestration工具："><span class="nav-number">4.2.</span> <span class="nav-text">三大Orchestration工具：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#负载均衡与服务发现："><span class="nav-number">4.3.</span> <span class="nav-text">负载均衡与服务发现：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#日志管理："><span class="nav-number">4.4.</span> <span class="nav-text">日志管理：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker监控："><span class="nav-number">4.5.</span> <span class="nav-text">Docker监控：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker平台架构："><span class="nav-number">4.6.</span> <span class="nav-text">Docker平台架构：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker平台技术体系："><span class="nav-number">4.7.</span> <span class="nav-text">Docker平台技术体系：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Docker平台的对比"><span class="nav-number">5.</span> <span class="nav-text">Docker平台的对比</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#三大编排工具之—Mesos："><span class="nav-number">5.1.</span> <span class="nav-text">三大编排工具之—Mesos：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Mesos-Marathon-Zookeeper来构架Docker平台。"><span class="nav-number">5.1.1.</span> <span class="nav-text">Mesos+Marathon+Zookeeper来构架Docker平台。</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三大编排工具之—Kubernetes："><span class="nav-number">5.2.</span> <span class="nav-text">三大编排工具之—Kubernetes：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Kubernetes中的pod："><span class="nav-number">5.2.1.</span> <span class="nav-text">Kubernetes中的pod：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Kubernetes的整体架构："><span class="nav-number">5.2.2.</span> <span class="nav-text">Kubernetes的整体架构：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三大编排工具之—Swarm："><span class="nav-number">5.3.</span> <span class="nav-text">三大编排工具之—Swarm：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Swarm特点："><span class="nav-number">5.3.1.</span> <span class="nav-text">Swarm特点：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker平台的对比："><span class="nav-number">5.4.</span> <span class="nav-text">Docker平台的对比：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Docker生态圈及企业应用案例"><span class="nav-number">6.</span> <span class="nav-text">Docker生态圈及企业应用案例</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#应用场景：快速交付与CICD："><span class="nav-number">6.1.</span> <span class="nav-text">应用场景：快速交付与CICD：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#应用场景：弹性扩展："><span class="nav-number">6.2.</span> <span class="nav-text">应用场景：弹性扩展：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Docker自测题"><span class="nav-number">7.</span> <span class="nav-text">Docker自测题</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Docker发展历程"><span class="nav-number">1.</span> <span class="nav-text">Docker发展历程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#容器技术的演进："><span class="nav-number">1.1.</span> <span class="nav-text">容器技术的演进：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#容器迅猛发展的背景："><span class="nav-number">1.2.</span> <span class="nav-text">容器迅猛发展的背景：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#容器技术："><span class="nav-number">1.3.</span> <span class="nav-text">容器技术：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定义标准-服务应用："><span class="nav-number">1.4.</span> <span class="nav-text">定义标准+服务应用：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#史无前例的发展速度："><span class="nav-number">1.5.</span> <span class="nav-text">史无前例的发展速度：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#容器技术精髓剖析"><span class="nav-number">2.</span> <span class="nav-text">容器技术精髓剖析</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#namespace："><span class="nav-number">2.1.</span> <span class="nav-text">namespace：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cgroups："><span class="nav-number">2.2.</span> <span class="nav-text">cgroups：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他相关的Linux-Kernel技术："><span class="nav-number">2.3.</span> <span class="nav-text">其他相关的Linux Kernel技术：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#容器管理："><span class="nav-number">2.4.</span> <span class="nav-text">容器管理：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker："><span class="nav-number">2.5.</span> <span class="nav-text">Docker：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker技术原理："><span class="nav-number">2.6.</span> <span class="nav-text">Docker技术原理：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Docker核心技术"><span class="nav-number">3.</span> <span class="nav-text">Docker核心技术</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#VM-vs-Docker："><span class="nav-number">3.1.</span> <span class="nav-text">VM vs Docker：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker的优势："><span class="nav-number">3.2.</span> <span class="nav-text">Docker的优势：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#容器、镜像、仓库："><span class="nav-number">3.3.</span> <span class="nav-text">容器、镜像、仓库：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker容器："><span class="nav-number">3.4.</span> <span class="nav-text">Docker容器：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Docker容器的三种状态："><span class="nav-number">3.4.1.</span> <span class="nav-text">Docker容器的三种状态：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker镜像："><span class="nav-number">3.5.</span> <span class="nav-text">Docker镜像：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker仓库："><span class="nav-number">3.6.</span> <span class="nav-text">Docker仓库：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker的核心技术Build，Ship，Run："><span class="nav-number">3.7.</span> <span class="nav-text">Docker的核心技术Build，Ship，Run：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker数据卷："><span class="nav-number">3.8.</span> <span class="nav-text">Docker数据卷：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker网络："><span class="nav-number">3.9.</span> <span class="nav-text">Docker网络：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Docker平台架构"><span class="nav-number">4.</span> <span class="nav-text">Docker平台架构</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Orchestration："><span class="nav-number">4.1.</span> <span class="nav-text">Orchestration：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三大Orchestration工具："><span class="nav-number">4.2.</span> <span class="nav-text">三大Orchestration工具：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#负载均衡与服务发现："><span class="nav-number">4.3.</span> <span class="nav-text">负载均衡与服务发现：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#日志管理："><span class="nav-number">4.4.</span> <span class="nav-text">日志管理：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker监控："><span class="nav-number">4.5.</span> <span class="nav-text">Docker监控：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker平台架构："><span class="nav-number">4.6.</span> <span class="nav-text">Docker平台架构：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker平台技术体系："><span class="nav-number">4.7.</span> <span class="nav-text">Docker平台技术体系：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Docker平台的对比"><span class="nav-number">5.</span> <span class="nav-text">Docker平台的对比</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#三大编排工具之—Mesos："><span class="nav-number">5.1.</span> <span class="nav-text">三大编排工具之—Mesos：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Mesos-Marathon-Zookeeper来构架Docker平台。"><span class="nav-number">5.1.1.</span> <span class="nav-text">Mesos+Marathon+Zookeeper来构架Docker平台。</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三大编排工具之—Kubernetes："><span class="nav-number">5.2.</span> <span class="nav-text">三大编排工具之—Kubernetes：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Kubernetes中的pod："><span class="nav-number">5.2.1.</span> <span class="nav-text">Kubernetes中的pod：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Kubernetes的整体架构："><span class="nav-number">5.2.2.</span> <span class="nav-text">Kubernetes的整体架构：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三大编排工具之—Swarm："><span class="nav-number">5.3.</span> <span class="nav-text">三大编排工具之—Swarm：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Swarm特点："><span class="nav-number">5.3.1.</span> <span class="nav-text">Swarm特点：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker平台的对比："><span class="nav-number">5.4.</span> <span class="nav-text">Docker平台的对比：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Docker生态圈及企业应用案例"><span class="nav-number">6.</span> <span class="nav-text">Docker生态圈及企业应用案例</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#应用场景：快速交付与CICD："><span class="nav-number">6.1.</span> <span class="nav-text">应用场景：快速交付与CICD：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#应用场景：弹性扩展："><span class="nav-number">6.2.</span> <span class="nav-text">应用场景：弹性扩展：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#图：弹性扩展"><span class="nav-number">6.3.</span> <span class="nav-text">图：弹性扩展</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Docker自测题"><span class="nav-number">7.</span> <span class="nav-text">Docker自测题</span></a></li></ol></div>
             
 
           </div>
@@ -1662,7 +1670,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2017 – <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; 2017 – <span itemprop="copyrightYear">2020</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
@@ -1675,7 +1683,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共 920.1k 字</span>
+  <span class="post-count">全站共 945.6k 字</span>
 </div>
 
 

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://cshihong.github.io/"/>
-  <updated>2019-10-04T07:26:58.749Z</updated>
+  <updated>2019-12-29T11:49:06.235Z</updated>
   <id>https://cshihong.github.io/</id>
   
   <author>
@@ -15,6 +15,148 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>python通过nmap扫描在线设备并尝试AAA登录</title>
+    <link href="https://cshihong.github.io/2019/12/29/python%E9%80%9A%E8%BF%87nmap%E6%89%AB%E6%8F%8F%E5%9C%A8%E7%BA%BF%E8%AE%BE%E5%A4%87%E5%B9%B6%E5%B0%9D%E8%AF%95AAA%E7%99%BB%E5%BD%95/"/>
+    <id>https://cshihong.github.io/2019/12/29/python通过nmap扫描在线设备并尝试AAA登录/</id>
+    <published>2019-12-29T11:21:53.000Z</published>
+    <updated>2019-12-29T11:49:06.235Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;如果管理网络设备很多，不可能靠人力每天去登录设备去查看是否在线。所以，可以利用python脚本通过每天扫描网络中的在线设备。可以部署在服务器上做成定时任务，每天发送AAA巡检报告。&lt;/p&gt;
+&lt;p&gt;下面是我写的一个python练手小程序。用来扫描一个网段中的在线主机，并尝试A
+        
+      
+    
+    </summary>
+    
+      <category term="网络自动化" scheme="https://cshihong.github.io/categories/%E7%BD%91%E7%BB%9C%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
+    
+    
+      <category term="网络自动化" scheme="https://cshihong.github.io/tags/%E7%BD%91%E7%BB%9C%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
+    
+      <category term="Python" scheme="https://cshihong.github.io/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python通过xlrd读取Excel表格和Template批量生成配置</title>
+    <link href="https://cshihong.github.io/2019/12/29/python%E9%80%9A%E8%BF%87xlrd%E8%AF%BB%E5%8F%96Excel%E8%A1%A8%E6%A0%BC%E5%92%8CTemplate%E6%89%B9%E9%87%8F%E7%94%9F%E6%88%90%E9%85%8D%E7%BD%AE/"/>
+    <id>https://cshihong.github.io/2019/12/29/python通过xlrd读取Excel表格和Template批量生成配置/</id>
+    <published>2019-12-29T10:30:24.000Z</published>
+    <updated>2019-12-29T11:51:56.136Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;当需要配置的网络设备很多的时候，不可能都通过手动去配置。此时则需要利用脚本来批量生成配置。从而既保证了配置的准确性，也提高了配置的效率。&lt;/p&gt;
+&lt;p&gt;可以利用python的xrld库来读取execl表格，利用String库的Template模板来配合批量生成配置。&lt;/p&gt;
+        
+      
+    
+    </summary>
+    
+      <category term="网络自动化" scheme="https://cshihong.github.io/categories/%E7%BD%91%E7%BB%9C%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
+    
+    
+      <category term="网络自动化" scheme="https://cshihong.github.io/tags/%E7%BD%91%E7%BB%9C%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
+    
+      <category term="Python" scheme="https://cshihong.github.io/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Netconf协议学习笔记</title>
+    <link href="https://cshihong.github.io/2019/12/29/Netconf%E5%8D%8F%E8%AE%AE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>https://cshihong.github.io/2019/12/29/Netconf协议学习笔记/</id>
+    <published>2019-12-29T07:28:09.000Z</published>
+    <updated>2019-12-29T10:07:35.654Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Netconf简介&quot;&gt;&lt;a href=&quot;#Netconf简介&quot; class=&quot;headerlink&quot; title=&quot;Netconf简介&quot;&gt;&lt;/a&gt;Netconf简介&lt;/h1&gt;&lt;p&gt; 网络配置协议NETCONF（Network Configuration
+        
+      
+    
+    </summary>
+    
+      <category term="网络自动化" scheme="https://cshihong.github.io/categories/%E7%BD%91%E7%BB%9C%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
+    
+    
+      <category term="网络自动化" scheme="https://cshihong.github.io/tags/%E7%BD%91%E7%BB%9C%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python网络自动化netconf配置模块ncclient学习笔记</title>
+    <link href="https://cshihong.github.io/2019/12/19/python%E7%BD%91%E7%BB%9C%E8%87%AA%E5%8A%A8%E5%8C%96netconf%E9%85%8D%E7%BD%AE%E6%A8%A1%E5%9D%97ncclient%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>https://cshihong.github.io/2019/12/19/python网络自动化netconf配置模块ncclient学习笔记/</id>
+    <published>2019-12-19T06:38:27.000Z</published>
+    <updated>2019-12-29T10:02:50.775Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;ncclient介绍&quot;&gt;&lt;a href=&quot;#ncclient介绍&quot; class=&quot;headerlink&quot; title=&quot;ncclient介绍&quot;&gt;&lt;/a&gt;ncclient介绍&lt;/h1&gt;&lt;h2 id=&quot;ncclient简介：&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="网络自动化" scheme="https://cshihong.github.io/categories/%E7%BD%91%E7%BB%9C%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
+    
+    
+      <category term="网络自动化" scheme="https://cshihong.github.io/tags/%E7%BD%91%E7%BB%9C%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
+    
+      <category term="python" scheme="https://cshihong.github.io/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>IPy-IPv4和IPv6地址处理模块学习笔记</title>
+    <link href="https://cshihong.github.io/2019/12/01/IPy%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>https://cshihong.github.io/2019/12/01/IPy模块学习笔记/</id>
+    <published>2019-12-01T06:03:07.000Z</published>
+    <updated>2019-12-09T01:14:11.835Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;在日常网络规划中，会有很多关于IP地址的分配规划问题，如果是手动分配，在量很大的情况下，容易出错。而利用IPy这个python模块，可以很容易实现对iP地址的分配等操作。&lt;/p&gt;
+&lt;p&gt;以下是对IPy模块学习的一个记录。&lt;/p&gt;
+&lt;h1 id=&quot;IPy模块简介&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="Python" scheme="https://cshihong.github.io/categories/Python/"/>
+    
+    
+      <category term="Python" scheme="https://cshihong.github.io/tags/Python/"/>
+    
+      <category term="Python模块" scheme="https://cshihong.github.io/tags/Python%E6%A8%A1%E5%9D%97/"/>
+    
+  </entry>
   
   <entry>
     <title>华为HCIE-Security考试心得</title>
@@ -212,7 +354,7 @@
     <link href="https://cshihong.github.io/2019/09/18/CSRF%E6%94%BB%E5%87%BB%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     <id>https://cshihong.github.io/2019/09/18/CSRF攻击学习笔记/</id>
     <published>2019-09-18T07:51:19.000Z</published>
-    <updated>2019-09-18T13:15:01.314Z</updated>
+    <updated>2019-10-20T02:17:06.317Z</updated>
     
     <summary type="html">
     
@@ -240,7 +382,7 @@
     <link href="https://cshihong.github.io/2019/09/17/SQL%E6%B3%A8%E5%85%A5%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     <id>https://cshihong.github.io/2019/09/17/SQL注入学习笔记/</id>
     <published>2019-09-17T03:09:43.000Z</published>
-    <updated>2019-09-21T13:18:17.269Z</updated>
+    <updated>2019-10-10T13:10:00.966Z</updated>
     
     <summary type="html">
     
@@ -425,140 +567,6 @@
     
     
       <category term="Linux学习笔记" scheme="https://cshihong.github.io/tags/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>HTTP协议分析</title>
-    <link href="https://cshihong.github.io/2019/06/19/HTTP%E5%8D%8F%E8%AE%AE%E5%88%86%E6%9E%90/"/>
-    <id>https://cshihong.github.io/2019/06/19/HTTP协议分析/</id>
-    <published>2019-06-19T01:39:28.000Z</published>
-    <updated>2019-06-19T03:27:48.696Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;HTTP简介&quot;&gt;&lt;a href=&quot;#HTTP简介&quot; class=&quot;headerlink&quot; title=&quot;HTTP简介&quot;&gt;&lt;/a&gt;HTTP简介&lt;/h1&gt;&lt;p&gt;HTTP（HyperText Transfer
-        
-      
-    
-    </summary>
-    
-      <category term="Web安全" scheme="https://cshihong.github.io/categories/Web%E5%AE%89%E5%85%A8/"/>
-    
-    
-      <category term="Web安全" scheme="https://cshihong.github.io/tags/Web%E5%AE%89%E5%85%A8/"/>
-    
-      <category term="HTTP" scheme="https://cshihong.github.io/tags/HTTP/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[转载]网络工程师行业的岗位认知</title>
-    <link href="https://cshihong.github.io/2019/06/06/%E8%BD%AC%E8%BD%BD-%E7%BD%91%E7%BB%9C%E5%B7%A5%E7%A8%8B%E5%B8%88%E8%A1%8C%E4%B8%9A%E7%9A%84%E5%B2%97%E4%BD%8D%E8%AE%A4%E7%9F%A5/"/>
-    <id>https://cshihong.github.io/2019/06/06/转载-网络工程师行业的岗位认知/</id>
-    <published>2019-06-06T05:25:54.000Z</published>
-    <updated>2019-06-06T05:59:39.247Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;hr&gt;
-&lt;blockquote&gt;
-&lt;p&gt;本文转载至：红茶三杯：&lt;a href=&quot;http://ccietea.com/Folder_GetStart/03.htm&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;网络工程师行业的岗位认知&lt;/a&gt;  &lt;a
-        
-      
-    
-    </summary>
-    
-      <category term="职业发展" scheme="https://cshihong.github.io/categories/%E8%81%8C%E4%B8%9A%E5%8F%91%E5%B1%95/"/>
-    
-    
-      <category term="职业发展" scheme="https://cshihong.github.io/tags/%E8%81%8C%E4%B8%9A%E5%8F%91%E5%B1%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>应用行为控制技术</title>
-    <link href="https://cshihong.github.io/2019/06/04/%E5%BA%94%E7%94%A8%E8%A1%8C%E4%B8%BA%E6%8E%A7%E5%88%B6%E6%8A%80%E6%9C%AF/"/>
-    <id>https://cshihong.github.io/2019/06/04/应用行为控制技术/</id>
-    <published>2019-06-04T06:56:47.000Z</published>
-    <updated>2019-08-23T01:14:49.352Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;应用行为控制简介&quot;&gt;&lt;a href=&quot;#应用行为控制简介&quot; class=&quot;headerlink&quot; title=&quot;应用行为控制简介&quot;&gt;&lt;/a&gt;应用行为控制简介&lt;/h1&gt;&lt;h2 id=&quot;定义：&quot;&gt;&lt;a href=&quot;#定义：&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="网络安全" scheme="https://cshihong.github.io/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
-    
-    
-      <category term="UTM统一威胁管理" scheme="https://cshihong.github.io/tags/UTM%E7%BB%9F%E4%B8%80%E5%A8%81%E8%83%81%E7%AE%A1%E7%90%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>邮件过滤技术</title>
-    <link href="https://cshihong.github.io/2019/06/04/%E9%82%AE%E4%BB%B6%E8%BF%87%E6%BB%A4%E6%8A%80%E6%9C%AF/"/>
-    <id>https://cshihong.github.io/2019/06/04/邮件过滤技术/</id>
-    <published>2019-06-04T06:56:12.000Z</published>
-    <updated>2019-08-23T01:15:40.495Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;邮件过滤简介&quot;&gt;&lt;a href=&quot;#邮件过滤简介&quot; class=&quot;headerlink&quot; title=&quot;邮件过滤简介&quot;&gt;&lt;/a&gt;邮件过滤简介&lt;/h1&gt;&lt;h2 id=&quot;电子邮件的基本概念：&quot;&gt;&lt;a href=&quot;#电子邮件的基本概念：&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="网络安全" scheme="https://cshihong.github.io/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
-    
-    
-      <category term="UTM统一威胁管理" scheme="https://cshihong.github.io/tags/UTM%E7%BB%9F%E4%B8%80%E5%A8%81%E8%83%81%E7%AE%A1%E7%90%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>文件过滤技术</title>
-    <link href="https://cshihong.github.io/2019/06/04/%E6%96%87%E4%BB%B6%E8%BF%87%E6%BB%A4%E6%8A%80%E6%9C%AF/"/>
-    <id>https://cshihong.github.io/2019/06/04/文件过滤技术/</id>
-    <published>2019-06-04T06:56:00.000Z</published>
-    <updated>2019-08-23T01:15:19.686Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;文件过滤简介&quot;&gt;&lt;a href=&quot;#文件过滤简介&quot; class=&quot;headerlink&quot; title=&quot;文件过滤简介&quot;&gt;&lt;/a&gt;文件过滤简介&lt;/h1&gt;&lt;h2 id=&quot;定义：&quot;&gt;&lt;a href=&quot;#定义：&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="网络安全" scheme="https://cshihong.github.io/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
-    
-    
-      <category term="UTM统一威胁管理" scheme="https://cshihong.github.io/tags/UTM%E7%BB%9F%E4%B8%80%E5%A8%81%E8%83%81%E7%AE%A1%E7%90%86/"/>
     
   </entry>
   

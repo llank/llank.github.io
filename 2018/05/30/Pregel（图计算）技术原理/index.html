@@ -152,7 +152,7 @@
 <meta property="og:image" content="https://cshihong.github.io/2018/05/30/Pregel（图计算）技术原理/执行过程.png">
 <meta property="og:image" content="https://cshihong.github.io/2018/05/30/Pregel（图计算）技术原理/最短路径.png">
 <meta property="og:image" content="https://cshihong.github.io/2018/05/30/Pregel（图计算）技术原理/Hama结构.png">
-<meta property="og:updated_time" content="2018-05-30T09:51:50.844Z">
+<meta property="og:updated_time" content="2019-11-15T14:38:11.931Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Pregel（图计算）技术原理">
 <meta name="twitter:description" content="图计算简介图结构数据： 许多大数据都是以大规模图或网络的形式呈现。 许多非图结构的大数据，也常常会被转换为图模型后进行分析。 图数据结构很好地表达了数据之间的关联性。 关联性计算是大数据计算的核心——通过获得数据的关联性，可以从噪音很多的海量数据中抽取有用的信息。  传统图计算解决方案的不足之处：很多传统的图计算算法都存在以下几个典型问题：  常常表现出比较差的内存访问局部性 针对单个顶点的处理工">
@@ -476,12 +476,24 @@
                 
               
 
-              <time title="创建时间：2018-05-30 16:44:15 / 修改时间：17:51:50" itemprop="dateCreated datePublished" datetime="2018-05-30T16:44:15+08:00">2018-05-30</time>
+              <time title="创建时间：2018-05-30 16:44:15" itemprop="dateCreated datePublished" datetime="2018-05-30T16:44:15+08:00">2018-05-30</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-11-15 22:38:11" itemprop="dateModified" datetime="2019-11-15T22:38:11+08:00">2019-11-15</time>
               
             
           </span>
@@ -521,7 +533,7 @@
             <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
 			<span class="post-meta-divider">|</span>
-			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 5,364</span>
+			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 5,427</span>
 			<span class="post-meta-item-text">|</span>
 			<span title="post.min2read"><span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span>阅读时长： 19</span>
 
@@ -737,6 +749,12 @@
 <h2 id="GroomServer："><a href="#GroomServer：" class="headerlink" title="GroomServer："></a>GroomServer：</h2><p> GroomServer是一个process，通过BSPMaster启动BSP任务。每一个Groom都有BSPMaster通信，可以通过BSPMaster获取任务，报告状态。GroomServer在HDFS或者其他文件系统上运行，通常，GroomServer与与数据结点在一个物理结点上运行，以保证获得最佳性能。</p>
 <h2 id="Zookeeper："><a href="#Zookeeper：" class="headerlink" title="Zookeeper："></a>Zookeeper：</h2><p>Zookeeper用来管理BSPPeer的同步，用于实现BarrierSynchronisation机制。在ZK上，进入BSPPeer主要有进入Barrier和离开Barrier操作，所有进入Barrier的Peer会在zk上创建一个EPHEMERAL的node（/bsp/JobID/Superstep NO./TaskID），最后一个进入Barrier的Peer同时还会创建一个readynode(/bsp/JobID/Superstep NO./ready)，Peer进入阻塞状态等待zk上所有task的node都删除后退出Barrier。</p>
 <h2 id="BSP-Programming-Model："><a href="#BSP-Programming-Model：" class="headerlink" title="BSP Programming Model："></a>BSP Programming Model：</h2><p>BSP(BulkSynchronous Parallel，整体同步并行计算模型)是英国计算机科学家Viliant在上世纪80年代提出的一种并行计算模型。Google发布的一往篇论文(《Pregel: A System for Large-Scale Graph Processing》)使得这一概念被更多人所认识，据说在Google 80%的程序运行在MapReduce上，20%的程序运行在Pregel上。和MapReduce一样，Google并没有开源Pregel，Apache按Pregel的思想提供了类似框架Hama。</p>
+<hr>
+<blockquote>
+<p>以上内容为听华为大数据培训课程和大学MOOC上厦门大学 林子雨的《大数据技术原理与应用》课程而整理的笔记。</p>
+<p><strong><a href="https://www.icourse163.org/course/XMU-1002335004" target="_blank" rel="noopener">大数据技术原理与应用</a></strong>： <a href="https://www.icourse163.org/course/XMU-1002335004" target="_blank" rel="noopener">https://www.icourse163.org/course/XMU-1002335004</a> </p>
+</blockquote>
+<hr>
 
       
     </div>
@@ -982,7 +1000,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">237</span>
+                    <span class="site-state-item-count">242</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1041,7 +1059,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">23</span>
+                      
+                    
+                    <span class="site-state-item-count">24</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1288,7 +1308,15 @@
                     
                       
                     
-                    <span class="site-state-item-count">117</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">121</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1443,7 +1471,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2017 – <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; 2017 – <span itemprop="copyrightYear">2020</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
@@ -1456,7 +1484,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共 920.1k 字</span>
+  <span class="post-count">全站共 945.6k 字</span>
 </div>
 
 

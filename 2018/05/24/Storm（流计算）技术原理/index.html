@@ -167,7 +167,7 @@
 <meta property="og:image" content="https://cshihong.github.io/2018/05/24/Storm（流计算）技术原理/数据流图.png">
 <meta property="og:image" content="https://cshihong.github.io/2018/05/24/Storm（流计算）技术原理/类别.png">
 <meta property="og:image" content="https://cshihong.github.io/2018/05/24/Storm（流计算）技术原理/过程.png">
-<meta property="og:updated_time" content="2018-05-24T09:20:46.092Z">
+<meta property="og:updated_time" content="2019-11-15T14:39:04.535Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Storm（流计算）技术原理">
 <meta name="twitter:description" content="流计算概述什么是流数据：数据有静态数据和流数据。 静态数据： 很多企业为了支持决策分析而构建的数据仓库系统，其中存放的大量历史数据就是静态数据。技术人员可以利用数据挖掘和OLAP（On-Line Analytical Processing）分析工具从静态数据中找到对企业有价值的信息。  图：静态数据的一般处理流程 流数据： 近年来，在Web应用、网络监控、传感监测等领域，兴起了一种新的数据密集型应">
@@ -491,12 +491,24 @@
                 
               
 
-              <time title="创建时间：2018-05-24 14:45:21 / 修改时间：17:20:46" itemprop="dateCreated datePublished" datetime="2018-05-24T14:45:21+08:00">2018-05-24</time>
+              <time title="创建时间：2018-05-24 14:45:21" itemprop="dateCreated datePublished" datetime="2018-05-24T14:45:21+08:00">2018-05-24</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-11-15 22:39:04" itemprop="dateModified" datetime="2019-11-15T22:39:04+08:00">2019-11-15</time>
               
             
           </span>
@@ -536,7 +548,7 @@
             <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
 			<span class="post-meta-divider">|</span>
-			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 5,871</span>
+			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 5,934</span>
 			<span class="post-meta-item-text">|</span>
 			<span title="post.min2read"><span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span>阅读时长： 21</span>
 
@@ -874,6 +886,12 @@
 <h1 id="Storm、Spark-Streaming和Samza的应用场景"><a href="#Storm、Spark-Streaming和Samza的应用场景" class="headerlink" title="Storm、Spark Streaming和Samza的应用场景"></a>Storm、Spark Streaming和Samza的应用场景</h1><p>从<strong>编程的灵活性来讲，Storm是比较理想的选择</strong>，它使用Apache Thrift，可以用任何编程语言来编写拓扑结构（Topology）。</p>
 <p>当需要在一个集群中把流计算和图计算、机器学习、SQL查询分析等进行结合时，可以选择<strong>Spark Streaming</strong>，因为，在Spark上可以统一部署Spark SQL，Spark Streaming、MLlib，GraphX等组件，<strong>提供便捷的一体化编程模型</strong>。</p>
 <p>当有<strong>大量的状态需要处理时，</strong>比如每个分区都有数十亿个元组，则可以<strong>选择Samza</strong>。当应用场景需要毫秒级响应时，可以选择Storm和Samza，因为Spark Streaming无法实现毫秒级的流计算。</p>
+<hr>
+<blockquote>
+<p>以上内容为听华为大数据培训课程和大学MOOC上厦门大学 林子雨的《大数据技术原理与应用》课程而整理的笔记。</p>
+<p><strong><a href="https://www.icourse163.org/course/XMU-1002335004" target="_blank" rel="noopener">大数据技术原理与应用</a></strong>： <a href="https://www.icourse163.org/course/XMU-1002335004" target="_blank" rel="noopener">https://www.icourse163.org/course/XMU-1002335004</a> </p>
+</blockquote>
+<hr>
 
       
     </div>
@@ -1119,7 +1137,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">237</span>
+                    <span class="site-state-item-count">242</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1178,7 +1196,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">23</span>
+                      
+                    
+                    <span class="site-state-item-count">24</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1425,7 +1445,15 @@
                     
                       
                     
-                    <span class="site-state-item-count">117</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">121</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1580,7 +1608,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2017 – <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; 2017 – <span itemprop="copyrightYear">2020</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
@@ -1593,7 +1621,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共 920.1k 字</span>
+  <span class="post-count">全站共 945.6k 字</span>
 </div>
 
 

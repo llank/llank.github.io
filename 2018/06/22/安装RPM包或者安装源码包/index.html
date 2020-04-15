@@ -144,7 +144,7 @@
 <meta property="og:image" content="https://cshihong.github.io/2018/06/22/安装RPM包或者安装源码包/安装PRM包或者安装源码包/查询.png">
 <meta property="og:image" content="https://cshihong.github.io/2018/06/22/安装RPM包或者安装源码包/安装PRM包或者安装源码包/yum%20list.png">
 <meta property="og:image" content="https://cshihong.github.io/2018/06/22/安装RPM包或者安装源码包/安装PRM包或者安装源码包/帮助.png">
-<meta property="og:updated_time" content="2018-06-23T11:55:05.725Z">
+<meta property="og:updated_time" content="2019-11-12T10:12:01.738Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="安装RPM包或者安装源码包">
 <meta name="twitter:description" content="RPM工具使用方法：RPM是 “Redhat Package Manager” 的缩写，根据名字也能猜到这是Redhat公司开发出来的。RPM 是以一种数据库记录的方式来将所需要的套件安装到Linux 主机的一套管理程序。也就是说，linux系统中存在着一个关于RPM的数据库，它记录了安装的包以及包与包之间依赖相关性。RPM包是预先在linux机器上编译好并打包好的文件，安装起来非常快捷。但是也有">
@@ -485,7 +485,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-06-23 19:55:05" itemprop="dateModified" datetime="2018-06-23T19:55:05+08:00">2018-06-23</time>
+                <time title="修改时间：2019-11-12 18:12:01" itemprop="dateModified" datetime="2019-11-12T18:12:01+08:00">2019-11-12</time>
               
             
           </span>
@@ -525,7 +525,7 @@
             <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
 			<span class="post-meta-divider">|</span>
-			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 4,020</span>
+			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 4,062</span>
 			<span class="post-meta-item-text">|</span>
 			<span title="post.min2read"><span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span>阅读时长： 16</span>
 
@@ -640,16 +640,26 @@
 <p><strong>6.yum其他用法：</strong></p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">check</span>          检查 RPM 数据库问题</span><br><span class="line"><span class="keyword">check</span>-<span class="keyword">update</span>   检查是否有可用的软件包更新</span><br><span class="line">clean          删除缓存数据</span><br><span class="line">deplist        列出软件包的依赖关系</span><br><span class="line">distribution-synchronization 已同步软件包到最新可用版本</span><br><span class="line"><span class="keyword">downgrade</span>      降级软件包</span><br><span class="line">erase          从系统中移除一个或多个软件包</span><br><span class="line"><span class="keyword">groups</span>         显示或使用、组信息</span><br><span class="line"><span class="keyword">help</span>           显示用法提示</span><br><span class="line">history        显示或使用事务历史</span><br><span class="line">info           显示关于软件包或组的详细信息</span><br><span class="line"><span class="keyword">install</span>        向系统中安装一个或多个软件包</span><br><span class="line"><span class="keyword">list</span>           列出一个或一组软件包</span><br><span class="line"><span class="keyword">load</span>-<span class="keyword">transaction</span> 从文件名中加载一个已存事务</span><br><span class="line">provides       查找提供指定内容的软件包</span><br><span class="line">reinstall      覆盖安装软件包</span><br><span class="line">repo-pkgs      将一个源当作一个软件包组，这样我们就可以一次性安装/移除全部软件包。</span><br><span class="line">repolist       显示已配置的源</span><br><span class="line"><span class="keyword">search</span>         在软件包详细信息中搜索指定字符串</span><br><span class="line"><span class="keyword">update</span>         更新系统中的一个或多个软件包</span><br><span class="line"><span class="keyword">upgrade</span>        更新软件包同时考虑软件包取代关系</span><br><span class="line"><span class="keyword">version</span>        显示机器和/或可用的源版本。</span><br></pre></td></tr></table></figure>
 <h2 id="使用本地的光盘来制作一个yum源："><a href="#使用本地的光盘来制作一个yum源：" class="headerlink" title="使用本地的光盘来制作一个yum源："></a>使用本地的光盘来制作一个yum源：</h2><p>有时候您的linux系统不能联网，当然就不能很便捷的使用联网的yum源了，这时候就需要会利用linux系统光盘制作一个yum源。具体步骤如下：</p>
-<p>a）挂载光盘</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# mount /dev/cdrom /mnt</span><br></pre></td></tr></table></figure>
-<p>b）删除/etc/yum.repos.d目录所有的repo文件</p>
+<ol>
+<li><p>创建挂载目录：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# mkdir /mnt/cdrom</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>将光盘挂载到/mnt/cdrom</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# mount /dev/sr0 /mnt/cdrom</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>删除/etc/yum.repos.d目录所有的repo文件,或者将该目录下的文件改名位非repo后缀</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# rm -rf /etc/yum.repos.d/*</span><br></pre></td></tr></table></figure>
-<p>c） 创建新文件dvd.repo</p>
+</li>
+<li><p>创建挂载文件dvd.repo</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# vim /etc/yum.repos.d/dvd.repo</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
 <p>加入以下内容：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[dvd]</span><br><span class="line">name=install dvd</span><br><span class="line">baseurl=file:///mnt</span><br><span class="line">enabled=1</span><br><span class="line">gpgcheck=0</span><br></pre></td></tr></table></figure>
-<p>d） 刷新 repos 生成缓存</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# yum makecache</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[dvd]</span><br><span class="line">name=install dvd</span><br><span class="line">baseurl=file:///mnt/cdrom</span><br><span class="line">enabled=1</span><br><span class="line">gpgcheck=0</span><br></pre></td></tr></table></figure>
+<ol start="5">
+<li>刷新 repos 生成缓存</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# yum makecache</span><br><span class="line">[root@localhost ~]# yum list</span><br></pre></td></tr></table></figure>
 <p>然后就可以使用yum命令安装您所需要的软件包了。</p>
 <h2 id="利用yum工具下载一个rpm包："><a href="#利用yum工具下载一个rpm包：" class="headerlink" title="利用yum工具下载一个rpm包："></a>利用yum工具下载一个rpm包：</h2><p><strong>用yum工具下一个rpm包，但是不安装。步骤如下：</strong></p>
 <ol>
@@ -947,7 +957,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">237</span>
+                    <span class="site-state-item-count">242</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1006,7 +1016,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">23</span>
+                      
+                    
+                    <span class="site-state-item-count">24</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1253,7 +1265,15 @@
                     
                       
                     
-                    <span class="site-state-item-count">117</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">121</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1408,7 +1428,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2017 – <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; 2017 – <span itemprop="copyrightYear">2020</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
@@ -1421,7 +1441,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共 920.1k 字</span>
+  <span class="post-count">全站共 945.6k 字</span>
 </div>
 
 

@@ -134,7 +134,7 @@
 
 
   <meta name="description" content="组队： 作为篮球队教练，你需要从以下名单中选出1 号位至5 号位各一名球员，组成球队的首发阵容。每位球员担任1号位至5号位时的评分如下表所示。请你计算首发阵容1号位至5 号位的评分之和最大可能是多少？  这是一道结果填空的题，你只需要算出结果后提交即可。本题的结果为一个整数，在提交答案时只填写这个整数，填写多余的内容将无法得分。  解题思路： 该题很简单。仔细找找就出来了。先找出每列最大的两个数，">
-<meta name="keywords" content="算法,蓝桥杯,Java编程">
+<meta name="keywords" content="算法,Java编程,蓝桥杯">
 <meta property="og:type" content="article">
 <meta property="og:title" content="蓝桥杯第十届省赛Java-B组">
 <meta property="og:url" content="https://cshihong.github.io/2019/03/27/蓝桥杯第十届省赛Java-B组/index.html">
@@ -144,7 +144,7 @@
 <meta property="og:image" content="https://cshihong.github.io/2019/03/27/蓝桥杯第十届省赛Java-B组/组队.png">
 <meta property="og:image" content="https://cshihong.github.io/2019/03/27/蓝桥杯第十届省赛Java-B组/组队1.png">
 <meta property="og:image" content="https://cshihong.github.io/2019/03/27/蓝桥杯第十届省赛Java-B组/10.png">
-<meta property="og:updated_time" content="2019-03-31T04:49:33.076Z">
+<meta property="og:updated_time" content="2020-02-05T02:33:48.941Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="蓝桥杯第十届省赛Java-B组">
 <meta name="twitter:description" content="组队： 作为篮球队教练，你需要从以下名单中选出1 号位至5 号位各一名球员，组成球队的首发阵容。每位球员担任1号位至5号位时的评分如下表所示。请你计算首发阵容1号位至5 号位的评分之和最大可能是多少？  这是一道结果填空的题，你只需要算出结果后提交即可。本题的结果为一个整数，在提交答案时只填写这个整数，填写多余的内容将无法得分。  解题思路： 该题很简单。仔细找找就出来了。先找出每列最大的两个数，">
@@ -485,7 +485,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-03-31 12:49:33" itemprop="dateModified" datetime="2019-03-31T12:49:33+08:00">2019-03-31</time>
+                <time title="修改时间：2020-02-05 10:33:48" itemprop="dateModified" datetime="2020-02-05T10:33:48+08:00">2020-02-05</time>
               
             
           </span>
@@ -525,7 +525,7 @@
             <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
 			<span class="post-meta-divider">|</span>
-			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 3,092</span>
+			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 3,093</span>
 			<span class="post-meta-item-text">|</span>
 			<span title="post.min2read"><span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span>阅读时长： 14</span>
 
@@ -636,7 +636,7 @@
 <h2 id="后缀表达式："><a href="#后缀表达式：" class="headerlink" title="后缀表达式："></a>后缀表达式：</h2><blockquote>
 <p>【问题描述】<br>给定N 个加号、M 个减号以及N + M + 1 个整数A1; A2;  AN+M+1，小<br>明想知道在所有由这N 个加号、M 个减号以及N + M +1 个整数凑出的合法的<br>后缀表达式中，结果最大的是哪一个？<br>请你输出这个最大的结果。<br>例如使用1 2 3 + -，则“2 3 + 1 -” 这个后缀表达式结果是4，是最大的。<br>【输入格式】<br>第一行包含两个整数N 和M。<br>第二行包含N + M + 1 个整数A1; A2; AN+M+1。<br>【输出格式】<br>输出一个整数，代表答案。<br>【样例输入】<br>1 1<br>1 2 3<br>【样例输出】<br>4</p>
 </blockquote>
-<h3 id="代码示例：-5"><a href="#代码示例：-5" class="headerlink" title="代码示例："></a>代码示例：</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> 后缀表达式 </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">		<span class="keyword">int</span> n = sc.nextInt();</span><br><span class="line">		<span class="keyword">int</span> m = sc.nextInt();</span><br><span class="line">		<span class="keyword">int</span>[] a = <span class="keyword">new</span> <span class="keyword">int</span>[n +m + <span class="number">1</span>];</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n + m + <span class="number">1</span>; i++) &#123;</span><br><span class="line">			a[i] = sc.nextInt();</span><br><span class="line">		&#125;</span><br><span class="line">		Arrays.sort(a);</span><br><span class="line">		<span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = n + m; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">			<span class="keyword">if</span>(i &gt;= n) &#123;</span><br><span class="line">				sum += a[i];</span><br><span class="line">			&#125;<span class="keyword">else</span> &#123;</span><br><span class="line">				sum -= a[i];</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(sum);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="代码示例：-5"><a href="#代码示例：-5" class="headerlink" title="代码示例："></a>代码示例：</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> 后缀表达式 </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">		<span class="keyword">int</span> n = sc.nextInt();</span><br><span class="line">		<span class="keyword">int</span> m = sc.nextInt();</span><br><span class="line">		<span class="keyword">int</span>[] a = <span class="keyword">new</span> <span class="keyword">int</span>[n +m + <span class="number">1</span>];</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n + m + <span class="number">1</span>; i++) &#123;</span><br><span class="line">			a[i] = sc.nextInt();</span><br><span class="line">		&#125;</span><br><span class="line">		Arrays.sort(a);</span><br><span class="line">		<span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = n + m; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">			<span class="keyword">if</span>(i &gt;= n - <span class="number">1</span>) &#123;</span><br><span class="line">				sum += a[i];</span><br><span class="line">			&#125;<span class="keyword">else</span> &#123;</span><br><span class="line">				sum -= a[i];</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(sum);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="灵能传输"><a href="#灵能传输" class="headerlink" title="灵能传输:"></a>灵能传输:</h2><blockquote>
 <p><img src="/2019/03/27/蓝桥杯第十届省赛Java-B组/10.png" alt="10"></p>
 <p>【输出格式】<br>输出T 行。每行一个整数依次表示每组询问的答案。<br>【样例输入】<br>3<br>3<br>5 -2 3<br>4<br>0 0 0 0<br>3<br>1 2 3<br>【样例输出】<br>3<br>0<br>3<br>【样例说明】<br>对于第一组询问：<br>对2 号高阶圣堂武士进行传输操作后a1 = 3，a2 = 2，a3 = 1。答案为3。<br>对于第二组询问：<br>这一组高阶圣堂武士拥有的灵能都正好可以让他们达到最佳战斗状态。<br>【样例输入】<br>3<br>4<br>-1 -2 -3 7<br>4<br>2 3 4 -8<br>5<br>-1 -1 6 -1 -1</p>
@@ -723,9 +723,9 @@
           
             <a href="/tags/算法/" rel="tag"># 算法</a>
           
-            <a href="/tags/蓝桥杯/" rel="tag"># 蓝桥杯</a>
-          
             <a href="/tags/Java编程/" rel="tag"># Java编程</a>
+          
+            <a href="/tags/蓝桥杯/" rel="tag"># 蓝桥杯</a>
           
         </div>
       
@@ -887,7 +887,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">237</span>
+                    <span class="site-state-item-count">242</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -946,7 +946,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">23</span>
+                      
+                    
+                    <span class="site-state-item-count">24</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1193,7 +1195,15 @@
                     
                       
                     
-                    <span class="site-state-item-count">117</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">121</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1348,7 +1358,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2017 – <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; 2017 – <span itemprop="copyrightYear">2020</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
@@ -1361,7 +1371,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共 920.1k 字</span>
+  <span class="post-count">全站共 945.6k 字</span>
 </div>
 
 

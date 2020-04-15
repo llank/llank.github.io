@@ -161,7 +161,7 @@
 <meta property="og:image" content="https://cshihong.github.io/2018/05/31/Flink技术原理/容错.png">
 <meta property="og:image" content="https://cshihong.github.io/2018/05/31/Flink技术原理/check1.png">
 <meta property="og:image" content="https://cshihong.github.io/2018/05/31/Flink技术原理/check2.png">
-<meta property="og:updated_time" content="2018-06-01T03:20:30.737Z">
+<meta property="og:updated_time" content="2019-11-15T14:37:16.105Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Flink技术原理">
 <meta name="twitter:description" content="Flink简介Flink概述： Flink是一个批处理和流处理结合的统一计算框架，其核心是一个提供了数据分发以及并发化计算的流数据处理引擎。它的最大亮点是流处理，是业界最顶级的开源流处理引擎。 Flink与Storm类似，属于事件驱动型实时流系统。 Flink特点： Streaming-first、流处理引擎。 Fault-tolerant，容错，可靠性，checkpoint。 Scalable，">
@@ -502,7 +502,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-06-01 11:20:30" itemprop="dateModified" datetime="2018-06-01T11:20:30+08:00">2018-06-01</time>
+                <time title="修改时间：2019-11-15 22:37:16" itemprop="dateModified" datetime="2019-11-15T22:37:16+08:00">2019-11-15</time>
               
             
           </span>
@@ -542,7 +542,7 @@
             <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
 			<span class="post-meta-divider">|</span>
-			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 2,902</span>
+			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 2,965</span>
 			<span class="post-meta-item-text">|</span>
 			<span title="post.min2read"><span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span>阅读时长： 11</span>
 
@@ -736,6 +736,12 @@
 <p><img src="/2018/05/31/Flink技术原理/check2.png" alt="check2"></p>
 <p><center>图：多Source源的Checkpoint机制<center></center></center></p>
 <p>当一个算子上游有多个来源时，它会将首先接收到barrier端阻塞掉，等待其他输入端的barrier，只有当接收到所有输入端的barrier时，该算子才会开始合并barrier执行制作快照过程，并将合并后的barrier广播到下游算子。</p>
+<hr>
+<blockquote>
+<p>以上内容为听华为大数据培训课程和大学MOOC上厦门大学 林子雨的《大数据技术原理与应用》课程而整理的笔记。</p>
+<p><strong><a href="https://www.icourse163.org/course/XMU-1002335004" target="_blank" rel="noopener">大数据技术原理与应用</a></strong>： <a href="https://www.icourse163.org/course/XMU-1002335004" target="_blank" rel="noopener">https://www.icourse163.org/course/XMU-1002335004</a> </p>
+</blockquote>
+<hr>
 
       
     </div>
@@ -979,7 +985,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">237</span>
+                    <span class="site-state-item-count">242</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1038,7 +1044,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">23</span>
+                      
+                    
+                    <span class="site-state-item-count">24</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1285,7 +1293,15 @@
                     
                       
                     
-                    <span class="site-state-item-count">117</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">121</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1440,7 +1456,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2017 – <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; 2017 – <span itemprop="copyrightYear">2020</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
@@ -1453,7 +1469,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共 920.1k 字</span>
+  <span class="post-count">全站共 945.6k 字</span>
 </div>
 
 
