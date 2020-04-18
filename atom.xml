@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://cshihong.github.io/"/>
-  <updated>2020-04-18T05:04:28.752Z</updated>
+  <updated>2020-04-18T08:17:03.533Z</updated>
   <id>https://cshihong.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>(BGP in the datacenter)数据中心的BGP,数据中心网络架构,Clos网络架构</title>
+    <link href="https://cshihong.github.io/2020/04/18/BGP-in-the-datacenter-%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%BF%83%E7%9A%84BGP-%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%BF%83%E7%BD%91%E7%BB%9C%E6%9E%B6%E6%9E%84-Clos%E7%BD%91%E7%BB%9C%E6%9E%B6%E6%9E%84/"/>
+    <id>https://cshihong.github.io/2020/04/18/BGP-in-the-datacenter-数据中心的BGP-数据中心网络架构-Clos网络架构/</id>
+    <published>2020-04-18T05:55:10.000Z</published>
+    <updated>2020-04-18T08:17:03.533Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;数据中心的BGP&quot;&gt;&lt;a href=&quot;#数据中心的BGP&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="数据中心" scheme="https://cshihong.github.io/categories/%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%BF%83/"/>
+    
+    
+      <category term="BGP" scheme="https://cshihong.github.io/tags/BGP/"/>
+    
+  </entry>
   
   <entry>
     <title>BGP知识手册(华为,华三,思科)</title>
@@ -70,9 +96,9 @@
       <category term="网络自动化" scheme="https://cshihong.github.io/categories/%E7%BD%91%E7%BB%9C%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
     
     
-      <category term="Python" scheme="https://cshihong.github.io/tags/Python/"/>
-    
       <category term="网络自动化" scheme="https://cshihong.github.io/tags/%E7%BD%91%E7%BB%9C%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
+    
+      <category term="Python" scheme="https://cshihong.github.io/tags/Python/"/>
     
   </entry>
   
@@ -99,9 +125,9 @@
       <category term="网络自动化" scheme="https://cshihong.github.io/categories/%E7%BD%91%E7%BB%9C%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
     
     
-      <category term="Python" scheme="https://cshihong.github.io/tags/Python/"/>
-    
       <category term="网络自动化" scheme="https://cshihong.github.io/tags/%E7%BD%91%E7%BB%9C%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
+    
+      <category term="Python" scheme="https://cshihong.github.io/tags/Python/"/>
     
   </entry>
   
@@ -543,34 +569,6 @@
     
     
       <category term="IPS" scheme="https://cshihong.github.io/tags/IPS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>防火墙双机热备升级步骤</title>
-    <link href="https://cshihong.github.io/2019/08/18/%E9%98%B2%E7%81%AB%E5%A2%99%E5%8F%8C%E6%9C%BA%E7%83%AD%E5%A4%87%E5%8D%87%E7%BA%A7%E6%AD%A5%E9%AA%A4/"/>
-    <id>https://cshihong.github.io/2019/08/18/防火墙双机热备升级步骤/</id>
-    <published>2019-08-18T03:13:01.000Z</published>
-    <updated>2019-08-18T06:06:37.540Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;防火墙上下VRRP双机热备在不中断业务的情况下升级设备过程：&quot;&gt;&lt;a href=&quot;#防火墙上下VRRP双机热备在不中断业务的情况下升级设备过程：&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="网络安全" scheme="https://cshihong.github.io/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
-    
-    
-      <category term="防火墙" scheme="https://cshihong.github.io/tags/%E9%98%B2%E7%81%AB%E5%A2%99/"/>
-    
-      <category term="双机热备" scheme="https://cshihong.github.io/tags/%E5%8F%8C%E6%9C%BA%E7%83%AD%E5%A4%87/"/>
     
   </entry>
   
