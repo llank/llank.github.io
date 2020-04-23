@@ -420,6 +420,195 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://cshihong.github.io/2019/04/17/IPSec VPN的NAT穿越-NAT-T-原理/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="曹世宏">
+      <meta itemprop="description" content="你的责任就是你的方向，你的经历就是你的资本，你的性格就是你的命运。">
+      <meta itemprop="image" content="/images/touxiang.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="曹世宏的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/04/17/IPSec VPN的NAT穿越-NAT-T-原理/" class="post-title-link" itemprop="https://cshihong.github.io/page/6/index.html">IPSec VPN的NAT穿越(NAT-T)原理</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-04-17 09:49:38" itemprop="dateCreated datePublished" datetime="2019-04-17T09:49:38+08:00">2019-04-17</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-04-18 11:44:09" itemprop="dateModified" datetime="2019-04-18T11:44:09+08:00">2019-04-18</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/网络安全/" itemprop="url" rel="index"><span itemprop="name">网络安全</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          IPSec NAT 穿越简介IPSec NAT穿越的场景：本质上解决ESP协议无法提供转换端口，插入UDP 4500端口
+有以下两种场景，需要进行进行NAT穿越。
+
+场景一、FW既做IPSEC网关，又做NAT转换
+此种场景下，是当运营商给客户的动态分配的私网地址情况下，FW需要穿越运营商的nat。
+IPSEC网关与NAT在同一台设备 ，如果运营商给分配的是公网地址，需要做NAT旁路(NAT豁免）
+
+场景二、FW处于内部只做IPSEC网关，前面有专门的设备做NAT(可以FW也可以ROUTER）
+
+
+          ...
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/04/17/IPSec VPN的NAT穿越-NAT-T-原理/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://cshihong.github.io/2019/04/15/数字证书PKI原理/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -2121,210 +2310,6 @@ hrp配置命令123hrp auto-sync config
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://cshihong.github.io/2019/03/20/防火墙双机热备三大协议VRRP、VGMP、HRP原理/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="曹世宏">
-      <meta itemprop="description" content="你的责任就是你的方向，你的经历就是你的资本，你的性格就是你的命运。">
-      <meta itemprop="image" content="/images/touxiang.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="曹世宏的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/03/20/防火墙双机热备三大协议VRRP、VGMP、HRP原理/" class="post-title-link" itemprop="https://cshihong.github.io/page/6/index.html">防火墙双机热备三大协议（VRRP/VGMP/HRP）原理</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-03-20 14:06:54" itemprop="dateCreated datePublished" datetime="2019-03-20T14:06:54+08:00">2019-03-20</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-08-25 09:45:26" itemprop="dateModified" datetime="2019-08-25T09:45:26+08:00">2019-08-25</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/网络安全/" itemprop="url" rel="index"><span itemprop="name">网络安全</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          防火墙双机热备技术双机热备概述：为什么需要要双机热备？
-
-解决单点故障，实现业务的平滑过渡（会话表需要同步的）
-
-双机热备的两种部署方式：
-
-主备方式
-负载分担分时。
-
-
-
-防火墙双机热备产生的原因，详细内容可参考：防火墙双机热备技术
-
-
-三大协议框架：
-VRRP——虚拟路由冗余协议
-VGMP——VRRP组管理协议（华为私有）
-HRP——–华为冗余协议（华为私有）
-
-VRRP协议基本原理
-VRRP协议的详细内容可参考：虚拟路由冗余协议（VRRP）
-
-
-VRRP的基础知识点：
-VRRP角色：  m
-          ...
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/03/20/防火墙双机热备三大协议VRRP、VGMP、HRP原理/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2374,7 +2359,7 @@ VRRP角色：  m
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">244</span>
+                    <span class="site-state-item-count">245</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>

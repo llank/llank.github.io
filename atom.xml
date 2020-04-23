@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://cshihong.github.io/"/>
-  <updated>2020-04-18T08:17:03.533Z</updated>
+  <updated>2020-04-23T08:18:42.629Z</updated>
   <id>https://cshihong.github.io/</id>
   
   <author>
@@ -17,11 +17,42 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>在大型数据中心使用BGP进行路由(RFC7938)</title>
+    <link href="https://cshihong.github.io/2020/04/23/%E5%9C%A8%E5%A4%A7%E5%9E%8B%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%BF%83%E4%BD%BF%E7%94%A8BGP%E8%BF%9B%E8%A1%8C%E8%B7%AF%E7%94%B1-RFC7938/"/>
+    <id>https://cshihong.github.io/2020/04/23/在大型数据中心使用BGP进行路由-RFC7938/</id>
+    <published>2020-04-23T08:00:27.000Z</published>
+    <updated>2020-04-23T08:18:42.629Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;hr&gt;
+&lt;blockquote&gt;
+&lt;p&gt;本文是在看RFC7938《 Use of BGP for Routing in Large-Scale Data Centers》是翻译整理的资料。主要讲述了在大型数据中心使用BGP进行路由。&lt;/p&gt;
+&lt;p&gt;原文链接：&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="数据中心" scheme="https://cshihong.github.io/categories/%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%BF%83/"/>
+    
+    
+      <category term="BGP" scheme="https://cshihong.github.io/tags/BGP/"/>
+    
+      <category term="数据中心" scheme="https://cshihong.github.io/tags/%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%BF%83/"/>
+    
+  </entry>
+  
+  <entry>
     <title>(BGP in the datacenter)数据中心的BGP,数据中心网络架构,Clos网络架构</title>
     <link href="https://cshihong.github.io/2020/04/18/BGP-in-the-datacenter-%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%BF%83%E7%9A%84BGP-%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%BF%83%E7%BD%91%E7%BB%9C%E6%9E%B6%E6%9E%84-Clos%E7%BD%91%E7%BB%9C%E6%9E%B6%E6%9E%84/"/>
     <id>https://cshihong.github.io/2020/04/18/BGP-in-the-datacenter-数据中心的BGP-数据中心网络架构-Clos网络架构/</id>
     <published>2020-04-18T05:55:10.000Z</published>
-    <updated>2020-04-18T08:17:03.533Z</updated>
+    <updated>2020-04-23T08:07:33.369Z</updated>
     
     <summary type="html">
     
@@ -39,6 +70,8 @@
     
     
       <category term="BGP" scheme="https://cshihong.github.io/tags/BGP/"/>
+    
+      <category term="数据中心" scheme="https://cshihong.github.io/tags/%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%BF%83/"/>
     
   </entry>
   
@@ -541,34 +574,6 @@
     
     
       <category term="VPN" scheme="https://cshihong.github.io/tags/VPN/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>IPS与IDS部署场景</title>
-    <link href="https://cshihong.github.io/2019/08/18/IPS%E4%B8%8EIDS%E9%83%A8%E7%BD%B2%E5%9C%BA%E6%99%AF/"/>
-    <id>https://cshihong.github.io/2019/08/18/IPS与IDS部署场景/</id>
-    <published>2019-08-18T09:37:51.000Z</published>
-    <updated>2019-08-18T10:45:34.163Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;hr&gt;
-&lt;blockquote&gt;
-&lt;p&gt;IPS原理可参考：&lt;a
-        
-      
-    
-    </summary>
-    
-      <category term="网络安全" scheme="https://cshihong.github.io/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
-    
-    
-      <category term="IPS" scheme="https://cshihong.github.io/tags/IPS/"/>
     
   </entry>
   
