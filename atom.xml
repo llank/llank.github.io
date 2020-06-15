@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://cshihong.github.io/"/>
-  <updated>2020-04-23T08:18:42.629Z</updated>
+  <updated>2020-06-15T02:55:53.046Z</updated>
   <id>https://cshihong.github.io/</id>
   
   <author>
@@ -17,11 +17,63 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>堡垒机(运维审计系统)的基本原理与部署方式</title>
+    <link href="https://cshihong.github.io/2020/06/15/%E5%A0%A1%E5%9E%92%E6%9C%BA-%E8%BF%90%E7%BB%B4%E5%AE%A1%E8%AE%A1%E7%B3%BB%E7%BB%9F-%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86%E4%B8%8E%E9%83%A8%E7%BD%B2%E6%96%B9%E5%BC%8F/"/>
+    <id>https://cshihong.github.io/2020/06/15/堡垒机-运维审计系统-的基本原理与部署方式/</id>
+    <published>2020-06-15T01:50:54.000Z</published>
+    <updated>2020-06-15T02:55:53.046Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;堡垒机简介&quot;&gt;&lt;a href=&quot;#堡垒机简介&quot; class=&quot;headerlink&quot; title=&quot;堡垒机简介&quot;&gt;&lt;/a&gt;堡垒机简介&lt;/h1&gt;&lt;h2 id=&quot;堡垒机是什么？&quot;&gt;&lt;a href=&quot;#堡垒机是什么？&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="网络安全" scheme="https://cshihong.github.io/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
+    
+    
+      <category term="网络安全" scheme="https://cshihong.github.io/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>WAF基本原理与部署方式</title>
+    <link href="https://cshihong.github.io/2020/06/14/WAF%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86%E4%B8%8E%E9%83%A8%E7%BD%B2%E6%96%B9%E5%BC%8F/"/>
+    <id>https://cshihong.github.io/2020/06/14/WAF基本原理与部署方式/</id>
+    <published>2020-06-14T00:24:29.000Z</published>
+    <updated>2020-06-14T02:19:08.039Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;WAF介绍&quot;&gt;&lt;a href=&quot;#WAF介绍&quot; class=&quot;headerlink&quot; title=&quot;WAF介绍&quot;&gt;&lt;/a&gt;WAF介绍&lt;/h1&gt;&lt;h2 id=&quot;WAF是什么？&quot;&gt;&lt;a href=&quot;#WAF是什么？&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="网络安全" scheme="https://cshihong.github.io/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
+    
+    
+      <category term="网络安全" scheme="https://cshihong.github.io/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
+    
+  </entry>
+  
+  <entry>
     <title>在大型数据中心使用BGP进行路由(RFC7938)</title>
     <link href="https://cshihong.github.io/2020/04/23/%E5%9C%A8%E5%A4%A7%E5%9E%8B%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%BF%83%E4%BD%BF%E7%94%A8BGP%E8%BF%9B%E8%A1%8C%E8%B7%AF%E7%94%B1-RFC7938/"/>
     <id>https://cshihong.github.io/2020/04/23/在大型数据中心使用BGP进行路由-RFC7938/</id>
     <published>2020-04-23T08:00:27.000Z</published>
-    <updated>2020-04-23T08:18:42.629Z</updated>
+    <updated>2020-04-23T11:54:47.363Z</updated>
     
     <summary type="html">
     
@@ -520,60 +572,6 @@
       <category term="Web安全" scheme="https://cshihong.github.io/tags/Web%E5%AE%89%E5%85%A8/"/>
     
       <category term="XSS" scheme="https://cshihong.github.io/tags/XSS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【转载】如何成为优秀的网络安全工程师</title>
-    <link href="https://cshihong.github.io/2019/08/21/%E3%80%90%E8%BD%AC%E8%BD%BD%E3%80%91%E5%A6%82%E4%BD%95%E6%88%90%E4%B8%BA%E4%BC%98%E7%A7%80%E7%9A%84%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%B7%A5%E7%A8%8B%E5%B8%88/"/>
-    <id>https://cshihong.github.io/2019/08/21/【转载】如何成为优秀的网络安全工程师/</id>
-    <published>2019-08-21T15:06:54.000Z</published>
-    <updated>2019-08-21T15:22:33.947Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;hr&gt;
-&lt;blockquote&gt;
-&lt;p&gt;转载至：&lt;a href=&quot;https://blog.csdn.net/zhangnn5/article/details/6630254&quot; target=&quot;_blank&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="职业发展" scheme="https://cshihong.github.io/categories/%E8%81%8C%E4%B8%9A%E5%8F%91%E5%B1%95/"/>
-    
-    
-      <category term="职业发展" scheme="https://cshihong.github.io/tags/%E8%81%8C%E4%B8%9A%E5%8F%91%E5%B1%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>L2TP VPN基本原理</title>
-    <link href="https://cshihong.github.io/2019/08/21/L2TP-VPN%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/"/>
-    <id>https://cshihong.github.io/2019/08/21/L2TP-VPN基本原理/</id>
-    <published>2019-08-21T13:01:48.000Z</published>
-    <updated>2019-08-23T01:12:08.675Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;L2TP-VPN简介&quot;&gt;&lt;a href=&quot;#L2TP-VPN简介&quot; class=&quot;headerlink&quot; title=&quot;L2TP VPN简介&quot;&gt;&lt;/a&gt;L2TP VPN简介&lt;/h1&gt;&lt;h2 id=&quot;L2TP基本概念：&quot;&gt;&lt;a href=&quot;#L2TP基本概念：&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="网络安全" scheme="https://cshihong.github.io/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
-    
-    
-      <category term="VPN" scheme="https://cshihong.github.io/tags/VPN/"/>
     
   </entry>
   
