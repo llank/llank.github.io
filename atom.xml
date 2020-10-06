@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://cshihong.github.io/"/>
-  <updated>2020-09-02T16:35:13.577Z</updated>
+  <updated>2020-10-06T11:44:44.348Z</updated>
   <id>https://cshihong.github.io/</id>
   
   <author>
@@ -17,11 +17,124 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Tacacs+协议交互报文抓包示例</title>
+    <link href="https://cshihong.github.io/2020/10/06/Tacacs-%E5%8D%8F%E8%AE%AE%E4%BA%A4%E4%BA%92%E6%8A%A5%E6%96%87%E6%8A%93%E5%8C%85%E7%A4%BA%E4%BE%8B/"/>
+    <id>https://cshihong.github.io/2020/10/06/Tacacs-协议交互报文抓包示例/</id>
+    <published>2020-10-06T10:19:44.000Z</published>
+    <updated>2020-10-06T11:44:44.348Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;tacacs-协议报文抓包示例&quot;&gt;&lt;a href=&quot;#tacacs-协议报文抓包示例&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="网络杂项" scheme="https://cshihong.github.io/categories/%E7%BD%91%E7%BB%9C%E6%9D%82%E9%A1%B9/"/>
+    
+    
+      <category term="Tacscs+" scheme="https://cshihong.github.io/tags/Tacscs/"/>
+    
+      <category term="安全" scheme="https://cshihong.github.io/tags/%E5%AE%89%E5%85%A8/"/>
+    
+      <category term="AAA" scheme="https://cshihong.github.io/tags/AAA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Tacacs+协议抓包分析</title>
+    <link href="https://cshihong.github.io/2020/09/28/Tacacs-%E5%8D%8F%E8%AE%AE%E6%8A%93%E5%8C%85%E5%88%86%E6%9E%90/"/>
+    <id>https://cshihong.github.io/2020/09/28/Tacacs-协议抓包分析/</id>
+    <published>2020-09-28T00:05:06.000Z</published>
+    <updated>2020-09-28T00:07:02.451Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="网络杂项" scheme="https://cshihong.github.io/categories/%E7%BD%91%E7%BB%9C%E6%9D%82%E9%A1%B9/"/>
+    
+    
+      <category term="Tacscs+" scheme="https://cshihong.github.io/tags/Tacscs/"/>
+    
+      <category term="安全" scheme="https://cshihong.github.io/tags/%E5%AE%89%E5%85%A8/"/>
+    
+      <category term="AAA" scheme="https://cshihong.github.io/tags/AAA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Tacacs+各厂商交换机配置</title>
+    <link href="https://cshihong.github.io/2020/09/28/Tacacs-%E5%90%84%E5%8E%82%E5%95%86%E4%BA%A4%E6%8D%A2%E6%9C%BA%E9%85%8D%E7%BD%AE/"/>
+    <id>https://cshihong.github.io/2020/09/28/Tacacs-各厂商交换机配置/</id>
+    <published>2020-09-28T00:04:30.000Z</published>
+    <updated>2020-10-06T09:42:15.753Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;以下为整理的常见厂商的交换机tacacs+认证配置。&lt;/p&gt;
+&lt;h1 id=&quot;交换机配置Tacacs-认证思路&quot;&gt;&lt;a href=&quot;#交换机配置Tacacs-认证思路&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="网络杂项" scheme="https://cshihong.github.io/categories/%E7%BD%91%E7%BB%9C%E6%9D%82%E9%A1%B9/"/>
+    
+    
+      <category term="Tacscs+" scheme="https://cshihong.github.io/tags/Tacscs/"/>
+    
+      <category term="安全" scheme="https://cshihong.github.io/tags/%E5%AE%89%E5%85%A8/"/>
+    
+      <category term="AAA" scheme="https://cshihong.github.io/tags/AAA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Tacacs+服务搭建与配置详解</title>
+    <link href="https://cshihong.github.io/2020/09/10/Tacacs-%E6%9C%8D%E5%8A%A1%E6%90%AD%E5%BB%BA%E4%B8%8E%E9%85%8D%E7%BD%AE%E8%AF%A6%E8%A7%A3/"/>
+    <id>https://cshihong.github.io/2020/09/10/Tacacs-服务搭建与配置详解/</id>
+    <published>2020-09-10T00:56:55.000Z</published>
+    <updated>2020-10-06T10:15:43.600Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;tac_plus&lt;/strong&gt;是TACACS
+        
+      
+    
+    </summary>
+    
+      <category term="网络杂项" scheme="https://cshihong.github.io/categories/%E7%BD%91%E7%BB%9C%E6%9D%82%E9%A1%B9/"/>
+    
+    
+      <category term="Tacscs+" scheme="https://cshihong.github.io/tags/Tacscs/"/>
+    
+      <category term="安全" scheme="https://cshihong.github.io/tags/%E5%AE%89%E5%85%A8/"/>
+    
+      <category term="AAA" scheme="https://cshihong.github.io/tags/AAA/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Tacscs+协议原理</title>
     <link href="https://cshihong.github.io/2020/08/30/Tacscs-%E5%8D%8F%E8%AE%AE%E5%8E%9F%E7%90%86/"/>
     <id>https://cshihong.github.io/2020/08/30/Tacscs-协议原理/</id>
     <published>2020-08-30T08:09:50.000Z</published>
-    <updated>2020-09-02T16:35:13.577Z</updated>
+    <updated>2020-09-28T00:06:43.647Z</updated>
     
     <summary type="html">
     
@@ -43,6 +156,8 @@
       <category term="Tacscs+" scheme="https://cshihong.github.io/tags/Tacscs/"/>
     
       <category term="安全" scheme="https://cshihong.github.io/tags/%E5%AE%89%E5%85%A8/"/>
+    
+      <category term="AAA" scheme="https://cshihong.github.io/tags/AAA/"/>
     
   </entry>
   
@@ -107,7 +222,7 @@
     <link href="https://cshihong.github.io/2020/07/14/%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%BF%83%E4%BA%A4%E6%8D%A2%E6%9C%BA%E8%8A%AF%E7%89%87%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
     <id>https://cshihong.github.io/2020/07/14/数据中心交换机芯片学习总结/</id>
     <published>2020-07-13T23:54:27.000Z</published>
-    <updated>2020-09-09T13:02:59.698Z</updated>
+    <updated>2020-09-10T00:56:11.701Z</updated>
     
     <summary type="html">
     
@@ -467,123 +582,6 @@
       <category term="网络自动化" scheme="https://cshihong.github.io/tags/%E7%BD%91%E7%BB%9C%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
     
       <category term="python" scheme="https://cshihong.github.io/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>IPy-IPv4和IPv6地址处理模块学习笔记</title>
-    <link href="https://cshihong.github.io/2019/12/01/IPy%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    <id>https://cshihong.github.io/2019/12/01/IPy模块学习笔记/</id>
-    <published>2019-12-01T06:03:07.000Z</published>
-    <updated>2019-12-09T01:14:12.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;在日常网络规划中，会有很多关于IP地址的分配规划问题，如果是手动分配，在量很大的情况下，容易出错。而利用IPy这个python模块，可以很容易实现对iP地址的分配等操作。&lt;/p&gt;
-&lt;p&gt;以下是对IPy模块学习的一个记录。&lt;/p&gt;
-&lt;h1 id=&quot;IPy模块简介&quot;&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-      <category term="Python" scheme="https://cshihong.github.io/categories/Python/"/>
-    
-    
-      <category term="Python" scheme="https://cshihong.github.io/tags/Python/"/>
-    
-      <category term="Python模块" scheme="https://cshihong.github.io/tags/Python%E6%A8%A1%E5%9D%97/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>华为HCIE-Security考试心得</title>
-    <link href="https://cshihong.github.io/2019/10/02/%E5%8D%8E%E4%B8%BAHCIE-Security%E8%80%83%E8%AF%95%E5%BF%83%E5%BE%97/"/>
-    <id>https://cshihong.github.io/2019/10/02/华为HCIE-Security考试心得/</id>
-    <published>2019-10-02T02:27:57.000Z</published>
-    <updated>2019-10-04T07:27:00.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;HCIE考试心得&quot;&gt;&lt;a href=&quot;#HCIE考试心得&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="人生感悟" scheme="https://cshihong.github.io/categories/%E4%BA%BA%E7%94%9F%E6%84%9F%E6%82%9F/"/>
-    
-    
-      <category term="人生感悟" scheme="https://cshihong.github.io/tags/%E4%BA%BA%E7%94%9F%E6%84%9F%E6%82%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>nmap扫描工具学习笔记</title>
-    <link href="https://cshihong.github.io/2019/09/24/nmap%E6%89%AB%E6%8F%8F%E5%B7%A5%E5%85%B7%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    <id>https://cshihong.github.io/2019/09/24/nmap扫描工具学习笔记/</id>
-    <published>2019-09-24T02:21:49.000Z</published>
-    <updated>2019-09-25T12:13:04.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;hr&gt;
-&lt;blockquote&gt;
-&lt;p&gt;参考文档：2019.3_Kali man namp手册。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;h1 id=&quot;Namp简介&quot;&gt;&lt;a href=&quot;#Namp简介&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="Linux" scheme="https://cshihong.github.io/categories/Linux/"/>
-    
-    
-      <category term="扫描工具" scheme="https://cshihong.github.io/tags/%E6%89%AB%E6%8F%8F%E5%B7%A5%E5%85%B7/"/>
-    
-      <category term="Nmap" scheme="https://cshihong.github.io/tags/Nmap/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Kali基本扫描工具</title>
-    <link href="https://cshihong.github.io/2019/09/22/Kali%E5%9F%BA%E6%9C%AC%E6%89%AB%E6%8F%8F%E5%B7%A5%E5%85%B7/"/>
-    <id>https://cshihong.github.io/2019/09/22/Kali基本扫描工具/</id>
-    <published>2019-09-22T12:47:23.000Z</published>
-    <updated>2019-09-22T14:50:48.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;Fping工具的使用&quot;&gt;&lt;a href=&quot;#Fping工具的使用&quot; class=&quot;headerlink&quot; title=&quot;Fping工具的使用&quot;&gt;&lt;/a&gt;Fping工具的使用&lt;/h1&gt;&lt;h2 id=&quot;fping简介：&quot;&gt;&lt;a href=&quot;#fping简介：&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="Linux" scheme="https://cshihong.github.io/categories/Linux/"/>
-    
-    
-      <category term="扫描工具" scheme="https://cshihong.github.io/tags/%E6%89%AB%E6%8F%8F%E5%B7%A5%E5%85%B7/"/>
-    
-      <category term="Kali" scheme="https://cshihong.github.io/tags/Kali/"/>
     
   </entry>
   
