@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://cshihong.github.io/"/>
-  <updated>2020-10-06T11:44:44.348Z</updated>
+  <updated>2020-10-06T13:32:53.785Z</updated>
   <id>https://cshihong.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://cshihong.github.io/2020/10/06/Tacacs-%E5%8D%8F%E8%AE%AE%E4%BA%A4%E4%BA%92%E6%8A%A5%E6%96%87%E6%8A%93%E5%8C%85%E7%A4%BA%E4%BE%8B/"/>
     <id>https://cshihong.github.io/2020/10/06/Tacacs-协议交互报文抓包示例/</id>
     <published>2020-10-06T10:19:44.000Z</published>
-    <updated>2020-10-06T11:44:44.348Z</updated>
+    <updated>2020-10-06T13:32:53.785Z</updated>
     
     <summary type="html">
     
@@ -29,31 +29,13 @@
       
         
         
-          &lt;h1 id=&quot;tacacs-协议报文抓包示例&quot;&gt;&lt;a href=&quot;#tacacs-协议报文抓包示例&quot; class=&quot;headerlink&quot;
+          &lt;hr&gt;
+&lt;blockquote&gt;
+&lt;p&gt;其他文章：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a
         
       
-    
-    </summary>
-    
-      <category term="网络杂项" scheme="https://cshihong.github.io/categories/%E7%BD%91%E7%BB%9C%E6%9D%82%E9%A1%B9/"/>
-    
-    
-      <category term="Tacscs+" scheme="https://cshihong.github.io/tags/Tacscs/"/>
-    
-      <category term="安全" scheme="https://cshihong.github.io/tags/%E5%AE%89%E5%85%A8/"/>
-    
-      <category term="AAA" scheme="https://cshihong.github.io/tags/AAA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Tacacs+协议抓包分析</title>
-    <link href="https://cshihong.github.io/2020/09/28/Tacacs-%E5%8D%8F%E8%AE%AE%E6%8A%93%E5%8C%85%E5%88%86%E6%9E%90/"/>
-    <id>https://cshihong.github.io/2020/09/28/Tacacs-协议抓包分析/</id>
-    <published>2020-09-28T00:05:06.000Z</published>
-    <updated>2020-09-28T00:07:02.451Z</updated>
-    
-    <summary type="html">
     
     </summary>
     
@@ -73,7 +55,7 @@
     <link href="https://cshihong.github.io/2020/09/28/Tacacs-%E5%90%84%E5%8E%82%E5%95%86%E4%BA%A4%E6%8D%A2%E6%9C%BA%E9%85%8D%E7%BD%AE/"/>
     <id>https://cshihong.github.io/2020/09/28/Tacacs-各厂商交换机配置/</id>
     <published>2020-09-28T00:04:30.000Z</published>
-    <updated>2020-10-06T09:42:15.753Z</updated>
+    <updated>2020-10-06T13:34:16.906Z</updated>
     
     <summary type="html">
     
@@ -81,8 +63,11 @@
       
         
         
-          &lt;p&gt;以下为整理的常见厂商的交换机tacacs+认证配置。&lt;/p&gt;
-&lt;h1 id=&quot;交换机配置Tacacs-认证思路&quot;&gt;&lt;a href=&quot;#交换机配置Tacacs-认证思路&quot; class=&quot;headerlink&quot;
+          &lt;hr&gt;
+&lt;blockquote&gt;
+&lt;p&gt;其他文章：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a
         
       
     
@@ -104,7 +89,7 @@
     <link href="https://cshihong.github.io/2020/09/10/Tacacs-%E6%9C%8D%E5%8A%A1%E6%90%AD%E5%BB%BA%E4%B8%8E%E9%85%8D%E7%BD%AE%E8%AF%A6%E8%A7%A3/"/>
     <id>https://cshihong.github.io/2020/09/10/Tacacs-服务搭建与配置详解/</id>
     <published>2020-09-10T00:56:55.000Z</published>
-    <updated>2020-10-06T10:15:43.600Z</updated>
+    <updated>2020-10-06T13:35:04.895Z</updated>
     
     <summary type="html">
     
@@ -112,7 +97,11 @@
       
         
         
-          &lt;h1 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;tac_plus&lt;/strong&gt;是TACACS
+          &lt;hr&gt;
+&lt;blockquote&gt;
+&lt;p&gt;其他文章：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a
         
       
     
@@ -134,7 +123,7 @@
     <link href="https://cshihong.github.io/2020/08/30/Tacscs-%E5%8D%8F%E8%AE%AE%E5%8E%9F%E7%90%86/"/>
     <id>https://cshihong.github.io/2020/08/30/Tacscs-协议原理/</id>
     <published>2020-08-30T08:09:50.000Z</published>
-    <updated>2020-09-28T00:06:43.647Z</updated>
+    <updated>2020-10-06T13:33:50.513Z</updated>
     
     <summary type="html">
     
@@ -582,6 +571,36 @@
       <category term="网络自动化" scheme="https://cshihong.github.io/tags/%E7%BD%91%E7%BB%9C%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
     
       <category term="python" scheme="https://cshihong.github.io/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>IPy-IPv4和IPv6地址处理模块学习笔记</title>
+    <link href="https://cshihong.github.io/2019/12/01/IPy%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>https://cshihong.github.io/2019/12/01/IPy模块学习笔记/</id>
+    <published>2019-12-01T06:03:07.000Z</published>
+    <updated>2019-12-09T01:14:12.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;在日常网络规划中，会有很多关于IP地址的分配规划问题，如果是手动分配，在量很大的情况下，容易出错。而利用IPy这个python模块，可以很容易实现对iP地址的分配等操作。&lt;/p&gt;
+&lt;p&gt;以下是对IPy模块学习的一个记录。&lt;/p&gt;
+&lt;h1 id=&quot;IPy模块简介&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="Python" scheme="https://cshihong.github.io/categories/Python/"/>
+    
+    
+      <category term="Python" scheme="https://cshihong.github.io/tags/Python/"/>
+    
+      <category term="Python模块" scheme="https://cshihong.github.io/tags/Python%E6%A8%A1%E5%9D%97/"/>
     
   </entry>
   

@@ -133,13 +133,13 @@
 
 
 
-  <meta name="description" content="tacacs+协议报文抓包示例 如果使用wireshark对tacacs+报文进行抓包，需要将tacacs+服务器的tac_plus服务监听端口设置为49，这是为tacacs+分配的默认端口，TCP 49。 此时，会将TCP 49端口的报解码为tacacs+报文。否则，看到的都是TCP交互报文。  实验拓扑：本次实验在eve-ng仿真环境中进行测试，可测试H3C，华为，Arista，Cisco设备">
+  <meta name="description" content="其他文章：  Tacacs+协议原理 Tacacs+服务搭建与配置详解 Tacacs+各厂商交换机配置 Tacacs+协议交互报文抓包示例    tacacs+协议报文抓包示例 如果使用wireshark对tacacs+报文进行抓包，需要将tacacs+服务器的tac_plus服务监听端口设置为49，这是为tacacs+分配的默认端口，TCP 49。 此时，会将TCP 49端口的报解码为tac">
 <meta name="keywords" content="Tacscs+,安全,AAA">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Tacacs+协议交互报文抓包示例">
 <meta property="og:url" content="https://cshihong.github.io/2020/10/06/Tacacs-协议交互报文抓包示例/index.html">
 <meta property="og:site_name" content="曹世宏的博客">
-<meta property="og:description" content="tacacs+协议报文抓包示例 如果使用wireshark对tacacs+报文进行抓包，需要将tacacs+服务器的tac_plus服务监听端口设置为49，这是为tacacs+分配的默认端口，TCP 49。 此时，会将TCP 49端口的报解码为tacacs+报文。否则，看到的都是TCP交互报文。  实验拓扑：本次实验在eve-ng仿真环境中进行测试，可测试H3C，华为，Arista，Cisco设备">
+<meta property="og:description" content="其他文章：  Tacacs+协议原理 Tacacs+服务搭建与配置详解 Tacacs+各厂商交换机配置 Tacacs+协议交互报文抓包示例    tacacs+协议报文抓包示例 如果使用wireshark对tacacs+报文进行抓包，需要将tacacs+服务器的tac_plus服务监听端口设置为49，这是为tacacs+分配的默认端口，TCP 49。 此时，会将TCP 49端口的报解码为tac">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://cshihong.github.io/2020/10/06/Tacacs-协议交互报文抓包示例/image-20201006194219331.png">
 <meta property="og:image" content="https://cshihong.github.io/2020/10/06/Tacacs-协议交互报文抓包示例/tacacs.png">
@@ -159,10 +159,10 @@
 <meta property="og:image" content="https://cshihong.github.io/2020/10/06/Tacacs-协议交互报文抓包示例/image-20201006185903029.png">
 <meta property="og:image" content="https://cshihong.github.io/2020/10/06/Tacacs-协议交互报文抓包示例/image-20201006185402438.png">
 <meta property="og:image" content="https://cshihong.github.io/2020/10/06/Tacacs-协议交互报文抓包示例/image-20201006185454370.png">
-<meta property="og:updated_time" content="2020-10-06T11:44:44.348Z">
+<meta property="og:updated_time" content="2020-10-06T13:32:53.785Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Tacacs+协议交互报文抓包示例">
-<meta name="twitter:description" content="tacacs+协议报文抓包示例 如果使用wireshark对tacacs+报文进行抓包，需要将tacacs+服务器的tac_plus服务监听端口设置为49，这是为tacacs+分配的默认端口，TCP 49。 此时，会将TCP 49端口的报解码为tacacs+报文。否则，看到的都是TCP交互报文。  实验拓扑：本次实验在eve-ng仿真环境中进行测试，可测试H3C，华为，Arista，Cisco设备">
+<meta name="twitter:description" content="其他文章：  Tacacs+协议原理 Tacacs+服务搭建与配置详解 Tacacs+各厂商交换机配置 Tacacs+协议交互报文抓包示例    tacacs+协议报文抓包示例 如果使用wireshark对tacacs+报文进行抓包，需要将tacacs+服务器的tac_plus服务监听端口设置为49，这是为tacacs+分配的默认端口，TCP 49。 此时，会将TCP 49端口的报解码为tac">
 <meta name="twitter:image" content="https://cshihong.github.io/2020/10/06/Tacacs-协议交互报文抓包示例/image-20201006194219331.png">
 
 
@@ -483,7 +483,7 @@
                 
               
 
-              <time title="创建时间：2020-10-06 18:19:44 / 修改时间：19:44:44" itemprop="dateCreated datePublished" datetime="2020-10-06T18:19:44+08:00">2020-10-06</time>
+              <time title="创建时间：2020-10-06 18:19:44 / 修改时间：21:32:53" itemprop="dateCreated datePublished" datetime="2020-10-06T18:19:44+08:00">2020-10-06</time>
             
 
             
@@ -528,7 +528,7 @@
             <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
 			<span class="post-meta-divider">|</span>
-			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 1,712</span>
+			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 1,790</span>
 			<span class="post-meta-item-text">|</span>
 			<span title="post.min2read"><span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span>阅读时长： 8</span>
 
@@ -551,7 +551,18 @@
       
 
       
-        <h1 id="tacacs-协议报文抓包示例"><a href="#tacacs-协议报文抓包示例" class="headerlink" title="tacacs+协议报文抓包示例"></a>tacacs+协议报文抓包示例</h1><blockquote>
+        <hr>
+<blockquote>
+<p>其他文章：</p>
+<ul>
+<li><a href="https://cshihong.github.io/2020/08/30/Tacscs-%E5%8D%8F%E8%AE%AE%E5%8E%9F%E7%90%86/">Tacacs+协议原理</a></li>
+<li><a href="https://cshihong.github.io/2020/09/10/Tacacs-%E6%9C%8D%E5%8A%A1%E6%90%AD%E5%BB%BA%E4%B8%8E%E9%85%8D%E7%BD%AE%E8%AF%A6%E8%A7%A3/">Tacacs+服务搭建与配置详解</a></li>
+<li><a href="https://cshihong.github.io/2020/09/28/Tacacs-%E5%90%84%E5%8E%82%E5%95%86%E4%BA%A4%E6%8D%A2%E6%9C%BA%E9%85%8D%E7%BD%AE/">Tacacs+各厂商交换机配置</a></li>
+<li><a href="https://cshihong.github.io/2020/10/06/Tacacs-%E5%8D%8F%E8%AE%AE%E4%BA%A4%E4%BA%92%E6%8A%A5%E6%96%87%E6%8A%93%E5%8C%85%E7%A4%BA%E4%BE%8B/">Tacacs+协议交互报文抓包示例</a></li>
+</ul>
+</blockquote>
+<hr>
+<h1 id="tacacs-协议报文抓包示例"><a href="#tacacs-协议报文抓包示例" class="headerlink" title="tacacs+协议报文抓包示例"></a>tacacs+协议报文抓包示例</h1><blockquote>
 <p>如果使用wireshark对tacacs+报文进行抓包，需要将tacacs+服务器的tac_plus服务监听端口设置为49，这是为tacacs+分配的默认端口，TCP 49。</p>
 <p>此时，会将TCP 49端口的报解码为tacacs+报文。否则，看到的都是TCP交互报文。</p>
 </blockquote>
@@ -624,6 +635,17 @@
 <h2 id="authentication-log-认证日志示例："><a href="#authentication-log-认证日志示例：" class="headerlink" title="authentication.log 认证日志示例："></a>authentication.log 认证日志示例：</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# more /var/log/tac_plus/authentication/authentication.log </span><br><span class="line">2020-10-06 15:47:43 +0800       192.168.147.134 tacacsuser      GigabitEthernet1/0      192.168.147.1   ascii lo</span><br><span class="line">gin succeeded</span><br><span class="line">2020-10-06 16:01:36 +0800       192.168.147.134 tacacsuser      GigabitEthernet1/0      192.168.147.1   ascii lo</span><br><span class="line">gin succeeded</span><br><span class="line">2020-10-06 16:07:37 +0800       192.168.147.134 tacacsuser      GigabitEthernet1/0      192.168.147.1   ascii lo</span><br><span class="line">gin succeeded</span><br><span class="line">2020-10-06 16:13:43 +0800       192.168.147.134 tacacsuser      GigabitEthernet1/0      192.168.147.1   ascii lo</span><br><span class="line">gin succeeded</span><br><span class="line">2020-10-06 17:59:12 +0800       192.168.147.134 tacacsuser      GigabitEthernet1/0      192.168.147.1   ascii lo</span><br><span class="line">gin succeeded</span><br><span class="line">2020-10-06 17:59:22 +0800       192.168.147.134 user    GigabitEthernet1/0      192.168.147.1   ascii login fail</span><br><span class="line">ed (no such user)</span><br></pre></td></tr></table></figure>
 <h2 id="authorization-log-授权日志示例："><a href="#authorization-log-授权日志示例：" class="headerlink" title="authorization.log  授权日志示例："></a>authorization.log  授权日志示例：</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# more /var/log/tac_plus/authorization/authorization.log </span><br><span class="line">2020-10-06 15:47:48 +0800       192.168.147.134 tacacsuser      vty0            permit  system-view     &lt;cr&gt;</span><br><span class="line">2020-10-06 16:01:45 +0800       192.168.147.134 tacacsuser      vty0            permit  display ip interface bri</span><br><span class="line">ef &lt;cr&gt;</span><br><span class="line">2020-10-06 16:06:34 +0800       192.168.147.134 tacacsuser      vty0            permit  system-view     &lt;cr&gt;</span><br><span class="line">2020-10-06 16:06:35 +0800       192.168.147.134 tacacsuser      vty0            permit  display this &lt;cr&gt;</span><br><span class="line">2020-10-06 16:06:37 +0800       192.168.147.134 tacacsuser      vty0            permit  display current-configur</span><br><span class="line">ation &lt;cr&gt;</span><br><span class="line">2020-10-06 16:07:19 +0800       192.168.147.134 tacacsuser      vty0            permit  hwtacacs        scheme c</span><br><span class="line">as &lt;cr&gt;</span><br><span class="line">2020-10-06 16:07:20 +0800       192.168.147.134 tacacsuser      vty0            permit  primary authentication 1</span><br><span class="line">92.168.147.135 49 single-connection key simple ****** &lt;cr&gt;</span><br><span class="line">2020-10-06 16:07:20 +0800       192.168.147.134 tacacsuser      vty0            permit  primary authorization 19</span><br><span class="line">2020-10-06 16:09:15 +0800       192.168.147.134 tacacsuser      vty0            permit  display ip interface bri</span><br></pre></td></tr></table></figure>
 <h2 id="accounting-log-计费日志示例："><a href="#accounting-log-计费日志示例：" class="headerlink" title="accounting.log  计费日志示例："></a>accounting.log  计费日志示例：</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# more /var/log/tac_plus/accounting/accounting.log </span><br><span class="line">2020-10-06 15:47:43 +0800       192.168.147.134 tacacsuser      vty0    192.168.147.1   start   task_id=0</span><br><span class="line">timezone=0      service=shell</span><br><span class="line">2020-10-06 15:47:48 +0800       192.168.147.134 tacacsuser      vty0            stop    task_id=0       timezone</span><br><span class="line">=0      service=shell   priv-lvl=15     cmd=system-view</span><br><span class="line">2020-10-06 15:49:39 +0800       192.168.147.134 tacacsuser      vty0            stop    task_id=0       timezone</span><br><span class="line">2020-10-06 18:27:23 +0800       192.168.147.134 user1   vty0    192.168.147.1   start   task_id=0       timezone</span><br><span class="line">=0      service=shell</span><br><span class="line">2020-10-06 18:27:24 +0800       192.168.147.134 user1   vty0            stop    task_id=0       timezone=0</span><br><span class="line">service=shell   priv-lvl=15     cmd=system-view</span><br><span class="line">2020-10-06 18:27:27 +0800       192.168.147.134 user1   vty0            stop    task_id=0       timezone=0</span><br><span class="line">service=shell   priv-lvl=15     cmd=display ip interface brief</span><br><span class="line">2020-10-06 18:37:28 +0800       192.168.147.134 user1   vty0    192.168.147.1   stop    task_id=0       timezone</span><br><span class="line">=0      service=shell   disc_cause=0    disc_cause_ext=0        bytes_in=0      bytes_out=0     paks_in=0</span><br><span class="line">paks_out=0      elapsed_time=605</span><br></pre></td></tr></table></figure>
+<hr>
+<blockquote>
+<p>其他文章：</p>
+<ul>
+<li><a href="https://cshihong.github.io/2020/08/30/Tacscs-%E5%8D%8F%E8%AE%AE%E5%8E%9F%E7%90%86/">Tacacs+协议原理</a></li>
+<li><a href="https://cshihong.github.io/2020/09/10/Tacacs-%E6%9C%8D%E5%8A%A1%E6%90%AD%E5%BB%BA%E4%B8%8E%E9%85%8D%E7%BD%AE%E8%AF%A6%E8%A7%A3/">Tacacs+服务搭建与配置详解</a></li>
+<li><a href="https://cshihong.github.io/2020/09/28/Tacacs-%E5%90%84%E5%8E%82%E5%95%86%E4%BA%A4%E6%8D%A2%E6%9C%BA%E9%85%8D%E7%BD%AE/">Tacacs+各厂商交换机配置</a></li>
+<li><a href="https://cshihong.github.io/2020/10/06/Tacacs-%E5%8D%8F%E8%AE%AE%E4%BA%A4%E4%BA%92%E6%8A%A5%E6%96%87%E6%8A%93%E5%8C%85%E7%A4%BA%E4%BE%8B/">Tacacs+协议交互报文抓包示例</a></li>
+</ul>
+</blockquote>
+<hr>
 
       
     </div>
@@ -780,8 +802,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/09/28/Tacacs-协议抓包分析/" rel="next" title="Tacacs+协议抓包分析">
-                <i class="fa fa-chevron-left"></i> Tacacs+协议抓包分析
+              <a href="/2020/09/28/Tacacs-各厂商交换机配置/" rel="next" title="Tacacs+各厂商交换机配置">
+                <i class="fa fa-chevron-left"></i> Tacacs+各厂商交换机配置
               </a>
             
           </div>
@@ -865,7 +887,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">258</span>
+                    <span class="site-state-item-count">257</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
