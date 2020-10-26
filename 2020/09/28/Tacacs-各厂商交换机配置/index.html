@@ -134,14 +134,14 @@
 
 
   <meta name="description" content="其他文章：  Tacacs+协议原理 Tacacs+服务搭建与配置详解 Tacacs+各厂商交换机配置 Tacacs+协议交互报文抓包示例    以下为整理的常见厂商的交换机tacacs+认证配置。 交换机配置Tacacs+认证思路 交换机全局开启Tacacs+认证 配置tacacs+认证模板，主要配置tacacs+认证的服务器地址，端口，密钥。 配置tacacs+的认证，授权，计费列表 全局">
-<meta name="keywords" content="Tacscs+,AAA,安全">
+<meta name="keywords" content="Tacscs+,安全,AAA">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Tacacs+各厂商交换机配置">
 <meta property="og:url" content="https://cshihong.github.io/2020/09/28/Tacacs-各厂商交换机配置/index.html">
 <meta property="og:site_name" content="曹世宏的博客">
 <meta property="og:description" content="其他文章：  Tacacs+协议原理 Tacacs+服务搭建与配置详解 Tacacs+各厂商交换机配置 Tacacs+协议交互报文抓包示例    以下为整理的常见厂商的交换机tacacs+认证配置。 交换机配置Tacacs+认证思路 交换机全局开启Tacacs+认证 配置tacacs+认证模板，主要配置tacacs+认证的服务器地址，端口，密钥。 配置tacacs+的认证，授权，计费列表 全局">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-10-06T13:34:16.906Z">
+<meta property="og:updated_time" content="2020-10-26T09:06:49.975Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Tacacs+各厂商交换机配置">
 <meta name="twitter:description" content="其他文章：  Tacacs+协议原理 Tacacs+服务搭建与配置详解 Tacacs+各厂商交换机配置 Tacacs+协议交互报文抓包示例    以下为整理的常见厂商的交换机tacacs+认证配置。 交换机配置Tacacs+认证思路 交换机全局开启Tacacs+认证 配置tacacs+认证模板，主要配置tacacs+认证的服务器地址，端口，密钥。 配置tacacs+的认证，授权，计费列表 全局">
@@ -481,7 +481,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2020-10-06 21:34:16" itemprop="dateModified" datetime="2020-10-06T21:34:16+08:00">2020-10-06</time>
+                <time title="修改时间：2020-10-26 17:06:49" itemprop="dateModified" datetime="2020-10-26T17:06:49+08:00">2020-10-26</time>
               
             
           </span>
@@ -579,7 +579,7 @@
 <blockquote>
 <p>目前锐捷设备新版本一般支持AAA认证检测并自动带内/带外切换</p>
 <p>no ip tacacs source-interface mgmt 0，需要删除认证源接口。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span><span class="bash"> tacacs-server host oob 10.8.8.12 port 4949 key XXX//首先采用带外通信</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> tacacs-server host 10.8.8.12 port 4949 key XXX//带外不通达到超时后，切换带内</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> tacacs-server timeout 3  //必配，配置AAA server超时时间3秒，超时后切换</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> tacacs-server deadtime 5  //必配，配置dead的AAA server 恢复的时间为5分钟。</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"></span></span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span><span class="bash"> tacacs-server host oob 192.168.147.135 port 49 key XXX//首先采用带外通信</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> tacacs-server host 192.168.147.135 port 49 key XXX//带外不通达到超时后，切换带内</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> tacacs-server timeout 3  //必配，配置AAA server超时时间3秒，超时后切换</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> tacacs-server deadtime 5  //必配，配置dead的AAA server 恢复的时间为5分钟。</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"></span></span><br></pre></td></tr></table></figure>
 </blockquote>
 <h2 id="Arista交换机："><a href="#Arista交换机：" class="headerlink" title="Arista交换机："></a>Arista交换机：</h2><p>Arista的交换机的认证同Ruijie交换机。</p>
 <hr>
@@ -688,9 +688,9 @@
           
             <a href="/tags/Tacscs/" rel="tag"># Tacscs+</a>
           
-            <a href="/tags/AAA/" rel="tag"># AAA</a>
-          
             <a href="/tags/安全/" rel="tag"># 安全</a>
+          
+            <a href="/tags/AAA/" rel="tag"># AAA</a>
           
         </div>
       
@@ -852,7 +852,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">257</span>
+                    <span class="site-state-item-count">258</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1188,7 +1188,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">130</span>
+                      
+                    
+                    <span class="site-state-item-count">131</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

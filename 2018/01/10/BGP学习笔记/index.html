@@ -133,20 +133,20 @@
 
 
 
-  <meta name="description" content="BGP的特征： BGP是外部路由协议，用来在AS之间传递路由信息。 是一种增强的距离矢量路由协议（AS_PATH）。  可靠的路由更新机制（TCP）（目的端口为179，源端口随机生成） 丰富的Metric度量方法（12条选路原则）。 从设计上避免了环路的发生   为路由附带属性信息。 支持CIDR（无类别域间选路）。 丰富的路由过滤和路由策略（router-policy）。 无需周期性的更新，只存">
+  <meta name="description" content="BGP的特征： BGP是外部路由协议，用来在AS之间传递路由信息。 是一种路径矢量（Path-Vector）矢量路由协议（AS_PATH）。  可靠的路由更新机制（TCP）（目的端口为179，源端口随机生成） 丰富的Metric度量方法（12条选路原则）。 从设计上避免了环路的发生   为路由附带属性信息。 支持CIDR（无类别域间选路）。 丰富的路由过滤和路由策略（router-policy）。">
 <meta name="keywords" content="BGP,路由基础">
 <meta property="og:type" content="article">
 <meta property="og:title" content="BGP学习笔记">
 <meta property="og:url" content="https://cshihong.github.io/2018/01/10/BGP学习笔记/index.html">
 <meta property="og:site_name" content="曹世宏的博客">
-<meta property="og:description" content="BGP的特征： BGP是外部路由协议，用来在AS之间传递路由信息。 是一种增强的距离矢量路由协议（AS_PATH）。  可靠的路由更新机制（TCP）（目的端口为179，源端口随机生成） 丰富的Metric度量方法（12条选路原则）。 从设计上避免了环路的发生   为路由附带属性信息。 支持CIDR（无类别域间选路）。 丰富的路由过滤和路由策略（router-policy）。 无需周期性的更新，只存">
+<meta property="og:description" content="BGP的特征： BGP是外部路由协议，用来在AS之间传递路由信息。 是一种路径矢量（Path-Vector）矢量路由协议（AS_PATH）。  可靠的路由更新机制（TCP）（目的端口为179，源端口随机生成） 丰富的Metric度量方法（12条选路原则）。 从设计上避免了环路的发生   为路由附带属性信息。 支持CIDR（无类别域间选路）。 丰富的路由过滤和路由策略（router-policy）。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://cshihong.github.io/2018/01/10/BGP学习笔记/BGP状态机.png">
 <meta property="og:image" content="https://cshihong.github.io/2018/01/10/BGP学习笔记/BGP路由信息处理.png">
-<meta property="og:updated_time" content="2018-04-12T10:42:02.000Z">
+<meta property="og:updated_time" content="2020-10-15T12:15:18.735Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="BGP学习笔记">
-<meta name="twitter:description" content="BGP的特征： BGP是外部路由协议，用来在AS之间传递路由信息。 是一种增强的距离矢量路由协议（AS_PATH）。  可靠的路由更新机制（TCP）（目的端口为179，源端口随机生成） 丰富的Metric度量方法（12条选路原则）。 从设计上避免了环路的发生   为路由附带属性信息。 支持CIDR（无类别域间选路）。 丰富的路由过滤和路由策略（router-policy）。 无需周期性的更新，只存">
+<meta name="twitter:description" content="BGP的特征： BGP是外部路由协议，用来在AS之间传递路由信息。 是一种路径矢量（Path-Vector）矢量路由协议（AS_PATH）。  可靠的路由更新机制（TCP）（目的端口为179，源端口随机生成） 丰富的Metric度量方法（12条选路原则）。 从设计上避免了环路的发生   为路由附带属性信息。 支持CIDR（无类别域间选路）。 丰富的路由过滤和路由策略（router-policy）。">
 <meta name="twitter:image" content="https://cshihong.github.io/2018/01/10/BGP学习笔记/BGP状态机.png">
 
 
@@ -484,7 +484,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-04-12 18:42:02" itemprop="dateModified" datetime="2018-04-12T18:42:02+08:00">2018-04-12</time>
+                <time title="修改时间：2020-10-15 20:15:18" itemprop="dateModified" datetime="2020-10-15T20:15:18+08:00">2020-10-15</time>
               
             
           </span>
@@ -524,9 +524,9 @@
             <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
 			<span class="post-meta-divider">|</span>
-			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 5,269</span>
+			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 6,161</span>
 			<span class="post-meta-item-text">|</span>
-			<span title="post.min2read"><span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span>阅读时长： 19</span>
+			<span title="post.min2read"><span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span>阅读时长： 23</span>
 
           
 
@@ -549,7 +549,7 @@
       
         <h2 id="BGP的特征："><a href="#BGP的特征：" class="headerlink" title="BGP的特征："></a>BGP的特征：</h2><ul>
 <li>BGP是外部路由协议，用来在AS之间传递路由信息。</li>
-<li>是一种增强的距离矢量路由协议（AS_PATH）。</li>
+<li>是一种路径矢量（Path-Vector）矢量路由协议（AS_PATH）。</li>
 <li><ol>
 <li>可靠的路由更新机制（TCP）（目的端口为179，源端口随机生成）</li>
 <li>丰富的Metric度量方法（12条选路原则）。</li>
@@ -562,6 +562,22 @@
 <li>无需周期性的更新，只存在触发更新，并且值更新部分路由。</li>
 <li>周期性（60s）的发送KeepAlive报文检测TCP的连通性。</li>
 </ul>
+<blockquote>
+<p><strong>路由算法分类</strong>：<a href="https://en.wikipedia.org/wiki/Routing_protocol" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Routing_protocol</a></p>
+<ul>
+<li><p><strong>路径矢量路由协议</strong>（<strong>path-vector routing protocol</strong> ）是一种网络路由协议，它维护动态更新的路径信息。通过网络循环并返回到同一节点的更新很容易被检测和丢弃。该算法有时用于 <a href="https://en.wikipedia.org/wiki/Bellman–Ford_algorithm" target="_blank" rel="noopener">Bellman–Ford algorithm</a>路由算法，以避免“数到无穷”问题。它不同于距离矢量路由和链路状态路由。路由表中的每个条目都包含目的地网络、下一个路由器和到达目的地的路径。</p>
+<p><a href="https://en.wikipedia.org/wiki/Path-vector_routing_protocol" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Path-vector_routing_protocol</a></p>
+</li>
+<li><p>距离矢量路由协（<strong>distance-vector routing protocol</strong>）：数据网络中的距离矢量路由协议根据距离确定数据包的最佳路由。距离向量路由协议通过分组必须通过的路由器数量来衡量距离，一个路由器算作一跳。一些距离矢量协议还考虑了网络延迟和影响给定路由上流量的其他因素。为了确定跨网络的最佳路由，在其上实现了距离矢量协议的路由器相互交换信息，通常是路由表加上目的地网络的跳跃计数，以及可能的其他交通信息。距离向量路由协议还要求路由器定期通知其邻居网络拓扑变化。距离矢量路由协议使用Bellman-Ford算法和Ford-Fulkerson算法来计算最佳路由。</p>
+<p><a href="https://en.wikipedia.org/wiki/Distance-vector_routing_protocol" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Distance-vector_routing_protocol</a></p>
+</li>
+<li><p>链路状态路由协（<strong>Link-state routing protocols</strong>）：是分组交换网络中用于计算机通信的两类主要路由协议之一，另一类是距离矢量路由协议。链路状态路由协议的例子包括开放最短路径优先(OSPF)和中间系统到中间系统(IS-IS)。链路状态协议由网络中的每个交换节点(即准备转发数据包的节点；在互联网中，这些被称为路由器)执行。</p>
+<p>链路状态路由的基本概念是，每个节点以图的形式构建到网络的连接映射，显示哪些节点连接到哪些其他节点。然后，每个节点独立计算从它到网络中每个可能目的地的下一个最佳逻辑路径。然后，每个最佳路径集合将形成每个节点的路由表。这与距离矢量路由协议形成鲜明对比，距离矢量路由协议的工作原理是让每个节点与其邻居共享其路由表，在链路状态协议中，节点之间传递的唯一信息与连接性有关。链路状态算法有时被非正式地描述为每个路由器，“向世界讲述它的邻居”</p>
+<p><a href="https://en.wikipedia.org/wiki/Link-state_routing_protocol" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Link-state_routing_protocol</a></p>
+</li>
+</ul>
+<p><a href="https://support.huawei.com/hedex/hdx.do?lib=EDOC1100109720AZI1016H&amp;docid=EDOC1100109720&amp;lang=zh&amp;v=02&amp;tocLib=EDOC1100109720AZI1016H&amp;tocV=02&amp;id=ZH-CN_CONCEPT_0172353878&amp;tocURL=resources%252fsoftware%252fnev8r10%255fvrpv8r16%252fuser%252fvrp%252ffeature%255f0003995041%252ehtml&amp;p=t&amp;fe=1&amp;ui=3&amp;keyword=%2525252525u8ddd%2525252525u79bb%2525252525u77e2%2525252525u91cf%2525252525u534f%2525252525u8bae" target="_blank" rel="noopener">https://support.huawei.com/hedex/hdx.do?lib=EDOC1100109720AZI1016H&amp;docid=EDOC1100109720&amp;lang=zh&amp;v=02&amp;tocLib=EDOC1100109720AZI1016H&amp;tocV=02&amp;id=ZH-CN_CONCEPT_0172353878&amp;tocURL=resources%252fsoftware%252fnev8r10%255fvrpv8r16%252fuser%252fvrp%252ffeature%255f0003995041%252ehtml&amp;p=t&amp;fe=1&amp;ui=3&amp;keyword=%2525252525u8ddd%2525252525u79bb%2525252525u77e2%2525252525u91cf%2525252525u534f%2525252525u8bae</a></p>
+</blockquote>
 <h2 id="BGP报文种类："><a href="#BGP报文种类：" class="headerlink" title="BGP报文种类："></a>BGP报文种类：</h2><ol>
 <li>Open：负责和对等体建立邻接关系。</li>
 <li>KeepAlive：该消息在对等体之间周期性地发送，用以维护TCP的连接。（60s）</li>
@@ -630,8 +646,18 @@
 <li>联盟</li>
 </ol>
 </li>
-<li><p>BGP与IGP同步。BGP不将从IBGP对等体获得的路由通告给它的EBGP对等体，除非该路由信息也能通过IBGP过得。</p>
+<li><p>BGP与IGP的同步。从IBGP邻居学来的路由信息：</p>
+<ul>
+<li><p>如果同步关闭：会将从IBGP学到的路由传给eBGP邻居</p>
+</li>
+<li><p>如果同步开启：BGP不将从IBGP对等体获得的路由通告给它的EBGP对等体，除非该路由信息也能通过IGP获得。</p>
+<blockquote>
+<p>先查找自己的IGP。如果IGP里面有这个网络，就把这个网络传给eBGP;如果IGP里面没有这个网络，就不会传给eBGP邻居。</p>
+</blockquote>
 <p>所有厂商同步功能默认关闭。华为不支持开启，思科可以开启。</p>
+<p><strong>BGP同步规则的目的:</strong><br>　　防止一个AS(不是所有的路由器都运行bgp)内部出现路由黑洞,即向外部通告了一个本AS不可达的虚假的路由.</p>
+</li>
+</ul>
 </li>
 </ol>
 <h2 id="BGP路由信息处理："><a href="#BGP路由信息处理：" class="headerlink" title="BGP路由信息处理："></a>BGP路由信息处理：</h2><p><img src="/2018/01/10/BGP学习笔记/BGP路由信息处理.png" alt="BGP路由信息处理"></p>
@@ -1132,7 +1158,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">257</span>
+                    <span class="site-state-item-count">258</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1468,7 +1494,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">130</span>
+                      
+                    
+                    <span class="site-state-item-count">131</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://cshihong.github.io/"/>
-  <updated>2020-10-06T13:32:53.785Z</updated>
+  <updated>2020-10-26T07:27:35.762Z</updated>
   <id>https://cshihong.github.io/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>WireGuard基本原理</title>
+    <link href="https://cshihong.github.io/2020/10/11/WireGuard%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/"/>
+    <id>https://cshihong.github.io/2020/10/11/WireGuard基本原理/</id>
+    <published>2020-10-11T14:22:20.000Z</published>
+    <updated>2020-10-26T07:27:35.762Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;WireGuard-下一代内核网络隧道&quot;&gt;&lt;a href=&quot;#WireGuard-下一代内核网络隧道&quot; class=&quot;headerlink&quot; title=&quot;WireGuard:下一代内核网络隧道&quot;&gt;&lt;/a&gt;WireGuard:下一代内核网络隧道&lt;/h1&gt;&lt;h2
+        
+      
+    
+    </summary>
+    
+      <category term="网络安全" scheme="https://cshihong.github.io/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
+    
+    
+      <category term="VPN" scheme="https://cshihong.github.io/tags/VPN/"/>
+    
+      <category term="安全" scheme="https://cshihong.github.io/tags/%E5%AE%89%E5%85%A8/"/>
+    
+      <category term="WireGuard" scheme="https://cshihong.github.io/tags/WireGuard/"/>
+    
+  </entry>
   
   <entry>
     <title>Tacacs+协议交互报文抓包示例</title>
@@ -44,9 +74,9 @@
     
       <category term="Tacscs+" scheme="https://cshihong.github.io/tags/Tacscs/"/>
     
-      <category term="AAA" scheme="https://cshihong.github.io/tags/AAA/"/>
-    
       <category term="安全" scheme="https://cshihong.github.io/tags/%E5%AE%89%E5%85%A8/"/>
+    
+      <category term="AAA" scheme="https://cshihong.github.io/tags/AAA/"/>
     
   </entry>
   
@@ -55,7 +85,7 @@
     <link href="https://cshihong.github.io/2020/09/28/Tacacs-%E5%90%84%E5%8E%82%E5%95%86%E4%BA%A4%E6%8D%A2%E6%9C%BA%E9%85%8D%E7%BD%AE/"/>
     <id>https://cshihong.github.io/2020/09/28/Tacacs-各厂商交换机配置/</id>
     <published>2020-09-28T00:04:30.000Z</published>
-    <updated>2020-10-06T13:34:16.906Z</updated>
+    <updated>2020-10-26T09:06:49.975Z</updated>
     
     <summary type="html">
     
@@ -78,9 +108,9 @@
     
       <category term="Tacscs+" scheme="https://cshihong.github.io/tags/Tacscs/"/>
     
-      <category term="AAA" scheme="https://cshihong.github.io/tags/AAA/"/>
-    
       <category term="安全" scheme="https://cshihong.github.io/tags/%E5%AE%89%E5%85%A8/"/>
+    
+      <category term="AAA" scheme="https://cshihong.github.io/tags/AAA/"/>
     
   </entry>
   
@@ -112,9 +142,9 @@
     
       <category term="Tacscs+" scheme="https://cshihong.github.io/tags/Tacscs/"/>
     
-      <category term="AAA" scheme="https://cshihong.github.io/tags/AAA/"/>
-    
       <category term="安全" scheme="https://cshihong.github.io/tags/%E5%AE%89%E5%85%A8/"/>
+    
+      <category term="AAA" scheme="https://cshihong.github.io/tags/AAA/"/>
     
   </entry>
   
@@ -144,9 +174,9 @@
     
       <category term="Tacscs+" scheme="https://cshihong.github.io/tags/Tacscs/"/>
     
-      <category term="AAA" scheme="https://cshihong.github.io/tags/AAA/"/>
-    
       <category term="安全" scheme="https://cshihong.github.io/tags/%E5%AE%89%E5%85%A8/"/>
+    
+      <category term="AAA" scheme="https://cshihong.github.io/tags/AAA/"/>
     
   </entry>
   
@@ -571,36 +601,6 @@
       <category term="网络自动化" scheme="https://cshihong.github.io/tags/%E7%BD%91%E7%BB%9C%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
     
       <category term="python" scheme="https://cshihong.github.io/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>IPy-IPv4和IPv6地址处理模块学习笔记</title>
-    <link href="https://cshihong.github.io/2019/12/01/IPy%E6%A8%A1%E5%9D%97%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    <id>https://cshihong.github.io/2019/12/01/IPy模块学习笔记/</id>
-    <published>2019-12-01T06:03:07.000Z</published>
-    <updated>2019-12-09T01:14:12.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;在日常网络规划中，会有很多关于IP地址的分配规划问题，如果是手动分配，在量很大的情况下，容易出错。而利用IPy这个python模块，可以很容易实现对iP地址的分配等操作。&lt;/p&gt;
-&lt;p&gt;以下是对IPy模块学习的一个记录。&lt;/p&gt;
-&lt;h1 id=&quot;IPy模块简介&quot;&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-      <category term="Python" scheme="https://cshihong.github.io/categories/Python/"/>
-    
-    
-      <category term="Python" scheme="https://cshihong.github.io/tags/Python/"/>
-    
-      <category term="Python模块" scheme="https://cshihong.github.io/tags/Python%E6%A8%A1%E5%9D%97/"/>
     
   </entry>
   
