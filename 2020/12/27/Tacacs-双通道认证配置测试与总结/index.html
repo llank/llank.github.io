@@ -133,18 +133,18 @@
 
 
 
-  <meta name="description" content="其他文章：  Tacacs+协议原理 Tacacs+服务搭建与配置详解 Tacacs+各厂商交换机配置 Tacacs+协议交互报文抓包示例    背景一般在网络组网中，从可靠性来说，一般主要的网络设备都有两个管理地址：  一个是loopback的逻辑地址，主要用于OSPF，BGP等路由协议配置Router-id等，也可以用于远程管理设备。loopback在网络中主要是通过路由协议的传播的，所以">
-<meta name="keywords" content="Tacscs+,安全,AAA">
+  <meta name="description" content="其他文章：  Tacacs+协议原理 Tacacs+服务搭建与配置详解 Tacacs+各厂商交换机配置 Tacacs+协议交互报文抓包示例 Tacacs+双通道认证配置测试与总结 Tacacs+配置single-connection单连接模式证测试与总结    背景一般在网络组网中，从可靠性来说，一般主要的网络设备都有两个管理地址：  一个是loopback的逻辑地址，主要用于OSPF，BGP">
+<meta name="keywords" content="Tacscs+,AAA,安全">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Tacacs+双通道认证配置测试与总结">
 <meta property="og:url" content="https://cshihong.github.io/2020/12/27/Tacacs-双通道认证配置测试与总结/index.html">
 <meta property="og:site_name" content="曹世宏的博客">
-<meta property="og:description" content="其他文章：  Tacacs+协议原理 Tacacs+服务搭建与配置详解 Tacacs+各厂商交换机配置 Tacacs+协议交互报文抓包示例    背景一般在网络组网中，从可靠性来说，一般主要的网络设备都有两个管理地址：  一个是loopback的逻辑地址，主要用于OSPF，BGP等路由协议配置Router-id等，也可以用于远程管理设备。loopback在网络中主要是通过路由协议的传播的，所以">
+<meta property="og:description" content="其他文章：  Tacacs+协议原理 Tacacs+服务搭建与配置详解 Tacacs+各厂商交换机配置 Tacacs+协议交互报文抓包示例 Tacacs+双通道认证配置测试与总结 Tacacs+配置single-connection单连接模式证测试与总结    背景一般在网络组网中，从可靠性来说，一般主要的网络设备都有两个管理地址：  一个是loopback的逻辑地址，主要用于OSPF，BGP">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-12-27T14:30:49.973Z">
+<meta property="og:updated_time" content="2020-12-27T14:42:23.089Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Tacacs+双通道认证配置测试与总结">
-<meta name="twitter:description" content="其他文章：  Tacacs+协议原理 Tacacs+服务搭建与配置详解 Tacacs+各厂商交换机配置 Tacacs+协议交互报文抓包示例    背景一般在网络组网中，从可靠性来说，一般主要的网络设备都有两个管理地址：  一个是loopback的逻辑地址，主要用于OSPF，BGP等路由协议配置Router-id等，也可以用于远程管理设备。loopback在网络中主要是通过路由协议的传播的，所以">
+<meta name="twitter:description" content="其他文章：  Tacacs+协议原理 Tacacs+服务搭建与配置详解 Tacacs+各厂商交换机配置 Tacacs+协议交互报文抓包示例 Tacacs+双通道认证配置测试与总结 Tacacs+配置single-connection单连接模式证测试与总结    背景一般在网络组网中，从可靠性来说，一般主要的网络设备都有两个管理地址：  一个是loopback的逻辑地址，主要用于OSPF，BGP">
 
 
 
@@ -464,7 +464,7 @@
                 
               
 
-              <time title="创建时间：2020-12-27 22:25:58 / 修改时间：22:30:49" itemprop="dateCreated datePublished" datetime="2020-12-27T22:25:58+08:00">2020-12-27</time>
+              <time title="创建时间：2020-12-27 22:25:58 / 修改时间：22:42:23" itemprop="dateCreated datePublished" datetime="2020-12-27T22:25:58+08:00">2020-12-27</time>
             
 
             
@@ -509,9 +509,9 @@
             <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
 			<span class="post-meta-divider">|</span>
-			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 2,765</span>
+			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 2,862</span>
 			<span class="post-meta-item-text">|</span>
-			<span title="post.min2read"><span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span>阅读时长： 12</span>
+			<span title="post.min2read"><span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span>阅读时长： 13</span>
 
           
 
@@ -540,6 +540,8 @@
 <li><a href="https://cshihong.github.io/2020/09/10/Tacacs-%E6%9C%8D%E5%8A%A1%E6%90%AD%E5%BB%BA%E4%B8%8E%E9%85%8D%E7%BD%AE%E8%AF%A6%E8%A7%A3/">Tacacs+服务搭建与配置详解</a></li>
 <li><a href="https://cshihong.github.io/2020/09/28/Tacacs-%E5%90%84%E5%8E%82%E5%95%86%E4%BA%A4%E6%8D%A2%E6%9C%BA%E9%85%8D%E7%BD%AE/">Tacacs+各厂商交换机配置</a></li>
 <li><a href="https://cshihong.github.io/2020/10/06/Tacacs-%E5%8D%8F%E8%AE%AE%E4%BA%A4%E4%BA%92%E6%8A%A5%E6%96%87%E6%8A%93%E5%8C%85%E7%A4%BA%E4%BE%8B/">Tacacs+协议交互报文抓包示例</a></li>
+<li><a href="https://cshihong.github.io/2020/12/27/Tacacs-%E5%8F%8C%E9%80%9A%E9%81%93%E8%AE%A4%E8%AF%81%E9%85%8D%E7%BD%AE%E6%B5%8B%E8%AF%95%E4%B8%8E%E6%80%BB%E7%BB%93/">Tacacs+双通道认证配置测试与总结</a></li>
+<li><a href="https://cshihong.github.io/2020/12/27/Tacacs-%E9%85%8D%E7%BD%AEsingle-connection%E5%8D%95%E8%BF%9E%E6%8E%A5%E6%A8%A1%E5%BC%8F%E8%AF%81%E6%B5%8B%E8%AF%95%E4%B8%8E%E6%80%BB%E7%BB%93/">Tacacs+配置single-connection单连接模式证测试与总结</a></li>
 </ul>
 </blockquote>
 <hr>
@@ -623,6 +625,20 @@
 <li>Arista系列支持，Tacacs+生效时本地用户不可登陆，失效时本地用户可登陆。</li>
 </ul>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">tacacs-server timeout 3</span><br><span class="line"><span class="meta">#</span><span class="bash"> 配置主Tacacs+认证</span></span><br><span class="line">tacacs-server host 192.168.147.135 vrf  port 49 single-connection key tacacs@123</span><br><span class="line"><span class="meta">#</span><span class="bash">配置备Tacacs+认证服务器</span></span><br><span class="line">tacacs-server host 192.168.147.135  port 49 key single-connection key tacacs@123</span><br><span class="line">!</span><br><span class="line">aaa group server tacacs+ tacacs</span><br><span class="line">   server 192.168.147.135 port 49</span><br><span class="line">!</span><br><span class="line">aaa group server tacacs+ tacacs_MGTMGT</span><br><span class="line">   server 192.168.147.135 vrf  port 49</span><br><span class="line">!</span><br><span class="line">aaa authentication login default group tacacs_MGT group tacacs local</span><br><span class="line">aaa authentication login console local</span><br><span class="line">aaa authorization exec default group tacacs_MGT MGT group tacacs local</span><br><span class="line">aaa authorization commands all default group tacacs_MGT group tacacs local</span><br><span class="line">aaa accounting commands all default start-stop group tacacs_MGTMGT group tacacs</span><br><span class="line">!</span><br><span class="line">ip tacacs vrf  source-interface Management0</span><br><span class="line">ip tacacs source-interface Loopback0</span><br></pre></td></tr></table></figure>
+<hr>
+<blockquote>
+<p>其他文章：</p>
+<ul>
+<li><a href="https://cshihong.github.io/2020/08/30/Tacscs-%E5%8D%8F%E8%AE%AE%E5%8E%9F%E7%90%86/">Tacacs+协议原理</a></li>
+<li><a href="https://cshihong.github.io/2020/09/10/Tacacs-%E6%9C%8D%E5%8A%A1%E6%90%AD%E5%BB%BA%E4%B8%8E%E9%85%8D%E7%BD%AE%E8%AF%A6%E8%A7%A3/">Tacacs+服务搭建与配置详解</a></li>
+<li><a href="https://cshihong.github.io/2020/09/28/Tacacs-%E5%90%84%E5%8E%82%E5%95%86%E4%BA%A4%E6%8D%A2%E6%9C%BA%E9%85%8D%E7%BD%AE/">Tacacs+各厂商交换机配置</a></li>
+<li><a href="https://cshihong.github.io/2020/10/06/Tacacs-%E5%8D%8F%E8%AE%AE%E4%BA%A4%E4%BA%92%E6%8A%A5%E6%96%87%E6%8A%93%E5%8C%85%E7%A4%BA%E4%BE%8B/">Tacacs+协议交互报文抓包示例</a></li>
+<li><a href="https://cshihong.github.io/2020/12/27/Tacacs-%E5%8F%8C%E9%80%9A%E9%81%93%E8%AE%A4%E8%AF%81%E9%85%8D%E7%BD%AE%E6%B5%8B%E8%AF%95%E4%B8%8E%E6%80%BB%E7%BB%93/">Tacacs+双通道认证配置测试与总结</a></li>
+<li><a href="https://cshihong.github.io/2020/12/27/Tacacs-%E9%85%8D%E7%BD%AEsingle-connection%E5%8D%95%E8%BF%9E%E6%8E%A5%E6%A8%A1%E5%BC%8F%E8%AF%81%E6%B5%8B%E8%AF%95%E4%B8%8E%E6%80%BB%E7%BB%93/">Tacacs+配置single-connection单连接模式证测试与总结</a></li>
+</ul>
+</blockquote>
+<hr>
+
       
     </div>
 
@@ -709,9 +725,9 @@
           
             <a href="/tags/Tacscs/" rel="tag"># Tacscs+</a>
           
-            <a href="/tags/安全/" rel="tag"># 安全</a>
-          
             <a href="/tags/AAA/" rel="tag"># AAA</a>
+          
+            <a href="/tags/安全/" rel="tag"># 安全</a>
           
         </div>
       
