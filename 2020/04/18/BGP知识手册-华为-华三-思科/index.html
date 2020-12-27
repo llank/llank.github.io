@@ -158,7 +158,7 @@
 <meta property="og:image" content="https://cshihong.github.io/2020/04/18/BGP知识手册-华为-华三-思科/c2.png">
 <meta property="og:image" content="https://cshihong.github.io/2020/04/18/BGP知识手册-华为-华三-思科/c3.png">
 <meta property="og:image" content="file:///C:/Users/cao/AppData/Local/Temp/msohtmlclip1/01/clip_image002.gif">
-<meta property="og:updated_time" content="2020-04-18T05:04:30.000Z">
+<meta property="og:updated_time" content="2020-11-25T09:19:07.391Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="BGP知识手册(华为,华三,思科)">
 <meta name="twitter:description" content="备注：以下资料整理自以下三个网站，有华为，华三，思科三个厂商官网的BGP相关资料。放这里是为了自己查看方便。同时，有需要的可以参考参考。   官方文档BGP相关资料： 华为：https://support.huawei.com/hedex/hdx.do?docid=EDOC1100101225&amp;amp;lang=zh&amp;amp;idPath=24030814%7C21782165%7C217822">
@@ -482,12 +482,24 @@
                 
               
 
-              <time title="创建时间：2020-04-18 12:20:38 / 修改时间：13:04:30" itemprop="dateCreated datePublished" datetime="2020-04-18T12:20:38+08:00">2020-04-18</time>
+              <time title="创建时间：2020-04-18 12:20:38" itemprop="dateCreated datePublished" datetime="2020-04-18T12:20:38+08:00">2020-04-18</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-11-25 17:19:07" itemprop="dateModified" datetime="2020-11-25T17:19:07+08:00">2020-11-25</time>
               
             
           </span>
@@ -527,7 +539,7 @@
             <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
 			<span class="post-meta-divider">|</span>
-			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 36,246</span>
+			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 36,457</span>
 			<span class="post-meta-item-text">|</span>
 			<span title="post.min2read"><span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span>阅读时长： 137</span>
 
@@ -854,44 +866,88 @@
 <li><p>优选从具有最小IP Address的对等体学来的路由。</p>
 </li>
 </ol>
+<blockquote>
+<ul>
+<li><p><strong>load-balancing as-path-relax</strong>命令用来设置路由在形成负载分担时不比较相同长度的AS-Path属性。</p>
+<p>缺省情况下，路由在形成负载分担时比较路由的AS-Path属性。</p>
+</li>
+<li><p><strong>bestroute as-path-ignore</strong>命令用来配置BGP在选择最优路由时忽略AS路径属性。</p>
+<p>缺省情况下，BGP将AS路径属性作为选择最优路由的一个条件。</p>
+</li>
+</ul>
+</blockquote>
 <h4 id="华三BGP选路原则"><a href="#华三BGP选路原则" class="headerlink" title="华三BGP选路原则"></a>华三BGP选路原则</h4><p>目前，BGP选择路由的过程为：</p>
-<p>(1)     丢弃下一跳（NEXT_HOP）不可达的路由；</p>
-<p>(2)     优选首选值（Preferred-value）最大的路由；</p>
-<p>(3)     优选本地优先级（LOCAL_PREF）最高的路由；</p>
-<p>(4)     依次选择<strong>network</strong>命令生成的路由、<strong>import-route</strong>命令引入的路由、聚合路由；</p>
-<p>(5)     优选AS路径（AS_PATH）最短的路由；</p>
-<p>(6)     依次选择ORIGIN类型为IGP、EGP、Incomplete的路由；</p>
-<p>(7)     优选MED值最低的路由；</p>
-<p>(8)     依次选择从EBGP、联盟EBGP、联盟IBGP、IBGP学来的路由；</p>
-<p>(9)     优选IGP Metric值最小的路由；</p>
-<p>(10)     优选迭代深度值小的路由；</p>
-<p>(11)     如果路由都来自EBGP邻居，并且Router ID不相同，优选曾经的最优路由；</p>
-<p>(12)     优选Router ID最小的路由器发布的路由。如果路由包含RR属性，那么在路由选择过程中，就用ORIGINATOR_ID来替代Router ID；</p>
-<p>(13)     优选CLUSTER_LIST长度最短的路由；</p>
-<p>(14)     优选IP地址最小的对等体发布的路由。</p>
-<h4 id="思科BGP选路原则："><a href="#思科BGP选路原则：" class="headerlink" title="思科BGP选路原则："></a>思科BGP选路原则：</h4><p>\1.     Prefer the path with the highest WEIGHT. </p>
-<p>\2.     Prefer the path with the highest <a href="https://www.cisco.com/en/US/tech/tk365/technologies_tech_note09186a00800c95bb.shtml#localpref" target="_blank" rel="noopener">LOCAL_PREF</a></p>
-<p>\3.     Prefer the path that was locally originated via a <strong>network</strong> or <strong>aggregate</strong> BGP subcommand or through redistribution from an IGP.</p>
+<ol>
+<li>丢弃下一跳（NEXT_HOP）不可达的路由；</li>
+<li>优选首选值（Preferred-value）最大的路由；</li>
+<li>优选本地优先级（LOCAL_PREF）最高的路由；</li>
+<li>依次选择<strong>network</strong>命令生成的路由、<strong>import-route</strong>命令引入的路由、聚合路由；</li>
+<li>优选AS路径（AS_PATH）最短的路由；</li>
+<li>依次选择ORIGIN类型为IGP、EGP、Incomplete的路由；</li>
+<li>优选MED值最低的路由；</li>
+<li>依次选择从EBGP、联盟EBGP、联盟IBGP、IBGP学来的路由；</li>
+<li>优选IGP Metric值最小的路由；</li>
+<li>优选迭代深度值小的路由；</li>
+<li>如果路由都来自EBGP邻居，并且Router ID不相同，优选曾经的最优路由；</li>
+<li>优选Router ID最小的路由器发布的路由。如果路由包含RR属性，那么在路由选择过程中，就用ORIGINATOR_ID来替代Router ID；</li>
+<li>优选CLUSTER_LIST长度最短的路由；</li>
+<li>优选IP地址最小的对等体发布的路由。</li>
+</ol>
+<blockquote>
+<ul>
+<li><p><strong>balance as-path-neglect</strong> （可选）配置不同AS_PATH属性的路由能够形成BGP负载分担</p>
+<p>缺省情况下，不同AS_PATH属性的路由之间不能形成BGP负载分担</p>
+</li>
+<li><p><strong>balance as-path-relax</strong> （可选）配置内容不同但长度相同的AS_PATH属性的路由能够形成BGP负载分担</p>
+<p>缺省情况下，内容不同但长度相同的AS_PATH属性的路由不能形成BGP负载分担</p>
+</li>
+</ul>
+</blockquote>
+<h4 id="思科BGP选路原则："><a href="#思科BGP选路原则：" class="headerlink" title="思科BGP选路原则："></a>思科BGP选路原则：</h4><ol>
+<li><p>refer the path with the highest WEIGHT. </p>
+</li>
+<li><p>refer the path with the highest <a href="https://www.cisco.com/en/US/tech/tk365/technologies_tech_note09186a00800c95bb.shtml#localpref" target="_blank" rel="noopener">LOCAL_PREF</a></p>
+</li>
+<li><p>refer the path that was locally originated via a <strong>network</strong> or <strong>aggregate</strong> BGP subcommand or through redistribution from an IGP.</p>
 <p>Local paths that are sourced by the <a href="https://www.cisco.com/en/US/tech/tk365/technologies_tech_note09186a00800c95bb.shtml#networkcommand" target="_blank" rel="noopener"><strong>network</strong> </a>or <strong>redistribute</strong> commands are preferred over local aggregates that are sourced by the <a href="https://www.cisco.com/en/US/tech/tk365/technologies_tech_note09186a0080094826.shtml" target="_blank" rel="noopener"><strong>aggregate-address</strong> </a>command.</p>
-<p>\4.     Prefer the path with the shortest AS_PATH.</p>
-<p>\5.     Prefer the path with the lowest origin type.</p>
-<p>\6.     Prefer the path with the lowest <a href="https://www.cisco.com/en/US/tech/tk365/technologies_tech_note09186a0080094934.shtml#med" target="_blank" rel="noopener">multi-exit discriminator (MED)</a>.</p>
-<p>\7.     Prefer eBGP over iBGP paths.</p>
+</li>
+<li><p>refer the path with the shortest AS_PATH.</p>
+</li>
+<li><p>refer the path with the lowest origin type.</p>
+</li>
+<li><p>refer the path with the lowest <a href="https://www.cisco.com/en/US/tech/tk365/technologies_tech_note09186a0080094934.shtml#med" target="_blank" rel="noopener">multi-exit discriminator (MED)</a>.</p>
+</li>
+<li><p>refer eBGP over iBGP paths.</p>
 <p>If bestpath is selected, go to Step 9 (multipath).</p>
-<p>\8.     Prefer the path with the lowest IGP metric to the BGP next hop.</p>
-<p>\9.     Determine if multiple paths require installation in the routing table for <a href="https://www.cisco.com/c/en/us/support/docs/ip/border-gateway-protocol-bgp/13753-25.html#anc5" target="_blank" rel="noopener">BGP Multipath</a>.</p>
-<p>\10.  When both paths are external, prefer the path that was received first (the oldest one).</p>
+</li>
+<li><p>refer the path with the lowest IGP metric to the BGP next hop.</p>
+</li>
+<li><p>etermine if multiple paths require installation in the routing table for <a href="https://www.cisco.com/c/en/us/support/docs/ip/border-gateway-protocol-bgp/13753-25.html#anc5" target="_blank" rel="noopener">BGP Multipath</a>.</p>
+</li>
+<li><p>n both paths are external, prefer the path that was received first (the oldest one).</p>
 <p>This step minimizes route-flap because a newer path does not displace an older one, even if the newer path would be the preferred route based on the next decision criteria (Steps 11, 12, and 13).</p>
 <p>Skip this step if any of these items is true:</p>
-<p>-       You have enabled the <a href="https://www.cisco.com/en/US/docs/ios/iproute_bgp/command/reference/irg_bgp1.html#wp1112448" target="_blank" rel="noopener">bgp best path compare-routerid</a> command.</p>
-<p>-       The router ID is the same for multiple paths because the routes were received from the same router.</p>
-<p>-       There is no current best path. The current best path can be lost when, for example, the neighbor that offers the path goes down</p>
-<p>\11.  Prefer the route that comes from the BGP router with the lowest router ID.</p>
+</li>
+</ol>
+<ul>
+<li><p>You have enabled the <a href="https://www.cisco.com/en/US/docs/ios/iproute_bgp/command/reference/irg_bgp1.html#wp1112448" target="_blank" rel="noopener">bgp best path compare-routerid</a> command.</p>
+</li>
+<li><p>The router ID is the same for multiple paths because the routes were received from the same router.</p>
+</li>
+<li><p>There is no current best path. The current best path can be lost when, for example, the neighbor that offers the path goes down</p>
+</li>
+</ul>
+<ol start="11">
+<li><p>fer the route that comes from the BGP router with the lowest router ID.</p>
 <p>The router ID is the highest IP address on the router, with preference given to loopback addresses. Also, you can use the <a href="https://www.cisco.com/en/US/docs/ios/iproute_bgp/command/reference/irg_bgp1.html#wp1115802" target="_blank" rel="noopener">bgp router-id</a> command to manually set the router ID.</p>
-<p>\12.  If the originator or router ID is the same for multiple paths, prefer the path with the minimum cluster list length.</p>
+</li>
+<li><p>the originator or router ID is the same for multiple paths, prefer the path with the minimum cluster list length.</p>
 <p>This is only present in BGP RR environments. It allows clients to peer with RRs or clients in other clusters. In this scenario, the client must be aware of the RR-specific BGP attribute.</p>
-<p>\13.  Prefer the path that comes from the lowest neighbor address.</p>
+</li>
+<li><p>Prefer the path that comes from the lowest neighbor address.</p>
 <p>This address is the IP address that is used in the BGP <strong>neighbor</strong> configuration. The address corresponds to the remote peer that is used in the TCP connection with the local router.</p>
+</li>
+</ol>
 <h3 id="BGP负载分担"><a href="#BGP负载分担" class="headerlink" title="BGP负载分担"></a>BGP负载分担</h3><p>当到达同一目的地址存在多条等价路由时，可以通过BGP等价负载分担实现均衡流量的目的。形成BGP等价负载分担的条件是“BGP选择路由的策略”的1至8条规则中需要比较的属性完全相同。</p>
 <p><strong>华三文档：</strong></p>
 <p>BGP可以通过如下两种方式实现负载分担：</p>
@@ -2095,7 +2151,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">259</span>
+                    <span class="site-state-item-count">261</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://cshihong.github.io/"/>
-  <updated>2020-11-20T13:21:39.577Z</updated>
+  <updated>2020-12-27T14:31:55.433Z</updated>
   <id>https://cshihong.github.io/</id>
   
   <author>
@@ -15,6 +15,74 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Tacacs+配置single-connection单连接模式证测试与总结</title>
+    <link href="https://cshihong.github.io/2020/12/27/Tacacs-%E9%85%8D%E7%BD%AEsingle-connection%E5%8D%95%E8%BF%9E%E6%8E%A5%E6%A8%A1%E5%BC%8F%E8%AF%81%E6%B5%8B%E8%AF%95%E4%B8%8E%E6%80%BB%E7%BB%93/"/>
+    <id>https://cshihong.github.io/2020/12/27/Tacacs-配置single-connection单连接模式证测试与总结/</id>
+    <published>2020-12-27T14:26:41.000Z</published>
+    <updated>2020-12-27T14:31:55.433Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;hr&gt;
+&lt;blockquote&gt;
+&lt;p&gt;其他文章：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="网络杂项" scheme="https://cshihong.github.io/categories/%E7%BD%91%E7%BB%9C%E6%9D%82%E9%A1%B9/"/>
+    
+    
+      <category term="Tacscs+" scheme="https://cshihong.github.io/tags/Tacscs/"/>
+    
+      <category term="安全" scheme="https://cshihong.github.io/tags/%E5%AE%89%E5%85%A8/"/>
+    
+      <category term="AAA" scheme="https://cshihong.github.io/tags/AAA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Tacacs+双通道认证配置测试与总结</title>
+    <link href="https://cshihong.github.io/2020/12/27/Tacacs-%E5%8F%8C%E9%80%9A%E9%81%93%E8%AE%A4%E8%AF%81%E9%85%8D%E7%BD%AE%E6%B5%8B%E8%AF%95%E4%B8%8E%E6%80%BB%E7%BB%93/"/>
+    <id>https://cshihong.github.io/2020/12/27/Tacacs-双通道认证配置测试与总结/</id>
+    <published>2020-12-27T14:25:58.000Z</published>
+    <updated>2020-12-27T14:30:49.973Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;hr&gt;
+&lt;blockquote&gt;
+&lt;p&gt;其他文章：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="网络杂项" scheme="https://cshihong.github.io/categories/%E7%BD%91%E7%BB%9C%E6%9D%82%E9%A1%B9/"/>
+    
+    
+      <category term="Tacscs+" scheme="https://cshihong.github.io/tags/Tacscs/"/>
+    
+      <category term="安全" scheme="https://cshihong.github.io/tags/%E5%AE%89%E5%85%A8/"/>
+    
+      <category term="AAA" scheme="https://cshihong.github.io/tags/AAA/"/>
+    
+  </entry>
   
   <entry>
     <title>如何在交换机上抓包</title>
@@ -104,9 +172,9 @@
     
       <category term="Tacscs+" scheme="https://cshihong.github.io/tags/Tacscs/"/>
     
-      <category term="AAA" scheme="https://cshihong.github.io/tags/AAA/"/>
-    
       <category term="安全" scheme="https://cshihong.github.io/tags/%E5%AE%89%E5%85%A8/"/>
+    
+      <category term="AAA" scheme="https://cshihong.github.io/tags/AAA/"/>
     
   </entry>
   
@@ -115,7 +183,7 @@
     <link href="https://cshihong.github.io/2020/09/28/Tacacs-%E5%90%84%E5%8E%82%E5%95%86%E4%BA%A4%E6%8D%A2%E6%9C%BA%E9%85%8D%E7%BD%AE/"/>
     <id>https://cshihong.github.io/2020/09/28/Tacacs-各厂商交换机配置/</id>
     <published>2020-09-28T00:04:30.000Z</published>
-    <updated>2020-10-26T09:06:49.975Z</updated>
+    <updated>2020-12-27T14:27:33.083Z</updated>
     
     <summary type="html">
     
@@ -138,9 +206,9 @@
     
       <category term="Tacscs+" scheme="https://cshihong.github.io/tags/Tacscs/"/>
     
-      <category term="AAA" scheme="https://cshihong.github.io/tags/AAA/"/>
-    
       <category term="安全" scheme="https://cshihong.github.io/tags/%E5%AE%89%E5%85%A8/"/>
+    
+      <category term="AAA" scheme="https://cshihong.github.io/tags/AAA/"/>
     
   </entry>
   
@@ -172,9 +240,9 @@
     
       <category term="Tacscs+" scheme="https://cshihong.github.io/tags/Tacscs/"/>
     
-      <category term="AAA" scheme="https://cshihong.github.io/tags/AAA/"/>
-    
       <category term="安全" scheme="https://cshihong.github.io/tags/%E5%AE%89%E5%85%A8/"/>
+    
+      <category term="AAA" scheme="https://cshihong.github.io/tags/AAA/"/>
     
   </entry>
   
@@ -204,9 +272,9 @@
     
       <category term="Tacscs+" scheme="https://cshihong.github.io/tags/Tacscs/"/>
     
-      <category term="AAA" scheme="https://cshihong.github.io/tags/AAA/"/>
-    
       <category term="安全" scheme="https://cshihong.github.io/tags/%E5%AE%89%E5%85%A8/"/>
+    
+      <category term="AAA" scheme="https://cshihong.github.io/tags/AAA/"/>
     
   </entry>
   
@@ -496,7 +564,7 @@
     <link href="https://cshihong.github.io/2020/04/18/BGP%E7%9F%A5%E8%AF%86%E6%89%8B%E5%86%8C-%E5%8D%8E%E4%B8%BA-%E5%8D%8E%E4%B8%89-%E6%80%9D%E7%A7%91/"/>
     <id>https://cshihong.github.io/2020/04/18/BGP知识手册-华为-华三-思科/</id>
     <published>2020-04-18T04:20:38.000Z</published>
-    <updated>2020-04-18T05:04:30.000Z</updated>
+    <updated>2020-11-25T09:19:07.391Z</updated>
     
     <summary type="html">
     
@@ -546,61 +614,6 @@
     
     
       <category term="Python" scheme="https://cshihong.github.io/tags/Python/"/>
-    
-      <category term="网络自动化" scheme="https://cshihong.github.io/tags/%E7%BD%91%E7%BB%9C%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>python通过xlrd读取Excel表格和Template批量生成配置</title>
-    <link href="https://cshihong.github.io/2019/12/29/python%E9%80%9A%E8%BF%87xlrd%E8%AF%BB%E5%8F%96Excel%E8%A1%A8%E6%A0%BC%E5%92%8CTemplate%E6%89%B9%E9%87%8F%E7%94%9F%E6%88%90%E9%85%8D%E7%BD%AE/"/>
-    <id>https://cshihong.github.io/2019/12/29/python通过xlrd读取Excel表格和Template批量生成配置/</id>
-    <published>2019-12-29T10:30:24.000Z</published>
-    <updated>2019-12-29T11:51:58.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;当需要配置的网络设备很多的时候，不可能都通过手动去配置。此时则需要利用脚本来批量生成配置。从而既保证了配置的准确性，也提高了配置的效率。&lt;/p&gt;
-&lt;p&gt;可以利用python的xrld库来读取execl表格，利用String库的Template模板来配合批量生成配置。&lt;/p&gt;
-        
-      
-    
-    </summary>
-    
-      <category term="网络自动化" scheme="https://cshihong.github.io/categories/%E7%BD%91%E7%BB%9C%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
-    
-    
-      <category term="Python" scheme="https://cshihong.github.io/tags/Python/"/>
-    
-      <category term="网络自动化" scheme="https://cshihong.github.io/tags/%E7%BD%91%E7%BB%9C%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Netconf协议学习笔记</title>
-    <link href="https://cshihong.github.io/2019/12/29/Netconf%E5%8D%8F%E8%AE%AE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    <id>https://cshihong.github.io/2019/12/29/Netconf协议学习笔记/</id>
-    <published>2019-12-29T07:28:09.000Z</published>
-    <updated>2019-12-29T10:07:36.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;Netconf简介&quot;&gt;&lt;a href=&quot;#Netconf简介&quot; class=&quot;headerlink&quot; title=&quot;Netconf简介&quot;&gt;&lt;/a&gt;Netconf简介&lt;/h1&gt;&lt;p&gt; 网络配置协议NETCONF（Network Configuration
-        
-      
-    
-    </summary>
-    
-      <category term="网络自动化" scheme="https://cshihong.github.io/categories/%E7%BD%91%E7%BB%9C%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
-    
     
       <category term="网络自动化" scheme="https://cshihong.github.io/tags/%E7%BD%91%E7%BB%9C%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
     
